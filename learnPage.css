@@ -262,7 +262,7 @@ header ul{
 .card{
     padding: 3rem;
     width: 20vw;
-    height: 40vh;
+    height: 60vh;
     background: linear-gradient(35deg, #1b1b1b ,#161616);
     box-shadow: 0 15px 7px rgba(0,0,0,0.2);
 }
