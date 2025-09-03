@@ -7,13 +7,15 @@
     --terciaria: #6A67D2;
     --holver: #F7515B;
     --braco: white;
-    --preto: black;
+    --preto: #0b0b0b;
 
     /* =====Fontes===== */
     --h1: 1.7rem;
-    --h2: 1.04rem;
+    --h2: 1.3rem;
     --p: 0.7rem;
 }
+
+/* ============ Estilos básicos ============ */
 
 *{
     padding: 0;
@@ -22,9 +24,19 @@
 }
 
 body{
-    background-color: #0b0b0b;
+    background-color: var(--preto);
     color: white;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+/* ============ Header ============ */
 
 header{
     display: flex;
@@ -43,17 +55,13 @@ header ul{
     gap: 1rem;
 }
 
-header ul li{
-
-}
-
 .nav{
     display: flex;
     position: relative;
     color: white;
     text-decoration: none;
     font-weight: bolder;
-    font-size: var(--h2);
+    font-size: 1.04rem;
     padding: 1rem;
     margin: 0.7rem;
     justify-content: center;
@@ -86,11 +94,16 @@ header ul li{
 #cadastro{
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 17px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 7px rgba(0,0,0,0.2);
     border-top: 1px solid rgba(255,255,255,0.1);
     border-bottom: 1px solid rgba(255,255,255,0.1);
     z-index: 1;
     overflow: hidden;
+}
+
+#cadastro:hover{
+    background: linear-gradient(75deg, var(--secundaria));
+    background-clip: text;
 }
 
 #cadastro::before{
@@ -108,4 +121,191 @@ header ul li{
 
 #cadastro:hover::before{
     transform: skewX(45deg) translateX(190%);
+}
+
+/* ============ Banner Inicial ============ */
+
+#banr_home{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+#img_banr{
+    width: 40vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img_banr img{
+    width: 30vw;
+    height: auto;
+    z-index: -11;
+}
+
+#text_banr{
+    width: 35vw;
+}
+
+.bnt{
+    display: flex;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.04rem;
+    width: 180px;
+    padding: 1rem 1.5rem;
+    margin: 0.7rem;
+    justify-content: center;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 17px;
+    box-shadow: 0 15px 7px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 1;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.bnt:hover{
+    letter-spacing: 3px;
+}
+
+.bnt::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    filter: blur(10px);
+    transition: 0.7s;
+    background: linear-gradient(to left, rgba(255,255,255,0.15), transparent);
+    transform: skewX(45deg) translateX(-80%);
+}
+
+.bnt:hover::before{
+    transform: skewX(45deg) translateX(190%);
+}
+
+.bnt::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to bottom, var(--primaria) , var(--secundaria));
+    width: 100%;
+    height: 30%;
+    border-radius: 2px;
+    z-index: -1;
+    box-shadow:
+            0 1px 10px var(--primaria),
+            0 1px 20px var(--primaria),
+            0 1px 30px var(--secundaria);
+    top: 55px;
+    transition: 6s;
+}
+
+.bnt:hover::after{
+    height: 95%;
+    transform: translateY(-100%);
+}
+
+#text_banr h2{
+    color: transparent;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    background: linear-gradient(70deg, var(--primaria), var(--holver));
+    background-clip: text;
+}
+
+#text_banr h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#text_banr p{
+    gap: 40px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* ============ Produtos ============ */
+#produtos{
+    width: 100%;
+    height: 85vh;
+}
+
+#bloco1{
+    position: absolute;
+    top: 700px;
+    left: 2px;
+    z-index: -10;
+    width: 51vw;
+    height: 80vh;
+    border-radius: 3px;
+    background: linear-gradient(35deg, var(--preto), #111111, #1b1b1b );
+}
+
+#cont_produtos{
+    gap: 30px;
+}
+
+/* Card Produtos */
+.card{
+    padding: 3rem;
+    width: 20vw;
+    height: 40vh;
+    background: linear-gradient(35deg, #1b1b1b ,#161616);
+    box-shadow: 0 15px 7px rgba(0,0,0,0.2);
+}
+
+#card_especial{
+    margin-bottom: 1.5rem;
+    background: linear-gradient(120deg,var(--primaria), var(--holver));
+}
+
+.card i{
+    font-size: 6rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.card h2{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.card p{
+    margin-bottom: 1rem;
+    font-size: var(--h2);
+}
+
+.card a{
+    position: relative;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: var(--holver);
+    transition: 0.5s;
+}
+
+.card a:hover{
+    letter-spacing: 3px;
+}
+
+.card a::after{
+    content: ' +';
+}
+
+#card_especial a{
+    color: #5445AE;
 }
