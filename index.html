@@ -3,24 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== RemixIcon ====================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="index.css">
+
+    <!--==================== Favicon====================-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="CSS/index.css">
+
+    <!--==================== CSS header e footer ====================-->
+    <link rel="stylesheet" href="CSS/head-foot.css">
+
+    <!--==================== JS header ====================-->
+    <script src="js/header.JS" defer></script>
+
     <title>TechFix</title>
 </head>
 <body>
+
     <header id="header">
-        <div class="logo"></div>
-        <menu>
+        <div class="logo"><img src="img/logo.png" alt=""><h1>TechFix</h1></div>
+
+        <menu>  
             <ul>
                 <li><a href="#" class="nav">HOME</a></li>
                 <li><a href="#" class="nav">CONTATO</a></li>
                 <li><a href="#" class="nav">SERVIÇOS</a></li>
                 <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
-                <li id="btn_cadastro"><a href="#" class="nav" id="cadastro">CADASTRO</a></li>
+                <li id="btn_cadastro"><a href="cadastro.html" class="nav" id="cadastro">CADASTRO</a></li>
             </ul>
         </menu>
     </header>
+
     <main>
+
         <section id="banr_home">
             <div id="img_banr"><img src="img/banner1.png" alt="Pessoa"></div>
             <div id="text_banr">
@@ -30,6 +48,7 @@
                 <button class="bnt">CADASTRAR</button>
             </div>
         </section>
+
         <section id="produtos">
             <div id="bloco1"></div>
             <div class="container" id="cont_produtos">
@@ -53,10 +72,91 @@
                 </div>
             </div>
         </section>
+
         <section>
-            
+            <div class="container" id="cont_beneficios">
+                <div class="anos">
+                    <h1>12</h1>
+                    <h2>Anos de Esperiencia</h2>
+                </div>
+                <div class="beneficios">
+                    <div class="card_retangulo">
+                        <h2>600+</h2>
+                        <p>Clientes</p>
+                    </div>
+                    <div class="card_retangulo">
+                        <h2>122+</h2>
+                        <p>Projetos Completos</p>
+                    </div>
+                    <div class="card_retangulo">
+                        <h2>10</h2>
+                        <p>Conquistas</p>
+                    </div>
+                    <div class="card_retangulo">
+                        <h2>20</h2>
+                        <p>Assinantes</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <section id="Titulo_projetos" class="container">
+            <div class="frase" id="frase1">
+                <div>
+                    <h1>FEATURED PROJECTS</h1>
+                    <p>Alguns projetos que fizemos:</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="Projetos">
+            <div class="container" id="cont_projetos">
+                <div class="card_projetos">
+                    <div class="card_img"><img src="" alt="Projeto de Sucesso"></div>
+                    <h1>Titulo brabo</h1>
+                    <a href="">DESCUBRA MAIS</a>
+                </div>
+                <div class="card_projetos">
+                    <div class="card_img"><img src="" alt="Projeto de Sucesso"></div>
+                    <h1>Titulo brabo</h1>
+                    <a href="">DESCUBRA MAIS</a>
+                </div>
+                <div class="card_projetos">
+                    <div class="card_img"><img src="" alt="Projeto de Sucesso"></div>
+                    <h1>Titulo brabo</h1>
+                    <a href="">DESCUBRA MAIS</a>
+                </div>
+                <div class="card_projetos">
+                    <div class="card_img"><img src="" alt="Projeto de Sucesso"></div>
+                    <h1>Titulo brabo</h1>
+                    <a href="">DESCUBRA MAIS</a>
+                </div>
+                <div class="card_projetos">
+                    <div class="card_img"><img src="" alt="Projeto de Sucesso"></div>
+                    <h1>Titulo brabo</h1>
+                    <a href="">DESCUBRA MAIS</a>
+                </div>
+                <div class="card_projetos">
+                    <div class="card_img"><img src="" alt="Projeto de Sucesso"></div>
+                    <h1>Titulo brabo</h1>
+                    <a href="">DESCUBRA MAIS</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="Junte-se">
+            <div class="frase">
+                <div>
+                    <h1>Junte-se a Nós</h1>
+                    <p>Agora que conhece um pouco sobre nós quer participar?</p>
+                </div>
+                <div><button class="bnt" id="bnt_ultimo">CADASTRAR-SE</button></div>
+            </div>
+        </section>
+
     </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-column">
@@ -82,29 +182,13 @@
                     <li><strong>Telefone: (11) 97018-4779</strong></li>
                 </ul>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-linkedin-box-fill"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-    <script>
-    let lastScrollTop = 0;
-    const header = document.getElementById("header");
 
-    window.addEventListener("scroll", function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop) {
-            
-            header.style.top = "-90px"; 
-        } else {
-            
-            header.style.top = "0";
-        }
-        lastScrollTop = scrollTop;
-    });
-    </script>
 </body>
 </html>

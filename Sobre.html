@@ -9,29 +9,36 @@
     <!--==================== RemixIcon ====================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="Sobre.css">
+    <!--==================== Favicon====================-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-    <title>EcoForge</title>
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="CSS/Sobre.css">
+
+    <!--==================== CSS header e footer ====================-->
+    <link rel="stylesheet" href="CSS/head-foot.css">
+    
+    <!--==================== JS header ====================-->
+    <script src="js/header.JS" defer></script>
+
+    <title>TechFix-Sobre Nós</title>
 </head>
 
 <body>
     <header id="header">
-        <div class="logo"></div>
-        <menu>
+        <div class="logo"><img src="img/logo.png" alt=""><h1>TechFix</h1></div>
+
+        <menu>  
             <ul>
                 <li><a href="index.html" class="nav">HOME</a></li>
                 <li><a href="#" class="nav">CONTATO</a></li>
                 <li><a href="#" class="nav">SERVIÇOS</a></li>
-                <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
-                <li id="btn_cadastro"><a href="#" class="nav" id="cadastro">CADASTRO</a></li>
+                <li><a href="#" class="nav">SOBRE NÓS</a></li>
+                <li id="btn_cadastro"><a href="cadastro.html" class="nav" id="cadastro">CADASTRO</a></li>
             </ul>
         </menu>
     </header>
-    <!DOCTYPE html>
-    <html lang="pt-BR">
 
-    <body>
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
@@ -323,22 +330,5 @@
             </div>
         </div>
     </footer>
-    <script>
-    let lastScrollTop = 0;
-    const header = document.getElementById("header");
-
-    window.addEventListener("scroll", function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop) {
-            
-            header.style.top = "-90px"; 
-        } else {
-            
-            header.style.top = "0";
-        }
-        lastScrollTop = scrollTop;
-    });
-    </script>
     </body>
     </html>
