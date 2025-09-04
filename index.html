@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="learnPage.css">
+    <link rel="stylesheet" href="index.css">
     <title>TechFix</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="logo"></div>
         <menu>
             <ul>
                 <li><a href="#" class="nav">HOME</a></li>
                 <li><a href="#" class="nav">CONTATO</a></li>
                 <li><a href="#" class="nav">SERVIÇOS</a></li>
-                <li><a href="#" class="nav">SOBRE NÓS</a></li>
+                <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
                 <li id="btn_cadastro"><a href="#" class="nav" id="cadastro">CADASTRO</a></li>
             </ul>
         </menu>
@@ -58,7 +58,53 @@
         </section>
     </main>
     <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                
+                <h3 id="footer-logo">TechFix</h3>
+                <p>Excelência em serviços e produtos de qualidade. Nosso compromisso é com você!</p>
+            </div>
 
+            <div class="footer-column">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">INÍCIO</a></li>
+                    <li><a href="#">SOBRE NÓS</a></li>
+                    <li><a href="#">SERVIÇOS</a></li>
+                    <li><a href="#">CONTATO</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contato</h3>
+                <ul>
+                    <li><strong>Email: TechFix@gmail.com</strong></li><br>
+                    <li><strong>Telefone: (11) 97018-4779</strong></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
+    <script>
+    let lastScrollTop = 0;
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            
+            header.style.top = "-90px"; 
+        } else {
+            
+            header.style.top = "0";
+        }
+        lastScrollTop = scrollTop;
+    });
+    </script>
 </body>
 </html>
