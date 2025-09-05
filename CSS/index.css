@@ -236,6 +236,10 @@ section{
 
 /* ============ Beneficios ============ */
 
+#sec_beneficios{
+    margin: 10rem 0rem;
+}
+
 #cont_beneficios{
     gap: 2rem;
 }
@@ -289,6 +293,7 @@ section{
 /* ============ Projeto+ ============ */
 
 #Titulo_projetos{
+    margin-top: 4rem;
     margin-bottom: 0;
 }
 
@@ -308,7 +313,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 6rem 0rem;
+    margin: 4rem 0rem;
 }
 
 #cont_projetos{
@@ -376,7 +381,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 10px 32px rgba(255, 255, 255, 0.08);
+    box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.15);
 }
 
 .frase h1{
