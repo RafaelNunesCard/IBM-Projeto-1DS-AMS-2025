@@ -22,12 +22,22 @@ header{
     color: white;
 }
 
+body{
+    background: linear-gradient(to right, var(--preto), var(--cinza-claro));
+}
+
+/* ============ Menuzinho ============*/
+.caixa{
+    position: fixed;
+    right: 10px;
+}
+
+/* ============ Cadastro e login ============*/
 section{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to right, var(--preto), var(--cinza-claro));
     color: var(--braco);
 }
 
