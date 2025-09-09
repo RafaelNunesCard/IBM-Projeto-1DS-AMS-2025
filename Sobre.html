@@ -28,13 +28,15 @@
     <header id="header">
         <div class="logo"><img src="img/logo.png" alt=""><h1>TechFix</h1></div>
 
-        <menu>  
-            <ul>
+        <menu>
+            <input type="checkbox" id="checkbox" class="checkbox"> 
+            <label for="checkbox" class="label_menu">Menu <span class="hamburger"></span></label>
+            <ul class="menu">
                 <li><a href="index.html" class="nav">HOME</a></li>
-                <li><a href="#" class="nav">CONTATO</a></li>
-                <li><a href="#" class="nav">SERVIÇOS</a></li>
                 <li><a href="#" class="nav">SOBRE NÓS</a></li>
-                <li id="btn_cadastro"><a href="cadastro.html" class="nav" id="cadastro">CADASTRO</a></li>
+                <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
+                <li><a href="contato.html" class="nav">CONTATO</a></li>
+                <li id="btn_cadastro"><a href="#" class="nav" id="cadastro">CADASTRO</a></li>
             </ul>
         </menu>
     </header>
@@ -42,39 +44,23 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1>Soluções Inovadoras para Desafios Complexos</h1>
-                <p>Transformamos problemas em oportunidades através de tecnologia e criatividade</p>
+                <h1>Sobre Nós</h1>
+                <p>Bem-vindo à <strong>TechFix!</strong></p>
                 <div id="alinhador_bnt"><a href=" " class="bnt">Conheça Nossa Solução</a></div>
             </div>
         </section>
 
         <!-- Sobre a Empresa -->
         <section id="about">
-            <div class="container">
+            <div class="container autoShow">
                 <h2>Nossa Empresa</h2>
                 <div class="about-content">
-                    <div class="about-text">
-                        <p>Fundada em 2025, a EcoForge nasceu da vontade de transformar o mundo através da tecnologia e
-                            da inovação. Somos uma equipe de especialistas apaixonados por resolver problemas complexos,
-                            oferecendo soluções que fazem a diferença na vida das pessoas.</p>
-                        <p>Desenvolvemos produtos e serviços que não apenas atendem às necessidades do mercado, mas
-                            também contribuem para um futuro mais sustentável e responsável. Nossa lixeira inteligente,
-                            por exemplo, facilita o processo de reciclagem ao reconhecer e separar automaticamente os
-                            resíduos recicláveis, garantindo que cada material seja direcionado corretamente.</p>
-                        <ul style="list-style-position: inside; margin: 15px 0;">
-                            <li><strong>TInovação:</strong> Buscamos constantemente novas maneiras de melhorar nossos
-                                processos e produtos.</li>
-                            <li><strong>Sustentabilidade:</strong> Cada ação é guiada pela missão de reduzir o impacto
-                                ambiental e promover a reciclagem.</li>
-                            <li><strong>Transparência:</strong> Mantemos uma comunicação aberta e honesta com nossos
-                                clientes e parceiros.</li>
-                        </ul>
-                        <p>Fique por dentro das nossas iniciativas e descubra como a reciclagem pode fazer a diferença.
-                            Nas redes sociais, você encontrará dicas, novidades e inspiração. Junte-se a nós nessa
-                            jornada para criar um mundo mais limpo e sustentável!</p>
+                    <div class="about-text" style="font-size: 1.3rem;">
+                        <p style="padding-bottom: 2rem;">Na TechFix, entendemos que a manutenção e o reparo de sua casa podem ser desafiadores. Por isso, criamos uma plataforma inovadora que conecta profissionais qualificados a clientes que precisam de serviços de qualidade.</p>
+                        <p>Nosso objetivo é facilitar a vida das pessoas, oferecendo um espaço onde você pode se cadastrar e ser contratado por clientes que buscam suas habilidades. Com um processo simples e eficiente, garantimos que tanto os profissionais quanto os clientes tenham uma experiência positiva.</p>
                     </div>
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+                        <img src="https://pfst.cf2.poecdn.net/base/image/d44be8114b85a6e5dc4d8046dd9a99157d145f5b67b37caf56043a16a30965ed?w=1024&h=768&pmaid=461066434"
                             alt="Nossa Empresa">
                     </div>
                 </div>
@@ -83,54 +69,36 @@
 
         <!-- Problema -->
         <section id="problem" style="background-color: #f2f2f2;">
-            <div class="container">
-                <h2>O Problema</h2>
+            <div class="container autoShow">
+                <h2>Por que escolher a TechFix?</h2>
                 <div class="problem-content">
                     <div class="problem-image">
-                        <img src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                            alt="Problema">
+                        <img src="https://pfst.cf2.poecdn.net/base/image/85e6acbf74e7a2e7d5b7a38342af885daeba02dd122285582d673797524389b9?w=1024&h=768&pmaid=461065826" alt="">
                     </div>
                     <div class="problem-text">
-                        <p>Atualmente, muitas empresas enfrentam desafios significativos no gerenciamento de resíduos e
-                            na implementação de práticas de reciclagem eficazes. Esses desafios podem incluir:</p>
-                        <ul style="list-style-position: inside; margin: 15px 0;">
-                            <li><strong>Falta de Conhecimento:</strong> Muitas organizações não têm clareza sobre como
-                                classificar e descartar diferentes tipos de resíduos.</li>
-                            <li><strong>Infraestrutura Inadequada:</strong> A ausência de sistemas de coleta e
-                                reciclagem adequados dificulta a separação dos materiais recicláveis.</li>
-                            <li><strong>Dificuldades em Acompanhar Oportunidades:</strong> As empresas podem ter
-                                dificuldades em se manter atualizadas sobre novas tecnologias e soluções sustentáveis
-                                disponíveis no mercado.</li>
+                        <ul style="list-style-position: inside; margin: 15px 0;font-size: 1.4rem;">
+                            <li><strong>Profissionais Qualificados:</strong> Todos os nossos prestadores de serviços são verificados e possuem experiência nas áreas de manutenção e reparo.</li><br>
+                            <li><strong>Facilidade de Contratação:</strong> Encontre rapidamente o profissional certo para o seu projeto, sem complicações.</li><br>
+                            <li><strong>Transparência:</strong>Você pode ver avaliações e comentários de outros clientes, ajudando na escolha do melhor serviço para suas necessidades.</li>
                         </ul>
-                        <p>Esses problemas não apenas impactam a eficiência operacional, mas também afetam a
-                            responsabilidade ambiental das empresas em um mundo que demanda cada vez mais práticas
-                            sustentáveis.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Causa -->
+        <!-- Valores -->
         <section id="cause">
-            <div class="container">
-                <h2>A Causa</h2>
+            <div class="container autoShow">
+                <h2>Nossos Valores</h2>
                 <div class="cause-content">
                     <div class="cause-text">
-                        <p>As causas fundamentais dos problemas enfrentados pelas empresas em relação à reciclagem e ao
-                            gerenciamento de resíduos podem ser atribuídas a vários fatores:</p>
+                        <p>Na TechFix, nos baseamos em princípios que guiam nosso trabalho e nossos relacionamentos:</p>
                         <ul style="list-style-position: inside; margin: 15px 0;">
-                            <li><strong>Tecnologia Desatualizada:</strong> Muitas empresas ainda utilizam sistemas
-                                legados que não suportam práticas de reciclagem eficazes, dificultando a integração de
-                                dados e a tomada de decisões informadas.</li>
-                            <li><strong>Falta de Integração:</strong> Sistemas desconectados podem levar à comunicação
-                                ineficiente entre setores, resultando em lacunas na gestão de resíduos.</li>
-                            <li><strong>Cultura Organizacional:</strong> Muitas vezes, a falta de uma cultura que
-                                valorize a sustentabilidade impede a implementação de soluções inovadoras e a adoção de
-                                práticas de reciclagem.</li>
+                            <li><strong>Compromisso com a Qualidade:</strong> Buscamos sempre a excelência nos serviços prestados, garantindo a satisfação dos nossos clientes.</li>
+                            <li><strong>Transparência:</strong> Valorizamos a honestidade em todas as interações, tanto com os profissionais quanto com os clientes.</li>
+                            <li><strong>Respeito e Ética:</strong> Tratamos todos com respeito, promovendo um ambiente de trabalho ético e colaborativo.</li>
+                            <li><strong>Inovação:</strong> Estamos constantemente buscando maneiras de melhorar nossos serviços e a experiência do usuário.</li>
                         </ul>
-                        <p>Esses desafios refletem a necessidade de uma abordagem integrada e inovadora, que não apenas
-                            resolva os problemas existentes, mas também capacite as empresas a se tornarem líderes em
-                            sustentabilidade.</p>
                     </div>
                     <div class="cause-image">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
@@ -140,36 +108,23 @@
             </div>
         </section>
 
-        <!-- Solução/Nossa Ideia -->
-        <section id="solution" style="background-color: #f2f2f2;">
-            <div class="container">
-                <h2>Solução / Nossa Ideia</h2>
+        <!-- Serviços oferecidos -->
+        <section id="solution">
+            <div class="container autoShow">
+                <h2>Nossos Serviços</h2>
                 <div class="solution-content">
                     <div class="solution-image">
-                        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                            alt="Solução">
+                        <img src="img/Sobre/Serviços.png" alt="Solução">
                     </div>
                     <div class="solution-text">
-                        <p>Para enfrentar os desafios no gerenciamento de resíduos e promover práticas de reciclagem
-                            eficazes, a EcoForge oferece soluções inovadoras que transformam a maneira como as empresas
-                            lidam com seus resíduos:</p>
-                        <p>Nossa solução oferece:</p>
+                        <p>Na TechFix, oferecemos uma ampla gama de serviços que envolvem manutenção e reparo, incluindo:</p>
                         <ul style="list-style-position: inside; margin: 15px 0;">
-                            <li><strong>Lixeira Inteligente:</strong> Nossas lixeiras equipadas com tecnologia avançada
-                                reconhecem e separam automaticamente os materiais recicláveis, facilitando o descarte
-                                correto e reduzindo a contaminação.</li>
-                            <li><strong>Plataforma de Gestão de Resíduos:</strong> Desenvolvemos um sistema integrado
-                                que permite às empresas monitorar e gerenciar seus resíduos de maneira eficiente,
-                                fornecendo dados em tempo real sobre a quantidade e tipos de materiais descartados.</li>
-                            <li><strong>Educação e Treinamento:</strong> Oferecemos workshops e materiais educativos
-                                para capacitar os colaboradores das empresas a entender melhor a importância da
-                                reciclagem e como implementar práticas sustentáveis no dia a dia.</li>
-                            <li><strong>Consultoria Personalizada:</strong> Trabalhamos lado a lado com as empresas para
-                                identificar oportunidades de melhoria em seus processos de reciclagem, adaptando
-                                soluções específicas às suas necessidades.</li>
+                            <li><strong>Manutenção Residencial:</strong> Cuidados gerais para garantir que sua casa esteja sempre em perfeito estado.</li>
+                            <li><strong>Reparos Elétricos:</strong> Soluções para problemas elétricos, como instalação de luminárias, consertos de fiações e mais.</li>
+                            <li><strong>Reparos Hidráulicos:</strong> Conserto de vazamentos, instalação de torneiras e manutenção de sistemas hidráulicos.</li>
+                            <li><strong>Serviços de Marcenaria:</strong> Fabricação e reparo de móveis sob medida, prateleiras e outros itens de madeira.</li>
+                            <li><strong>Reformas e Construção:</strong> Projetos de reformas, ampliações e construção de estruturas novas.</li>
                         </ul>
-                        <p>Com essas iniciativas, buscamos não apenas resolver problemas imediatos, mas também criar uma
-                            cultura de sustentabilidade que impacte positivamente o meio ambiente e a sociedade.</p>
                     </div>
                 </div>
             </div>
@@ -177,33 +132,26 @@
 
         <!-- Explicação do Nosso Trabalho -->
         <section id="work">
-            <div class="container">
+            <div class="container autoShow">
                 <h2>Como Trabalhamos</h2>
                 <div class="work-content">
-                    <div class="work-text">
-                        <p>Na EcoForge, seguimos um processo de trabalho colaborativo e centrado no cliente, garantindo
-                            uma abordagem metodológica que resulta em soluções de alta qualidade. Nossos passos incluem:
-                        </p>
+                    <div class="work-text" style="font-size: 1.1rem;">
 
-                        <h3 style="margin: 20px 0 10px; color: var(--primary);">1. Diagnóstico</h3>
-                        <p>Realizamos uma análise detalhada do cenário atual da empresa, identificando desafios e
-                            oportunidades no gerenciamento de resíduos.</p>
+                        <h3 style="margin: 20px 0 10px; color: var(--primary);">1. Cadastro de Profissionais:</h3>
+                        <p>Profissionais de manutenção e reparo se cadastram em nossa plataforma, fornecendo informações sobre suas habilidades e experiências.</p>
 
-                        <h3 style="margin: 20px 0 10px; color: var(--primary);">2. Planejamento</h3>
-                        <p>Desenvolvemos um plano personalizado com objetivos claros, prazos definidos e estratégias
-                            adaptadas às necessidades específicas da empresa.</p>
+                        <h3 style="margin: 20px 0 10px; color: var(--primary);">2. Busca de Serviços:</h3>
+                        <p>Clientes podem navegar pela lista de profissionais disponíveis, visualizar perfis, avaliações e escolher o melhor para suas necessidades.</p>
 
-                        <h3 style="margin: 20px 0 10px; color: var(--primary);">3. Implementação</h3>
-                        <p>Colocamos a solução em prática com agilidade e precisão, mantendo uma comunicação
-                            transparente em todo o processo para garantir o alinhamento com as expectativas do cliente.
-                        </p>
+                        <h3 style="margin: 20px 0 10px; color: var(--primary);">3. Contratação Simples:</h3>
+                        <p>Após selecionar um profissional, o cliente pode entrar em contato diretamente para discutir detalhes e fechar o serviço.</p>
 
-                        <h3 style="margin: 20px 0 10px; color: var(--primary);">4. Otimização Contínua</h3>
-                        <p>Monitoramos os resultados e realizamos ajustes sempre que necessário para garantir que a
-                            solução continue a agregar valor ao longo do tempo.</p>
+                        <h3 style="margin: 20px 0 10px; color: var(--primary);">4. Avaliações e Feedback:</h3>
+                        <p>Após a conclusão do serviço, incentivamos os clientes a deixarem avaliações, ajudando a manter a qualidade e a transparência na plataforma.</p>
+
                     </div>
                     <div class="work-image">
-                        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                        <img src="https://pfst.cf2.poecdn.net/base/image/4a7e19e7bab2016e04dd39464d6eb2fbd7dd8b335be915171db2c8544ba210c7?w=1024&h=768&pmaid=461074408"
                             alt="Nosso Trabalho">
                     </div>
                 </div>
@@ -212,85 +160,72 @@
 
         <!-- Equipe -->
         <section id="team" style="background-color: #f2f2f2;">
-            <div class="container">
+            <div class="container autoShow">
                 <h2>Nossa Equipe</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Contamos com profissionais
-                    experientes e apaixonados por inovação, comprometidos em entregar soluções de excelência para nossos
-                    clientes.</p>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Na TechFix, temos uma equipe dedicada e experiente, pronta para oferecer soluções inovadoras. Conheça nossos profissionais:</p>
 
                 <div class="team-grid">
-                    <div class="team-member">
+                    <div class="team-member autoShow">
                         <img src="img/Perfis/Rafael.webp" alt="Rafael Nunes">
                         <div class="team-info">
                             <h3>Rafael Nunes</h3>
                             <p>CEO & Fundador</p>
                             <div class="social-links">
                                 <a href="#" target="_blank"><i class="ri-instagram-line"></i></a>
-                                <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                                 <a href="#" target="_blank"><i class="ri-github-fill"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="../img/funcionarios/Diego.jpg" alt="Diego Rodrigues">
-                        <div class="team-info">
-                            <h3>Rafael Nunes</h3>
-                            <p>Gerente</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="../img/funcionarios/Derik.jpg" alt="Guilherme Izidio">
-                        <div class="team-info">
-                            <h3>Rafael Nunes</h3>
-                            <p>Operação Maquinaria</p>
-                            <div class="social-links">
-                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="../img/funcionarios/Rafael.webp" alt="Rafael Nunes">
-                        <div class="team-info">
-                            <h3>Rafael Nunes</h3>
-                            <p>Head de Design</p>
-                            <div class="social-links">
-                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="img/Perfis/Matheus.jpg" alt="Matheus Sampaio">
-                        <div class="team-info">
-                            <h3>Matheus Sampaio</h3>
-                            <p>A</p>
-                            <div class="social-links">
-                                <a href="#" target="_blank"><i class="ri-whatsapp-fill"></i></a>
-                                <a href="#" target="_blank"><i class="ri-instagram-line"></i></a>
                                 <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="team-member">
+
+                    <div class="team-member autoShow">
                         <img src="img/Perfis/Miguel.jpg" alt="Miguel Januario">
                         <div class="team-info">
                             <h3>Miguel Januario</h3>
-                            <p>Head de Design</p>
+                            <p>Gerente</p>
                             <div class="social-links">
                                 <a href="#"  target="_blank"><i class="ri-discord-fill"></i></a>
-                                <a href="#" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-github-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-grid2">
+                    <div class="team-member autoShow">
+                        <img src="img/Perfis/Leonardo.jpg" alt="Leonardo Gregório">
+                        <div class="team-info">
+                            <h3>Leonardo Gregório</h3>
+                            <p>Head de Design</p>
+                            <div class="social-links">
+                                <a href="#" target="_blank"><i class="ri-instagram-line"></i></a>
+                                <a href="#" target="_blank"><i class="ri-github-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member autoShow">
+                        <img src="img/Perfis/Gabriel.jpg" alt="Gabriel Araujo">
+                        <div class="team-info">
+                            <h3>Gabriel Araujo</h3>
+                            <p>Operação Maquinaria</p>
+                            <div class="social-links">
+                                <a href="#" target="_blank"><i class="ri-instagram-line"></i></a>
+                                <a href="#" target="_blank"><i class="ri-github-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member autoShow">
+                        <img src="img/Perfis/Matheus.jpg" alt="Matheus Sampaio">
+                        <div class="team-info">
+                            <h3>Matheus Sampaio</h3>
+                            <p>?</p>
+                            <div class="social-links">
+                                <a href="#" target="_blank"><i class="ri-instagram-line"></i></a>
+                                <a href="#" target="_blank"><i class="ri-github-fill"></i></a>
                                 <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             </div>
                         </div>
@@ -301,26 +236,26 @@
         <footer>
         <div class="footer-container">
             <div class="footer-column">
-                
+                    
                 <h3 id="footer-logo">TechFix</h3>
-                <p>Excelência em serviços e produtos de qualidade. Nosso compromisso é com você!</p>
+                <p class="footer">Excelência em serviços e produtos de qualidade. Nosso compromisso é com você!</p>
             </div>
 
             <div class="footer-column">
                 <h3>Links</h3>
                 <ul>
-                    <li><a href="index.html">INÍCIO</a></li>
-                    <li><a href="#">SOBRE NÓS</a></li>
-                    <li><a href="serviço.html">SERVIÇOS</a></li>
-                    <li><a href="#">CONTATO</a></li>
+                    <li class="footer"><a href="index.html">HOME</a></li>
+                    <li class="footer"><a href="#">SOBRE NÓS</a></li>
+                    <li class="footer"><a href="serviço.html">SERVIÇOS</a></li>
+                    <li class="footer"><a href="contato.html">CONTATO</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
                 <h3>Contato</h3>
                 <ul>
-                    <li><strong>Email: TechFix@gmail.com</strong></li><br>
-                    <li><strong>Telefone: (11) 97018-4779</strong></li>
+                    <li class="footer"><strong>Email: TechFix@gmail.com</strong></li><br>
+                    <li class="footer"><strong>Telefone: (11) 97018-4779</strong></li>
                 </ul>
                 <div class="social-icons">
                     <a href="#"><i class="ri-facebook-box-fill"></i></a>

@@ -18,21 +18,8 @@
     --p: 0.7rem;
 }
 
-/* ============ Estilos básicos ============ */
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto';
-}
-
-body{
-    background-color: var(--preto);
-    color: white;
-}
-
-
 /*==================== Banner ====================*/
+
 .banner {
     background-image: url('../img/Sobre/banner_da_pg.png');
     background-size: contain;  
@@ -52,6 +39,15 @@ body{
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--braco);
+}
+
+p:not(.footer),
+li:not(.footer){
+    font-size: 1.4rem;
+}
+
+li:not(.footer){
+    padding-bottom: 1rem;
 }
 
 .container {
@@ -78,7 +74,7 @@ body{
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     max-width: 700px;
     margin: 0 auto 30px;
 }
@@ -205,6 +201,13 @@ section h2 {
 }
 
 .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.team-grid2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
