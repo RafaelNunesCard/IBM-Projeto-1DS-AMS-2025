@@ -1,0 +1,120 @@
+:root{
+    /* =====Cores do Site===== */
+    --primaria: #FC8E53;
+    --secundaria: #5445AE;
+    --terciaria: #6A67D2;
+    --holver: #F7515B;
+    --braco: white;
+    --preto: #0b0b0b;
+    --cinza-escuro: #111111;
+    --cinza-claro: #1b1b1b;
+    --cinza-clarinho: #161616;
+
+    /* =====Fontes===== */
+    --h1: 1.7rem;
+    --h2: 1.3rem;
+    --p: 0.7rem;
+}
+
+.banner_clt{
+    height: 55vh;
+    background: var(--preto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_clt{
+    height: 60%;
+    width: 20%;
+    overflow: hidden;
+}
+
+.img_clt img{
+    height: 100%;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.nome_clt h1{
+    font-size: 2.7rem;
+    margin-bottom: 1.1rem;
+}
+
+.nome_clt h2{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.aval_clt{
+    font-size: 1.3rem;
+    color: transparent;
+    background: linear-gradient(70deg, var(--primaria), var(--holver));
+    background-clip: text;
+    display: flex;
+    gap: 7px;
+}
+
+.bnt{
+    display: flex;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    width: 290px;
+    padding: 0.7rem 1.4rem;
+    margin: 0.7rem;
+    justify-content: center;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 17px;
+    box-shadow: 0 15px 7px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 1;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.bnt:hover{
+    letter-spacing: 3px;
+    color: var(--holver);
+}
+
+.bnt::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    height: 10%;
+    box-shadow: 0 0 16px white;
+    background-color: white;
+    z-index: -10;
+    filter: blur(10px);
+    transition: all 3s;
+}
+
+.bnt:hover::after{
+    width: 100%;
+    height: 100%;
+}
+
+.bnt::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    filter: blur(10px);
+    transition: 0.7s;
+    background: linear-gradient(to left, rgba(255,255,255,0.15), transparent);
+    transform: skewX(45deg) translateX(-80%);
+}
+
+.bnt:hover::before{
+    transform: skewX(45deg) translateX(190%);       
+}
