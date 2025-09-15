@@ -1,0 +1,18 @@
+:root {
+  /* =====Cores do Site===== */
+  --primaria: #fc8e53;
+  --secundaria: #5445ae;
+  --terciaria: #6a67d2;
+  --holver: #f7515b;
+  --braco: white;
+  --preto: #0b0b0b;
+  --cinza-escuro: #111111;
+  --cinza-claro: #1b1b1b;
+  --cinza-clarinho: #161616;
+
+  /* =====Fontes===== */
+  --h1: 1.7rem;
+  --h2: 1.3rem;
+  --p: 0.7rem;
+}
+

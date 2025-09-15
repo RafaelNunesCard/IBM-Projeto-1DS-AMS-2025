@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--==================== RemixIcon ====================-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+
+    <!--==================== Favicon====================-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="CSS/agendamento.css" />
+
+    <!--==================== CSS header e footer ====================-->
+    <link rel="stylesheet" href="CSS/head-foot.css" />
+
+    <!--==================== JS header ====================-->
+    <script src="js/header.JS" defer></script>
+
+    <!--==================== JS Calendario ====================-->
+    <script src="js/calendario.js" defer></script>
+
+    <title>TechFix</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img src="img/logo.png" alt="" />
+        <h1>TechFix</h1>
+      </div>
+
+      <menu>
+        <input type="checkbox" id="checkbox" class="checkbox" />
+        <label for="checkbox" class="label_menu"
+          >Menu <span class="hamburger"></span
+        ></label>
+        <ul class="menu">
+          <li><a href="home.html" class="nav">HOME</a></li>
+          <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
+          <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
+          <li><a href="contato.html" class="nav">CONTATO</a></li>
+          <li id="btn_cadastro">
+            <a href="perfil.html" class="nav" id="cadastro">PERFIL</a>
+          </li>
+        </ul>
+      </menu>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="card">
+          <h2>Calendário do Mês</h2>
+          <div class="controls">
+            <button id="prevMonth"><i class="ri-arrow-left-s-line"></i></button>
+            <span id="monthYear"></span>
+            <button id="nextMonth">
+              <i class="ri-arrow-right-s-line"></i>
+            </button>
+          </div>
+          <div class="calendar" id="calendar"></div>
+          <div class="card" id="card_pagamento">
+            <h1>Forma de pagamento:</h1>
+            <div class="metodos">
+              <button class="pag"><i class="ri-pix-fill"></i> Pix</button>
+              <button class="pag">
+                <i class="ri-bank-card-fill"></i> Credito/Debito
+              </button>
+              <button class="pag">
+                <i class="ri-barcode-box-fill"></i> Boleto
+              </button>
+              <button class="pag">
+                <i class="ri-money-dollar-box-fill"></i> Dinheiro
+              </button>
+            </div>
+          </div>
+          <button class="confirm" id="showConfirmed">
+            Proximo
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3 id="footer-logo">TechFix</h3>
+          <p>
+            Excelência em serviços e produtos de qualidade. Nosso compromisso é
+            com você!
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="Sobre.html">SOBRE NÓS</a></li>
+            <li><a href="serviço.html">SERVIÇOS</a></li>
+            <li><a href="contato.html">CONTATO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <ul>
+            <li><strong>Email: TechFix@gmail.com</strong></li>
+            <br />
+            <li><strong>Telefone: (11) 97018-4779</strong></li>
+          </ul>
+          <div class="social-icons">
+            <a href="#"><i class="ri-facebook-box-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+        const buttons = document.querySelectorAll('.pag');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove a classe 'checked' de todos os botões
+                buttons.forEach(btn => btn.classList.remove('checked'));
+                // Adiciona a classe 'checked' ao botão clicado
+                this.classList.add('checked');
+            });
+        });
+    </script>
+  </body>
+</html>

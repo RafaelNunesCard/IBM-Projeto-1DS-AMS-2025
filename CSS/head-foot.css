@@ -1,157 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-:root{
-    /* =====Cores do Site===== */
-    --primaria: #FC8E53;
-    --secundaria: #5445AE;
-    --terciaria: #6A67D2;
-    --holver: #F7515B;
-    --braco: white;
-    --preto: #0b0b0b;
-    --cinza-escuro: #111111;
-    --cinza-claro: #1b1b1b;
-    --cinza-clarinho: #161616;
+:root {
+  /* =====Cores do Site===== */
+  --primaria: #fc8e53;
+  --secundaria: #5445ae;
+  --terciaria: #6a67d2;
+  --holver: #f7515b;
+  --braco: white;
+  --preto: #0b0b0b;
+  --cinza-escuro: #111111;
+  --cinza-claro: #1b1b1b;
+  --cinza-clarinho: #161616;
 
-    /* =====Fontes===== */
-    --h1: 1.7rem;
-    --h2: 1.3rem;
-    --p: 0.7rem;
+  /* =====Fontes===== */
+  --h1: 1.7rem;
+  --h2: 1.3rem;
+  --p: 0.7rem;
 }
 
 /* ============ Estilos básicos ============ */
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto';
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto";
+  box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(to right, var(--preto), var(--cinza-claro));
-    color: white;
+body {
+  background: linear-gradient(to right, var(--preto), var(--cinza-claro));
+  color: white;
 }
 
 /* ============ Header ============ */
 
-header{
-    display: flex;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    padding: 10px;
-    height: auto;
-    transition: top 0.3s;
-    justify-content: space-between;
-    background: linear-gradient(35deg, #181818 ,#111111);
-    color: white;
+header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding: 10px;
+  height: auto;
+  transition: top 0.3s;
+  justify-content: space-between;
+  background: linear-gradient(35deg, #181818, #111111);
+  color: white;
 }
 
-header ul{
-    list-style: none;
-    align-items: center;
-    display: flex;
-    gap: 1rem;
+header ul {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
 }
 
-.nav{
-    display: flex;
-    position: relative;
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
-    font-size: 1.04rem;
-    padding: 1rem;
-    margin: 0.3rem 0.7rem;
-    justify-content: center;
-    letter-spacing: 1px;
-    transition: 0.5s;
+.nav {
+  display: flex;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem 0.7rem;
+  justify-content: center;
+  letter-spacing: 1px;
+  transition: 0.5s;
 }
 
-
-
-.nav:hover{
-    color: transparent;
-    background: linear-gradient(75deg, var(--primaria));
-    background-clip: text;
-    letter-spacing: 3px;
+.nav:hover {
+  color: transparent;
+  background: linear-gradient(75deg, var(--primaria));
+  background-clip: text;
+  letter-spacing: 3px;
 }
 
-.nav::before{
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 7px;
-    bottom: 1px;
-    border-radius: 10px;
-    background: linear-gradient(to right, var(--primaria));
-    transition: linear 0.2s;
+.nav::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  bottom: 1px;
+  border-radius: 10px;
+  background: linear-gradient(to right, var(--primaria));
+  transition: linear 0.2s;
 }
 
-.nav:hover:not(#cadastro)::before{
-    width: 100%;
+.nav:hover:not(#cadastro)::before {
+  width: 100%;
 }
 
 .label_menu,
-.checkbox{
+.checkbox {
   display: none;
 }
 
-#cadastro{
-  width: 150px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 17px;
-    box-shadow: 0 15px 7px rgba(0,0,0,0.2);
-    border-top: 1px solid rgba(255,255,255,0.1);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    z-index: 1;
-    overflow: hidden;
+#cadastro {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 17px;
+  box-shadow: 0 15px 7px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  overflow: hidden;
 }
 
-#cadastro:hover{
-    background: linear-gradient(75deg, var(--secundaria));
-    background-clip: text;
+#cadastro:hover {
+  background: linear-gradient(75deg, var(--secundaria));
+  background-clip: text;
 }
 
-#cadastro::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    border-radius: 0;
-    transition: 0.7s;
-    background: linear-gradient(to left, rgba(255,255,255,0.15), transparent);
-    transform: skewX(45deg) translateX(-80%);
+#cadastro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0;
+  transition: 0.7s;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translateX(-80%);
 }
 
-#cadastro:hover::before{
-    transform: skewX(45deg) translateX(190%);
+#cadastro:hover::before {
+  transform: skewX(45deg) translateX(190%);
 }
 
 /* Logo */
 .logo {
-  width: 70px;
+  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 3rem;
 }
 
-.logo img{
+.logo img {
   width: 100%;
 }
 
-.logo h1{
+.logo h1 {
   font-size: 27px;
 }
 
-@media(max-width: 880px){
-  .nav::before{
+@media (max-width: 880px) {
+  .nav::before {
     visibility: hidden;
   }
-  
-  .menu{
+
+  .menu {
     display: block;
     visibility: hidden;
     position: absolute;
@@ -159,36 +156,36 @@ header ul{
     top: 4.6875rem;
     left: 0;
     overflow-y: hidden;
-    background: linear-gradient(35deg, #181818 ,#111111);
+    background: linear-gradient(35deg, #181818, #111111);
     width: 100%;
     height: 0;
     z-index: 10;
     transition: 0.5s;
   }
 
-  .menu a{
+  .menu a {
     padding: 1rem 0;
     margin-inline: 1rem;
-    border-bottom: 0.0625rem solid rgb(0,0,0);
+    border-bottom: 0.0625rem solid rgb(0, 0, 0);
   }
 
-  .label_menu{
+  .label_menu {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     color: var(--braco);
     padding-block: 1rem;
-    cursor:pointer;
+    cursor: pointer;
   }
 
-  .hamburger{
+  .hamburger {
     border-top: 0.125rem solid;
     width: 1.25rem;
   }
 
   .hamburger::before,
-  .hamburger::after{
-    content: '';
+  .hamburger::after {
+    content: "";
     display: block;
     width: 1.25rem;
     height: 0.125rem;
@@ -198,158 +195,158 @@ header ul{
     transition: 0.4s;
   }
 
-  .checkbox:checked ~ .menu{
+  .checkbox:checked ~ .menu {
     visibility: visible;
     height: auto;
     overflow-y: auto;
   }
 
-  .checkbox:checked ~ .label_menu .hamburger{
+  .checkbox:checked ~ .label_menu .hamburger {
     border-top-color: transparent;
   }
 
-  .checkbox:checked ~ .label_menu .hamburger::before{
+  .checkbox:checked ~ .label_menu .hamburger::before {
     transform: rotate(135deg);
   }
 
-  .checkbox:checked ~ .label_menu .hamburger::after{
+  .checkbox:checked ~ .label_menu .hamburger::after {
     transform: rotate(-135deg);
     top: -0.4375rem;
   }
 }
 
-
 /* ============ Footer ============ */
 
 footer {
-    background: linear-gradient(35deg, #181818 ,#111111);
-    color: #ecf0f1;
-    padding: 40px 20px;
-  }
+  background: linear-gradient(35deg, #181818, #111111);
+  color: #ecf0f1;
+  padding: 40px 20px;
+}
 
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
-  .footer-column {
-    flex: 1 1 200px;
-    margin: 10px;
-  }
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
 
-  #footer-logo{
-    color: transparent;
-    background: linear-gradient(70deg, var(--primaria), var(--holver));
-    background-clip: text;
-  }
+#footer-logo {
+  color: transparent;
+  background: linear-gradient(70deg, var(--primaria), var(--holver));
+  background-clip: text;
+}
 
-  .footer-column h3 {
-    margin-bottom: 15px;
-    font-size: 22px;
-  }
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 1.7rem;
+}
 
-  .footer-column ul {
-    list-style: none;
-    display: grid;  
-    grid-template-columns: repeat(2,1fr);
-    padding: 0;
-  }
+.footer-column ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0;
+}
 
-  .footer-column ul li {
-    margin-bottom: 10px;
-  }
+.footer-column ul li {
+  margin-bottom: 10px;
+}
 
-  .footer-column ul li a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: linear 0.2s;
-  }
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: linear 0.2s;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 
-  .footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    border-top: 1px solid #7f8c8d;
-    padding-top: 20px;
-  }
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  border-top: 1px solid #7f8c8d;
+  padding-top: 20px;
+}
 
-  .footer-column ul li a:hover {
-    color: var(--primaria);
-    letter-spacing: 2px;
-  }
+.footer-column ul li a:hover {
+  color: var(--primaria);
+  letter-spacing: 2px;
+}
 
-  .social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 27px;
-    transition: transform 0.3s, color 0.3s;
-  }
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 27px;
+  transition: transform 0.3s, color 0.3s;
+}
 
-  .social-icons a:hover{
-    transform: scale(1.2);
-  }
+.social-icons a:hover {
+  transform: scale(1.2);
+}
 
-  .social-icons a i:hover {
-    color: var(--secundaria);
-  }
+.social-icons a i:hover {
+  color: var(--secundaria);
+}
 
-  /* ============ Animações muito brabas ============ */
+/* ============ Animações muito brabas ============ */
 
-  /* ======== Aparece quando scrolado ======== */
-  .autoShow{
-    animation: text-appear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 100dvh;
-  }
+/* ======== Aparece quando scrolado ======== */
+.autoShow {
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100dvh;
+}
 
-  @keyframes text-appear{
-      from{
-        opacity: 0;
-        transform: translateY(100px);
-      }
-      to{
-        opacity: 1;
-        transform: translateY(0);
-      }
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  /* ======== Imagem aparece quando scrolado ======== */
-  .imageReveal{
-     animation: imageReveal both;
-     animation-timeline: view(10% 5%); /*1° termina e 2° começa*/
+/* ======== Imagem aparece quando scrolado ======== */
+.imageReveal {
+  animation: imageReveal both;
+  animation-timeline: view(10% 5%); /*1° termina e 2° começa*/
+}
+@keyframes imageReveal {
+  from {
+    filter: saturate(0) contrast(4) brightness(0.1) blur(5px);
+    opacity: 0;
+    scale: 0.95;
+    translate: 0 4rem;
   }
-  @keyframes imageReveal{
-    from{
-      filter: saturate(0) contrast(4) brightness(.1) blur(5px);
-      opacity: 0;
-      scale: .95;
-      translate: 0 4rem;
-    }
-    to{
-      filter: none;
-      opacity: 1;
-      scale: 1;
-      translate: 0 0;
-    }
+  to {
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
   }
+}
 
-  /* ======== Animação de Blur ======== */
-    .autoBlur{
-      animation: autoBlurAnimation linear both;
-      animation-timeline: view(10% auto);
-    }
-    @keyframes autoBlurAnimation{
-      0%{
-        filter: blur(20px);
-      }
-      100%{
-        filter: blur(0px);
-      }
-    }
-     
+/* ======== Animação de Blur ======== */
+.autoBlur {
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view(10% auto);
+}
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(20px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}

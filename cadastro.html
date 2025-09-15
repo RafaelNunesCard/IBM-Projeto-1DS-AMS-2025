@@ -1,150 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/Icons/folha.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../img/Icons/folha.ico"
+      type="image/x-icon"
+    />
 
     <!--==================== RemixIcon ====================-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
 
     <!--==================== Favicon====================-->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="CSS/cadastro.css">
+    <link rel="stylesheet" href="CSS/cadastro.css" />
 
     <!--==================== CSS header e footer ====================-->
-    <link rel="stylesheet" href="CSS/head-foot.css">
-    
+    <link rel="stylesheet" href="CSS/head-foot.css" />
+
     <!--==================== JS header ====================-->
     <script src="js/header.JS" defer></script>
 
-    <script src="JS/cadastro-login.js"defer></script>
+    <script src="JS/cadastro-login.js" defer></script>
 
     <title>TechFix-Cadastro</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header id="header">
-        <div class="logo"><img src="img/logo.png" alt=""><h1>TechFix</h1></div>
+      <div class="logo">
+        <img src="img/logo.png" alt="" />
+        <h1>TechFix</h1>
+      </div>
 
-        <menu>
-            <input type="checkbox" id="checkbox" class="checkbox"> 
-            <label for="checkbox" class="label_menu">Menu <span class="hamburger"></span></label>
-            <ul class="menu">
-                <li><a href="index.html" class="nav">HOME</a></li>
-                <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
-                <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
-                <li><a href="contato.html" class="nav">CONTATO</a></li>
-                <li id="btn_cadastro"><a href="#" class="nav" id="cadastro">CADASTRO</a></li>
-            </ul>
-        </menu>
+      <menu>
+        <input type="checkbox" id="checkbox" class="checkbox" />
+        <label for="checkbox" class="label_menu"
+          >Menu <span class="hamburger"></span
+        ></label>
+        <ul class="menu">
+          <li><a href="index.html" class="nav">HOME</a></li>
+          <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
+          <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
+          <li><a href="contato.html" class="nav">CONTATO</a></li>
+          <li id="btn_cadastro">
+            <a href="#" class="nav" id="cadastro">CADASTRO</a>
+          </li>
+        </ul>
+      </menu>
     </header>
 
     <section>
-        <div class="container">
-            <div class="form-box login">
-                <form action="">
-                    <h1>Login</h1>
-                    <div class="input-box">
-                        <input type="text" placeholder="Nome" required>
-                        <i class="ri-user-fill"></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="Senha" autocomplete="new-password" required >
-                        <i class="ri-lock-fill"></i>
-                    </div>
-                    <div class="forgot-link">
-                        <a href="#">ESQUECEU A SENHA?</a>
-                    </div>
-                    <div class="pinto"><button type="submit" class="bnt" id="bnt-login">LOGIN</button></div>
-                    <p>Logar com outras plataformas:</p>
-                    <div class="social-icon">
-                        <a href="#"><i class="ri-google-fill"></i></a>
-                        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-                        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-                    </div>
-                </form>
+      <div class="container">
+        <div class="form-box login">
+          <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+              <input type="text" placeholder="Nome" required />
+              <i class="ri-user-fill"></i>
             </div>
-
-            <div class="form-box Cadastrar">
-                <form action="">
-                    <h1>Cadastrar</h1>
-                    <div class="input-box">
-                        <input type="text" placeholder="Nome" required>
-                        <i class="ri-user-fill"></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="email" placeholder="Email" autocomplete="email" required >
-                        <i class="ri-mail-fill"></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="Senha" autocomplete="new-password" required >
-                        <i class="ri-lock-fill"></i>
-                    </div>
-                    <div class="pinto"><button type="submit" class="bnt" id="bnt-cadastro">CADASTRAR-SE</button></div>
-                    <p>Cadastrar-se com outras plataformas:</p>
-                    <div class="social-icon">
-                        <a href="#"><i class="ri-google-fill"></i></a>
-                        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-                        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-                    </div>
-                </form>
+            <div class="input-box">
+              <input
+                type="password"
+                placeholder="Senha"
+                autocomplete="new-password"
+                required
+              />
+              <i class="ri-lock-fill"></i>
             </div>
-
-            <div class="toggle-box">
-                <div class="toggle-panel toggle-left">
-                    <h1>Olá, Bem Vindo de Volta!</h1>
-                    <p>Não tem uma conta?</p>
-                    <button class="register-bnt" id="sim">CADASTRAR-SE</button>
-                </div>
+            <div class="forgot-link">
+              <a href="#">ESQUECEU A SENHA?</a>
             </div>
-
-            <div class="toggle-box">
-                <div class="toggle-panel toggle-right">
-                    <h1>Olá, Bem Vindo!</h1>
-                    <p>Já tem uma conta?</p>
-                    <button class="login-bnt" id="sim">Logar</button>
-                </div>
+            <div class="pinto">
+              <button type="submit" class="bnt" id="bnt-login" href="home.html">LOGIN</button>
             </div>
-
+            <p>Logar com outras plataformas:</p>
+            <div class="social-icon">
+              <a href="#"><i class="ri-google-fill"></i></a>
+              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+            </div>
+          </form>
         </div>
+
+        <div class="form-box Cadastrar">
+          <form action="">
+            <h1>Cadastrar</h1>
+            <div class="input-box">
+              <input type="text" placeholder="Nome" required />
+              <i class="ri-user-fill"></i>
+            </div>
+            <div class="input-box">
+              <input
+                type="email"
+                placeholder="Email"
+                autocomplete="email"
+                required
+              />
+              <i class="ri-mail-fill"></i>
+            </div>
+            <div class="input-box">
+              <input
+                type="password"
+                placeholder="Senha"
+                autocomplete="new-password"
+                required
+              />
+              <i class="ri-lock-fill"></i>
+            </div>
+            <div class="pinto">
+              <button type="submit" class="bnt" id="bnt-cadastro">
+                CADASTRAR-SE
+              </button>
+            </div>
+            <p>Cadastrar-se com outras plataformas:</p>
+            <div class="social-icon">
+              <a href="#"><i class="ri-google-fill"></i></a>
+              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+            </div>
+          </form>
+        </div>
+
+        <div class="toggle-box">
+          <div class="toggle-panel toggle-left">
+            <h1>Olá, Bem Vindo de Volta!</h1>
+            <p>Não tem uma conta?</p>
+            <button class="register-bnt" id="sim">CADASTRAR-SE</button>
+          </div>
+        </div>
+
+        <div class="toggle-box">
+          <div class="toggle-panel toggle-right">
+            <h1>Olá, Bem Vindo!</h1>
+            <p>Já tem uma conta?</p>
+            <button class="login-bnt" id="sim">Logar</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                
-                <h3 id="footer-logo">TechFix</h3>
-                <p>Excelência em serviços e produtos de qualidade. Nosso compromisso é com você!</p>
-            </div>
-
-            <div class="footer-column">
-                <h3>Links</h3>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="Sobre.html">SOBRE NÓS</a></li>
-                    <li><a href="#">SERVIÇOS</a></li>
-                    <li><a href="contato.html">CONTATO</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Contato</h3>
-                <ul>
-                    <li><strong>Email: TechFix@gmail.com</strong></li><br>
-                    <li><strong>Telefone: (11) 97018-4779</strong></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="#"><i class="ri-facebook-box-fill"></i></a>
-                    <a href="#"><i class="ri-instagram-line"></i></a>
-                    <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3 id="footer-logo">TechFix</h3>
+          <p>
+            Excelência em serviços e produtos de qualidade. Nosso compromisso é
+            com você!
+          </p>
         </div>
+
+        <div class="footer-column">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Sobre.html">SOBRE NÓS</a></li>
+            <li><a href="#">SERVIÇOS</a></li>
+            <li><a href="contato.html">CONTATO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <ul>
+            <li><strong>Email: TechFix@gmail.com</strong></li>
+            <br />
+            <li><strong>Telefone: (11) 97018-4779</strong></li>
+          </ul>
+          <div class="social-icons">
+            <a href="#"><i class="ri-facebook-box-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+          </div>
+        </div>
+      </div>
     </footer>
-    </body>
-    </html>
+  </body>
+</html>

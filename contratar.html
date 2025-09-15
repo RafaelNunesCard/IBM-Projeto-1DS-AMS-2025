@@ -1,102 +1,603 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--==================== RemixIcon ====================-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
 
     <!--==================== Favicon====================-->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="CSS/contratar.css">
+    <link rel="stylesheet" href="CSS/contratar.css" />
 
     <!--==================== CSS header e footer ====================-->
-    <link rel="stylesheet" href="CSS/head-foot.css">
+    <link rel="stylesheet" href="CSS/head-foot.css" />
 
     <!--==================== JS header ====================-->
     <script src="js/header.JS" defer></script>
 
-    <title>TechFix</title>
-</head>
-<body>
-    <header id="header">
-        <div class="logo"><img src="img/logo.png" alt=""><h1>TechFix</h1></div>
+    <!--==================== JS avaliacao ====================-->
+    <script src="js/avaliacoes.js" defer></script>
 
-        <menu>
-            <input type="checkbox" id="checkbox" class="checkbox"> 
-            <label for="checkbox" class="label_menu">Menu <span class="hamburger"></span></label>
-            <ul class="menu">
-                <li><a href="home.html" class="nav">HOME</a></li>
-                <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
-                <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
-                <li><a href="contato.html" class="nav">CONTATO</a></li>
-                <li id="btn_cadastro"><a href="#" class="nav" id="cadastro">PERFIL</a></li>
-            </ul>
-        </menu>
+    <!--==================== JS Popup ====================-->
+    <script src="js/Popup.js" defer></script>
+
+    <title>TechFix</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img src="img/logo.png" alt="" />
+        <h1>TechFix</h1>
+      </div>
+
+      <menu>
+        <input type="checkbox" id="checkbox" class="checkbox" />
+        <label for="checkbox" class="label_menu"
+          >Menu <span class="hamburger"></span
+        ></label>
+        <ul class="menu">
+          <li><a href="home.html" class="nav">HOME</a></li>
+          <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
+          <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
+          <li><a href="contato.html" class="nav">CONTATO</a></li>
+          <li id="btn_cadastro">
+            <a href="#" class="nav" id="cadastro">PERFIL</a>
+          </li>
+        </ul>
+      </menu>
     </header>
 
     <main>
-        <section class="clt">
-            <div class="banner_clt">
+      <section class="clt">
+        <div class="banner_clt">
+          <div class="img_clt">
+            <img src="https://pfst.cf2.poecdn.net/base/image/27cdbd2a42b23937e9ce950bcf18f0fe81dd1f1e17da8e6199da3893d427d5b9?w=1024&h=768&pmaid=466461082" alt="Profissional" />
+          </div>
 
-                <div class="img_clt">
-                    <img src="img/Perfis/Rafael.webp" alt="">
-                </div>
+          <div class="nome_clt">
+            <h1>Jorge Fonceca dos Santos</h1>
+            <h2 class="prof">
+              <span class="especial">Profissão:</span> Engenheiro/Uber
+            </h2>
+            <div
+              class="aval_clt1"
+              onmouseover="mostrarGrafico(this)"
+              onmouseout="esconderGrafico(this)"
+            >
+              <div class="aval_clt">
+                <h3>4.5</h3>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+                <i class="ri-arrow-down-s-line" id="roda"></i>
+              </div>
+              <a href="#coment">103 Avaliações de Clientes</a>
 
-                <div class="nome_clt">
-                    <h1>Jorge Fonceca dos Santos</h1>
-                    <h2>Engenheiro-Uber</h2>
-                    <div class="aval_clt">
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-half-fill"></i>
-                        <i class="ri-star-line"></i>
-                        <h3>3.5</h3>
-                    </div>
-                    <h2>R$300</h2>
-                    <div class="bnt_clt">
-                        <button class="bnt">CONTRATAR</button>
-                    </div>
+              <div class="grafico">
+                <div>5 estrelas (62%)</div>
+                <div class="barra">
+                  <div class="preenchimento" style="width: 62%"></div>
                 </div>
+                <div>4 estrelas (28%)</div>
+                <div class="barra">
+                  <div class="preenchimento" style="width: 28%"></div>
+                </div>
+                <div>3 estrelas (8%)</div>
+                <div class="barra">
+                  <div class="preenchimento" style="width: 8%"></div>
+                </div>
+                <div>2 estrelas (2%)</div>
+                <div class="barra">
+                  <div class="preenchimento" style="width: 2%"></div>
+                </div>
+                <div>1 estrela (0%)</div>
+                <div class="barra">
+                  <div class="preenchimento" style="width: 0%"></div>
+                </div>
+              </div>
             </div>
-        </section>
+
+            <h5>Mais de 600 trabalhos concluidos</h5>
+
+            <div class="direitos">
+              <div class="direito">
+                <div class="direito_i"><i class="ri-star-smile-fill"></i></div>
+                <h4>Avaliações extremamente<br />positivas</h4>
+              </div>
+              <div class="direito">
+                <div class="direito_i"><i class="ri-lock-star-fill"></i></div>
+                <h4>Segurança no trabalho</h4>
+              </div>
+              <div class="direito">
+                <div class="direito_i"><i class="ri-fire-fill"></i></div>
+                <h4>Nenhuma falta</h4>
+              </div>
+            </div>
+            <div class="bnt_clt">
+              <h2>R$300,00 p/hora</h2>
+              <a href="agendamento.html"><button class="bnt">CONTRATAR</button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="descricao">
+        <div class="descricao">
+          <div class="desc">
+            <h1>Descrição do Profissional:</h1>
+            <div class="blocos">
+              <div class="bloco">
+                <i class="ri-user-fill"></i>
+                <h3>Biografia</h3>
+                <p>
+                  Jorge Fonseca dos Santos é um engenheiro civil com mais de 12
+                  anos de experiência no setor de construção e infraestrutura.
+                  Nascido e criado em São Paulo, Jorge sempre teve uma paixão
+                  pela engenharia e pelo impacto positivo que projetos bem
+                  executados podem ter na sociedade.
+                </p>
+              </div>
+              <div class="bloco">
+                <i class="ri-book-marked-fill"></i>
+                <h3>Educação</h3>
+                <p>
+                  Jorge graduou-se em Engenharia Civil pela Universidade XYZ,
+                  onde desenvolveu uma base sólida em princípios de engenharia e
+                  gestão de projetos. Posteriormente, ele obteve certificação em
+                  Gestão de Projetos pela Associação de Engenheiros, aprimorando
+                  suas habilidades em planejamento e execução.
+                </p>
+              </div>
+              <div class="bloco">
+                <i class="ri-phone-fill"></i>
+                <h3>Contato</h3>
+                <p>
+                  Para mais informações ou para discutir projetos potenciais,
+                  Jorge pode ser contatado através de e-mail em: <br />
+                  <br />
+                  E-mail: jorge.fonseca@email.com <br />
+                  Telefone: (11) 99233-7620
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="trabalhos">
+            <h1>Trabalhos concluidos:</h1>
+            <div class="trabalho_img">
+              <div class="card">
+                <img
+                  src="https://pfst.cf2.poecdn.net/base/image/705abbce91e7b7425234454929d381525de3d4b313b27c3c6517d96cd1121e03?w=1024&h=768&pmaid=466412230"
+                  alt="Trabalho concluido"
+                />
+                <h1>Rodovia Pamonha</h1>
+                <p>
+                  A estrada principal, com várias faixas, serpenteia pela
+                  paisagem, enquanto o viaduto elevado facilita o tráfego. A
+                  vegetação ao redor contrasta com a estrutura de concreto,
+                  criando uma harmonia entre urbanização e natureza.
+                </p>
+              </div>
+              <div class="card">
+                <img
+                  src="https://pfst.cf2.poecdn.net/base/image/28e274b5cc2cb55048563ccb39521e773c5a6db86f3306f839457294597fae04?w=1024&h=768&pmaid=466413321"
+                  alt="Trabalho concluido"
+                />
+                <h1>Sede Umbreon Tower</h1>
+                <p>
+                  A estrada principal, com várias faixas, serpenteia pela
+                  paisagem, enquanto o viaduto elevado facilita o tráfego. A
+                  vegetação ao redor contrasta com a estrutura de concreto,
+                  criando uma harmonia entre urbanização e natureza.
+                </p>
+              </div>
+              <div class="card">
+                <img
+                  src="https://pfst.cf2.poecdn.net/base/image/9d3d31ce99e501651c4e5d35b145306d4739c250f0cad84c82bb3080c5370068?w=1024&h=768&pmaid=466413548"
+                  alt="Trabalho concluido"
+                />
+                <h1>Casa contra aquecimento</h1>
+                <p>
+                  A estrada principal, com várias faixas, serpenteia pela
+                  paisagem, enquanto o viaduto elevado facilita o tráfego. A
+                  vegetação ao redor contrasta com a estrutura de concreto,
+                  criando uma harmonia entre urbanização e natureza.
+                </p>
+              </div>
+              <div class="card">
+                <img
+                  src="https://pfst.cf2.poecdn.net/base/image/87bb51ce333d2f2a8e91b81c027949ba0cf117781a6e9330796fb5ae731fc786?w=1024&h=768&pmaid=466413899"
+                  alt="Trabalho concluido"
+                />
+                <h1>Ponte Jotoh</h1> 
+                <p>
+                  A estrada principal, com várias faixas, serpenteia pela
+                  paisagem, enquanto o viaduto elevado facilita o tráfego. A
+                  vegetação ao redor contrasta com a estrutura de concreto,
+                  criando uma harmonia entre urbanização e natureza.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="item">
+        <div class="venda">
+          <div class="desc_img">
+            <h1>Item Consertado:</h1>
+
+            <table
+              style="width: 100%; border-collapse: collapse; margin-top: 20px"
+            >
+              <thead>
+                <tr style="background-color: #333; color: #fff">
+                  <th style="padding: 10px; border: 1px solid #ddd">
+                    Características
+                  </th>
+                  <th style="padding: 10px; border: 1px solid #ddd">
+                    Especificações
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">Tela</td>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    15.6" Full HD (1920x1080)
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Processador
+                  </td>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Intel Core i7-1165G7
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Memória RAM
+                  </td>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    16GB DDR4
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Armazenamento
+                  </td>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    SSD de 512GB
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Placa de Vídeo
+                  </td>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    NVIDIA GeForce MX450
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">Portas</td>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    2 x USB 3.0, 1 x USB-C, 1 x HDMI
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Conectividade
+                  </td>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Wi-Fi 6 (802.11ax), Bluetooth 5.1
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">Câmera</td>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    HD 720p com microfone integrado
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">Bateria</td>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Até 12 horas
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">Peso</td>
+                  <td style="padding: 10px; border: 1px solid #ddd">1.7 kg</td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Sistema Operacional
+                  </td>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Windows 11 Home
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px; border: 1px solid #ddd">
+                    Garantia
+                  </td>
+                  <td style="padding: 10px; border: 1px solid #ddd">1 ano</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cont">
+            <div class="imgs">
+              <div class="img">
+                <img
+                  src="https://pfst.cf2.poecdn.net/base/image/621c7f66909be65500d109f699d58616158fb09fa18ce495d603a8ab4a064fb7?w=1024&h=768&pmaid=465882384"
+                  alt="notebook1"
+                />
+              </div>
+              <div class="img">
+                <img
+                  src="https://pfst.cf2.poecdn.net/base/image/777b3cce9b30afbf6a53beb44418971c737e176ed5e0186a4ac8ba9d858b30b9?w=1024&h=768&pmaid=465882574"
+                  alt="notebook2"
+                />
+              </div>
+            </div>
+            <div class="sobre">
+              <h3>Sobre:</h3>
+              <p>
+                Experimente a combinação perfeita de desempenho e estilo com
+                este notebook. Com um design minimalista e elegante, ele se
+                destaca em qualquer ambiente, seja em casa, no escritório ou em
+                um café. Ideal para estudantes, profissionais e qualquer pessoa
+                que valorize eficiência e estilo.
+              </p>
+            </div>
+            <div class="alinha">
+              <h3>Notebook: <span>R$ 3.499,00</span></h3>
+              <button class="bnt contato">ENTRE EM CONTATO</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="coment">
+        <div class="coment">
+          <div class="avaliacoes">
+            <h1>Avaliações de Clientes</h1>
+            <div class="aval_clt aval1">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-half-fill"></i>
+              <h3>4.5 de 5</h3>
+            </div>
+            <div class="grafico1">
+              <div>5 estrelas (62%)</div>
+              <div class="barra">
+                <div class="preenchimento" style="width: 62%"></div>
+              </div>
+              <div>4 estrelas (28%)</div>
+              <div class="barra">
+                <div class="preenchimento" style="width: 28%"></div>
+              </div>
+              <div>3 estrelas (8%)</div>
+              <div class="barra">
+                <div class="preenchimento" style="width: 8%"></div>
+              </div>
+              <div>2 estrelas (2%)</div>
+              <div class="barra">
+                <div class="preenchimento" style="width: 2%"></div>
+              </div>
+              <div>1 estrela (0%)</div>
+              <div class="barra">
+                <div class="preenchimento" style="width: 0%"></div>
+              </div>
+            </div>
+            <div class="deixe">
+              <h1>Deixe sua Avalição</h1>
+              <p>Compartilhe seu pensamento com os outros clientes.</p>
+              <button class="bnt">Escreva uma Avaliação</button>
+            </div>
+          </div>
+          <div class="comentarios">
+            <h1>Principais Avaliações</h1>
+            <div class="comentario">
+              <div class="perfil">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+                  alt="Perfil Comentario"
+                />
+                <h3>Lucas Almeida</h3>
+              </div>
+              <div class="aval_clt aval1">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <h4>Um exelente trabalho.</h4>
+              </div>
+              <h4>Avaliado em 12 de setembro de 2025</h4>
+              <h3>Manutenção verificada</h3>
+              <p>
+                Contratei Jorge Fonceca dos Santos como engenheiro e não poderia
+                estar mais satisfeito! O trabalho dele foi excepcional, com
+                atenção aos detalhes e grande profissionalismo. Recomendo a
+                todos!
+              </p>
+              <h4>2 pessoas acharam esse comentario útil</h4>
+              <div class="bnt_coment">
+                <button class="bnt comen util like-button" id="likeButton">
+                  Útil
+                </button>
+                <p class="like-message" id="likeMessage">
+                  👍 Você achou esse comentario útil!
+                </p>
+                <button class="bnt comen denunciar" id="openPopup">
+                  Denuciar
+                </button>
+              </div>
+            </div>
+
+            <div class="comentario">
+              <div class="perfil">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+                  alt="Perfil Comentario"
+                />
+                <h3>Mariele Soares</h3>
+              </div>
+              <div class="aval_clt aval1">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <h4>Melhor trabalho.</h4>
+              </div>
+              <h4>Avaliado em 6 de setembro de 2025</h4>
+              <h3>Manutenção verificada</h3>
+              <p>
+                Contratei Jorge Fonceca dos Santos como engenheiro e não poderia
+                estar mais satisfeito! O trabalho dele foi excepcional, com
+                atenção aos detalhes e grande profissionalismo. Recomendo a
+                todos!
+              </p>
+              <h4>3 pessoas acharam esse comentario útil</h4>
+              <div class="bnt_coment">
+                <button class="bnt comen util like-button" id="likeButton">
+                  Útil
+                </button>
+                <p class="like-message" id="likeMessage">
+                  👍 Você achou esse comentario útil!
+                </p>
+                <button class="bnt comen denunciar" id="openPopup">
+                  Denuciar
+                </button>
+              </div>
+            </div>
+
+            <div class="comentario">
+              <div class="perfil">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+                  alt="Perfil Comentario"
+                />
+                <h3>Jaime dos Santos</h3>
+              </div>
+              <div class="aval_clt aval1">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <h4>Um pareceiro</h4>
+              </div>
+              <h4>Avaliado em 1 de setembro de 2025</h4>
+              <h3>Manutenção verificada</h3>
+              <p>
+                Quero agradecer ao Jorge Fonseca dos Santos pela excelente
+                explicação sobre o projeto. Ele fez questão de detalhar cada
+                etapa, o que me deixou muito tranquilo em relação ao processo.
+                Além disso, indicou uma equipe de confiança que realmente
+                entregou um trabalho de qualidade. Recomendo a todos!
+              </p>
+              <h4>2 pessoas acharam esse comentario útil</h4>
+              <div class="bnt_coment">
+                <button class="bnt comen util like-button" id="likeButton">
+                  Útil
+                </button>
+                <p class="like-message" id="likeMessage">
+                  👍 Você achou esse comentario útil!
+                </p>
+                <button class="bnt comen denunciar" id="openPopup">
+                  Denuciar
+                </button>
+              </div>
+            </div>
+            <a href="">VEJA MAIS AVALIAÇÕES <i class="ri-arrow-right-s-line"></i></a>
+          </div>
+        </div>
+      </section>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <h1>Denunciar está avaliação</h1>
+          <h4>Opcional: Por que você está denunciando isso?</h4>
+          <form>
+            <label><input type="checkbox" /> Sem relação com o assunto</label
+            ><br />
+            <label><input type="checkbox" /> Inadequado</label><br />
+            <label><input type="checkbox" /> Falso</label><br />
+            <label><input type="checkbox" /> Outros</label><br />
+            <p>
+              Verificaremos se essa avaliação está de acordo com as nossas
+              Diretrizes da comunidade. Se não estiver, ela será removida.
+            </p>
+            <button type="button" class="cancel" onclick="closePopup()">
+              Cancelar
+            </button>
+            <button type="button" onclick="sendFeedback()">Enviar</button>
+          </form>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                    
-                <h3 id="footer-logo">TechFix</h3>
-                <p class="footer">Excelência em serviços e produtos de qualidade. Nosso compromisso é com você!</p>
-            </div>
-
-            <div class="footer-column">
-                <h3>Links</h3>
-                <ul>
-                    <li class="footer"><a href="index.html">HOME</a></li>
-                    <li class="footer"><a href="#">SOBRE NÓS</a></li>
-                    <li class="footer"><a href="serviço.html">SERVIÇOS</a></li>
-                    <li class="footer"><a href="contato.html">CONTATO</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Contato</h3>
-                <ul>
-                    <li class="footer"><strong>Email: TechFix@gmail.com</strong></li><br>
-                    <li class="footer"><strong>Telefone: (11) 97018-4779</strong></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="#"><i class="ri-facebook-box-fill"></i></a>
-                    <a href="#"><i class="ri-instagram-line"></i></a>
-                    <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3 id="footer-logo">TechFix</h3>
+          <p class="footer">
+            Excelência em serviços e produtos de qualidade. Nosso compromisso é
+            com você!
+          </p>
         </div>
+
+        <div class="footer-column">
+          <h3>Links</h3>
+          <ul>
+            <li class="footer"><a href="home.html">HOME</a></li>
+            <li class="footer"><a href="Sobre.html">SOBRE NÓS</a></li>
+            <li class="footer"><a href="serviço.html">SERVIÇOS</a></li>
+            <li class="footer"><a href="contato.html">CONTATO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <ul>
+            <li class="footer"><strong>Email: TechFix@gmail.com</strong></li>
+            <br />
+            <li class="footer"><strong>Telefone: (11) 97018-4779</strong></li>
+          </ul>
+          <div class="social-icons">
+            <a href="#"><i class="ri-facebook-box-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+          </div>
+        </div>
+      </div>
     </footer>
-    
-</body>
+    <script>
+      document
+        .getElementById("likeButton")
+        .addEventListener("click", function () {
+          const message = document.getElementById("likeMessage");
+          message.style.display = "block";
+
+          // Esconder a mensagem após 3 segundos
+          setTimeout(function () {
+            message.style.display = "none";
+          }, 3000);
+        });
+    </script>
+  </body>
+</html>

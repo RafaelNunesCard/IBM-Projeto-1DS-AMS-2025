@@ -1,0 +1,139 @@
+:root {
+  /* =====Cores do Site===== */
+  --primaria: #fc8e53;
+  --secundaria: #5445ae;
+  --terciaria: #6a67d2;
+  --holver: #f7515b;
+  --braco: white;
+  --preto: #0b0b0b;
+  --cinza-escuro: #111111;
+  --cinza-claro: #1b1b1b;
+  --cinza-clarinho: #161616;
+
+  /* =====Fontes===== */
+  --h1: 1.7rem;
+  --h2: 1.3rem;
+  --p: 0.7rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+}
+
+.card {
+  width: 60vw;
+  background-color: var(--preto);
+  padding: 3rem 2rem;
+  border-radius: 10px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.day {
+  background: var(--cinza-escuro);
+  border-radius: 4px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.day:hover{
+    background-color: #f7515c10;
+}
+
+.day.past {
+  background: var(--cinza-claro);
+  cursor: default;
+}
+
+.day.selected {
+  background: var(--primaria);
+  color: white;
+  box-shadow: 0 0 2px 3px var(--primaria);
+}
+
+.header {
+  font-weight: bold;
+  text-align: center;
+  background: var(--primaria);
+  color: white;
+  padding: 10px;
+}
+
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 6px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  background: var(--primaria);
+  border: none;
+  transition: 0.3s;
+  color: white;
+  font-size: 1.3rem;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+#card_pagamento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.pag {
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1.5px solid white;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+
+.pag:hover {
+  transform: scale(1.05);
+}
+
+.pag.checked {
+  background-color: var(--primaria);
+  box-shadow: 0 0 1px .5px var(--primaria);
+  transition: .5s;
+  border: none;
+}
+
+.pag.checked:hover{
+    background-color: var(--holver);
+    box-shadow: 0 0 1px .5px var(--holver);
+}
+
+.confirm {
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 3px black;
+}
+
+.confirm:hover{
+    transform: scale(1.05);
+    box-shadow: -2px 6px 3px rgba(0, 0, 0, 0.699);
+}
