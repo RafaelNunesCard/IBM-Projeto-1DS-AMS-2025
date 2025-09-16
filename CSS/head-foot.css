@@ -26,6 +26,10 @@
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+}
+
 body {
   background: linear-gradient(to right, var(--preto), var(--cinza-claro));
   color: white;
