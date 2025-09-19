@@ -16,3 +16,272 @@
   --p: 0.7rem;
 }
 
+header {
+  visibility: hidden;
+}
+
+/*========== Perfil ==========*/
+
+section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.perfil {
+  width: 20vw;
+}
+
+/*===== Perfil img =====*/
+
+.perfil_img {
+  width: 90%;
+  height: 17.6vw;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3.5px solid #3d3d3d;
+}
+
+.perfil_img img {
+  width: 100%;
+}
+
+.icon_img {
+  position: relative;
+}
+
+.icon_img a {
+  position: absolute;
+  bottom: 14%;
+  right: 10%;
+  font-size: 1.3rem;
+  padding: 10px 11px;
+  color: white;
+  background-color: #1b1b1b;
+  box-shadow: 0px 6px 3px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition: transform 0.3s, color 0.4s;
+  border: 1.5px solid #3d3d3d;
+  overflow: hidden;
+}
+
+.icon_img a:hover {
+  color: var(--primaria);
+  transform: scale(1.1);
+}
+
+/*===== Status Popup =====*/
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--preto);
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  border-radius: 8px;
+}
+
+.suggestions{
+  font-size: 1.2rem;
+}
+
+.popup #status{
+  background: var(--cinza-claro);
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+}
+
+.popup h2 {
+  color: white;
+  font-size: 1rem;
+  margin: 0 0 1rem;
+}
+
+.popup button {
+  background-color: var(--primaria);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.popup button:hover {
+  background-color: var(--holver);
+}
+
+/*===== Perfil textos =====*/
+
+.perfil h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+.perfil h2 {
+  font-weight: 300;
+  color: #535353;
+  margin-bottom: 1rem;
+}
+
+.perfil h3 {
+  font-weight: 400;
+  margin-bottom: 0.7rem;
+}
+
+.perfil h3 a {
+  color: white;
+  transition: 0.3s;
+}
+
+.perfil h3 a:hover {
+  text-decoration: underline;
+  color: var(--holver);
+}
+
+.perfil p {
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.bnt {
+  display: flex;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 0.4rem 1.4rem;
+  margin: 0.7rem 0;
+  justify-content: center;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 15px 7px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+
+.bnt:hover {
+  letter-spacing: 3px;
+  color: var(--holver);
+}
+
+.bnt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0;
+  filter: blur(10px);
+  transition: 0.7s;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translateX(-80%);
+}
+
+.bnt:hover::before {
+  transform: skewX(45deg) translateX(190%);
+}
+
+.seguidores {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.seguidores a {
+  display: flex;
+  gap: 4px;
+  color: #3d3d3d;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.seguidores i {
+  transition: color 0.3s;
+}
+
+.seguidores a:hover {
+  color: var(--holver);
+}
+
+.seguidores a:hover i {
+  color: var(--holver);
+}
+
+.endereços h3 i {
+  color: #999999;
+}
+
+.obras {
+  width: 45vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card_obra {
+  width: 100%;
+  border: 2px solid #1b1b1b;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.card_obra h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primaria);
+}
+
+.card_obra p {
+  width: 98%;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.card_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_img img {
+  width: 90%;
+  border-radius: 10px;
+}
+
+.alinhar {
+  display: flex;
+  gap: 5px;
+}
+
+.alinhar h4 {
+  color: #616161;
+  font-size: 1.2rem;
+}

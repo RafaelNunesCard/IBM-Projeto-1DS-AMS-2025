@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="CSS/agendamento.css" />
+    <link rel="stylesheet" href="CSS/perfil.css" />
 
     <!--==================== CSS header e footer ====================-->
     <link rel="stylesheet" href="CSS/head-foot.css" />
@@ -22,12 +22,15 @@
     <!--==================== JS header ====================-->
     <script src="js/header.JS" defer></script>
 
+    <!--==================== JS Popup2 ====================-->
+    <script src="js/Popup2.js" defer></script>
+
     <title>TechFix</title>
   </head>
   <body>
     <header id="header">
       <div class="logo">
-        <img src="img/logo.png" alt="Logo"/>
+        <img src="img/logo.png" alt="Logo" />
         <h1>TechFix</h1>
       </div>
 
@@ -37,21 +40,134 @@
           >Menu <span class="hamburger"></span
         ></label>
         <ul class="menu">
-          <li><a href="cadastro.html" class="nav">HOME</a></li>
-          <li><a href="cadastro.html" class="nav">SOBRE NÓS</a></li>
-          <li><a href="cadastro.html" class="nav">SERVIÇOS</a></li>
-          <li><a href="cadastro.html" class="nav">CONTATO</a></li>
+          <li><a href="home.html" class="nav">HOME</a></li>
+          <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
+          <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
+          <li><a href="contato.html" class="nav">CONTATO</a></li>
           <li id="btn_cadastro">
-            <a href="cadastro.html" class="nav" id="cadastro">CADASTRO</a>
+            <a href="perfil.html" class="nav" id="cadastro">PERFIL</a>
           </li>
         </ul>
       </menu>
     </header>
 
     <main>
-        <section>
-            
-        </section>
+      <section>
+        <div class="perfil">
+          <div class="icon_img">
+            <div class="perfil_img">
+              <img src="img/Perfis/Rafael.webp" alt="imagem do usuario" />
+            </div>
+            <a href="#" onclick="openPopup()"
+              ><i class="ri-user-smile-line"></i
+            ></a>
+
+            <div class="overlay" id="overlay" onclick="closePopup()"></div>
+            <div class="popup" id="popup">
+              <h2>Editar Status</h2>
+              <label for="status">Oque aconteceu?</label>
+              <input
+                type="text"
+                id="status"
+                placeholder="Digite seu status..."
+              />
+              <div>
+                <div class="suggestions">
+                  <h4>Sugestões:</h4>
+                  <label><input type="radio" name="suggestion" value="De férias"> 🌴 De férias</label><br>
+                  <label><input type="radio" name="suggestion" value="Fora do escritório"> 🤒 Fora do escritório</label><br>
+                  <label><input type="radio" name="suggestion" value="Trabalhando de casa"> 🏡 Trabalhando de casa</label><br>
+                  <label><input type="radio" name="suggestion" value="Focando"> 🎯 Focando</label><br>
+                </div>
+                  <input type="radio" name="availability" value="busy" />
+                  Ocupado
+                  <span
+                    >Quando outras pessoas mencionam você, designam você ou
+                    solicitam sua revisão, a TechFix informará que você tem
+                    disponibilidade limitada.</span
+                  >
+                </label>
+                
+                <br />
+                <label>
+                  <input
+                    type="radio"
+                    name="availability"
+                    value="never"
+                    checked
+                  />
+                  Limpar status
+                </label>
+                <br />
+                <select id="clearStatus">
+                  <option value="never">Never</option>
+                  <option value="1h">1 hora</option>
+                  <option value="2h">2 horas</option>
+                  <option value="4h">4 horas</option>
+                  <option value="1d">um dia</option>
+                  <option value="7d">uma semana</option>
+                  <option value="30d">um mês</option>
+                </select>
+              </div>
+              <button onclick="setStatus()">Set status</button>
+              <button onclick="closePopup()">Cancelar</button>
+            </div>
+          </div>
+          <div class="Informacoes">
+            <h1>Rafael Nunes Cardoso</h1>
+            <h2>Ele/Dele</h2>
+            <p>
+              Sou Rafael Nunes Cardoso, aluno do 1º ano do Ensino Médio na ETEC
+              Zona Leste, cursando Desenvolvimento de Sistemas. Estou em
+              constante aprendizado.
+            </p>
+            <a href=""><button class="bnt">Editar seu perfil</button></a>
+            <div class="seguidores">
+              <a href="">
+                <h3 id="seguidores"><i class="ri-group-line"></i> 2</h3>
+                <h3>Seguidores</h3>
+              </a>
+              <a href="">
+                <h3 id="seguindo"><i class="ri-user-received-2-fill"></i> 5</h3>
+                <h3>Seguindo</h3>
+              </a>
+            </div>
+            <div class="endereços">
+              <h3><i class="ri-map-pin-line"></i> São Paulo</h3>
+              <h3>
+                <i class="ri-mail-line"></i>
+                <a href="mailto:rfnunes1000@gmail.com" target="_blank"
+                  >rfnunes1000@gmail.com</a
+                >
+              </h3>
+              <h3>
+                <i class="ri-phone-line"></i> <a href=""> (11) 97589-3396</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="obras">
+          <div class="card_obra">
+            <h1>Rodovia Pamonha</h1>
+            <div class="card_img">
+              <img
+                src="https://pfst.cf2.poecdn.net/base/image/705abbce91e7b7425234454929d381525de3d4b313b27c3c6517d96cd1121e03?w=1024&h=768&pmaid=466412230"
+                alt=""
+              />
+            </div>
+            <p>
+              A estrada principal, com várias faixas, serpenteia pela paisagem,
+              enquanto o viaduto elevado facilita o tráfego. A vegetação ao
+              redor contrasta com a estrutura de concreto, criando uma harmonia
+              entre urbanização e natureza.
+            </p>
+            <div class="alinhar">
+              <i class="ri-star-line"></i>
+              <h4>3</h4>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -59,8 +175,8 @@
         <div class="footer-column">
           <h3 id="footer-logo">TechFix</h3>
           <p>
-            Excelência em atendimento e serviços de qualidade. Nosso compromisso é
-            com você!
+            Excelência em atendimento e serviços de qualidade. Nosso compromisso
+            é com você!
           </p>
         </div>
 

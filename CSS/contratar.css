@@ -73,6 +73,7 @@ a{
 .aval_clt1 {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .aval_clt {
@@ -108,21 +109,21 @@ a{
 }
 
 .grafico {
-  clip-path: polygon(50% 0, 53% 3%, 100% 3%, 100% 100%, 0 100%, 0 3%, 47% 3%);
-  opacity: 0; /* Inicialmente invisível */
-  transition: opacity 0.5s ease; /* Transição suave */
+  clip-path: polygon(50% 0, 53% 1%, 100% 1%, 100% 100%, 0 100%, 0 1%, 47% 1%);
+  opacity: 0; 
+  transition: opacity 0.5s ease; 
   margin-top: 10px;
-  pointer-events: none; /* Evita interação quando invisível */
+  pointer-events: none; 
   position: absolute;
-  top: 295px;
+  top: 15px;
   padding: 1rem 2rem;
   border-radius: 20px;
   background-color: #1b1b1b;
 }
 
 .grafico.visible {
-  opacity: 1; /* Visível quando a classe "visible" é adicionada */
-  pointer-events: auto; /* Permite interação quando visível */
+  opacity: 1; 
+  pointer-events: auto; 
 }
 
 .barra {
@@ -274,7 +275,7 @@ a{
 .card {
   background: var(--cinza-claro);
   box-shadow: 0 10px 12px rgba(20, 20, 20, 0.5);
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   border-radius: 10px;
   width: 22%;
 }
@@ -473,6 +474,7 @@ th {
 .bnt_coment {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .comen {
@@ -491,7 +493,7 @@ th {
   color: #4caf50;
   margin-top: 20px;
   position: absolute;
-  bottom: -990px;
+  top: 45px;
 }
 
 .denunciar:hover {

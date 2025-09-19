@@ -40,7 +40,7 @@ body {
 header {
   display: flex;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 100;
   padding: 10px;
   height: auto;
@@ -148,6 +148,10 @@ header ul {
 }
 
 @media (max-width: 880px) {
+  header{
+    width: 100%;
+  }
+
   .nav::before {
     visibility: hidden;
   }

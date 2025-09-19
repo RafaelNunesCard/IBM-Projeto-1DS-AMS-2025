@@ -2,7 +2,7 @@
   /* =====Cores do Site===== */
   --primaria: #fc8e53;
   --secundaria: #5445ae;
-  --terciaria: #6a67d2;
+  --terciaria: #a54b85;
   --holver: #f7515b;
   --braco: white;
   --preto: #0b0b0b;
@@ -17,10 +17,6 @@
 }
 
 /* ============ Estilos básicos ============ */
-
-section {
-  margin: 10rem 0;
-}
 
 .container {
   display: flex;
@@ -40,7 +36,7 @@ section {
   justify-content: center;
   align-items: center;
   text-align: left;
-  margin: 2rem 0;
+  margin-bottom: 10rem;
   position: relative;
 }
 
@@ -51,6 +47,7 @@ section {
   height: 100%;
   background: var(--cinza-claro);
   transform: skewX(45deg) translateX(-60%);
+  z-index: -1;
 }
 
 #banr_home::after {
@@ -170,67 +167,129 @@ section {
   margin-bottom: 20px;
 }
 
-/* ============ Produtos ============ */
+/*=========== Serviços ===========*/
+.servicos{
+  text-align: center;
+}
 
-#produtos {
+.servicos h1{
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.servicos p{
+  font-size: 1.3rem;
+}
+
+.alinha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_serviços{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  text-align: left;
+  gap: 2.5rem;
+  width: 90%;
+  margin: 6rem 0;
+}
+
+.card{
   width: 100%;
-  height: auto;
-}
-
-#cont_produtos {
-  gap: 90px;
-}
-
-/* Card Produtos */
-.card {
-  padding: 3rem;
-  width: 22vw;
-  height: 100%;
-  background: linear-gradient(35deg, var(--cinza-claro), var(--cinza-clarinho));
-  box-shadow: 0 15px 7px rgba(0, 0, 0, 0.2);
-}
-
-#card_especial {
-  margin-bottom: 1.5rem;
-  background: linear-gradient(120deg, var(--primaria), var(--holver));
-}
-
-.card i {
-  font-size: 6rem;
-  margin: 1rem;
+  background-color: #212121;
   padding: 1rem;
+  border-radius: 10px;
 }
 
-.card h2 {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
+.card i{
+   background: linear-gradient(
+    35deg,
+    var(--primaria),
+    var(--holver),
+    #a54b85
+  );
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7); 
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.card p {
-  margin-bottom: 1rem;
-  font-size: var(--h2);
+.card h1{
+  font-size: 1.4rem;
 }
 
-.card a {
+.card p{
+  font-size: 1rem;
+}
+
+.cont{
+  text-align: center;
+}
+
+.cont h1{
+  font-size: 1.6rem;
+  color:transparent;
+  background: linear-gradient(
+    35deg,
+    var(--primaria),
+    var(--holver),
+    #a54b85
+  );
+  background-clip: text;
+}
+
+.cont a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bnt_especial {
+  display: flex;
   position: relative;
+  color: white;
   text-decoration: none;
   font-weight: bolder;
+  font-size: 1.2rem;
+  width: 90%;
+  padding: 0.7rem 1.4rem;
+  margin: 0.7rem;
+  justify-content: center;
   letter-spacing: 1px;
-  color: var(--holver);
   transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 17px;
+  box-shadow: 0 15px 7px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  overflow: hidden;
+  letter-spacing: 1px;
 }
 
-.card a:hover {
+.bnt_especial:hover {
   letter-spacing: 3px;
+  color: var(--holver);
 }
 
-.card a::after {
-  content: " +";
+.bnt_especial::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0;
+  filter: blur(10px);
+  transition: 0.7s;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translateX(-80%);
 }
 
-#card_especial a {
-  color: #5445ae;
+.bnt_especial:hover::before {
+  transform: skewX(45deg) translateX(190%);
 }
 
 /* ============ Beneficios ============ */
@@ -446,6 +505,23 @@ section {
   .card_img {
     height: auto;
   }
+
+  .container_serviços{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .cont{
+    background: transparent;
+  }
+
+  .cont h1{
+    font-size: 2.5rem;
+  }
+
+  .cont button{
+    font-size: 1.4rem;
+    width: 60%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -489,6 +565,13 @@ section {
 
   .frase {
     width: 90%;
+    display: block;
+  }
+  .frase button{
+    margin-top: 1rem;
+  }
+  .container_serviços{
+    margin-bottom: 0;
   }
 }
 
