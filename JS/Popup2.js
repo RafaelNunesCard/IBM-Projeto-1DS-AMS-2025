@@ -8,11 +8,7 @@ function closePopup() {
   document.getElementById("overlay").style.display = "none";
 }
 
-function setStatus() {
-  const status = document.getElementById("status").value;
-  const availability = document.querySelector(
-    'input[name="availability"]:checked'
-  ).value;
-  alert(`Status: ${status}, Availability: ${availability}`);
+function sendStatus() {
+  alert("Status atualizado!");
   closePopup();
 }

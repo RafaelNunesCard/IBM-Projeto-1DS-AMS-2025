@@ -273,6 +273,7 @@ a{
 }
 
 .card {
+  height: 90vh;
   background: var(--cinza-claro);
   box-shadow: 0 10px 12px rgba(20, 20, 20, 0.5);
   padding: 1rem;

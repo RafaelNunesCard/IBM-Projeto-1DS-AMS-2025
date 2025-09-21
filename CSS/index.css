@@ -168,79 +168,82 @@
 }
 
 /*=========== Serviços ===========*/
-.servicos{
+.servicos {
   text-align: center;
 }
 
-.servicos h1{
+.servicos h1 {
   font-size: 2.5rem;
   margin: 1rem 0;
 }
 
-.servicos p{
+.servicos p {
   font-size: 1.3rem;
+  margin: 1rem 0;
 }
 
-.alinha{
+.alinha {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1 1 0;
+  overflow-x: scroll;
 }
 
-.container_serviços{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
+.container_serviços {
+  display: flex;
   text-align: left;
-  gap: 2.5rem;
-  width: 90%;
-  margin: 6rem 0;
+  gap: 1rem;
+  height: 60vh;
+  animation: spin 60s infinite linear;
 }
 
-.card{
-  width: 100%;
+@keyframes spin{
+  from{translate: 10%;}
+  to{ translate: -55%;}
+}
+
+.alinha::-webkit-scrollbar{
+  display: none;
+}
+
+.card {
+  flex: 0 0 17%; 
+  height: 80%; 
   background-color: #212121;
   padding: 1rem;
   border-radius: 10px;
+  box-sizing: border-box; 
 }
 
-.card i{
-   background: linear-gradient(
-    35deg,
-    var(--primaria),
-    var(--holver),
-    #a54b85
-  );
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7); 
-  font-size: 2rem;
+.card i {
+  background: linear-gradient(35deg, var(--primaria), var(--holver), #a54b85);
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7);
+  font-size: 2.5rem;
   padding: 10px;
   border-radius: 10px;
 }
 
-.card h1{
+.card h1 {
   font-size: 1.4rem;
 }
 
-.card p{
-  font-size: 1rem;
+.card p {
+  font-size: 1.1rem;
 }
 
-.cont{
+.cont {
   text-align: center;
 }
 
-.cont h1{
+.cont h1 {
   font-size: 1.6rem;
-  color:transparent;
-  background: linear-gradient(
-    35deg,
-    var(--primaria),
-    var(--holver),
-    #a54b85
-  );
+  color: transparent;
+  background: linear-gradient(35deg, var(--primaria), var(--holver), #a54b85);
   background-clip: text;
 }
 
-.cont a{
+.cont a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,7 +298,7 @@
 /* ============ Beneficios ============ */
 
 #sec_beneficios {
-  margin: 10rem 0rem;
+  margin: 2rem 0rem;
 }
 
 #cont_beneficios {
@@ -398,6 +401,7 @@
 }
 
 .card_projetos h1 {
+  font-size: 1.9rem;
   margin: 0.5rem 0;
 }
 
@@ -419,7 +423,7 @@
 
 .card_img {
   width: 100%;
-  height: 400px;
+  height: 300px;
   background-color: var(--cinza-claro);
   border-radius: 10px;
   display: flex;
@@ -506,19 +510,19 @@
     height: auto;
   }
 
-  .container_serviços{
-    grid-template-columns: repeat(1,1fr);
+  .container_serviços {
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  .cont{
+  .cont {
     background: transparent;
   }
 
-  .cont h1{
+  .cont h1 {
     font-size: 2.5rem;
   }
 
-  .cont button{
+  .cont button {
     font-size: 1.4rem;
     width: 60%;
   }
@@ -567,10 +571,10 @@
     width: 90%;
     display: block;
   }
-  .frase button{
+  .frase button {
     margin-top: 1rem;
   }
-  .container_serviços{
+  .container_serviços {
     margin-bottom: 0;
   }
 }
