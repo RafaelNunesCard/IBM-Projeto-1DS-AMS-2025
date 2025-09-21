@@ -70,6 +70,7 @@ section {
   transform: scale(1.1);
 }
 
+/*===== Perfil Texto =====*/
 
 .perfil h1 {
   font-size: 2rem;
@@ -104,6 +105,8 @@ section {
   font-size: 1.3rem;
 }
 
+/*===== Nome-Editar =====*/
+
 .nome{
   position: relative;
 }
@@ -128,6 +131,20 @@ section {
   transform: scale(1.1);
 }
 
+
+/*===== Profissões =====*/
+.card_funcoes{
+  background-color: #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card_funcoes i{
+  color: #fd0;
+}
+
+/*===== Biografia =====*/
+
 .biografia p{
   border-radius: 10px;
   background-color: #000;
@@ -135,10 +152,13 @@ section {
   margin-bottom: 1rem;
 }
 
+/*===== Seguidores =====*/
+
 .seguidores {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin: 1.5rem 0;
 }
 
 .seguidores a {
@@ -161,53 +181,9 @@ section {
   color: var(--holver);
 }
 
+/*===== Endereços =====*/
+
 .endereços h3 i {
   color: #999999;
 }
 
-.obras {
-  width: 45vw;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.card_obra {
-  width: 100%;
-  border: 2px solid #1b1b1b;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.card_obra h1 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: var(--primaria);
-}
-
-.card_obra p {
-  width: 98%;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.card_img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card_img img {
-  width: 90%;
-  border-radius: 10px;
-}
-
-.alinhar {
-  display: flex;
-  gap: 5px;
-}
-
-.alinhar h4 {
-  color: #616161;
-  font-size: 1.2rem;
-}
