@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="CSS/home.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
 
     <!--==================== CSS header e footer ====================-->
     <link rel="stylesheet" href="CSS/head-foot.css" />
@@ -37,58 +37,191 @@
           >Menu <span class="hamburger"></span
         ></label>
         <ul class="menu">
-          <li><a href="#" class="nav">HOME</a></li>
-          <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
-          <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
-          <li><a href="contato.html" class="nav">CONTATO</a></li>
+          <li><a href="cadastro.html" class="nav">HOME</a></li>
+          <li><a href="cadastro.html" class="nav">SOBRE NÓS</a></li>
+          <li><a href="cadastro.html" class="nav">SERVIÇOS</a></li>
+          <li><a href="cadastro.html" class="nav">CONTATO</a></li>
           <li id="btn_cadastro">
-            <a href="perfil.html" class="nav" id="cadastro">PERFIL</a>
+            <a href="cadastro.html" class="nav" id="cadastro">PERFIL</a>
           </li>
         </ul>
       </menu>
     </header>
 
     <main>
-      <section id="banner1">
-
+      <section id="banr_home">
+        <div id="img_banr"><img src="img/banner1.png" alt="Pessoa" /></div>
+        <div id="text_banr">
+          <h2>Olá precisa de ajuda?</h2>
+          <h1>Manutenção e Reparo</h1>
+          <p>
+            Se você precisa de assistência com consertos ou manutenção, estamos
+            aqui para ajudar! Entre em contato e descubra como podemos resolver
+            seus problemas de forma rápida e eficiente.
+          </p>
+          <a href="cadastro.html"><button class="bnt">CADASTRAR</button></a>
+        </div>
       </section>
-      <section id="banner">
-        <div class="banner">
-          <div class="text_servicos">
-            <h1>Profissionais para Seus Serviços Residenciais</h1>
-            <p>
-              Oferecemos uma gama completa de serviços para garantir que sua casa esteja sempre em perfeitas condições.
-            </p>
-            <div class="listas">
-              <ul>
-                <li><i class="ri-check-fill"></i></i>Reabilitações Regulares</li>
-                <li><i class="ri-check-fill"></i></i>Manutenção Geral</li>
-                <li><i class="ri-check-fill"></i></i>Serviços de Limpeza</li>
-              </ul>
-              <ul>
-                <li><i class="ri-check-fill"></i></i>Planejamento Personalizado</li>
-                <li><i class="ri-check-fill"></i></i>Amigável ao Orçamento</li>
-                <li><i class="ri-check-fill"></i></i>Soluções Ecológicas</li>
-              </ul>
+
+      <section class="servicos">
+        <h1>Nossos Serviços de Manutenção e Reparo</h1>
+        <p>Estamos aqui para garantir que sua casa ou empresa funcione perfeitamente. Confira nossos serviços especializados:</p>
+        <div class="alinha">
+          <div class="container_serviços">
+            <div class="card autoShow">
+              <i class="ri-building-line"></i>
+              <h1>Manutenção Predial:</h1>
+              <p>Cuidamos de todos os aspectos estruturais e funcionais do seu edifício.</p>
             </div>
-            <div class="text_destaque">
-                <h3><i class="ri-phone-fill"></i> (11) 97018-4779</h3>
-                <p>Estamos prontos para ajudar você a cuidar do seu lar!</p>
+            <div class="card autoShow">
+              <i class="ri-macbook-line"></i>
+              <h1>Manutenção de Computadores:</h1>
+              <p>Garantimos que seus dispositivos funcionem de maneira eficiente e segura.</p>
             </div>
-          </div>
-          <div class="img">
-            <img
-              src="https://pfst.cf2.poecdn.net/base/image/8dd7b92fc6673c55c2a628e3a5d90e7608cb15011bf51d5635da33d0ea35de26?w=1024&h=768&pmaid=466552374"
-              alt="Cara em cima da casa"
-            />
+            <div class="card autoShow">
+              <i class="ri-computer-line"></i>
+              <h1>Reparo de Eletrodomésticos:</h1>
+              <p>Consertos rápidos e eficazes para garantir o funcionamento dos seus aparelhos.</p>
+            </div>
+            <div class="card autoShow">
+              <i class="ri-roadster-line"></i>
+              <h1>Manutenção de Veículos:</h1>
+              <p>Serviços de manutenção para manter seu carro em ótimo estado.</p>
+            </div>
+            <div class="card autoShow">
+              <i class="ri-server-line"></i>
+              <h1>Manutenção de Equipamentos Industriais:</h1>
+              <p>Soluções para garantir a eficiência e segurança dos seus maquinários.</p>
+            </div>
+            <div class="card autoShow">
+              <i class="ri-paint-brush-line"></i>
+              <h1>Serviços de Pintura:</h1>
+              <p>Transforme seus espaços com um acabamento profissional.</p>
+            </div>
+            <div class="card autoShow">
+              <i class="ri-radar-line"></i>
+              <h1>Manutenção de Sistemas Elétricos:</h1>
+              <p>Inspeção e reparo de instalações elétricas para garantir segurança e eficiência.</p>
+            </div>
+            <div class="card cont autoShow">
+              <h1>Venha conhecer nossos serviços!</h1>
+              <a href="serviço.html"><button class="bnt_especial" id="bnt_conheça">Conheça +</button></a>
+            </div>
           </div>
         </div>
       </section>
-      
 
-      <section>
-        <div class=""> 
+      <section id="sec_beneficios">
+        <div class="container" id="cont_beneficios">
+          <div class="anos autoShow">
+            <h1>3</h1>
+            <h2>Anos de Esperiencia</h2>
+          </div>
+          <div class="beneficios">
+            <div class="card_retangulo autoShow">
+              <h2>600+</h2>
+              <p>Clientes</p>
+            </div>
+            <div class="card_retangulo autoShow">
+              <h2>12+</h2>
+              <p>Projetos Completos</p>
+            </div>
+            <div class="card_retangulo autoShow">
+              <h2>10</h2>
+              <p>Conquistas</p>
+            </div>
+            <div class="card_retangulo autoShow">
+              <h2>40+</h2>
+              <p>Assinantes</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section id="Titulo_projetos" class="container">
+        <div class="frase" id="frase1">
+          <div>
+            <h1>Projetos Concluídos</h1>
+            <p>Alguns projetos que fizemos:</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="Projetos">
+        <div class="container" id="cont_projetos">
+          <div class="card_projetos autoShow">
+            <div class="card_img">
+              <img
+                src="img/Projetos/Agendamento.jpg"
+                alt="Projeto de Sucesso"
+              />
+            </div>
+            <h1>Agendamento Online</h1>
+            <a href="cadastro.html">DESCUBRA MAIS</a>
+          </div>
+          <div class="card_projetos">
+            <div class="card_img autoShow">
+              <img src="img/Projetos/podcast.jpg" alt="Projeto de Sucesso" />
+            </div>
+            <h1>Blog de Dicas e Tutoriais</h1>
+            <a href="cadastro.html">DESCUBRA MAIS</a>
+          </div>
+          <div class="card_projetos">
+            <div class="card_img autoShow">
+              <img
+                src="img/Projetos/Ligação com o cliente.jpg"
+                alt="Projeto de Sucesso"
+              />
+            </div>
+            <h1>Área do Cliente</h1>
+            <a href="cadastro.html">DESCUBRA MAIS</a>
+          </div>
+          <div class="card_projetos">
+            <div class="card_img autoShow">
+              <img src="img/Projetos/Contrução.jpg" alt="Projeto de Sucesso" />
+            </div>
+            <h1>Catálogo de Serviços</h1>
+            <a href="cadastro.html">DESCUBRA MAIS</a>
+          </div>
+          <div class="card_projetos">
+            <div class="card_img autoShow">
+              <img
+                src="img/Projetos/Suporte ao Cliente.jpg"
+                alt="Projeto de Sucesso"
+              />
+            </div>
+            <h1>Suporte ao Cliente</h1>
+            <a href="cadastro.html">DESCUBRA MAIS</a>
+          </div>
+          <div class="card_projetos">
+            <div class="card_img autoShow">
+              <img
+                src="img/Projetos/Depoimentos.jpg"
+                alt="Projeto de Sucesso"
+              />
+            </div>
+            <h1>Depoimentos de Clientes</h1>
+            <a href="cadastro.html">DESCUBRA MAIS</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="Junte-se">
+        <div class="frase">
+          <div id="text_frase">
+            <h1>Junte-se a Nós</h1>
+            <p>
+              Agora que você conhece um pouco sobre o que fazemos,
+              que tal se inscrever e fazer parte da nossa equipe?
+            </p>
+          </div>
+          <div>
+            <a href="cadastro.html">
+              <button class="bnt" id="bnt_ultimo" href="cadastro.html">
+                CADASTRAR-SE
+              </button>
+            </a>
+          </div>
         </div>
       </section>
     </main>
@@ -97,7 +230,7 @@
       <div class="footer-container">
         <div class="footer-column">
           <h3 id="footer-logo">TechFix</h3>
-          <p class="footer">
+          <p>
             Excelência em atendimento e serviços de qualidade. Nosso compromisso
             é com você!
           </p>
@@ -106,19 +239,19 @@
         <div class="footer-column">
           <h3>Links</h3>
           <ul>
-            <li class="footer"><a href="#">HOME</a></li>
-            <li class="footer"><a href="Sobre.html">SOBRE NÓS</a></li>
-            <li class="footer"><a href="serviço.html">SERVIÇOS</a></li>
-            <li class="footer"><a href="contato.html">CONTATO</a></li>
+            <li><a href="cadastro.html">HOME</a></li>
+            <li><a href="cadastro.html">SOBRE NÓS</a></li>
+            <li><a href="cadastro.html">SERVIÇOS</a></li>
+            <li><a href="cadastro.html">CONTATO</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h3>Contato</h3>
           <ul>
-            <li class="footer"><strong>Email: TechFix@gmail.com</strong></li>
+            <li><strong>Email: TechFix@gmail.com</strong></li>
             <br />
-            <li class="footer"><strong>Telefone: (11) 97018-4779</strong></li>
+            <li><strong>Telefone: (11) 97018-4779</strong></li>
           </ul>
           <div class="social-icons">
             <a href="#"><i class="ri-facebook-box-fill"></i></a>

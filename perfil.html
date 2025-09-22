@@ -60,193 +60,134 @@
     <main>
       <section>
         <div class="perfil">
-          <div class="icon_img">
-            <div class="perfil_img">
-              <img src="img/Perfis/Rafael.webp" alt="imagem do usuario" />
-            </div>
-            <a href="#" onclick="openPopup()"
-              ><i class="ri-emotion-line"></i></a>
-
-            <div class="overlay" id="overlay" onclick="closePopup()"></div>
-            <div class="popup" id="popup">
-              <h2>Editar Status</h2>
-              <div class="select">
-                <div id="category-select">
-                  <label for="options-view-button">Categoria</label>
-                  <input type="checkbox" id="options-view-button" />
-
-                  <div id="select-button">
-                    <div id="selected-value">Selecione a categoria</div>
-
-                    <div id="chevrons">
-                      <i class="ri-arrow-down-s-line"></i>
+          <div class="perfil_esquerda">
+            <div class="icon_img">
+              <div class="perfil_img">
+                <img src="img/Perfis/Rafael.webp" alt="imagem do usuario" />
+              </div>
+              <a href="#" onclick="openPopup()"
+                ><i class="ri-emotion-line"></i
+              ></a>
+              <div class="overlay" id="overlay" onclick="closePopup()"></div>
+              <div class="popup" id="popup">
+                <h2>Editar Status</h2>
+                <div class="select">
+                  <div id="category-select">
+                    <label for="options-view-button">Categoria</label>
+                    <input type="checkbox" id="options-view-button" />
+                    <div id="select-button">
+                      <div id="selected-value">Selecione a categoria</div>
+                      <div id="chevrons">
+                        <i class="ri-arrow-down-s-line"></i>
+                      </div>
                     </div>
                   </div>
+                  <ul id="options">
+                    <li class="option">
+                      <input
+                        type="radio"
+                        name="category"
+                        value="vacation"
+                        data-label="Estou de férias"
+                      />
+                      <i class="ri-tent-fill"></i>
+                      <span class="label">Estou de férias</span>
+                      <i class="ri-check-line"></i>
+                    </li>
+                    <li class="option">
+                      <input
+                        type="radio"
+                        name="category"
+                        value="sick"
+                        data-label="Estou doente"
+                      />
+                      <i class="ri-nurse-fill"></i>
+                      <span class="label">Estou doente</span>
+                      <i class="ri-check-line"></i>
+                    </li>
+                    <li class="option">
+                      <input
+                        type="radio"
+                        name="category"
+                        value="focusing"
+                        data-label="Estou focado"
+                      />
+                      <i class="ri-brain-fill"></i>
+                      <span class="label">Estou focado</span>
+                      <i class="ri-check-line"></i>
+                    </li>
+                    <li class="option">
+                      <input
+                        type="radio"
+                        name="category"
+                        value="grief"
+                        data-label="Estou de luto"
+                      />
+                      <i class="ri-emotion-sad-fill"></i>
+                      <span class="label">Estou de luto</span>
+                      <i class="ri-check-line"></i>
+                    </li>
+                  </ul>
                 </div>
-
-                <ul id="options">
-                  <li class="option">
-                    <input
-                      type="radio"
-                      name="category"
-                      value="vacation"
-                      data-label="Estou de férias"
-                    />
-
-                    <i class="ri-tent-fill"></i>
-                    <span class="label">Estou de férias</span>
-                    <i class="ri-check-line"></i>
-                  </li>
-
-                  <li class="option">
-                    <input
-                      type="radio"
-                      name="category"
-                      value="sick"
-                      data-label="Estou doente"
-                    />
-
-                    <i class="ri-nurse-fill"></i>
-                    <span class="label">Estou doente</span>
-                    <i class="ri-check-line"></i>
-                  </li>
-
-                  <li class="option">
-                    <input
-                      type="radio"
-                      name="category"
-                      value="focusing"
-                      data-label="Estou focado"
-                    />
-
-                    <i class="ri-brain-fill"></i>
-                    <span class="label">Estou focado</span>
-                    <i class="ri-check-line"></i>
-                  </li>
-
-                  <li class="option">
-                    <input
-                      type="radio"
-                      name="category"
-                      value="grief"
-                      data-label="Estou de luto"
-                    />
-
-                    <i class="ri-emotion-sad-fill"></i>
-                    <span class="label">Estou de luto</span>
-                    <i class="ri-check-line"></i>
-                  </li>
-                </ul>
-              </div>
-
-              <p>Escolha o tempo que vai durar o status:</p>
-
-              <div class="select2">
-                <div id="category-select2">
-                  <label for="options-view-button2">Duração:</label>
-                  <input type="checkbox" id="options-view-button2" />
-
-                  <div id="select-button2">
-                    <div id="selected-value2">Selecione a categoria</div>
-
-                    <div id="chevrons2">
-                      <i class="ri-arrow-down-s-line"></i>
+                <p>Escolha o tempo que vai durar o status:</p>
+                <div class="select2">
+                  <div id="category-select2">
+                    <label for="options-view-button2">Duração:</label>
+                    <input type="checkbox" id="options-view-button2" />
+                    <div id="select-button2">
+                      <div id="selected-value2">Selecione a categoria</div>
+                      <div id="chevrons2">
+                        <i class="ri-arrow-down-s-line"></i>
+                      </div>
                     </div>
                   </div>
+                  <ul id="options2">
+                    <li class="option2">
+                      <input
+                        type="radio"
+                        name="category"
+                        value="hour"
+                        data-label="Uma hora"
+                      />
+                      <span class="label2">Uma hora</span>
+                      <i class="ri-check-line"></i>
+                    </li>
+                    <li class="option2">
+                      <input
+                        type="radio"
+                        name="category"
+                        value="day"
+                        data-label="1 dia"
+                      />
+                      <span class="label2">Um dia</span>
+                      <i class="ri-check-line"></i>
+                    </li>
+                    <li class="option2">
+                      <input
+                        type="radio"
+                        name="category"
+                        value="week"
+                        data-label="Uma semana"
+                      />
+                      <span class="label2">Uma semana</span>
+                      <i class="ri-check-line"></i>
+                    </li>
+                    <li class="option2">
+                      <input
+                        type="radio"
+                        name="category"
+                        value="month"
+                        data-label="Um mês"
+                      />
+                      <span class="label2">Um mês</span>
+                      <i class="ri-check-line"></i>
+                    </li>
+                  </ul>
                 </div>
-
-                <ul id="options2">
-                  <li class="option2">
-                    <input
-                      type="radio"
-                      name="category"
-                      value="hour"
-                      data-label="Uma hora"
-                    />
-
-                    <span class="label2">Uma hora</span>
-                    <i class="ri-check-line"></i>
-                  </li>
-
-                  <li class="option2">
-                    <input
-                      type="radio"
-                      name="category"
-                      value="day"
-                      data-label="1 dia"
-                    />
-
-                    <span class="label2">Um dia</span>
-                    <i class="ri-check-line"></i>
-                  </li>
-
-                  <li class="option2">
-                    <input
-                      type="radio"
-                      name="category"
-                      value="week"
-                      data-label="Uma semana"
-                    />
-
-                    <span class="label2">Uma semana</span>
-                    <i class="ri-check-line"></i>
-                  </li>
-
-                  <li class="option2">
-                    <input
-                      type="radio"
-                      name="category"
-                      value="month"
-                      data-label="Um mês"
-                    />
-
-                    <span class="label2">Um mês</span>
-                    <i class="ri-check-line"></i>
-                  </li>
-                </ul>
+                <button onclick="sendStatus()">Aplicar status</button>
+                <button onclick="closePopup()">Cancelar</button>
               </div>
-
-              <button onclick="sendStatus()">Aplicar status</button>
-              <button onclick="closePopup()">Cancelar</button>
             </div>
-          </div>
-          <div class="Informacoes">
-            <div class="nome">
-              <h1>Rafael Nunes Cardoso</h1>
-              <a href="" id="editar"><i class="ri-edit-fill"></i></a>
-              <h2>Ele/Dele</h2>
-              <h3>Engenheiro</h3>
-            </div>
-
-            <div class="funções">
-              <div class="card_funcoes">
-                <h3><i class="ri-trophy-fill"></i> Engenharia</h3>
-              </div>
-              
-            </div>
-
-            <div class="biografia">
-              <h3><i class="ri-user-fill"></i>Biografia:</h3>
-              <p>
-                Jorge Fonseca dos Santos é um engenheiro civil com mais de 12
-                anos de experiência no setor de construção e infraestrutura.
-                Nascido e criado em São Paulo, Jorge sempre teve uma paixão pela
-                engenharia e pelo impacto positivo que projetos bem executados
-                podem ter na sociedade.
-              </p>
-            </div>
-
-            <div class="biografia">
-              <h3><i class="ri-book-marked-fill"></i>Educação:</h3>
-              <p>
-                Jorge graduou-se em Engenharia Civil pela Universidade XYZ, onde
-                desenvolveu uma base sólida em princípios de engenharia e gestão
-                de projetos. Posteriormente, ele obteve certificação em Gestão
-                de Projetos pela Associação de Engenheiros, aprimorando suas
-                habilidades em planejamento e execução.
-              </p>
-            </div>
-
             <div class="endereços">
               <h3><i class="ri-map-pin-line"></i> São Paulo</h3>
               <h3>
@@ -271,7 +212,39 @@
               </a>
             </div>
           </div>
+           <div class="Informacoes">
+          <div class="nome">
+            <h1>Rafael Nunes Cardoso</h1>
+            <a href="" id="editar"><i class="ri-edit-fill"></i></a>
+            <h3>Engenheiro</h3>
+            <h2>Ele/Dele</h2>
+          </div>
+
+          <div class="biografia">
+            <h3><i class="ri-user-fill"></i>Biografia:</h3>
+            <p>
+              Jorge Fonseca dos Santos é um engenheiro civil com mais de 12 anos
+              de experiência no setor de construção e infraestrutura. Nascido e
+              criado em São Paulo, Jorge sempre teve uma paixão pela engenharia
+              e pelo impacto positivo que projetos bem executados podem ter na
+              sociedade.
+            </p>
+          </div>
+
+          <div class="biografia">
+            <h3><i class="ri-book-marked-fill"></i>Educação:</h3>
+            <p>
+              Jorge graduou-se em Engenharia Civil pela Universidade XYZ, onde
+              desenvolveu uma base sólida em princípios de engenharia e gestão
+              de projetos. Posteriormente, ele obteve certificação em Gestão de
+              Projetos pela Associação de Engenheiros, aprimorando suas
+              habilidades em planejamento e execução.
+            </p>
+          </div>
         </div>
+        </div>
+
+       
       </section>
     </main>
 
