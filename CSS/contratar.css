@@ -23,7 +23,7 @@ a{
 /*======= Banner =======*/
 
 .banner_clt {
-  height: 65vh;
+  height: 85vh;
   background: var(--preto);
   display: flex;
   justify-content: center;
