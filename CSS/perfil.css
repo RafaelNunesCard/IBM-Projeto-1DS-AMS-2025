@@ -39,6 +39,8 @@ section {
 /*===== Perfil img =====*/
 
 .perfil_img {
+  display: flex;
+  justify-content: center;
   width: 20vw;
   height: 19.2vw;
   border-radius: 50%;
@@ -47,7 +49,7 @@ section {
 }
 
 .perfil_img img {
-  width: 100%;
+  height: 100%;
 }
 
 .icon_img {
@@ -140,6 +142,7 @@ section {
 .perfil h3 a {
   color: white;
   transition: 0.3s;
+  font-size: 1rem;
 }
 
 .perfil h3 a:hover {
@@ -149,7 +152,7 @@ section {
 
 .perfil p {
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 /*===== Nome-Editar =====*/

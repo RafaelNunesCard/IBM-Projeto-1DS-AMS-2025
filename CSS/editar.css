@@ -1,0 +1,132 @@
+:root {
+  --primaria: #fc8e53;
+  --holver: #f7515b;
+  --preto: #0b0b0b;
+  --cinza-claro: #1b1b1b;
+  --cinza-escuro: #111111;
+  --branco: #fff;
+}
+
+/* Container */
+body {
+  background: var(--cinza-claro);
+  color: var(--branco);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.editar {
+  background: var(--cinza-escuro);
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.editar h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  background: linear-gradient(to right, var(--primaria), var(--holver));
+  background-clip: text;
+  color: transparent;
+}
+
+/* Form */
+#form-editar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#form-editar label {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+
+/* Inputs e textarea */
+#form-editar input,
+#form-editar textarea {
+  padding: 10px 12px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: var(--cinza-claro);
+  color: var(--branco);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+#form-editar input:focus,
+#form-editar textarea:focus {
+  border-color: var(--primaria);
+  box-shadow: 0 0 0 2px rgba(252, 142, 83, 0.4);
+  outline: none;
+}
+
+#form-editar textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Preview avatar */
+#preview {
+  margin: 10px 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #333;
+  display: block;
+}
+
+/* Botões */
+.botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button.salvar {
+  background: var(--primaria);
+  color: var(--preto);
+  font-weight: bold;
+}
+
+button.salvar:hover {
+  background: var(--holver);
+}
+
+button.cancelar {
+  background: #333;
+  color: var(--branco);
+}
+
+button.cancelar:hover {
+  background: #555;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .editar {
+    padding: 15px;
+  }
+  #form-editar {
+    gap: 12px;
+  }
+}
