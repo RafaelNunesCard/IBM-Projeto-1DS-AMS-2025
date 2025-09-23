@@ -40,6 +40,15 @@ a {
 
 .tipos {
   font-size: 0.8rem;
+  width: 14vw;
+  padding: 10px;
+  border-radius: 10px;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.tipos:hover{
+  background-color: var(--primaria);
 }
 
 .i {
@@ -51,15 +60,13 @@ a {
 }
 
 .i i {
-  background: var(--primaria);
   padding: 0.5rem;
   border-radius: 50%;
-  transition: transform 0.5s, background 1s;
+  transition: transform 0.5s;
   margin-bottom: 0.5rem;
 }
 
 .i i:hover {
-  background: var(--secundaria);
   transform: scale(1.2);
 }
 
