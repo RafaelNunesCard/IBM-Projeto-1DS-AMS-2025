@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (perfil.local) document.querySelector(".endereços a[href^='#']").textContent = perfil.local;
     if (perfil.email) document.querySelector(".endereços a[href^='mailto']").textContent = perfil.email;
     if (perfil.telefone) document.querySelector(".endereços a[href^='tel']").textContent = perfil.telefone;
-    if (perfil.biografia) document.querySelector(".biografia p").textContent = perfil.biografia;
-    if (perfil.educacao) document.querySelectorAll(".biografia p")[1].textContent = perfil.educacao;
+    if (perfil.biografia) document.querySelector(".biografia .bio").textContent = perfil.biografia;
+    if (perfil.educacao) document.querySelector(".biografia .edu").textContent = perfil.educacao;
 
     // Link para editar
     const editarLink = document.getElementById("editar");

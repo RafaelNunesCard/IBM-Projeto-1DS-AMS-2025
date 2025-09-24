@@ -21,13 +21,14 @@ a {
 }
 
 #banner {
-  height: 40vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2.9rem;
-  background-color: var(--preto);
-  border-radius: 0px 0px 150px 150px;
+  background: linear-gradient(180deg, var(--cinza-escuro), var(--preto));
+  border-radius: 0px 0px 120px 120px;
+  color: var(--braco);
 }
 
 /* ===== Tipos de serviço===== */
@@ -39,35 +40,30 @@ a {
 }
 
 .tipos {
-  font-size: 0.8rem;
-  width: 14vw;
-  padding: 10px;
+  font-size: 0.9rem;
+  width: 180px;
+  padding: 15px;
   border-radius: 10px;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
+  background: var(--cinza-claro);
+  color: white;
 }
 
-.tipos:hover{
+.tipos:hover {
   background-color: var(--primaria);
+}
+
+.tipos h2 {
+  font-size: 1.2rem;
 }
 
 .i {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5rem;
-  border-radius: 50%;
-}
-
-.i i {
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: transform 0.5s;
-  margin-bottom: 0.5rem;
-}
-
-.i i:hover {
-  transform: scale(1.2);
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 
 /* ===== Onde fica os CLTS ===== */
@@ -82,6 +78,11 @@ a {
   justify-content: center;
   align-items: center;
   margin: 30px;
+  transition: all 0.3s ease;
+}
+
+.card_clt.hidden {
+  display: none;
 }
 
 .clt {
@@ -89,24 +90,33 @@ a {
   justify-content: center;
   align-items: center;
   width: 70%;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
   margin: 20px 0px;
-  border-radius: 10px;
-  background-color: var(--preto);
-  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  background: rgba(26, 26, 26, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clt:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .img_clt {
-  width: 30%;
-  height: 80%;
+  width: 30vw;
+  height: 150px;
   overflow: hidden;
-  margin: 0px 20px;
+  margin-right: 20px;
+  border-radius: 10px;
 }
 
 .img_clt img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  object-fit: cover;
 }
 
 .text_clt {
@@ -114,6 +124,11 @@ a {
   padding-right: 20px;
   display: table-column;
   justify-content: space-between;
+}
+
+.text_clt h1,
+.text_clt h3 {
+  color: #ffffff;
 }
 
 .text_clt h1 {
@@ -128,7 +143,8 @@ a {
 
 .text_clt p {
   font-size: 1rem;
-  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
 }
 
 .alinha_clt {
@@ -137,8 +153,8 @@ a {
   align-items: center;
 }
 
-.alinha_clt h2{
-  margin: .5rem 0;
+.alinha_clt h2 {
+  margin: 0.5rem 0;
   font-size: 1.6rem;
   color: var(--primaria);
 }
@@ -146,14 +162,15 @@ a {
 .aval_clt {
   font-size: 1.3rem;
   color: transparent;
-  background: linear-gradient(70deg, yellow , var(--primaria));
+  background: linear-gradient(70deg, yellow, var(--primaria));
   background-clip: text;
   display: flex;
   align-items: center;
   gap: 7px;
 }
 
-.aval_clt h3,i{
+.aval_clt h3,
+i {
   margin: 0;
 }
 
@@ -221,3 +238,5 @@ a {
   width: 300px;
   font-size: 1.9rem;
 }
+
+

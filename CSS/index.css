@@ -2,13 +2,15 @@
   /* =====Cores do Site===== */
   --primaria: #fc8e53;
   --secundaria: #5445ae;
-  --terciaria: #a54b85;
+  --terciaria: #6a67d2;
   --holver: #f7515b;
-  --braco: white;
-  --preto: #0b0b0b;
-  --cinza-escuro: #111111;
-  --cinza-claro: #1b1b1b;
-  --cinza-clarinho: #161616;
+  --braco: #ffffff;
+
+  /* Tons suavizados */
+  --preto: #1a1a1a;
+  --cinza-escuro: #222222;
+  --cinza-claro: #2a2a2a;
+  --cinza-clarinho: #333333;
 
   /* =====Fontes===== */
   --h1: 1.7rem;
@@ -213,7 +215,14 @@
   background-color: #212121;
   padding: 1rem;
   border-radius: 10px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 .card i {

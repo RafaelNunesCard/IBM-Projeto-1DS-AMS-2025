@@ -4,11 +4,13 @@
   --secundaria: #5445ae;
   --terciaria: #6a67d2;
   --holver: #f7515b;
-  --braco: white;
-  --preto: #0b0b0b;
-  --cinza-escuro: #111111;
-  --cinza-claro: #1b1b1b;
-  --cinza-clarinho: #161616;
+  --braco: #ffffff;
+
+  /* Tons suavizados */
+  --preto: #1a1a1a;
+  --cinza-escuro: #222222;
+  --cinza-claro: #2a2a2a;
+  --cinza-clarinho: #333333;
 
   /* =====Fontes===== */
   --h1: 1.7rem;
@@ -46,8 +48,8 @@
   transition: background 0.3s;
 }
 
-.day:hover{
-    background-color: #f7515c10;
+.day:hover {
+  background-color: #f7515c10;
 }
 
 .day.past {
@@ -115,14 +117,14 @@ button:hover {
 
 .pag.checked {
   background-color: var(--primaria);
-  box-shadow: 0 0 1px .5px var(--primaria);
-  transition: .5s;
+  box-shadow: 0 0 1px 0.5px var(--primaria);
+  transition: 0.5s;
   border: none;
 }
 
-.pag.checked:hover{
-    background-color: var(--holver);
-    box-shadow: 0 0 1px .5px var(--holver);
+.pag.checked:hover {
+  background-color: var(--holver);
+  box-shadow: 0 0 1px 0.5px var(--holver);
 }
 
 .confirm {
@@ -133,7 +135,7 @@ button:hover {
   box-shadow: 0 2px 3px black;
 }
 
-.confirm:hover{
-    transform: scale(1.05);
-    box-shadow: -2px 6px 3px rgba(0, 0, 0, 0.699);
+.confirm:hover {
+  transform: scale(1.05);
+  box-shadow: -2px 6px 3px rgba(0, 0, 0, 0.699);
 }
