@@ -305,25 +305,8 @@ section h2 {
   .team-grid {
     grid-template-columns: 1fr;
   }
-}
 
-@media screen and (max-width: 600px) {
-  header {
-    flex-direction: column; /* Muda para coluna */
-    align-items: flex-start; /* Alinha à esquerda */
-    padding: 10px; /* Adiciona padding */
-  }
-  nav > ul {
-    gap: 10px; /* Reduz o gap */
-    padding: 10px; /* Adiciona padding */
-  }
-
-  li > a {
-    font-size: 1rem; /* Reduz o tamanho da fonte */
-  }
-
-  .logo {
-    width: 100px; /* Reduz a largura do logo */
-    height: 40px; /* Reduz a altura do logo */
+  .team-grid2 {
+    grid-template-columns: 1fr;
   }
 }
