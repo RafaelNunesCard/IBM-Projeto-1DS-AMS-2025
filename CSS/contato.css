@@ -293,7 +293,7 @@ outline: none;
 .btn1 {
   padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   transition: background 0.3s;
@@ -303,10 +303,12 @@ outline: none;
 .btn-primary {
   background: var(--primaria);
   color: white;
+  transition: .2s;
 }
 
 .btn-primary:hover {
   background: var(--holver);
+  transform: scale(1.05);
 }
 
 /* Mensagem de sucesso */

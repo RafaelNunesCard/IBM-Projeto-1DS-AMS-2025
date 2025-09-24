@@ -152,6 +152,9 @@ header ul {
 
 .logo h1 {
   font-size: 27px;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 880px) {
