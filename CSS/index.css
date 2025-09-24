@@ -345,7 +345,7 @@
 }
 
 .card_retangulo {
-  background-color: var(--cinza-clarinho);
+  background-color: var(--cinza-escuro);
   text-align: center;
   padding: 15px 25px;
   width: 300px;

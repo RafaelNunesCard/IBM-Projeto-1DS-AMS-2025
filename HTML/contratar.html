@@ -16,17 +16,18 @@
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="../CSS/contratar.css" />
 
-    <!--==================== CSS header e footer ====================-->
+    <link rel="stylesheet" href="../CSS/popups_contratar.css">
+
     <link rel="stylesheet" href="../CSS/head-foot.css" />
 
-    <!--==================== JS header ====================-->
+    <!--==================== JS ====================-->
     <script src="../js/header.JS" defer></script>
 
-    <!--==================== JS avaliacao ====================-->
     <script src="../js/avaliacoes.js" defer></script>
 
-    <!--==================== JS Popup ====================-->
     <script src="../js/Popup.js" defer></script>
+
+    <script src="../JS/popup_aval.js"></script>
 
     <title>TechFix</title>
   </head>
@@ -397,7 +398,46 @@
             <div class="deixe">
               <h1>Deixe sua avalição</h1>
               <p>Compartilhe seu pensamento com os outros clientes.</p>
-              <button class="bnt">Escreva uma avaliação</button>
+              <button class="bnt" >Escreva uma avaliação</button>
+            </div>
+
+            <!-- ==================== POPUP ESCREVA SUA AVALIAÇÃO ==================== -->
+            <div id="popup-avaliacao" class="popup-avaliacao">
+              <div class="popup-avaliacao-content">
+                <span class="close-avaliacao">&times;</span>
+                <h1>Escreva sua avaliação</h1>
+                <form class="form-avaliacao">
+                  <label for="nome-avaliacao">Seu nome:</label><br />
+                  <input type="text" id="nome-avaliacao" required /><br /><br />
+
+                  <label>Sua nota:</label><br />
+                  <div class="estrelas-avaliacao">
+                    <i class="ri-star-line" data-value="1"></i>
+                    <i class="ri-star-line" data-value="2"></i>
+                    <i class="ri-star-line" data-value="3"></i>
+                    <i class="ri-star-line" data-value="4"></i>
+                    <i class="ri-star-line" data-value="5"></i>
+                  </div>
+                  <br />
+
+                  <label for="comentario-avaliacao">Comentário:</label><br />
+                  <textarea
+                    id="comentario-avaliacao"
+                    rows="5"
+                    required
+                  ></textarea
+                  ><br />
+
+                  <div class="btns-avaliacao">
+                    <button type="button" class="cancel-avaliacao">
+                      Cancelar
+                    </button>
+                    <button type="submit" class="enviar-avaliacao">
+                      Enviar
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
           <div class="comentarios">
@@ -421,10 +461,10 @@
               <h4>Avaliado em 12 de setembro de 2025</h4>
               <h3>Manutenção verificada</h3>
               <p>
-                Contratei Jorge Fonceca dos Santos como técnico em informática e não poderia
-                estar mais satisfeito! O trabalho dele foi excepcional, com
-                atenção aos detalhes e grande profissionalismo. Recomendo a
-                todos!
+                Contratei Jorge Fonceca dos Santos como técnico em informática e
+                não poderia estar mais satisfeito! O trabalho dele foi
+                excepcional, com atenção aos detalhes e grande profissionalismo.
+                Recomendo a todos!
               </p>
               <h4>2 pessoas acharam esse comentario útil</h4>
               <div class="bnt_coment">
@@ -459,10 +499,10 @@
               <h4>Avaliado em 6 de setembro de 2025</h4>
               <h3>Manutenção verificada</h3>
               <p>
-                Contratei Jorge Fonseca dos Santos como técnico em informática e não poderia
-                estar mais satisfeito! O trabalho dele foi excepcional, com
-                atenção aos detalhes e grande profissionalismo. Recomendo a
-                todos!
+                Contratei Jorge Fonseca dos Santos como técnico em informática e
+                não poderia estar mais satisfeito! O trabalho dele foi
+                excepcional, com atenção aos detalhes e grande profissionalismo.
+                Recomendo a todos!
               </p>
               <h4>3 pessoas acharam esse comentario útil</h4>
               <div class="bnt_coment">
@@ -537,10 +577,12 @@
               Verificaremos se essa avaliação está de acordo com as nossas
               Diretrizes da comunidade. Se não estiver, ela será removida.
             </p>
-            <button type="button" class="cancel" onclick="closePopup()">
-              Cancelar
-            </button>
-            <button type="button" onclick="sendFeedback()">Enviar</button>
+            <div class="alinha">
+              <button type="button" class="cancel" onclick="closePopup()">
+                Cancelar
+              </button>
+              <button type="button" onclick="sendFeedback()">Enviar</button>
+            </div>
           </form>
         </div>
       </div>

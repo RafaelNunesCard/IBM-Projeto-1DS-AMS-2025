@@ -1,0 +1,178 @@
+:root {
+  /* =====Cores do Site===== */
+  --primaria: #fc8e53;
+  --secundaria: #5445ae;
+  --terciaria: #6a67d2;
+  --holver: #f7515b;
+  --braco: #ffffff;
+
+  /* Tons suavizados */
+  --preto: #1a1a1a;
+  --cinza-escuro: #222222;
+  --cinza-claro: #2a2a2a;
+  --cinza-clarinho: #333333;
+
+  /* =====Fontes===== */
+  --h1: 1.7rem;
+  --h2: 1.3rem;
+  --p: 0.7rem;
+}
+/* ==================== POPUP DENUNCIA ==================== */    
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup h1 {
+  font-size: 1.7rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.popup h4 {
+  margin-bottom: 0.5rem;
+}
+
+.popup p {
+  margin: 1rem 0;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin: 0.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.popup-content {
+  background-color: var(--preto);
+  margin: 15% auto;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup .alinha{
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup button {
+  background-color: var(--primaria);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+button.cancel {
+  background: #ccc;
+  color: var(--cinza-escuro);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+
+/* ==================== POPUP AVALIAÇÃO ==================== */
+.popup-avaliacao {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.5);
+}
+
+.popup-avaliacao-content {
+  background: var(--preto);
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.popup-avaliacao-content h1{
+    margin-bottom: 1rem;
+}
+
+.close-avaliacao {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.estrelas-avaliacao i {
+  font-size: 28px;
+  cursor: pointer;
+  color: #ccc;
+  transition: transform .2s;
+}
+
+.estrelas-avaliacao i.ri-star-fill {
+  color: orange; 
+}
+
+.btns-avaliacao {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns-avaliacao button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-avaliacao {
+  background: #ccc;
+  color: var(--cinza-escuro);
+}
+
+.enviar-avaliacao {
+  background: var(--primaria);
+  transition: background .3s;
+  color: #fff;
+}
+
+.popup-avaliacao input,textarea{
+    background: var(--cinza-claro);
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.enviar-avaliacao:hover{
+    background-color: var(--holver);
+}

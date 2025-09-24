@@ -10,40 +10,37 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
 
-    <!--==================== Favicon====================-->
+    <!--==================== Favicon ====================-->
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="../CSS/contato.css" />
-
-    <!--==================== CSS header e footer ====================-->
     <link rel="stylesheet" href="../CSS/head-foot.css" />
 
-    <!--==================== JS header ====================-->
-    <script src="../js/header.JS" defer></script>
-
-    <!--==================== JS header ====================-->
+    <!--==================== JS ====================-->
+    <script src="../js/header.js" defer></script>
     <script src="../js/FAQ.js" defer></script>
 
-    <title>TechFix-Contato</title>
+    <title>TechFix - Contato</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header id="header">
       <div class="logo">
-        <img src="../img/logo.png" alt="" />
+        <img src="../img/logo.png" alt="Logo TechFix" />
         <h1>TechFix</h1>
       </div>
 
       <menu>
         <input type="checkbox" id="checkbox" class="checkbox" />
-        <label for="checkbox" class="label_menu"
-          >Menu <span class="hamburger"></span
-        ></label>
+        <label for="checkbox" class="label_menu">
+          Menu <span class="hamburger"></span>
+        </label>
         <ul class="menu">
           <li><a href="home.html" class="nav">HOME</a></li>
           <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
           <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
-          <li><a href="#" class="nav">CONTATO</a></li>
+          <li><a href="#" class="nav active">CONTATO</a></li>
           <li id="btn_cadastro">
             <a href="perfil.html" class="nav" id="cadastro">PERFIL</a>
           </li>
@@ -51,177 +48,230 @@
       </menu>
     </header>
 
-    <main>
-      <section id="banner">
-        <div class="banner_text">
-          <h1>Quer <span>entrar em contato?</span></h1>
-          <p>Gostariamos de escutar você. Veja como nos contatar.</p>
-        </div>
+    <!-- BANNER -->
+    <section id="banner">
+      <div class="banner_text">
+        <h1>Quer <span>entrar em contato?</span></h1>
+        <p>Gostaríamos de escutar você. Veja como nos contatar.</p>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <div class="alinha">
+      <section class="card" role="main">
+        <aside class="contact-side">
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="icon"><i class="ri-mail-line"></i></div>
+              <div>
+                <div class="small">E-mail</div>
+                <div style="font-weight: 600">TechFix@gmail.com</div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="icon"><i class="ri-phone-line"></i></div>
+              <div>
+                <div class="small">Telefone</div>
+                <div style="font-weight: 600">+55 (11) 97018-4779</div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="icon"><i class="ri-map-pin-line"></i></div>
+              <div>
+                <div class="small">Localização</div>
+                <div style="font-weight: 600">São Paulo, BR</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <form id="contactForm" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="name">Nome</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Seu nome"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="seu@exemplo.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label for="subject">Assunto</label>
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              placeholder="Sobre o que é?"
+            />
+          </div>
+          <div class="field">
+            <label for="message">Mensagem</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Escreva sua mensagem..."
+              required
+            ></textarea>
+          </div>
+          <div class="submit-area">
+            <div class="meta">
+              Suas informações são confidenciais • Resposta em até 48h
+            </div>
+            <button class="btn1 btn-primary" type="submit">
+              Enviar mensagem
+            </button>
+          </div>
+          <div id="success" class="success" role="status">
+            Mensagem enviada com sucesso — obrigado! ✨
+          </div>
+        </form>
       </section>
+    </div>
 
-      <section id="contato">
-        <div class="container">
-          <div class="card">
-            <div class="img_card">
-              <i class="ri-chat-smile-2-fill"></i>
-            </div>
-            <div class="text_card">
-              <h1>Perguntas gerais</h1>
-              <p>
-                Se você tem perguntas específicas ou precisa de orientação, estamos aqui para ajudar. Nossa equipe está pronta para fornecer as informações necessárias para você.
-              </p>
-              <button class="bnt"><a href="">ENTRE EM CONTATO</a></button>
-            </div>
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="card_faq">
+        <h1>Perguntas Frequentes</h1>
+        <p>
+          Encontre aqui as respostas para as dúvidas mais comuns:
+        </p>
+      </div>
+
+      <div class="faq_card">
+        <!-- Exemplo de FAQ -->
+        <div class="faq">
+          <div class="pergunta">
+            <h3>Quais tipos de Serviços?</h3>
+            <i class="ri-arrow-down-s-line"></i>
           </div>
-
-          <div class="card">
-            <div class="img_card">
-              <i class="ri-question-answer-fill"></i>
-            </div>
-            <div class="text_card">
-              <h1>Fale com um especialista</h1>
-              <p>
-                Sinta-se à vontade para fazer qualquer pergunta. Estamos disponíveis para esclarecer dúvidas e fornecer suporte em suas necessidades.
-              </p>
-              <button class="bnt">
-                <a href="">FALE COM UM ESPECIALISTA</a>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="faq_card">
-          <h2 class="titulo">Perguntas Frequentes</h2>
-
-          <div class="faq">
-            <div class="pergunta">
-              <h3>Quais tipos de Serviços?</h3>
-              <i class="ri-arrow-down-s-line"></i>
-            </div>
-            <div class="resposta">
-              <p>
-                Nós disponibilizamos diversos serviços, nas quais você pode consultar
-                na página de serviços.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq">
-            <div class="pergunta">
-              <h3>Preços</h3>
-              <i class="ri-arrow-down-s-line"></i>
-            </div>
-            <div class="resposta">
-              <p>
-                Os preços são propostos pelo profissional. Se você quiser
-                negociar, será necessário contatar ele diretamente.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq">
-            <div class="pergunta">
-              <h3>Agendamento</h3>
-              <i class="ri-arrow-down-s-line"></i>
-            </div>
-            <div class="resposta">
-              <p>
-                O agendamento será feito após o profissional confirmar sua
-                solicitação. Um e-mail será enviado para você após a
-                confirmação.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq">
-            <div class="pergunta">
-              <h3>Área de Atendimento</h3>
-              <i class="ri-arrow-down-s-line"></i>
-            </div>
-            <div class="resposta">
-              <p>
-                Os profissionais serão recomendados de acordo 
-                com a localização do cliente de forma automática.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq">
-            <div class="pergunta">
-              <h3>Política de Cancelamento</h3>
-              <i class="ri-arrow-down-s-line"></i>
-            </div>
-            <div class="resposta">
-              <p>
-                O cancelamento é simples. Acesse seu perfil e vá até as
-                configurações. Por favor, cancele com antecedência para
-                facilitar a vida do profissional.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq">
-            <div class="pergunta">
-              <h3>Avaliações e Testemunhos</h3>
-              <i class="ri-arrow-down-s-line"></i>
-            </div>
-            <div class="resposta">
-              <p>
-                As avaliações aparecem abaixo do perfil do profissional. Ao
-                acessar o perfil dele, você verá todos que o avaliaram e seus
-                testemunhos.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq">
-            <div class="pergunta">
-              <h3>Experiência da Equipe</h3>
-              <i class="ri-arrow-down-s-line"></i>
-            </div>
-            <div class="resposta">
-              <p>
-                Para ter certeza antes de contratar, confira os certificados do
-                profissional e comentários de outros clientes para ter certeza
-                da qualidade do profissional.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq">
-            <div class="pergunta">
-              <h3>Suporte Pós-Serviço</h3>
-              <i class="ri-arrow-down-s-line"></i>
-            </div>
-            <div class="resposta">
-              <p>
-                Após a conclusão do serviço, você poderá avaliar o profissional
-                em nosso site. Se houver algum problema, entre em contato com
-                nossos funcionários para obter ajuda.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq">
-            <div class="pergunta">
-              <h3>Métodos de Pagamento</h3>
-              <i class="ri-arrow-down-s-line"></i>
-            </div>
-            <div class="resposta">
-              <p>
-                O pagamento pode ser escolhido no momento da contratação do
-                profissional, mas será efetuado somente após a conclusão do
-                serviço.
-              </p>
-            </div>
+          <div class="resposta">
+            <p>
+              Nós disponibilizamos diversos serviços, que você pode consultar na
+              página de serviços.
+            </p>
           </div>
         </div>
-        <div></div>
-      </section>
-    </main>
+        <div class="faq">
+          <div class="pergunta">
+            <h3>Preços</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <p>
+              Os preços são propostos pelo profissional. Se você quiser
+              negociar, será necessário contatar ele diretamente.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="pergunta">
+            <h3>Agendamento</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <p>
+              O agendamento será feito após o profissional confirmar sua
+              solicitação. Um e-mail será enviado para você após a confirmação.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="pergunta">
+            <h3>Área de Atendimento</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <p>
+              Os profissionais serão recomendados de acordo com a localização do
+              cliente de forma automática.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="pergunta">
+            <h3>Política de Cancelamento</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <p>
+              O cancelamento é simples. Acesse seu perfil e vá até as
+              configurações. Por favor, cancele com antecedência para facilitar
+              a vida do profissional.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="pergunta">
+            <h3>Avaliações e Testemunhos</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <p>
+              As avaliações aparecem abaixo do perfil do profissional. Ao
+              acessar o perfil dele, você verá todos que o avaliaram e seus
+              testemunhos.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="pergunta">
+            <h3>Experiência da Equipe</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <p>
+              Para ter certeza antes de contratar, confira os certificados do
+              profissional e comentários de outros clientes para ter certeza da
+              qualidade do profissional.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="pergunta">
+            <h3>Suporte Pós-Serviço</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <p>
+              Após a conclusão do serviço, você poderá avaliar o profissional em
+              nosso site. Se houver algum problema, entre em contato com nossos
+              funcionários para obter ajuda.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="pergunta">
+            <h3>Métodos de Pagamento</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <p>
+              O pagamento pode ser escolhido no momento da contratação do
+              profissional, mas será efetuado somente após a conclusão do
+              serviço.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- FOOTER -->
     <footer>
       <div class="footer-container">
         <div class="footer-column">
@@ -246,7 +296,6 @@
           <h3>Contato</h3>
           <ul>
             <li><strong>Email: TechFix@gmail.com</strong></li>
-            <br />
             <li><strong>Telefone: (11) 97018-4779</strong></li>
           </ul>
           <div class="social-icons">
@@ -257,5 +306,31 @@
         </div>
       </div>
     </footer>
+
+    <!-- SCRIPT DO FORMULÁRIO -->
+    <script>
+      const form = document.getElementById("contactForm");
+      const successEl = document.getElementById("success");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        if (!name || !email || !message) {
+          alert("Preencha os campos obrigatórios: nome, e-mail e mensagem.");
+          return;
+        }
+
+        successEl.style.display = "block";
+        form.reset();
+
+        setTimeout(() => {
+          successEl.style.display = "none";
+        }, 5000);
+      });
+    </script>
   </body>
 </html>
