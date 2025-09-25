@@ -293,20 +293,98 @@ section h2 {
   color: var(--secundaria);
 }
 
-@media (max-width: 600px) {
+/* ========================= */
+/* ======= MOBILE ========= */
+/* ========================= */
+@media (max-width: 768px) {
+  /* Banner menor e ajustado */
+  .banner {
+    height: 50vh;
+    background-size: cover;
+    margin-bottom: 10px;
+  }
+
+  /* Hero mais compacto */
+  .hero {
+    padding: 80px 20px 60px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* Botões */
+  .bnt {
+    width: 100%;
+    max-width: 300px;
+    font-size: 0.95rem;
+    padding: 0.9rem 1rem;
+  }
+
+  /* Seções */
+  section {
+    padding: 50px 15px;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  /* Conteúdo em coluna */
   .about-content,
   .problem-content,
   .cause-content,
   .solution-content,
   .work-content {
     flex-direction: column;
+    gap: 20px;
+    text-align: center;
   }
 
+  .about-text,
+  .problem-text,
+  .cause-text,
+  .solution-text,
+  .work-text {
+    min-width: auto;
+  }
+
+  /* Grids */
   .team-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .team-grid2 {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .team-member {
+    width: 90%;
+    height: auto;
+  }
+
+  .team-member img {
+    height: 180px;
+  }
+
+  .team-info {
+    padding: 15px;
+  }
+
+  /* Social icons menores */
+  .social-links {
+    gap: 10px;
+  }
+
+  .social-links a {
+    font-size: 1rem;
   }
 }
