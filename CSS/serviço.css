@@ -239,4 +239,101 @@ i {
   font-size: 1.9rem;
 }
 
+/* ========================= */
+/* ======= MOBILE ========= */
+/* ========================= */
+@media (max-width: 768px) {
+  #banner {
+    height: 35vh;
+    font-size: 1.8rem;
+    border-radius: 0px 0px 60px 60px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  #tipos {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 10px;
+    gap: 15px;
+  }
+
+  .tipos {
+    width: 90%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  #titulo_clt {
+    font-size: 1.7rem;
+    margin: 2rem 1rem;
+  }
+
+  .card_clt {
+    flex-direction: column;
+    margin: 15px 0;
+  }
+
+  .clt {
+    flex-direction: column;
+    width: 95%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .img_clt {
+    width: 100%;
+    height: 200px;
+    margin: 0 0 15px 0;
+  }
+
+  .text_clt {
+    padding: 0 10px;
+  }
+
+  .text_clt h1 {
+    font-size: 1.5rem;
+  }
+
+  .text_clt h3 {
+    font-size: 1.1rem;
+  }
+
+  .text_clt p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .alinha_clt {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .alinha_clt h2 {
+    font-size: 1.2rem;
+  }
+
+  .aval_clt {
+    font-size: 1rem;
+  }
+
+  .bnt {
+    width: 90%;
+    font-size: 1.1rem;
+    margin: 1rem auto;
+    padding: 0.7rem 1rem;
+  }
+
+  .bloco {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .especial {
+    width: 90%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
 
