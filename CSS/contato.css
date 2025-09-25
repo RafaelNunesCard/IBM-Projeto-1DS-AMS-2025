@@ -321,3 +321,141 @@ outline: none;
   color: var(--braco);
   font-size: 0.9rem;
 } 
+
+/* ========================= */
+/* ======= MOBILE ========= */
+/* ========================= */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+  }
+
+  #banner {
+    height: auto;
+    padding: 4rem 1rem 2rem;
+    text-align: center;
+  }
+
+  #banner h1 {
+    font-size: 2rem;
+  }
+
+  #banner p {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .intro {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-side {
+    gap: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p.lead {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .chip {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .field {
+    margin-bottom: 1rem;
+  }
+
+  input[type="text"], 
+  input[type="email"], 
+  textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  /* ===== FAQ ===== */
+  .faq_card {
+    width: 95%;
+    min-height: auto;
+    padding: 1rem 0;
+  }
+
+  .card_faq {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .card_faq h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .card_faq p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card_faq button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .titulo {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  .faq {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .pergunta {
+    font-size: 1.2rem;
+  }
+
+  .resposta p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* ===== Contato ===== */
+  .contact-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Botões */
+  .btn1 {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .success {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
