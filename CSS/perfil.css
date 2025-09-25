@@ -226,5 +226,100 @@ section {
   margin-bottom: 1rem;
 }
 
+/* ========================= */
+/* ======= MOBILE ========= */
+/* ========================= */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .perfil_esquerda {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perfil_img {
+    width: 45vw;
+    height: 45vw;
+  }
+
+  .icon_img a {
+    top: auto;
+    right: 5px;
+    bottom: -15px;
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .seguidores {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+
+  .endereços {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .Informacoes {
+    width: 100%;
+    text-align: center;
+  }
+
+  .perfil h1 {
+    font-size: 1.6rem;
+  }
+
+  .perfil h2 {
+    font-size: 1rem;
+  }
+
+  .perfil h3 {
+    font-size: 0.95rem;
+  }
+
+  .perfil p {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .nome {
+    margin-bottom: 2rem;
+  }
+
+  .nome h3 {
+    font-size: 1.3rem;
+  }
+
+  #editar {
+    font-size: 1rem;
+    padding: 7px 8px;
+  }
+
+  .card_funcoes {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .biografia p {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
 
 
