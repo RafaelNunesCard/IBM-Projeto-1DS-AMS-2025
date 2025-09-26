@@ -46,10 +46,12 @@
   text-align: center;
   cursor: pointer;
   transition: background 0.3s;
+  transition: .2s;
 }
 
 .day:hover {
-  background-color: #f7515c10;
+  background-color: #f7515c29;
+  transform: scale(1.1);
 }
 
 .day.past {
@@ -60,7 +62,6 @@
 .day.selected {
   background: var(--primaria);
   color: white;
-  box-shadow: 0 0 2px 3px var(--primaria);
 }
 
 .header {
@@ -117,14 +118,12 @@ button:hover {
 
 .pag.checked {
   background-color: var(--primaria);
-  box-shadow: 0 0 1px 0.5px var(--primaria);
   transition: 0.5s;
   border: none;
 }
 
 .pag.checked:hover {
   background-color: var(--holver);
-  box-shadow: 0 0 1px 0.5px var(--holver);
 }
 
 .confirm {
@@ -138,4 +137,95 @@ button:hover {
 .confirm:hover {
   transform: scale(1.05);
   box-shadow: -2px 6px 3px rgba(0, 0, 0, 0.699);
+}
+
+/* ================= Responsividade ================= */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 90vw;  /* ocupa mais a tela */
+    padding: 2rem 1.2rem;
+  }
+
+  .day {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  #card_pagamento {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .pag, .confirm {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Celulares grandes */
+@media screen and (max-width: 768px) {
+
+   #card_pagamento {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card {
+    width: 95vw;
+    padding: 1.5rem 1rem;
+  }
+
+  .calendar {
+    gap: 6px;
+  }
+
+  .day {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+
+  .header {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100vw;
+    padding: 1rem;
+  }
+
+  .header {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  #card_pagamento {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .day {
+    padding: 12px;
+    font-size: 0.75rem;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+
+  .pag, .confirm {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }

@@ -42,7 +42,7 @@
   padding: 20px;
   z-index: 1000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 35%;
+  width: 40%;
   border-radius: 8px;
 }
 
@@ -354,4 +354,10 @@
 
 .select2:has(.option2 input:checked) #selected-value2 {
   color: #FBF9FE;
+}
+
+@media (max-width: 768px) {
+  .popup{
+    width: 70%;
+  }
 }

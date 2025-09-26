@@ -283,7 +283,7 @@ i {
 
   .img_clt {
     width: 100%;
-    height: 200px;
+    height: 45vh;
     margin: 0 0 15px 0;
   }
 
@@ -318,7 +318,7 @@ i {
   }
 
   .bnt {
-    width: 90%;
+    width: 80vw; 
     font-size: 1.1rem;
     margin: 1rem auto;
     padding: 0.7rem 1rem;

@@ -18,7 +18,7 @@
   --p: 0.7rem;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -112,20 +112,21 @@ a{
 
 .grafico {
   clip-path: polygon(50% 0, 53% 1%, 100% 1%, 100% 100%, 0 100%, 0 1%, 47% 1%);
-  opacity: 0; 
-  transition: opacity 0.5s ease; 
+  opacity: 0;
+  transition: opacity 0.5s ease;
   margin-top: 10px;
-  pointer-events: none; 
+  pointer-events: none;
   position: absolute;
   top: 15px;
   padding: 1rem 2rem;
   border-radius: 20px;
   background-color: #1b1b1b;
+  z-index: 10;
 }
 
 .grafico.visible {
-  opacity: 1; 
-  pointer-events: auto; 
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .barra {
@@ -349,7 +350,7 @@ th {
   width: 300px;
 }
 
-.sobre{
+.sobre {
   width: 50vw;
 }
 
@@ -525,3 +526,160 @@ th {
   margin: 0;
 }
 
+/* ================= RESPONSIVIDADE ================= */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+  .banner_clt {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .img_clt {
+    width: 60%;
+    height: auto;
+  }
+
+  .nome_clt h1 {
+    font-size: 2rem;
+  }
+
+  .prof {
+    font-size: 1.3rem;
+  }
+
+  .bnt_clt {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bnt {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+
+  .descricao {
+    padding: 1.5rem;
+  }
+
+  .blocos {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .bloco {
+    width: 45%;
+  }
+
+  .card {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .comentarios {
+    margin: 0 4rem;
+  }
+
+  .avaliacoes {
+    width: 30vw;
+  }
+
+  .coment {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  .banner_clt {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .img_clt {
+    width: 80%;
+  }
+
+  .nome_clt h1 {
+    font-size: 1.8rem;
+  }
+
+  .nome_clt h2 {
+    font-size: 1.4rem;
+  }
+
+  .prof {
+    font-size: 1.2rem;
+  }
+
+  .aval_clt {
+    font-size: 1rem;
+  }
+
+  .direitos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .bloco {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    height: 105vh;
+  }
+
+  .trabalho_img {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .venda {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .sobre {
+    width: 100%;
+  }
+
+  .contato {
+    width: 100%;
+  }
+
+  .comentarios {
+    margin: 0 1rem;
+  }
+
+  .avaliacoes {
+    width: 100%;
+  }
+
+  .coment {
+    flex-direction: column;
+  }
+
+  .perfil {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bnt {
+    width: 100%;
+  }
+
+  table,
+  td,
+  th {
+    width: 90vw;
+  }
+}

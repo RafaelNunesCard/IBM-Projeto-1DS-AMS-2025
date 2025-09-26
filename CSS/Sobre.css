@@ -367,12 +367,12 @@ section h2 {
   }
 
   .team-member {
-    width: 90%;
+    width: 75%;
     height: auto;
   }
 
   .team-member img {
-    height: 180px;
+    height: 40vh;
   }
 
   .team-info {
