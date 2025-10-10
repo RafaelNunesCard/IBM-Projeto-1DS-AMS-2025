@@ -538,10 +538,9 @@
 }
 
 @media (max-width: 768px) {
-  body {
+  section{
     padding: 1rem;
   }
-
   .bnt {
     width: 100%;
     margin: 0.5rem 0;
@@ -589,6 +588,7 @@
 }
 
 @media (max-width: 480px) {
+  
   #text_banr h1 {
     font-size: 2rem;
   }
