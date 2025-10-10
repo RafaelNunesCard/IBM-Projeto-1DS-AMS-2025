@@ -158,9 +158,6 @@ header ul {
 }
 
 @media (max-width: 880px) {
-  header{
-    width: 100%;
-  }
 
   .nav::before {
     visibility: hidden;
@@ -171,7 +168,7 @@ header ul {
     visibility: hidden;
     position: absolute;
     text-align: center;
-    top: 4.6875rem;
+    top: 4.45rem;
     left: 0;
     overflow-y: hidden;
     background: linear-gradient(35deg, #181818, #111111);
@@ -186,6 +183,8 @@ header ul {
     margin-inline: 1rem;
     border-bottom: 0.0625rem solid rgb(0, 0, 0);
   }
+
+
 
   .label_menu {
     display: flex;
