@@ -107,7 +107,7 @@ a {
 
 .img_clt {
   width: 30vw;
-  height: 150px;
+  height: 200px;
   overflow: hidden;
   margin-right: 20px;
   border-radius: 10px;
@@ -145,6 +145,16 @@ a {
   font-size: 1rem;
   line-height: 1.6;
   color: #e0e0e0;
+  width: 50vw;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: calc(1.6em * 3);
+  transition: max-height 0.5s ease;
+}
+
+.card_clt:hover p {
+  max-height: calc(1.6em * 5);
 }
 
 .alinha_clt {
