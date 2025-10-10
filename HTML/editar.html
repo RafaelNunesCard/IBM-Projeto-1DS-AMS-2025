@@ -10,6 +10,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
 
+    <!--==================== Favicon====================-->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+
     <!-- CSS do editar -->
     <link rel="stylesheet" href="../CSS/editar.css" />
 
@@ -22,31 +25,31 @@
         <form id="form-editar">
           <label>Foto de Perfil:</label>
           <input type="file" id="avatar" accept="image/*" />
-          <img id="preview" src="" alt="Preview do avatar" />
+          <img id="preview" src="../img/Perfis/Default perfil.jpg" alt="Preview do avatar" />
 
           <label>Nome:</label>
-          <input type="text" id="nome" required />
+          <input type="text" id="nome" required placeholder="Ex: Pedro Henrique Giovanelli"/>
 
           <label>Pronomes:</label>
           <input type="text" id="pronome" placeholder="Ex: Ele/Dele" />
 
           <label>Profissão:</label>
-          <input type="text" id="profissao" />
+          <input type="text" id="profissao" placeholder="Ex: Cliente" />
 
           <label>Localização:</label>
-          <input type="text" id="local" />
+          <input type="text" id="local" placeholder="Ex: São Paulo-SP" />
 
           <label>Email:</label>
-          <input type="email" id="email" />
+          <input type="email" id="email" placeholder="Email profissional:"/>
 
           <label>Telefone:</label>
-          <input type="tel" id="telefone" />
+          <input type="tel" id="telefone" placeholder="Ex: +55 (11) 9999-9999"/>
 
           <label>Biografia:</label>
-          <textarea id="biografia" maxlength="500"></textarea>
+          <textarea id="biografia" maxlength="500" placeholder="Resumo profissional ou pessoal (máx. 500 caracteres)"></textarea>
 
           <label>Educação:</label>
-          <textarea id="educacao" maxlength="500"></textarea>
+          <textarea id="educacao" maxlength="500" placeholder="Ex: Universidade de São Paulo - Administração (máx. 500 caracteres)"></textarea>
 
           <div class="botoes">
             <button type="submit" class="salvar">

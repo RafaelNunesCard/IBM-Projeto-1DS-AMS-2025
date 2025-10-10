@@ -60,9 +60,9 @@
       <div class="container">
         <div class="form-box login">
           <form action="">
-            <h1>Login</h1>
+            <h1>TROCAR SENHA</h1>
             <div class="input-box">
-              <input type="text" placeholder="Nome" required />
+              <input type="text" placeholder="Email" required />
               <i class="ri-user-fill"></i>
             </div>
             <div class="input-box">
@@ -74,8 +74,14 @@
               />
               <i class="ri-lock-fill"></i>
             </div>
-            <div class="forgot-link">
-              <a href="esqueceu.html">ESQUECEU A SENHA?</a>
+            <div class="input-box">
+              <input
+                type="password"
+                placeholder="Confirmar senha"
+                autocomplete="new-password"
+                required
+              />
+              <i class="ri-lock-fill"></i>
             </div>
             <div class="pinto">
               <button
@@ -84,73 +90,20 @@
                 id="bnt-login"
                 onclick="validateForm()"
               >
-                LOGIN
+                TROCAR SENHA
               </button>
-            </div>
-            <p>Logar com outras plataformas:</p>
-            <div class="social-icon">
-              <a href="#"><i class="ri-google-fill"></i></a>
-              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
             </div>
           </form>
         </div>
 
-        <div class="form-box Cadastrar">
-          <form action="">
-            <h1>Cadastrar</h1>
-            <div class="input-box">
-              <input type="text" placeholder="Nome" required />
-              <i class="ri-user-fill"></i>
-            </div>
-            <div class="input-box">
-              <input
-                type="email"
-                placeholder="Email"
-                autocomplete="email"
-                required
-              />
-              <i class="ri-mail-fill"></i>
-            </div>
-            <div class="input-box">
-              <input
-                type="password"
-                placeholder="Senha"
-                autocomplete="new-password"
-                required
-              />
-              <i class="ri-lock-fill"></i>
-            </div>
-            <div class="pinto">
-              <button type="submit" class="bnt" id="bnt-cadastro">
-                CADASTRAR-SE
-              </button>
-            </div>
-            <p>Cadastrar-se por outras plataformas:</p>
-            <div class="social-icon">
-              <a href="#"><i class="ri-google-fill"></i></a>
-              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-            </div>
-          </form>
-        </div>
 
         <div class="toggle-box">
           <div class="toggle-panel toggle-left">
-            <h1>Olá, bem vindo de volta!</h1>
-            <p>Não tem uma conta?</p>
-            <button class="register-bnt" id="sim">CADASTRAR-SE</button>
+            <h1>Você lembrou sua senha!</h1>
+            <p>Quer voltar para o Login?</p>
+            <a href="cadastro.html"><button class="register-bnt" id="sim">LOGAR-SE</button></a>
           </div>
         </div>
-
-        <div class="toggle-box">
-          <div class="toggle-panel toggle-right">
-            <h1>Olá, bem vindo!</h1>
-            <p>Já tem uma conta?</p>
-            <button class="login-bnt" id="sim">Logar</button>
-          </div>
-        </div>
-      </div>
     </section>
 
     <footer>
@@ -198,7 +151,7 @@
           alert("Por favor, preencha todos os campos.");
         } else {
           // Se os campos estão preenchidos, redirecione
-          window.location.href = "home.html";
+          window.location.href = "cadastro.html";
         }
       }
     </script>

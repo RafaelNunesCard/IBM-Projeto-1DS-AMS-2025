@@ -38,6 +38,7 @@ section {
   width: 850px;
   height: 550px;
   border-radius: 30px;
+  background: linear-gradient(35deg, var(--cinza-clarinho), var(--cinza-claro));
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
