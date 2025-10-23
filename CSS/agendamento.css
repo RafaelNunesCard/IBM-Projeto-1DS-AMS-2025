@@ -50,8 +50,8 @@
 }
 
 .day:hover {
-  background-color: #f7515c29;
-  transform: scale(1.1);
+  background-color: #f7785129;
+  transform: scale(1.05);
 }
 
 .day.past {
@@ -67,7 +67,7 @@
 .header {
   font-weight: bold;
   text-align: center;
-  background: var(--primaria);
+  background: #fc8e53c7;
   color: white;
   padding: 10px;
 }
@@ -82,7 +82,7 @@ button {
   border-radius: 50%;
   margin: 0 10px;
   cursor: pointer;
-  background: var(--primaria);
+  background: #fc8e53c7;
   border: none;
   transition: 0.3s;
   color: white;
@@ -94,49 +94,55 @@ button:hover {
 }
 
 #card_pagamento {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: transparent;
   width: 100%;
   margin: 2rem 0;
 }
 
 .pag {
-  padding: 10px 15px;
+  width: 40%;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  padding: 1rem;
   border-radius: 10px;
   cursor: pointer;
   background: transparent;
-  border: 1.5px solid white;
-  transition: 0.3s;
+  border: 3px solid rgba(255, 255, 255, 0.3);
   letter-spacing: 1px;
+  text-align: left;
+}
+
+.pag i{
+  font-size: 2rem;
+  padding: .5rem;
+  margin: 1rem 0;
+  background-color: #fc8e53;
+  border-radius: 10px;
 }
 
 .pag:hover {
-  transform: scale(1.05);
+  background-color: #fc8e532f;
+  border-color: #fc8e534b;
+  transform: scale(1.01);
 }
 
 .pag.checked {
   background-color: var(--primaria);
   transition: 0.5s;
-  border: none;
+  border-color: #fc8e53;
 }
 
-.pag.checked:hover {
-  background-color: var(--holver);
-}
 
 .confirm {
+  background-color: #fc8e53ea;
   padding: 10px 15px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
-  box-shadow: 0 2px 3px black;
 }
 
 .confirm:hover {
   transform: scale(1.05);
-  box-shadow: -2px 6px 3px rgba(0, 0, 0, 0.699);
 }
 
 /* ================= Responsividade ================= */
