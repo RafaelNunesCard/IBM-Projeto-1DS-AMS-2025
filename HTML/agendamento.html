@@ -41,9 +41,9 @@
         ></label>
         <ul class="menu">
           <li><a href="home.html" class="nav">HOME</a></li>
-          <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
-          <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
-          <li><a href="contato.html" class="nav">CONTATO</a></li>
+          <li><a href="Sobre.html" class="nav">ABOUT US</a></li>
+          <li><a href="serviço.html" class="nav">SERVICES</a></li>
+          <li><a href="contato.html" class="nav">CONTACT</a></li>
           <li id="btn_cadastro">
             <a href="perfil.html" class="nav" id="cadastro">PERFIL</a>
           </li>
@@ -54,7 +54,7 @@
     <main>
       <section class="container">
         <div class="card">
-          <h2>Calendário do Mês</h2>
+          <h2>Month Calendar</h2>
           <div class="controls">
             <button id="prevMonth"><i class="ri-arrow-left-s-line"></i></button>
             <span id="monthYear"></span>
@@ -64,23 +64,23 @@
           </div>
           <div class="calendar" id="calendar"></div>
           <div class="card" id="card_pagamento">
-            <h1>Forma de pagamento:</h1>
+            <h1>Payment method:</h1>
             <div class="metodos">
               <button class="pag"><i class="ri-pix-fill"></i> Pix</button>
               <button class="pag">
-                <i class="ri-bank-card-fill"></i> Credito/Debito
+                <i class="ri-bank-card-fill"></i> Credit/Debit
               </button>
               <button class="pag">
-                <i class="ri-barcode-box-fill"></i> Boleto
+                <i class="ri-barcode-box-fill"></i> Bank Slip
               </button>
               <button class="pag">
-                <i class="ri-money-dollar-box-fill"></i> Dinheiro
+                <i class="ri-money-dollar-box-fill"></i> Money
               </button>
             </div>
           </div>
           <a href="">
             <button class="confirm" id="showConfirmed">
-              Confirmar
+              Confirm
             </button>
           </a>
         </div>
@@ -93,8 +93,8 @@
         <div class="footer-column">
           <h3 id="footer-logo">TechFix</h3>
           <p>
-            Excelência em serviços e produtos de qualidade. Nosso compromisso é
-            com você!
+            Excellence in services and quality products. Our commitment 
+            is to you!
           </p>
         </div>
 
@@ -102,9 +102,9 @@
           <h3>Links</h3>
           <ul>
             <li><a href="home.html">HOME</a></li>
-            <li><a href="Sobre.html">SOBRE NÓS</a></li>
-            <li><a href="serviço.html">SERVIÇOS</a></li>
-            <li><a href="contato.html">CONTATO</a></li>
+            <li><a href="Sobre.html">ABOUT US</a></li>
+            <li><a href="serviço.html">SERVICES</a></li>
+            <li><a href="contato.html">CONTACT</a></li>
           </ul>
         </div>
 
@@ -113,7 +113,7 @@
           <ul>
             <li><strong>Email: TechFix@gmail.com</strong></li>
             <br />
-            <li><strong>Telefone: (11) 97018-4779</strong></li>
+            <li><strong>Number: (11) 97018-4779</strong></li>
           </ul>
           <div class="social-icons">
             <a href="#"><i class="ri-facebook-box-fill"></i></a>
@@ -128,9 +128,7 @@
 
         buttons.forEach(button => {
             button.addEventListener('click', function() {
-                // Remove a classe 'checked' de todos os botões
                 buttons.forEach(btn => btn.classList.remove('checked'));
-                // Adiciona a classe 'checked' ao botão clicado
                 this.classList.add('checked');
             });
         });
