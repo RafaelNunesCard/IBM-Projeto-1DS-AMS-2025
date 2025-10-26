@@ -16,51 +16,51 @@
     <!-- CSS do editar -->
     <link rel="stylesheet" href="../CSS/editar.css" />
 
-    <title>Editar Perfil</title>
+    <title>Edit Profile</title>
   </head>
   <body>
     <main>
       <section class="editar">
-        <h1>Editar Perfil</h1>
+        <h1>Edit Profile</h1>
         <form id="form-editar">
-          <label>Foto de Perfil:</label>
+          <label>Profile Photo:</label>
           <input type="file" id="avatar" accept="image/*" />
           <img id="preview" src="../img/Perfis/Default perfil.jpg" alt="Preview do avatar" />
 
-          <label>Nome:</label>
+          <label>Name:</label>
           <input type="text" id="nome" required placeholder="Ex: Pedro Henrique Giovanelli"/>
 
-          <label>Pronomes:</label>
+          <label>Pronouns:</label>
           <input type="text" id="pronome" placeholder="Ex: Ele/Dele" />
 
-          <label>Profissão:</label>
+          <label>Profession:</label>
           <input type="text" id="profissao" placeholder="Ex: Cliente" />
 
-          <label>Localização:</label>
+          <label>Location:</label>
           <input type="text" id="local" placeholder="Ex: São Paulo-SP" />
 
           <label>Email:</label>
           <input type="email" id="email" placeholder="Email profissional:"/>
 
-          <label>Telefone:</label>
+          <label>Number:</label>
           <input type="tel" id="telefone" placeholder="Ex: +55 (11) 9999-9999"/>
 
-          <label>Biografia:</label>
+          <label>Biography:</label>
           <textarea id="biografia" maxlength="500" placeholder="Resumo profissional ou pessoal (máx. 500 caracteres)"></textarea>
 
-          <label>Educação:</label>
+          <label>Education:</label>
           <textarea id="educacao" maxlength="500" placeholder="Ex: Universidade de São Paulo - Administração (máx. 500 caracteres)"></textarea>
 
           <div class="botoes">
             <button type="submit" class="salvar">
-              <i class="ri-check-line"></i> Salvar
+              <i class="ri-check-line"></i> Save
             </button>
             <button
               type="button"
               class="cancelar"
               onclick="window.location.href='perfil.html'"
             >
-              <i class="ri-close-line"></i> Cancelar
+              <i class="ri-close-line"></i> Cancel
             </button>
           </div>
         </form>
