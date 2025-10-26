@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("perfil", JSON.stringify(dados));
         window.location.href = "perfil.html";
       } catch (err) {
-        alert("Erro ao salvar: " + err.message);
+        alert("Error saving: " + err.message);
       }
     });
   }
