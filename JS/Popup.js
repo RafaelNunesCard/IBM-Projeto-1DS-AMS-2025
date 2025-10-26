@@ -17,6 +17,6 @@ function closePopup() {
 }
 
 function sendFeedback() {
-  alert("Feedback enviado!");
+  alert("Feedback send!");
   closePopup();
 }
