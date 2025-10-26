@@ -9,6 +9,6 @@ function closePopup() {
 }
 
 function sendStatus() {
-  alert("Status atualizado!");
+  alert("Updated status!");
   closePopup();
 }
