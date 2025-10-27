@@ -12,10 +12,10 @@ function generateCalendar(month, year) {
     const today = new Date();
 
     // Atualiza o título do mês e ano
-    monthYear.innerText = `${new Intl.DateTimeFormat('pt-BR', { month: 'long' }).format(new Date(year, month))} ${year}`;
+    monthYear.innerText = `${new Intl.DateTimeFormat('en-US', { month: 'long' }).format(new Date(year, month))} ${year}`;
 
     // Adiciona os dias da semana
-    const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'];
+    const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     weekDays.forEach(day => {
         const header = document.createElement('div');
         header.classList.add('header');
@@ -69,9 +69,9 @@ function toggleDay(day, month, year, element) {
 document.getElementById('showConfirmed').addEventListener('click', function () {
     const confirmedMessages = confirmedDays.map(date => {
         const [year, month, day] = date.split('-');
-        return `Dia: ${day}, Mês: ${new Intl.DateTimeFormat('pt-BR', { month: 'long' }).format(new Date(year, month - 1))}, Ano: ${year}`;
+        return `Day: ${day}, Month: ${new Intl.DateTimeFormat('en-US', { month: 'long' }).format(new Date(year, month - 1))}, Year: ${year}`;
     });
-    alert('Dias Confirmados:\n' + (confirmedMessages.join('\n') || 'Nenhum dia confirmado.'));
+    alert('Coonfirmed days:\n' + (confirmedMessages.join('\n') || 'Any day confirmed.'));
 });
 
 document.getElementById('prevMonth').addEventListener('click', function () {
