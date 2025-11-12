@@ -47,11 +47,15 @@ a {
   transition: 0.3s ease-in-out;
   cursor: pointer;
   background: var(--cinza-claro);
+  border: 2px solid #0f0f0f;
   color: white;
 }
 
 .tipos:hover {
   background-color: var(--primaria);
+  border: 1px solid var(--primaria);
+  transform: translateY(-8px);
+  box-shadow:  -5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .tipos h2 {

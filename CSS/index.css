@@ -40,28 +40,11 @@
   text-align: left;
   margin-bottom: 10rem;
   position: relative;
+  background: radial-gradient(circle at 30% 50%, rgba(252, 142, 83, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 50%, rgba(84, 69, 174, 0.1) 0%, transparent 50%);
 }
 
-#banr_home::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--cinza-claro);
-  transform: skewX(45deg) translateX(-60%);
-  z-index: -1;
-}
 
-#banr_home::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--cinza-claro);
-  transform: skewX(-45deg) translateX(-60%);
-  z-index: -1;
-}
 
 #img_banr {
   width: 40vw;
