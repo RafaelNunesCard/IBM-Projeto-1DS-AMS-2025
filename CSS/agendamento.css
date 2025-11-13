@@ -132,17 +132,90 @@ button:hover {
   border-color: #fc8e53;
 }
 
-
-.confirm {
-  background-color: #fc8e53ea;
-  padding: 10px 15px;
+/* ======= FORMULÁRIOS ======= */
+.form {
+  margin-top: 1rem;
+  width: 82.6%;
+  margin-left: .7rem;
+  display: none;
+  text-align: left;
+  background: var(--cinza-clarinho);
+  box-shadow: 0 10px 2px rgba(0, 0, 0, 0.3);
+  padding: 15px;
   border-radius: 10px;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--holver);
+}
+
+.form label {
+  display: block;
+  margin: 8px 0 4px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.form input {
+  width: 100%;
+  background: #1a1a1a;
+  color: white;
+  padding: 8px 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s ease;
+  font-size: 1.1rem;
+}
+
+.form input:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#pix{
+  text-align: center;
+}
+
+#QRcode img{
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+/* ======= BOTÃO CONFIRMAR ======= */
+.confirm {
+  margin-top: 20px;
+  width: 20%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primaria);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .confirm:hover {
-  transform: scale(1.05);
+  background: var(--holver);
+  transform: scale(1.1);
+}
+
+/* ======= ANIMAÇÃO ======= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ================= Responsividade ================= */

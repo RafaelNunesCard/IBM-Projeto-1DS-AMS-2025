@@ -64,27 +64,70 @@
           </div>
           <div class="calendar" id="calendar"></div>
           <div class="card" id="card_pagamento">
-            <h1>Payment method:</h1>
-            <div class="metodos">
-              <button class="pag"><i class="ri-pix-fill"></i> Pix</button>
-              <button class="pag">
-                <i class="ri-bank-card-fill"></i> Credit/Debit
-              </button>
-              <button class="pag">
-                <i class="ri-barcode-box-fill"></i> Bank Slip
-              </button>
-              <button class="pag">
-                <i class="ri-money-dollar-box-fill"></i> Money
-              </button>
-            </div>
-          </div>
-          <a href="">
-            <button class="confirm" id="showConfirmed">
-              Confirm
-            </button>
-          </a>
-        </div>
+          <h1>Payment method:</h1>
 
+          <div class="metodos">
+            <button class="pag" data-form="pix" onclick="chavepix()"><i class="ri-pix-fill"></i> Pix</button>
+            <button class="pag" data-form="cartao">
+            <i class="ri-bank-card-fill"></i> Credit/Debit
+            </button>
+            <button class="pag" data-form="boleto">
+            <i class="ri-barcode-box-fill"></i> Bank Slip
+            </button>
+            <button class="pag" data-form="dinheiro">
+            <i class="ri-money-dollar-box-fill"></i> Money
+            </button>
+          </div>
+
+          <!-- Formulário PIX -->
+          <form action="" class="form" id="pix">
+            <h2>Pix</h2>
+            <p>Escaneie o QR Code abaixo ou copie a chave:</p>
+            <div id="QRcode">
+              <img src="/img/QR-code.png"
+                  alt="QR Code Pix">
+            </div>
+            <p><strong>Chave Pix: </strong><span id="chavepix"></span></p>
+          </form>
+
+          <!-- Formulário Cartão -->
+          <form action="" class="form" id="cartao">
+            <h2>Credit/Debit Card</h2>
+            <label for="numero_cartao">Card Number:</label>
+            <input type="number" id="numero_cartao" placeholder="Ex:0000 0000 0000 0000" required>
+
+            <label for="nome_cartao">Cardholder Name:</label>
+            <input type="text" id="nome_cartao" placeholder="Full name" required>
+
+            <div class="linha">
+              <div>
+                <label for="validade">Expiration Date:</label>
+                <input type="month" id="validade" required>
+              </div>
+              <div>
+                <label for="cvv">CVV:</label>
+                <input type="number" id="cvv" placeholder="Ex:123" required>
+              </div>
+            </div>
+          </form>
+
+          <!-- Formulário Boleto -->
+          <form action="" class="form" id="boleto">
+            <h2>Bank Slip</h2>
+            <p>A bank slip will be generated after confirmation.</p>
+            <p>Due date: <strong>5 days after issue</strong></p>
+          </form>
+
+          <!-- Formulário Dinheiro -->
+          <form action="" class="form" id="dinheiro">
+            <h2>Cash Payment</h2>
+            <p>Please specify if you need change:</p>
+            <label for="troco">Do you need change for:</label>
+            <input type="number" id="troco" placeholder="Enter the amount (e.g., 100)" min="0">
+          </form>
+
+          <button class="confirm" id="showConfirmed">Confirm</button>
+        </div>
       </section>
     </main>
 
@@ -123,6 +166,28 @@
         </div>
       </div>
     </footer>
+    <script src="/JS/metodos pagmento.js"></script>
+    <script>
+      function chavepix() {
+      const campo = document.getElementById('chavepix');
+      
+      // Gera UUID v4 (chave EVP)
+      const bytes = crypto.getRandomValues(new Uint8Array(16));
+      bytes[6] = (bytes[6] & 0x0f) | 0x40; // versão 4
+      bytes[8] = (bytes[8] & 0x3f) | 0x80; // variante
+      
+      const hex = Array.from(bytes)
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join('');
+      
+      const uuid = hex.replace(
+        /^(.{8})(.{4})(.{4})(.{4})(.{12})$/,
+        '$1-$2-$3-$4-$5'
+      );
+      campo.textContent = ''
+      campo.textContent += uuid; // mostra na tela
+    }
+    </script>
     <script>
         const buttons = document.querySelectorAll('.pag');
 
