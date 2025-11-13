@@ -40,7 +40,7 @@
   text-align: left;
   margin-bottom: 10rem;
   position: relative;
-  background: radial-gradient(circle at 30% 50%, rgba(252, 142, 83, 0.1) 0%, transparent 50%),
+  background: radial-gradient(circle at 35% 50%, rgba(252, 142, 83, 0.1) 0%, transparent 50%),
               radial-gradient(circle at 70% 50%, rgba(84, 69, 174, 0.1) 0%, transparent 50%);
 }
 
@@ -179,13 +179,13 @@
   display: flex;
   text-align: left;
   gap: 1rem;
-  height: 60vh;
+  height: 50vh;
   animation: spin 60s infinite linear;
 }
 
 @keyframes spin{
-  from{translate: 10%;}
-  to{ translate: -55%;}
+  from{translate: 3%;}
+  to{ translate: -62%;}
 }
 
 .alinha::-webkit-scrollbar{
@@ -448,12 +448,14 @@
 
 .frase {
   width: 60%;
-  background-color: var(--cinza-claro);
+  background: radial-gradient(circle at 30% 50%, rgba(252, 142, 83, 0.1) 0%, transparent 60%),
+              radial-gradient(circle at 70% 50%, rgba(84, 69, 174, 0.1) 0%, transparent 60%);
   padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
 .frase h1 {
