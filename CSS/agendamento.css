@@ -165,7 +165,7 @@ button:hover {
   background: #1a1a1a;
   color: white;
   padding: 8px 10px;
-  border: 2px solid #ccc;
+  border: 2px solid #1a1a1a;
   border-radius: 6px;
   outline: none;
   transition: 0.2s ease;
@@ -173,7 +173,7 @@ button:hover {
 }
 
 .form input:focus {
-  border-color: #aaa;
+  border-color: #1a1a1a;
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
 }
 
