@@ -17,7 +17,7 @@
   --h2: 1.3rem;
   --p: 0.7rem;
 }
-/* ==================== POPUP DENUNCIA ==================== */    
+/* ==================== POPUP DENUNCIA ==================== */
 .popup {
   display: none;
   position: fixed;
@@ -42,11 +42,45 @@
   margin: 1rem 0;
 }
 
-input[type="checkbox"] {
-  transform: scale(1.5);
-  margin: 0.5rem;
+.custom-checkbox input {
+  display: none; 
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  border-radius: 10px;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  border-radius: 4px; 
+  margin-right: 10px;
+  position: relative;
+  transition: all .4s, transform .3s;
+}
+
+.checkmark:hover{
+  transform: scale(1.15);
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #5E2A79;
+  border-color: #5E2A79; 
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg); 
 }
 
 .popup-content {
@@ -62,6 +96,7 @@ input[type="checkbox"] {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  transition: all .6s ease-in-out;
 }
 
 .close:hover,
@@ -69,32 +104,53 @@ input[type="checkbox"] {
   color: white;
   text-decoration: none;
   cursor: pointer;
+  transform: rotate(180deg) scale(1.2);
 }
 
-.popup .alinha{
+.popup .alinha {
   display: flex;
   justify-content: space-between;
 }
 
-.popup button {
+.popup .enviar {
   background-color: var(--primaria);
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
+  font-size: 0.9rem;
   color: #fff;
+  transition: all .3s;
+}
+
+.popup .enviar:hover {
+  background-color: var(--holver);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 button.cancel {
   background: #ccc;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
   color: var(--cinza-escuro);
+  transition: all .3s;
+}
+
+.cancel:hover {
+  background-color: #bbb;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 button:hover {
   opacity: 0.9;
 }
-
 
 /* ==================== POPUP AVALIAÇÃO ==================== */
 .popup-avaliacao {
@@ -106,7 +162,7 @@ button:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .popup-avaliacao-content {
@@ -116,28 +172,34 @@ button:hover {
   border-radius: 12px;
   width: 400px;
   max-width: 90%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-.popup-avaliacao-content h1{
-    margin-bottom: 1rem;
+.popup-avaliacao-content h1 {
+  margin-bottom: 1rem;
 }
 
 .close-avaliacao {
+  color: #ccc;
   float: right;
   font-size: 28px;
   cursor: pointer;
+  transition: all 0.6s;
+}
+
+.close-avaliacao:hover {
+  color: white;
+  transform: rotate(180deg) scale(1.2);
 }
 
 .estrelas-avaliacao i {
-  font-size: 28px;
+  font-size: 26px;
   cursor: pointer;
   color: #ccc;
-  transition: transform .2s;
 }
 
 .estrelas-avaliacao i.ri-star-fill {
-  color: orange; 
+  color: orange;
 }
 
 .btns-avaliacao {
@@ -156,23 +218,35 @@ button:hover {
 .cancel-avaliacao {
   background: #ccc;
   color: var(--cinza-escuro);
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.cancel-avaliacao:hover {
+  background: #bbb;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 .enviar-avaliacao {
   background: var(--primaria);
-  transition: background .3s;
+  transition: all 0.3s;
   color: #fff;
+  font-size: 0.9rem;
 }
 
-.popup-avaliacao input,textarea{
-    background: var(--cinza-claro);
-    color: white;
-    width: 100%;
-    border: none;
-    padding: 3px;
-    border-radius: 5px;
+.popup-avaliacao input,
+textarea {
+  background: var(--cinza-claro);
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 3px;
+  border-radius: 5px;
 }
 
-.enviar-avaliacao:hover{
-    background-color: var(--holver);
+.enviar-avaliacao:hover {
+  background-color: var(--holver);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
 }
