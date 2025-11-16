@@ -1,4 +1,5 @@
 // Carregar dados no perfil
+
 document.addEventListener("DOMContentLoaded", () => {
   const perfil = JSON.parse(localStorage.getItem("perfil")) || {};
 

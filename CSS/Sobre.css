@@ -336,6 +336,11 @@ section h2 {
     margin-bottom: 30px;
   }
 
+  .container{
+    padding: 0;
+    margin: 10px;
+  }
+
   /* Conteúdo em coluna */
   .about-content,
   .problem-content,
@@ -367,7 +372,7 @@ section h2 {
   }
 
   .team-member {
-    width: 75%;
+    width: 85%;
     height: auto;
   }
 
@@ -385,6 +390,6 @@ section h2 {
   }
 
   .social-links a {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
