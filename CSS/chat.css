@@ -1,0 +1,291 @@
+header{
+    visibility: hidden;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/*====Divisões====*/
+
+#pessoas{
+    background-color: #101010;
+    width: 28%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#perfil{
+    width: 72%;
+    height: 100%;
+}
+
+/*Perfils*/
+#cont-perfils{
+    width: 80%;
+    height: 94%;
+}
+
+#pesquisar{
+    width: 100%;
+    padding: .6rem;
+    border-radius: 10px;
+    background: #2a2a2a;
+    margin-bottom: 1rem;
+}
+
+#pesquisar input{
+    width: 92%;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    color: white;
+}
+
+#pesquisar i{
+    margin: 0 .2rem;
+}
+
+#pesquisar input:focus-visible{
+    border: none;
+    outline: none;
+}
+
+#nome{
+    font-size: 2rem;
+}
+
+.perfil{
+    gap: 1rem;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    border-bottom: 3px solid rgb(12, 12, 12);
+}
+
+#ativado{
+    background: rgba(255, 255, 255, 0.05);
+}
+
+aside{
+    position: relative;
+    width: 100%;
+}
+
+aside h1{
+    margin-bottom: 8px;
+}
+
+#horasbotas{
+    position: absolute;
+    top: 3px;
+    right: 0;
+    font-size: .9rem;
+}
+
+.foto{
+    width: 85px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.foto img{
+    height: 100%;
+}
+
+
+/*Barra do topo*/
+#pessoa{
+    width: 100%;
+    height: 6%;
+    background:#2a2a2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#foto{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#foto img{
+    height: 100%;
+}
+
+#phone{
+    border-radius: 3px;
+    padding: .5rem .6rem;
+    border: none;
+    font-size: 1.5rem;
+    background: transparent;
+    transition: all .2s;
+    color: white;
+    background: #353535;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+#phone:hover{
+    transform: rotate(0);
+    padding: .4rem .5rem;
+    font-size: 1.6rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+/*====Mensagens====*/
+#mensagens{
+    width: 100%;
+    height: 90%;
+}
+
+.you-mensagens{
+    width: 50%;
+}
+
+.my-mensagens{
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.mensagem{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    gap: .5rem;
+}
+
+.mini-foto{
+    width: 38px;
+    height: 38px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+.mini-foto img{
+    height: 100%;
+}
+
+.mensagem p{
+    position: relative;
+    background: #131212;
+    border-radius: 10px;
+    padding: 7px;
+    padding-right: 2.7rem;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.nome{
+    color: #b3531f;
+    font-weight: bolder;
+}
+
+.user-mensagem p{
+    background: #b3531f;
+}
+
+.hora{
+    position: absolute;
+    color: rgb(233, 233, 233);
+    font-size: .7rem;
+    bottom: 5px;
+    right: 5px;
+}
+
+/*====Barra de digitação====*/
+
+#digitar{
+    position: fixed;
+    bottom: 0;
+    width: 73%;
+    display: flex;
+    justify-content: center;
+    background: #2a2a2a;
+    align-items: center;
+    padding: 1rem;
+}
+
+#digita{
+    width: 86%;
+    padding: .6rem;
+    border-radius: 7px;
+    background: #2f2f2f;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    box-shadow: 1px 5px 2px solid rgba(0, 0, 0, 0.3);
+}
+
+#digita:focus-visible{
+    outline: none;
+    border: none;
+}
+
+#enviar{
+   position: relative;
+   width: 2rem;
+   height: 2rem;
+   border: none;
+   margin: 0 .5rem;
+   border-radius: 3px;
+   padding: 1.2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: transparent;
+   font-size: 1.2rem;
+   color: white;
+   transition: background .2s;  
+}
+
+#mic{
+    border-radius: 3px;
+    padding: .5rem .6rem;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    background: transparent;
+    transition: all .2s;
+}
+
+#mic:hover,
+#enviar:hover{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
