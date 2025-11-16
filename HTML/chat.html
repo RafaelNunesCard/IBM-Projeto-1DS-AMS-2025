@@ -47,11 +47,11 @@
               </div>
               <aside>
                 <h1>Jorge Fonseca</h1>
-                <p id="ult-msg">
+                <p id="ult-msg" class="msg">
                   Olá, tudo bem?<br />
                   Recebi uma mensagem que você estava interessado
                 </p>
-                <span id="horasbotas">12:10</span>
+                <span id="horasbotas" class="tempo">12:10</span>
               </aside>
             </div>
           </a>
@@ -62,10 +62,10 @@
               </div>
               <aside>
                 <h1>TechFix</h1>
-                <p id="ult-msg">
+                <p class="msg">
                   Bem vindo a TechFix! Se precisar de ajuda estamos aqui!
                 </p>
-                <span id="horasbotas" id="tempo">14:04</span>
+                <span class="tempo">14:04</span>
               </aside>
             </div>
           </a>
@@ -132,6 +132,7 @@
               type="text"
               name="digita"
               placeholder="Mensagem"
+              autocomplete="off"
               id="digita"
             />
             <button onclick="enviar()" id="enviar">
