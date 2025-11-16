@@ -37,8 +37,8 @@
             <input type="text" placeholder="Pesquisar" />
           </div>
           <h1 id="nome">Bate-Papo</h1>
-          <a href="#">
-            <div class="perfil" id="ativado">
+          <a href="#" onclick="ativar()">
+            <div class="perfil" id="Jorge">
               <div class="foto">
                 <img
                   src="https://pfst.cf2.poecdn.net/base/image/27cdbd2a42b23937e9ce950bcf18f0fe81dd1f1e17da8e6199da3893d427d5b9?w=1024&h=768&pmaid=466461082"
@@ -47,7 +47,10 @@
               </div>
               <aside>
                 <h1>Jorge Fonseca</h1>
-                <p id="ult-msg">Olá, tudo bem?<br> Recebi uma mensagem que você estava interessado</p>
+                <p id="ult-msg">
+                  Olá, tudo bem?<br />
+                  Recebi uma mensagem que você estava interessado
+                </p>
                 <span id="horasbotas">12:10</span>
               </aside>
             </div>
@@ -55,14 +58,13 @@
           <a href="#">
             <div class="perfil">
               <div class="foto">
-                <img
-                  src="../img/Sobre/Serviços.png"
-                  alt=""
-                />
+                <img src="../img/Sobre/Serviços.png" alt="" />
               </div>
               <aside>
                 <h1>TechFix</h1>
-                <p id="ult-msg">Bem vindo a TechFix! Se precisar de ajuda estamos aqui!</p>
+                <p id="ult-msg">
+                  Bem vindo a TechFix! Se precisar de ajuda estamos aqui!
+                </p>
                 <span id="horasbotas" id="tempo">14:04</span>
               </aside>
             </div>
@@ -71,46 +73,91 @@
       </section>
 
       <section id="perfil">
-        <div id="pessoa">
-          <a href="contratar.html">
-            <div id="foto">
-              <img
-                src="https://pfst.cf2.poecdn.net/base/image/27cdbd2a42b23937e9ce950bcf18f0fe81dd1f1e17da8e6199da3893d427d5b9?w=1024&h=768&pmaid=466461082"
-                alt=""
-              />
+        <div id="cont1">
+          <div class="default">
+            <div class="alinha">
+              <div class="logo-cinza">
+                <img src="../img/Logo-cinza.png" alt="" />
+              </div>
             </div>
-          </a>
-          <h1>Jorge Fonseca</h1>
-          <div>
-            <button id="phone"><i class="ri-video-on-line"></i></button>
-            <button id="phone"><i class="ri-phone-line"></i></button>
+            <h1>Abra um chat para começar</h1>
+            <p>
+              Selecione um cliente ou profissional para visualizar o histórico
+              de mensagens.
+            </p>
+            <div id="especial">
+              <p>
+                <i class="ri-lock-2-line"></i> Protegido com criptografia de
+                ponta a ponta
+              </p>
+            </div>
           </div>
         </div>
-        <div id="mensagens">
-          <div class="you-mensagens">
-            <div class="mensagem">
-              <div class="mini-foto">
+        <div id="cont2">
+          <div id="pessoa">
+            <a href="contratar.html">
+              <div id="foto">
                 <img
                   src="https://pfst.cf2.poecdn.net/base/image/27cdbd2a42b23937e9ce950bcf18f0fe81dd1f1e17da8e6199da3893d427d5b9?w=1024&h=768&pmaid=466461082"
                   alt=""
                 />
               </div>
-              <p>
-                <span class="nome">Jorge Fonseca</span><br />Olá, tudo bem?<br> Recebi uma mensagem que você estava interessado
-                <span class="hora">12:10</span>
-              </p>
+            </a>
+            <h1>Jorge Fonseca</h1>
+            <div>
+              <button id="phone"><i class="ri-video-on-line"></i></button>
+              <button id="phone"><i class="ri-phone-line"></i></button>
             </div>
           </div>
-        </div>
-        <div id="digitar">
-          <button id="mic"><i class="ri-emotion-happy-line"></i></button>
-          <input type="text" name="digita" placeholder="Mensagem" id="digita" />
-          <button onclick="enviar()" id="enviar">
-            <i class="ri-send-plane-2-line"></i>
-          </button>
-          <button id="mic"><i class="ri-mic-line"></i></button>
+          <div id="mensagens">
+            <div class="you-mensagens">
+              <div class="mensagem">
+                <div class="mini-foto">
+                  <img
+                    src="https://pfst.cf2.poecdn.net/base/image/27cdbd2a42b23937e9ce950bcf18f0fe81dd1f1e17da8e6199da3893d427d5b9?w=1024&h=768&pmaid=466461082"
+                    alt=""
+                  />
+                </div>
+                <p>
+                  <span class="nome">Jorge Fonseca</span><br />Olá, tudo bem?<br />
+                  Recebi uma mensagem que você estava interessado
+                  <span class="hora">12:10</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="digitar">
+            <button id="mic"><i class="ri-emotion-happy-line"></i></button>
+            <input
+              type="text"
+              name="digita"
+              placeholder="Mensagem"
+              id="digita"
+            />
+            <button onclick="enviar()" id="enviar">
+              <i class="ri-send-plane-2-line"></i>
+            </button>
+            <button id="mic"><i class="ri-mic-line"></i></button>
+          </div>
         </div>
       </section>
     </main>
   </body>
+  <script>
+    let perfil = document.getElementById("Jorge");
+    let defult = document.getElementById("cont1");
+    let conversa = document.getElementById("cont2");
+
+    function ativar() {
+      if(perfil.classList.contains("ativado")){
+        perfil.classList.remove("ativado");
+        defult.style.display = "flex";
+        conversa.style.display = "none";
+      }else{
+      perfil.classList.add("ativado");
+      defult.style.display = "none";
+      conversa.style.display = "block";
+      }
+    }
+  </script>
 </html>

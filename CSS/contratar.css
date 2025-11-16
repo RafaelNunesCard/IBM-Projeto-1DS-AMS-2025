@@ -677,6 +677,11 @@ th {
     width: 100%;
   }
 
+  #review{
+    margin: 0;
+    width: 100%;
+  }
+
   table,
   td,
   th {
