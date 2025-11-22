@@ -125,7 +125,9 @@ button.cancelar:hover {
 @media (max-width: 480px) {
   .editar {
     padding: 15px;
+    width: 93%;
   }
+
   #form-editar {
     gap: 12px;
   }

@@ -1,3 +1,23 @@
+:root {
+  /* =====Cores do Site===== */
+  --primaria: #fc8e53;
+  --secundaria: #5445ae;
+  --terciaria: #6a67d2;
+  --holver: #f7515b;
+  --braco: #ffffff;
+
+  /* Tons suavizados */
+  --preto: #1a1a1a;
+  --cinza-escuro: #222222;
+  --cinza-claro: #2a2a2a;
+  --cinza-clarinho: #333333;
+
+  /* =====Fontes===== */
+  --h1: 1.7rem;
+  --h2: 1.3rem;
+  --p: 0.7rem;
+}
+
 main {
   display: flex;
   width: 100%;
@@ -235,7 +255,14 @@ aside h1 {
   height: 100%;
 }
 
-#phone {
+.options{
+  position: relative;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.phone {
   border-radius: 3px;
   padding: 0.5rem 0.6rem;
   border: none;
@@ -247,11 +274,41 @@ aside h1 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-#phone:hover {
-  transform: rotate(0);
-  padding: 0.4rem 0.5rem;
-  font-size: 1.6rem;
+.phone:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.visivel{
+  display: flex !important;
+}
+
+.pop-up{
+  display: none;
+  top: 3.9rem;
+  position: absolute;
+  width: 130%;
+  height: 15vh;
+  background-color: #353535;
+  padding: 14px 2px;
+  gap: 20px;
+  border-radius: 10px;
+            
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center;
+}
+
+.pop-up a{
+  text-align: center;
+  padding: 7px 0;
+  width: 100%;
+  border-radius: 5px;
+  transition: background-color .3s ease-in-out, color .5s ease-in-out;
+}
+
+.pop-up a:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--holver);
 }
 
 #especial-return {

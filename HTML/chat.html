@@ -112,9 +112,14 @@
               </a>
               <h1>Jorge Fonseca</h1>
             </div>
-            <div>
-              <button id="phone"><i class="ri-video-on-line"></i></button>
-              <button id="phone"><i class="ri-phone-line"></i></button>
+            <div class="options">
+              <button class="phone"><i class="ri-phone-line"></i></button>
+              <button class="phone" id="more"><i class="ri-list-check"></i></button>
+              <div class="pop-up" id="opção">
+                <a href=""><i class="ri-notification-3-line"></i> Silenciar</a>
+                <a href=""><i class="ri-prohibited-2-line"></i> Bloquear</a>
+                <a href=""><i class="ri-alert-line"></i> Denunciar</a>
+              </div>
             </div>
           </div>
           <div id="mensagens">
@@ -153,46 +158,4 @@
       </section>
     </main>
   </body>
-  <script>
-    let perfils = document.getElementById("pessoas");
-    let profile = document.getElementById("perfil");
-    let perfil = document.getElementById("Jorge");
-    let defult = document.getElementById("cont1");
-    let conversa = document.getElementById("cont2");
-
-    function checkMobile() {
-      return window.innerWidth <= 1024;
-    }
-    const isMobile = checkMobile();
-
-    if (isMobile) {
-      profile.classList.add("esconder");
-    }
-
-    function ativar() {
-      perfil.classList.toggle("ativado");
-
-      if (isMobile) {
-        if (perfil.classList.contains("ativado")) {
-          perfils.classList.add("esconder");
-          profile.classList.remove("esconder");
-          conversa.classList.remove("esconder");
-        } else {
-          perfils.classList.remove("esconder");
-          profile.classList.add("esconder");
-          conversa.classList.add("esconder");
-        }
-        return;
-      }
-
-      // ----- DESKTOP -----
-      if (perfil.classList.contains("ativado")) {
-        defult.classList.add("esconder");
-        conversa.classList.remove("esconder");
-      } else {
-        defult.classList.remove("esconder");
-        conversa.classList.add("esconder");
-      }
-    }
-  </script>
 </html>

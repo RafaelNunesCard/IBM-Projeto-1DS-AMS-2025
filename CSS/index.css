@@ -526,6 +526,12 @@
   section{
     padding: 1rem;
   }
+
+  .card{
+    height: 43vh;
+    width: 60vw;
+  }
+
   .bnt {
     width: 100%;
     margin: 0.5rem 0;
@@ -542,6 +548,7 @@
   .anos {
     width: 100%;
   }
+
   #cont_produtos {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -554,6 +561,7 @@
 
   .card_retangulo {
     width: 90%;
+
   }
 
   #Junte-se {
@@ -564,9 +572,11 @@
     width: 90%;
     display: block;
   }
+
   .frase button {
     margin-top: 1rem;
   }
+
   .container_serviços {
     margin-bottom: 0;
   }
