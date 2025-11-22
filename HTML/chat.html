@@ -28,7 +28,7 @@
   <body>
     <main>
       <section id="pessoas">
-        <a href="perfil.html" id="return"
+        <a href="perfil.html" class="return"
           ><i class="ri-arrow-left-s-line"></i
         ></a>
         <div id="cont-perfils">
@@ -49,7 +49,8 @@
                 <h1>Jorge Fonseca</h1>
                 <p id="ult-msg" class="msg">
                   Olá, tudo bem?<br />
-                  Recebi uma mensagem que você estava interessado
+                  Recebi uma notificação informando que você demonstrou interesse e
+                  gostaria de conversar.
                 </p>
                 <span id="horasbotas" class="tempo">12:10</span>
               </aside>
@@ -74,36 +75,43 @@
 
       <section id="perfil">
         <div id="cont1">
-          <div class="default">
-            <div class="alinha">
-              <div class="logo-cinza">
-                <img src="../img/Logo-cinza.png" alt="" />
+          <div class="itens">
+            <div class="default">
+              <div class="alinha">
+                <div class="logo-cinza">
+                  <img src="../img/Logo-cinza.png" alt="logo-cinza" />
+                </div>
               </div>
-            </div>
-            <h1>Abra um chat para começar</h1>
-            <p>
-              Selecione um cliente ou profissional para visualizar o histórico
-              de mensagens.
-            </p>
-            <div id="especial">
+              <h1>Abra um chat para começar</h1>
               <p>
-                <i class="ri-lock-2-line"></i> Protegido com criptografia de
-                ponta a ponta
+                Selecione um cliente ou profissional para visualizar o histórico
+                de mensagens.
               </p>
+              <div id="especial">
+                <p>
+                  <i class="ri-lock-2-line"></i> Protegido com criptografia de
+                  ponta a ponta
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div id="cont2">
+        <div id="cont2" class="esconder">
           <div id="pessoa">
-            <a href="contratar.html">
-              <div id="foto">
-                <img
-                  src="https://pfst.cf2.poecdn.net/base/image/27cdbd2a42b23937e9ce950bcf18f0fe81dd1f1e17da8e6199da3893d427d5b9?w=1024&h=768&pmaid=466461082"
-                  alt=""
-                />
-              </div>
-            </a>
-            <h1>Jorge Fonseca</h1>
+            <div class="separar">
+              <button onclick="ativar()" id="especial-return">
+                <i class="ri-arrow-left-line"></i>
+              </button>
+              <a href="contratar.html">
+                <div id="foto">
+                  <img
+                    src="https://pfst.cf2.poecdn.net/base/image/27cdbd2a42b23937e9ce950bcf18f0fe81dd1f1e17da8e6199da3893d427d5b9?w=1024&h=768&pmaid=466461082"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <h1>Jorge Fonseca</h1>
+            </div>
             <div>
               <button id="phone"><i class="ri-video-on-line"></i></button>
               <button id="phone"><i class="ri-phone-line"></i></button>
@@ -120,7 +128,8 @@
                 </div>
                 <p>
                   <span class="nome">Jorge Fonseca</span><br />Olá, tudo bem?<br />
-                  Recebi uma mensagem que você estava interessado
+                  Recebi uma notificação informando que você demonstrou interesse e
+                  gostaria de conversar.
                   <span class="hora">12:10</span>
                 </p>
               </div>
@@ -145,19 +154,44 @@
     </main>
   </body>
   <script>
+    let perfils = document.getElementById("pessoas");
+    let profile = document.getElementById("perfil");
     let perfil = document.getElementById("Jorge");
     let defult = document.getElementById("cont1");
     let conversa = document.getElementById("cont2");
 
+    function checkMobile() {
+      return window.innerWidth <= 1024;
+    }
+    const isMobile = checkMobile();
+
+    if (isMobile) {
+      profile.classList.add("esconder");
+    }
+
     function ativar() {
-      if(perfil.classList.contains("ativado")){
-        perfil.classList.remove("ativado");
-        defult.style.display = "flex";
-        conversa.style.display = "none";
-      }else{
-      perfil.classList.add("ativado");
-      defult.style.display = "none";
-      conversa.style.display = "block";
+      perfil.classList.toggle("ativado");
+
+      if (isMobile) {
+        if (perfil.classList.contains("ativado")) {
+          perfils.classList.add("esconder");
+          profile.classList.remove("esconder");
+          conversa.classList.remove("esconder");
+        } else {
+          perfils.classList.remove("esconder");
+          profile.classList.add("esconder");
+          conversa.classList.add("esconder");
+        }
+        return;
+      }
+
+      // ----- DESKTOP -----
+      if (perfil.classList.contains("ativado")) {
+        defult.classList.add("esconder");
+        conversa.classList.remove("esconder");
+      } else {
+        defult.classList.remove("esconder");
+        conversa.classList.add("esconder");
       }
     }
   </script>

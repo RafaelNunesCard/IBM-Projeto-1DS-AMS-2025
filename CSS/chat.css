@@ -1,467 +1,551 @@
-main{
-    display: flex;
-    width: 100%;
-    height: 100vh;
+main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
 }
 
-a{
-    color: white;
+a {
+  color: white;
 }
 
 /*====Divisões====*/
 
-#pessoas{
-    background-color: #101010;
-    width: 28%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+#pessoas {
+  background-color: #101010;
+  width: 28%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-right: 3px solid rgba(0, 0, 0, 0.5);
 }
 
-#perfil{
-    width: 72%;
-    height: 100%;
+#perfil {
+  width: 72%;
+  height: 100%;
 }
 
 /*Perfils*/
 
-
-#cont-perfils{
-    width: 85%;
-    height: 94%;
+#cont-perfils {
+  width: 85%;
+  height: 94%;
 }
 
-#return{
-    color: white;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 3.3%;
-    left: 7px;
-    border-radius: 10px;
-    transition: all .2s;
+.return {
+  color: white;
+  padding: 1px 3px;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 3.3%;
+  left: 7px;
+  border-radius: 10px;
+  transition: all 0.2s;
 }
 
-#return:hover{
-    background-color: rgba(255, 255, 255, 0.1);
+.return:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-#nome{
-    margin-bottom: 10px;
+#especial-return {
+  display: none;
+  visibility: hidden;
 }
 
-#pesquisar{
-    width: 100%;
-    padding: .6rem;
-    border-radius: 10px;
-    background: #2a2a2a;
-    margin-bottom: 1rem;
+#nome {
+  margin-bottom: 10px;
 }
 
-#pesquisar input{
-    width: 89%;
-    background: transparent;
-    border: none;
-    font-size: 1rem;
-    color: white;
+#pesquisar {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background: #2a2a2a;
+  margin-bottom: 1rem;
 }
 
-#pesquisar i{
-    margin: 0 .2rem;
+#pesquisar input {
+  width: 89%;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: white;
 }
 
-#pesquisar input:focus-visible{
-    border: none;
-    outline: none;
+#pesquisar i {
+  margin: 0 0.2rem;
 }
 
-#nome{
-    font-size: 2rem;
+#pesquisar input:focus-visible {
+  border: none;
+  outline: none;
 }
 
-.perfil{
-    gap: 1rem;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    padding: 10px;
-    border-radius: 10px;
-    align-items: center;
-    border-bottom: 3px solid black;
-    transition: all .2s;
-    margin-bottom: 6px;
+#nome {
+  font-size: 2rem;
 }
 
-.perfil:hover{
-    background: rgba(255, 255, 255, 0.01);
+.perfil {
+  gap: 1rem;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  border-bottom: 3px solid black;
+  transition: all 0.2s;
+  margin-bottom: 6px;
 }
 
-.ativado{
-    background: rgba(255, 255, 255, 0.05);
+.perfil:hover {
+  background: rgba(255, 255, 255, 0.01);
 }
 
-aside{
-    position: relative;
-    width: 100%;
+.ativado {
+  background: rgba(255, 255, 255, 0.05);
 }
 
-aside h1{
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+aside {
+  position: relative;
+  width: 100%;
 }
 
-.msg{
-    font-size: .8rem;
-    width: 26ch;              
-    white-space: nowrap;      
-    overflow: hidden;         
-    text-overflow: ellipsis;
+aside h1 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
-.tempo{
-    position: absolute;
-    top: 3px;
-    right: 0;
-    font-size: .7rem;
+.msg {
+  font-size: 0.8rem;
+  width: 26ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.foto{
-    width: 70px;
-    height: 70px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    flex-shrink: 0;
+.tempo {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  font-size: 0.7rem;
 }
 
-.foto img{
-    height: 100%;
+.foto {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.foto img {
+  height: 100%;
+}
+
+.esconder {
+  display: none !important;
 }
 
 /*Default*/
-#cont1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: relative;
+#cont1 {
+  height: 100%;
 }
 
-.default{
-    text-align: center;
-    align-items: center;
-    color: rgb(187, 187, 187);
+.itens {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
 }
 
-.default h1{
-    margin-bottom: 6px;
+.default {
+  text-align: center;
+  align-items: center;
+  color: rgb(187, 187, 187);
 }
 
-.alinha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.default h1 {
+  margin-bottom: 6px;
 }
 
-.logo-cinza{
-    width: 110px;
-    height: 110px;
-    overflow: hidden;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.alinha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo-cinza img{
-    width: 160%;
+.logo-cinza {
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#especial{
-    width: 58%;
-    position: absolute;
-    text-align: center;
-    bottom: 50px;
+.logo-cinza img {
+  width: 160%;
+}
+
+#especial {
+  width: 60%;
+  position: absolute;
+  text-align: center;
+  bottom: 50px;
 }
 
 /*Barra do topo*/
-#cont2{
-    display: none;
+
+#pessoa {
+  width: 100%;
+  height: auto;
+  background: #2a2a2a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
-#pessoa{
-    width: 100%;
-    height: auto;
-    background:#2a2a2a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+.separar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-#foto{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#foto {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#foto img{
-    height: 100%;
+#foto img {
+  height: 100%;
 }
 
-#phone{
-    border-radius: 3px;
-    padding: .5rem .6rem;
-    border: none;
-    font-size: 1.5rem;
-    background: transparent;
-    transition: all .2s;
-    color: white;
-    background: #353535;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+#phone {
+  border-radius: 3px;
+  padding: 0.5rem 0.6rem;
+  border: none;
+  font-size: 1.5rem;
+  background: transparent;
+  transition: all 0.2s;
+  color: white;
+  background: #353535;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-#phone:hover{
-    transform: rotate(0);
-    padding: .4rem .5rem;
-    font-size: 1.6rem;  
-    background: rgba(255, 255, 255, 0.1);
+#phone:hover {
+  transform: rotate(0);
+  padding: 0.4rem 0.5rem;
+  font-size: 1.6rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#especial-return {
+  border-radius: 3px;
+  padding: 0.5rem 0.6rem;
+  border: none;
+  font-size: 1.3rem;
+  background: transparent;
+  transition: all 0.2s;
+  color: white;
+}
+
+#especial-return:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /*====Mensagens====*/
-#mensagens{
-    width: 100%;
-    height: 80%;
+#mensagens {
+  width: 100%;
+  height: 80%;
 }
 
-.you-mensagens{
-    width: 50%;
+.my-mensagens {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
 }
 
-.my-mensagens{
-    position: relative;
-    display: block;
-    width: fit-content;
-    margin-left: auto;
+.mensagem {
+  display: flex;
+  align-items: center;
+  margin: 1rem 1.4rem;
+  gap: 0.5rem;
 }
 
-.mensagem{
-    display: flex;
-    align-items: center;
-    margin: 1rem;
-    gap: .5rem;
+.mini-foto {
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
 }
 
-.mini-foto{
-    width: 38px;
-    height: 38px;
-    overflow: hidden;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.3);
-    flex-shrink: 0;
+.mini-foto img {
+  height: 100%;
 }
 
-.mini-foto img{
-    height: 100%;
+.mensagem p {
+  position: relative;
+  background: #131212;
+  border-radius: 10px;
+  padding: 7px;
+  padding-right: 2.7rem;
+  margin-top: 10px;
+  font-size: 1rem;
+
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
-.mensagem p{
-    position: relative;
-    background: #131212;
-    border-radius: 10px;
-    padding: 7px;
-    padding-right: 2.7rem;
-    margin-top: 10px;
-    font-size: 1rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
+.nome {
+  color: #b3531f;
+  font-weight: bolder;
 }
 
-.nome{
-    color: #b3531f;
-    font-weight: bolder;
+.user-mensagem p {
+  background: #b3531f;
 }
 
-.user-mensagem p{
-    background: #b3531f;
-}
-
-.hora{
-    position: absolute;
-    color: rgb(233, 233, 233);
-    font-size: .7rem;
-    bottom: 5px;
-    right: 5px;
+.hora {
+  position: absolute;
+  color: rgb(233, 233, 233);
+  font-size: 0.7rem;
+  bottom: 5px;
+  right: 5px;
 }
 
 /*====Barra de digitação====*/
 
-#digitar{
-    position: fixed;
-    bottom: 0;
-    width: 73%;
-    display: flex;
-    justify-content: center;
-    background: #2a2a2a;
-    align-items: center;
-    padding: 1rem;
+#digitar {
+  position: fixed;
+  bottom: 0;
+  width: 73%;
+  display: flex;
+  justify-content: center;
+  background: #2a2a2a;
+  align-items: center;
+  padding: 1rem;
 }
 
-#digita{
-    width: 86%;
-    padding: .6rem;
-    border-radius: 7px;
-    background: #2f2f2f;
-    border: none;
-    font-size: 1rem;
-    color: white;
-    box-shadow: 1px 5px 2px solid rgba(0, 0, 0, 0.3);
+#digita {
+  width: 86%;
+  padding: 0.6rem;
+  border-radius: 7px;
+  background: #2f2f2f;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  box-shadow: 1px 5px 2px solid rgba(0, 0, 0, 0.3);
 }
 
-#digita:focus-visible{
-    outline: none;
-    border: none;
+#digita:focus-visible {
+  outline: none;
+  border: none;
 }
 
-#enviar{
-   position: relative;
-   width: 2rem;
-   height: 2rem;
-   border: none;
-   margin: 0 .5rem;
-   border-radius: 3px;
-   padding: 1.2rem;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background: transparent;
-   font-size: 1.2rem;
-   color: white;
-   transition: background .2s;  
+#enviar {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  margin: 0 0.5rem;
+  border-radius: 3px;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  font-size: 1.2rem;
+  color: white;
+  transition: background 0.2s;
 }
 
-#mic{
-    border-radius: 3px;
-    padding: .5rem .6rem;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
-    background: transparent;
-    transition: all .2s;
+#mic {
+  border-radius: 3px;
+  padding: 0.5rem 0.6rem;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  background: transparent;
+  transition: all 0.2s;
 }
 
 #mic:hover,
-#enviar:hover{
-    background: rgba(255, 255, 255, 0.1);
+#enviar:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 1024px) {
-    main {
-        flex-direction: column;
-        height: auto;
-    }
+  #pessoas {
+    width: 100vw;
+    height: 100dvh;
+    border-right: none;
+  }
 
-    #pessoas {
-        width: 100%;
-        height: auto;
-    }
+  #perfil {
+    width: 100vw;
+    height: 100dvh;
+  }
 
-    #perfil {
-        width: 100%;
-        height: auto;
-    }
+  #mensagens{
+    min-height: 83.5vh;
+  }
 
-    #digitar {
-        width: 100%;
-        position: relative;
-    }
+  #cont2 {
+    width: 100vw;
+    height: 100dvh;
+  }
+
+  #cont1 {
+    visibility: hidden;
+    display: none;
+  }
+
+  .msg {
+    width: 50ch;
+  }
+
+  #especial-return {
+    display: block;
+    visibility: visible;
+    position: relative;
+  }
+
+  #digitar {
+    width: 100%;
+    position: relative;
+  }
 }
 
 @media (max-width: 768px) {
+  #pessoas {
+    width: 100vw;
+    height: 100dvh;
+    padding: 1rem 0;
+  }
 
-    #pessoas {
-        width: 100%;
-        height: auto;
-        padding: 1rem 0;
-    }
+  #cont-perfils {
+    width: 95%;
+  }
 
-    #cont-perfils {
-        width: 95%;
-    }
+  .return {
+    top: 10px;
+    left: 14px;
+  }
 
-    .perfil {
-        height: auto;
-        padding: .6rem;
-        gap: .8rem;
-    }
+  .perfil {
+    height: auto;
+    padding: 0.6rem;
+    gap: 0.8rem;
+  }
 
-    .foto {
-        width: 60px;
-        height: 60px;
-    }
+  .foto {
+    width: 60px;
+    height: 60px;
+  }
 
-    #nome {
-        font-size: 1.6rem;
-    }
+  #nome {
+    font-size: 1.6rem;
+  }
 
-    #pessoa {
-        height: auto;
-        padding: .7rem;
-    }
+  #mensagens {
+    min-height: 83.7vh;
+  }
 
-    /* Mensagens */
-    .mensagem p {
-        font-size: 1rem;
-        padding-right: 2.3rem;
-    }
+  /* Mensagens */
+  .mensagem p {
+    font-size: 1rem;
+    padding-right: 2.3rem;
+  }
 
-    /* Digitação */
-    #digitar {
-        width: 100%;
-    }
+  .msg {
+    width: 45ch;
+  }
 
-    #digita {
-        width: 75%;
-        font-size: .9rem;
-    }
+  /* Digitação */
+  #digitar {
+    width: 100%;
+  }
 
-    #mic, #enviar {
-        padding: .4rem;
-    }
+  #digita {
+    width: 75%;
+    font-size: 0.9rem;
+  }
+
+  #mic,
+  #enviar {
+    padding: 0.4rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .foto {
+    width: 50px;
+    height: 50px;
+  }
 
-    .foto {
-        width: 50px;
-        height: 50px;
-    }
+  #especial-return{
+    font-size: 1.1rem;
+    padding: 0.3rem 0.4rem;
+  }
 
-    .mini-foto {
-        width: 32px;
-        height: 32px;
-    }
+  #mensagens {
+    min-height: 84vh;
+  }
 
-    .mensagem {
-        margin: .6rem;
-    }
+  .mini-foto {
+    width: 36px;
+    height: 36px;
+  }
 
-    .mensagem p {
-        font-size: .9rem;
-    }
+  .msg {
+    width: 34ch;
+  }
 
-    #digita {
-        width: 70%;
-    }
+  .mensagem {
+    margin: 0.8rem;
+  }
+
+  .mensagem p {
+    font-size: 0.9rem;
+  }
+
+  #digita {
+    width: 70%;
+  }
+
+  .separar {
+    gap: 7px;
+  }
+
+  #phone {
+    font-size: 1rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  #phone:hover {
+    font-size: 1rem;
+    padding: 0.4rem 0.5rem;
+  }
 }
