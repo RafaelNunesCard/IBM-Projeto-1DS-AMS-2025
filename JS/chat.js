@@ -132,14 +132,85 @@ function ativar() {
 const more = document.getElementById("more");
 let opção = document.getElementById("opção");
 
-more.addEventListener('click', mostrar);
+more.addEventListener("click", mostrar);
 
 function mostrar() {
   more.classList.toggle("ativado");
 
-  if(more.classList.contains("ativado")){ 
-    opção.classList.add("visivel")
-  }else{
-    opção.classList.remove("visivel")
+  if (more.classList.contains("ativado")) {
+    opção.classList.add("visivel");
+  } else {
+    opção.classList.remove("visivel");
+  }
+}
+
+//Silenciar
+const silenciar = document.getElementById("silenciar");
+let notificação = document.getElementById("notificação");
+let texTsilenciar = document.getElementById("text-silenciar");
+let silenciarIco = document.getElementById("silenciar1");
+
+silenciar.addEventListener("click", trocar);
+
+function trocar(event) {
+  event.preventDefault();
+  silenciar.classList.toggle("a");
+
+  if (silenciar.classList.contains("a")) {
+    notificação.classList.remove("ri-notification-4-line");
+    notificação.classList.add("ri-notification-off-line");
+    silenciarIco.classList.add("visivel")
+    texTsilenciar.textContent = " Silenciado";
+  } else {
+    notificação.classList.add("ri-notification-4-line");
+    notificação.classList.remove("ri-notification-off-line");
+    silenciarIco.classList.remove("visivel");
+    texTsilenciar.textContent = " Silenciar";
+  }
+}
+
+//Bloquear
+const Bloquear = document.getElementById("bloquear");
+let block = document.getElementById("block");
+let texTblock = document.getElementById("text-block");
+let blockIco = document.getElementById("block1");
+
+Bloquear.addEventListener("click", bloqueio);
+
+function bloqueio(event) {
+  event.preventDefault();
+  Bloquear.classList.toggle("b");
+
+  if (Bloquear.classList.contains("b")) {
+    block.classList.add("girar");
+    blockIco.classList.add("visivel");
+    texTblock.textContent = " Bloqueado";
+  } else {
+    block.classList.remove("girar");
+    blockIco.classList.remove("visivel");
+    texTblock.textContent = " Bloquear";
+  }
+}
+
+//Denunciar
+const Denunciar = document.getElementById("denunciar");
+let denun = document.getElementById("denun");
+let texTdenun = document.getElementById("text-denun");
+let denunIco = document.getElementById("denun1");
+
+Denunciar.addEventListener("click", denunciando);
+
+function denunciando(event) {
+  event.preventDefault();
+  Denunciar.classList.toggle("c");
+
+  if (Denunciar.classList.contains("c")) {
+    denun.classList.remove("ri-alert-line");
+    denun.classList.add("ri-alert-fill");
+    denunIco.classList.add("visivel");
+  } else {
+    denun.classList.remove("ri-alert-fill");
+    denun.classList.add("ri-alert-line");
+    denunIco.classList.remove("visivel");
   }
 }

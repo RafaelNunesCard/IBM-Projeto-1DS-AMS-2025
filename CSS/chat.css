@@ -167,6 +167,26 @@ aside h1 {
   height: 100%;
 }
 
+.acusações{
+  position: absolute;
+  display: flex;
+  right: 0;
+  color: var(--holver);
+  gap: 10px;
+}
+
+.acusação{
+  display: none;
+}
+
+#silenciar1{
+  animation: gira 1.5s ease-in-out forwards;
+}
+
+#block1{
+  transform: rotate(45deg);
+}
+
 .esconder {
   display: none !important;
 }
@@ -292,6 +312,7 @@ aside h1 {
   padding: 14px 2px;
   gap: 20px;
   border-radius: 10px;
+  z-index: 100;
             
   flex-direction: column;  
   justify-content: center; 
@@ -308,6 +329,44 @@ aside h1 {
 
 .pop-up a:hover{
   background-color: rgba(255, 255, 255, 0.1);
+  color: var(--holver);
+}
+
+.a{
+  color: var(--holver);
+}
+
+.a > i{
+  display: inline-block;
+  animation: gira 1.5s ease-in-out forwards;
+}
+
+@keyframes gira{
+  0%{
+    transform: rotate(0deg);
+  }25%{
+    transform: rotate(-35deg);
+  }50%{
+    transform: rotate(35deg);
+  }100%{
+    transform: rotate(0deg);
+  }
+}
+
+#block{
+  transition: all .3s ease-in-out;
+}
+
+.b{
+  color: var(--holver);
+}
+
+.b > i{
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.c{
   color: var(--holver);
 }
 
@@ -524,6 +583,10 @@ aside h1 {
 
   #nome {
     font-size: 1.6rem;
+  }
+
+  .acusações{
+    bottom: -4px;
   }
 
   #mensagens {
