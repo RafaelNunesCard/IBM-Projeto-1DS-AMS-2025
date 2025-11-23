@@ -30,7 +30,7 @@
 
     <!--==================== JS Status ====================-->
     <script src="../JS/status.js" defer></script>
-    
+
     <script src="../JS/editar.js" defer></script>
 
     <title>TechFix - Perfil</title>
@@ -65,7 +65,10 @@
           <div class="perfil_esquerda">
             <div class="icon_img">
               <div class="perfil_img">
-                <img src="../img/Perfis/Default perfil.jpg" alt="imagem do usuario" />
+                <img
+                  src="../img/Perfis/Default perfil.jpg"
+                  alt="imagem do usuario"
+                />
               </div>
               <a href="#" onclick="openPopup()"
                 ><i class="ri-emotion-line"></i
@@ -194,9 +197,7 @@
               <h3><i class="ri-map-pin-line"></i> <a href="#">São Paulo</a></h3>
               <h3>
                 <i class="ri-mail-line"></i>
-                <a href="mailto" target="_blank"
-                  >Nenhum e-mail informado</a
-                >
+                <a href="mailto" target="_blank">Nenhum e-mail informado</a>
               </h3>
               <h3>
                 <i class="ri-phone-line"></i> <a href="tel"> (xx) xxxxx-xxxx</a>
@@ -208,7 +209,7 @@
                 <h3 id="seguidores"><i class="ri-group-line"></i> 0</h3>
                 <h3>Agendas</h3>
               </a>
-              
+
               <a href="">
                 <h3 id="seguindo"><i class="ri-user-received-2-fill"></i> 0</h3>
                 <h3>Reviews</h3>
@@ -220,31 +221,25 @@
               </a>
             </div>
           </div>
-           <div class="Informacoes">
-          <div class="nome">
-            <h1>Rafael Nunes Cardoso</h1>
-            <a href="editar.html" id="editar"><i class="ri-edit-fill"></i></a>
-            <h3>Client</h3>
-            <h2>He/Him</h2>
-          </div>
+          <div class="Informacoes">
+            <div class="nome">
+              <h1>Rafael Nunes Cardoso</h1>
+              <a href="editar.html" id="editar"><i class="ri-edit-fill"></i></a>
+              <h3>Client</h3>
+              <h2>He/Him</h2>
+            </div>
 
-          <div class="biografia">
-            <h3><i class="ri-user-fill"></i>Biography:</h3>
-            <p class="bio">
-              Nothing here
-            </p>
-          </div>
+            <div class="biografia">
+              <h3><i class="ri-user-fill"></i>Biography:</h3>
+              <p class="bio">Nothing here</p>
+            </div>
 
-          <div class="biografia">
-            <h3><i class="ri-book-marked-fill"></i>Education:</h3>
-            <p class="edu">
-             Nothing here
-            </p>
+            <div class="biografia">
+              <h3><i class="ri-book-marked-fill"></i>Education:</h3>
+              <p class="edu">Nothing here</p>
+            </div>
           </div>
         </div>
-        </div>
-
-       
       </section>
     </main>
 
@@ -283,5 +278,31 @@
         </div>
       </div>
     </footer>
+    <script>
+      if (document.body.contains(document.querySelector(".perfil"))) {
+        // --- AJUSTE AUTOMÁTICO DO AVATAR ---
+        const avatarImg = document.querySelector(".perfil_img img");
+
+        avatarImg.addEventListener("load", () => {
+          const largura = avatarImg.naturalWidth;
+          const altura = avatarImg.naturalHeight;
+
+          // Remove classes antigas
+          avatarImg.classList.remove(
+            "img-horizontal",
+            "img-vertical",
+            "img-quadrada"
+          );
+
+          if (largura > altura) {
+            avatarImg.classList.add("img-horizontal"); // foto deitada
+          } else if (altura > largura) {
+            avatarImg.classList.add("img-vertical"); // foto em pé
+          } else {
+            avatarImg.classList.add("img-quadrada"); // quadrada
+          }
+        });
+      }
+    </script>
   </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Emoji Picker Profissional</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    #container {
+      max-width: 350px;
+    }
+
+    #emojiInput {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    #abrirPicker {
+      padding: 10px 15px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    #emojiBox {
+      display: none; /* escondido até clicar no botão */
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <button id="abrirPicker">😀 Escolher emoji</button>
+
+    <div id="emojiBox"></div>
+
+    <input id="emojiInput" placeholder="Emoji escolhido aparece aqui">
+  </div>
+
+  <!-- IMPORTANDO O EMOJI PICKER VIA CDN -->
+  <script type="module">
+    import "https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js";
+
+    const picker = document.createElement("emoji-picker");
+    picker.style.width = "100%";
+
+    const box = document.getElementById("emojiBox");
+    box.appendChild(picker);
+
+    const input = document.getElementById("emojiInput");
+    const btn = document.getElementById("abrirPicker");
+
+    // Alterna mostrar/ocultar o seletor
+    btn.addEventListener("click", () => {
+      box.style.display = box.style.display === "none" ? "block" : "none";
+    });
+
+    // Quando o usuário clicar em um emoji
+    picker.addEventListener("emoji-click", (event) => {
+      input.value += event.detail.unicode; // adiciona o emoji no campo
+    });
+  </script>
+</body>
+</html>

@@ -49,13 +49,19 @@
                 <h1>Jorge Fonseca</h1>
                 <p id="ult-msg" class="msg">
                   Olá, tudo bem?<br />
-                  Recebi uma notificação informando que você demonstrou interesse e
-                  gostaria de conversar.
+                  Recebi uma notificação informando que você demonstrou
+                  interesse e gostaria de conversar.
                 </p>
                 <div class="acusações">
-                  <span class="acusação" id="denun1"><i class="ri-alert-fill"></i></span>
-                  <span class="acusação" id="block1"><i class="ri-prohibited-2-line"></i></span>
-                  <span class="acusação" id="silenciar1"><i class="ri-notification-off-line"></i></span>
+                  <span class="acusação" id="denun1"
+                    ><i class="ri-alert-fill"></i
+                  ></span>
+                  <span class="acusação" id="block1"
+                    ><i class="ri-prohibited-2-line"></i
+                  ></span>
+                  <span class="acusação" id="silenciar1"
+                    ><i class="ri-notification-off-line"></i
+                  ></span>
                 </div>
                 <span id="horasbotas" class="tempo">12:10</span>
               </aside>
@@ -119,11 +125,22 @@
             </div>
             <div class="options">
               <button class="phone"><i class="ri-phone-line"></i></button>
-              <button class="phone" id="more"><i class="ri-list-check"></i></button>
+              <button class="phone" id="more">
+                <i class="ri-list-check"></i>
+              </button>
               <div class="pop-up" id="opção">
-                <a id="silenciar"><i class="ri-notification-4-line" id="notificação"></i><span id="text-silenciar"> Silenciar</span></a>
-                <a id="bloquear"><i class="ri-prohibited-2-line" id="block"></i> <span id="text-block">Bloquear</span></a>
-                <a id="denunciar"><i class="ri-alert-line" id="denun"></i> <span id="text-denun">Denunciar</span></a>
+                <a id="silenciar"
+                  ><i class="ri-notification-4-line" id="notificação"></i
+                  ><span id="text-silenciar"> Silenciar</span></a
+                >
+                <a id="bloquear"
+                  ><i class="ri-prohibited-2-line" id="block"></i>
+                  <span id="text-block">Bloquear</span></a
+                >
+                <a id="denunciar"
+                  ><i class="ri-alert-line" id="denun"></i>
+                  <span id="text-denun">Denunciar</span></a
+                >
               </div>
             </div>
           </div>
@@ -138,15 +155,18 @@
                 </div>
                 <p>
                   <span class="nome">Jorge Fonseca</span><br />Olá, tudo bem?<br />
-                  Recebi uma notificação informando que você demonstrou interesse e
-                  gostaria de conversar.
+                  Recebi uma notificação informando que você demonstrou
+                  interesse e gostaria de conversar.
                   <span class="hora">12:10</span>
                 </p>
               </div>
             </div>
           </div>
           <div id="digitar">
-            <button id="mic"><i class="ri-emotion-happy-line"></i></button>
+            <div id="emojiBox"></div>
+            <button class="emoji" id="abrirPicker">
+              <i class="ri-emotion-happy-line"></i>
+            </button>
             <input
               type="text"
               name="digita"
@@ -162,5 +182,27 @@
         </div>
       </section>
     </main>
+    <script type="module">
+      import "https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js";
+
+      const picker = document.createElement("emoji-picker");
+      picker.style.width = "100%";
+
+      const box = document.getElementById("emojiBox");
+      box.appendChild(picker);
+
+      const input = document.getElementById("digita");
+      const btn = document.getElementById("abrirPicker");
+
+      // Alterna mostrar/ocultar o seletor
+      btn.addEventListener("click", () => {
+        box.style.display = box.style.display === "none" ? "block" : "none";
+      });
+
+      // Quando o usuário clicar em um emoji
+      picker.addEventListener("emoji-click", (event) => {
+        input.value += event.detail.unicode; // adiciona o emoji no campo
+      });
+    </script>
   </body>
 </html>

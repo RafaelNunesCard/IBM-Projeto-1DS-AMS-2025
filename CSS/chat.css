@@ -167,7 +167,7 @@ aside h1 {
   height: 100%;
 }
 
-.acusações{
+.acusações {
   position: absolute;
   display: flex;
   right: 0;
@@ -175,15 +175,15 @@ aside h1 {
   gap: 10px;
 }
 
-.acusação{
+.acusação {
   display: none;
 }
 
-#silenciar1{
+#silenciar1 {
   animation: gira 1.5s ease-in-out forwards;
 }
 
-#block1{
+#block1 {
   transform: rotate(45deg);
 }
 
@@ -275,7 +275,7 @@ aside h1 {
   height: 100%;
 }
 
-.options{
+.options {
   position: relative;
   display: flex;
   gap: 10px;
@@ -298,75 +298,77 @@ aside h1 {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.visivel{
+.visivel {
   display: flex !important;
 }
 
-.pop-up{
+.pop-up {
   display: none;
   top: 3.9rem;
   position: absolute;
   width: 130%;
-  height: 15vh;
   background-color: #353535;
   padding: 14px 2px;
   gap: 20px;
   border-radius: 10px;
   z-index: 100;
-            
-  flex-direction: column;  
-  justify-content: center; 
+
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.pop-up a{
+.pop-up a {
   text-align: center;
   padding: 7px 0;
   width: 100%;
   border-radius: 5px;
-  transition: background-color .3s ease-in-out, color .5s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.5s ease-in-out;
 }
 
-.pop-up a:hover{
+.pop-up a:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--holver);
 }
 
-.a{
+.a {
   color: var(--holver);
 }
 
-.a > i{
+.a > i {
   display: inline-block;
   animation: gira 1.5s ease-in-out forwards;
 }
 
-@keyframes gira{
-  0%{
+@keyframes gira {
+  0% {
     transform: rotate(0deg);
-  }25%{
+  }
+  25% {
     transform: rotate(-35deg);
-  }50%{
+  }
+  50% {
     transform: rotate(35deg);
-  }100%{
+  }
+  100% {
     transform: rotate(0deg);
   }
 }
 
-#block{
-  transition: all .3s ease-in-out;
+#block {
+  transition: all 0.3s ease-in-out;
 }
 
-.b{
+.b {
   color: var(--holver);
 }
 
-.b > i{
+.b > i {
   display: inline-block;
   transform: rotate(45deg);
 }
 
-.c{
+.c {
   color: var(--holver);
 }
 
@@ -465,6 +467,7 @@ aside h1 {
 }
 
 #digita {
+  position: relative;
   width: 86%;
   padding: 0.6rem;
   border-radius: 7px;
@@ -478,6 +481,35 @@ aside h1 {
 #digita:focus-visible {
   outline: none;
   border: none;
+}
+
+#emojiBox {
+  display: none; 
+  position: absolute;
+  margin-top: 10px;
+  left: 5px;
+  bottom: 60px;
+  width: 300px;
+}
+
+emoji-picker {
+  width: 100%;
+  height: 300px;
+
+  --emoji-size: 20px;
+  --num-columns: 7;
+  --border-radius: 8px;
+}
+
+
+.emoji{
+  border-radius: 3px;
+  padding: 0.5rem 0.6rem;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  background: transparent;
+  transition: all 0.2s;
 }
 
 #enviar {
@@ -508,7 +540,8 @@ aside h1 {
 }
 
 #mic:hover,
-#enviar:hover {
+#enviar:hover,
+.emoji:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -524,7 +557,7 @@ aside h1 {
     height: 100dvh;
   }
 
-  #mensagens{
+  #mensagens {
     min-height: 83.5vh;
   }
 
@@ -539,7 +572,7 @@ aside h1 {
   }
 
   .msg {
-    width: 50ch;
+    width: 65ch;
   }
 
   #especial-return {
@@ -566,7 +599,7 @@ aside h1 {
   }
 
   .return {
-    top: 10px;
+    top: 0px;
     left: 14px;
   }
 
@@ -585,12 +618,13 @@ aside h1 {
     font-size: 1.6rem;
   }
 
-  .acusações{
+  .acusações {
     bottom: -4px;
   }
 
   #mensagens {
-    min-height: 83.7vh;
+    min-height: 68.4dvh;
+    height: auto;
   }
 
   /* Mensagens */
@@ -600,7 +634,7 @@ aside h1 {
   }
 
   .msg {
-    width: 45ch;
+    width: 41ch;
   }
 
   /* Digitação */
@@ -625,13 +659,23 @@ aside h1 {
     height: 50px;
   }
 
-  #especial-return{
+  .separar h1 {
+    font-size: 1.2rem;
+  }
+
+  .return {
+    top: 0;
+    left: 7px;
+  }
+
+  #especial-return {
     font-size: 1.1rem;
     padding: 0.3rem 0.4rem;
   }
 
   #mensagens {
-    min-height: 84vh;
+    min-height: 69dvh;
+    height: auto;
   }
 
   .mini-foto {
@@ -640,7 +684,7 @@ aside h1 {
   }
 
   .msg {
-    width: 34ch;
+    width: 30ch;
   }
 
   .mensagem {

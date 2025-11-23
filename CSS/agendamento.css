@@ -248,6 +248,7 @@ button:hover {
    #card_pagamento {
     flex-direction: column;
     align-items: stretch;
+    margin: 0;
   }
 
   .card {
@@ -306,5 +307,9 @@ button:hover {
   .pag, .confirm {
     font-size: 0.9rem;
     padding: 10px;
+  }
+
+  .form{
+    width: 100%;
   }
 }

@@ -250,3 +250,45 @@ textarea {
   transform: translateY(-3px);
   box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
 }
+
+@media (max-width: 768px) {
+  :root {
+    --h1: 1.5rem;
+    --h2: 1.2rem;
+    --p: 0.9rem;
+  }
+  
+  .popup-content, .popup-avaliacao-content {
+    width: 90%; 
+    padding: 15px;
+  }
+
+  .popup h1, .popup-avaliacao-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .popup .enviar, .cancel, .enviar-avaliacao {
+    font-size: 0.8rem; 
+    padding: 8px 12px; 
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --h1: 1.2rem;
+    --h2: 1rem;
+    --p: 0.8rem;
+  }
+
+  .popup-content, .popup-avaliacao-content {
+    width: 95%; 
+  }
+
+  .close, .close-avaliacao {
+    font-size: 24px; 
+  }
+
+  .estrelas-avaliacao i {
+    font-size: 20px; 
+  }
+}
