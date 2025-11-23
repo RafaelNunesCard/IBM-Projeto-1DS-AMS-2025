@@ -52,15 +52,15 @@ section {
 
 /* Imagem horizontal */
 .img-horizontal {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   object-fit: cover;
 }
 
 /* Imagem vertical */
 .img-vertical {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -258,7 +258,8 @@ section {
     align-items: center;
     gap: 2rem;
     width: 100%;
-    height: 100dvh;
+    min-height: 100dvh;
+    height: auto;
   }
 
   .perfil_esquerda {

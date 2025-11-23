@@ -674,7 +674,7 @@ emoji-picker {
   }
 
   #mensagens {
-    min-height: 69dvh;
+    min-height: 75dvh;
     height: auto;
   }
 
@@ -684,7 +684,7 @@ emoji-picker {
   }
 
   .msg {
-    width: 30ch;
+    width: 25ch;
   }
 
   .mensagem {
