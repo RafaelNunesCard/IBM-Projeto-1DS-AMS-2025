@@ -337,9 +337,13 @@ input:-webkit-autofill {
   transform: skewX(45deg) translateX(190%);
 }
 
+#titulo-esqueceu{
+  text-align: center;
+}
+
 @media screen and (max-width: 650px) {
   .container {
-    margin: 120px 40px;
+    margin: 120px 20px;
     height: calc(120vh - 40px);
   }
 
