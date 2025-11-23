@@ -52,22 +52,22 @@
       <section id="banr_home">
         <div id="img_banr"><img src="../img/banner1.png" alt="Pessoa" /></div>
         <div id="text_banr">
-          <h2>Hello, do you need help?</h2>
+          <h2 id="headerNome">Hello, do you need help?</h2>
           <h1>Maintenance and Repair</h1>
           <p>
-            If you need assistance with repairs or maintenance, we're
-            here to help! Contact us and find out how we can solve
-            your problems quickly and efficiently.
+            If you need assistance with repairs or maintenance, we're here to
+            help! Contact us and find out how we can solve your problems quickly
+            and efficiently.
           </p>
-          <a href="cadastro.html"><button class="bnt">REGISTER</button></a>
+          <a href="serviço.html"><button class="bnt">SERVICES</button></a>
         </div>
       </section>
 
       <section class="servicos">
         <h1>Our Maintenance and Repair Services</h1>
         <p>
-          We're here to ensure your home or business runs smoothly.
-          Check out our specialized services:
+          We're here to ensure your home or business runs smoothly. Check out
+          our specialized services:
         </p>
         <div class="alinha">
           <div class="container_serviços">
@@ -82,31 +82,26 @@
             <div class="card autoShow">
               <i class="ri-macbook-line"></i>
               <h1>Computer Maintenance:</h1>
-              <p>
-                We ensure your devices operate efficiently and securely.
-              </p>
+              <p>We ensure your devices operate efficiently and securely.</p>
             </div>
             <div class="card autoShow">
               <i class="ri-computer-line"></i>
               <h1>Home Appliance Repair:</h1>
               <p>
-                Fast and effective repairs to ensure the functioning of
-                your devices.
+                Fast and effective repairs to ensure the functioning of your
+                devices.
               </p>
             </div>
             <div class="card autoShow">
               <i class="ri-roadster-line"></i>
               <h1>Vehicle Maintenance:</h1>
-              <p>
-                Maintenance services to keep your car in great condition.
-              </p>
+              <p>Maintenance services to keep your car in great condition.</p>
             </div>
             <div class="card autoShow">
               <i class="ri-server-line"></i>
               <h1>Industrial Equipment Maintenance:</h1>
               <p>
-                Solutions to ensure the efficiency and safety of your
-                machinery.
+                Solutions to ensure the efficiency and safety of your machinery.
               </p>
             </div>
             <div class="card autoShow">
@@ -133,9 +128,7 @@
             <div class="card autoShow">
               <i class="ri-macbook-line"></i>
               <h1>Computer Maintenance:</h1>
-              <p>
-                We ensure your devices operate efficiently and securely.
-              </p>
+              <p>We ensure your devices operate efficiently and securely.</p>
             </div>
           </div>
         </div>
@@ -238,25 +231,6 @@
           </div>
         </div>
       </section>
-
-      <section id="Junte-se">
-        <div class="frase">
-          <div id="text_frase">
-            <h1>Join Us</h1>
-            <p>
-              Now that you know a little about what we do, how about
-              signing up and joining our team?
-            </p>
-          </div>
-          <div>
-            <a href="cadastro.html">
-              <button class="bnt" id="bnt_ultimo" href="cadastro.html">
-                REGISTER
-              </button>
-            </a>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer>
@@ -294,5 +268,14 @@
         </div>
       </div>
     </footer>
+    <script>
+      const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
+
+      if (loggedUser) {
+        document.getElementById(
+          "headerNome"
+        ).textContent = `Hello ${loggedUser.nome}, do you need help?`;
+      }
+    </script>
   </body>
 </html>
