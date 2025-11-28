@@ -71,6 +71,47 @@ a {
 }
 
 /* ===== Onde fica os CLTS ===== */
+#clts{
+  position: relative;
+}
+
+.search{
+  position: absolute;
+  top: 110px;
+  right: 16.5%;
+  background: #0f0f0f;
+  width: 25%;
+  padding: .4rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search input{
+  color: white;
+  background: transparent;
+  border: none;
+  width: 90%;
+  caret-color: white !important;
+}
+
+.search input:focus-visible{
+  border: none;
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #0f0f0f inset !important; /* sua cor de fundo */
+  -webkit-text-fill-color: #fff !important; /* cor do texto */
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #0f0f0f inset !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
 #titulo_clt {
   font-size: 2.5rem;
   text-align: center;
@@ -263,6 +304,13 @@ i {
     border-radius: 0px 0px 60px 60px;
     text-align: center;
     padding: 0 10px;
+  }
+
+  .search{
+    position: relative;
+    width: 90%;
+    top: 0;
+    left: 5%;
   }
 
   #tipos {

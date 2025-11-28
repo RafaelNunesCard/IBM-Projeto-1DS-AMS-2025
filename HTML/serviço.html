@@ -86,7 +86,10 @@
 
       <section id="clts">
         <h1 id="titulo_clt">Professionals in your region</h1>
-
+        <div class="search">
+          <i class="ri-search-2-line"></i>
+          <input id="search" type="text" placeholder="Pesquisar">
+        </div>
         <div class="card_clt" data-categoria="predial">
           <div class="clt">
             <div class="img_clt">
@@ -714,28 +717,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const botoes = document.querySelectorAll("#tipos .tipos");
-        const cards = document.querySelectorAll(".card_clt");
-
-        botoes.forEach((botao) => {
-          botao.addEventListener("click", () => {
-            const categoria = botao.getAttribute("data-categoria");
-
-            cards.forEach((card) => {
-              if (
-                categoria === "todos" ||
-                card.getAttribute("data-categoria") === categoria
-              ) {
-                card.classList.remove("hidden");
-              } else {
-                card.classList.add("hidden");
-              }
-            });
-          });
-        });
-      });
-    </script>
+    <script src="../JS/serviço.js"></script>
   </body>
 </html>
