@@ -120,7 +120,7 @@ a {
   top: 15px;
   padding: 1rem 2rem;
   border-radius: 20px;
-  background-color: #1b1b1b;
+  background-color: #292929;
   z-index: 10;
 }
 
@@ -136,7 +136,7 @@ a {
   height: 20px;
   position: relative;
   margin-bottom: 15px;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
 }
 
 .preenchimento {

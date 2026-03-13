@@ -227,7 +227,7 @@ section h2 {
 
 .team-grid2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   gap: 30px;
   margin-top: 40px;
