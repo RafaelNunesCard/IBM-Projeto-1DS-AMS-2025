@@ -26,8 +26,7 @@
     <script src="../JS/calendario.js" defer></script>
     <script src="../JS/metodos pagmento.js"></script>
     
-    <!--==================== JS tradutor ====================-->
-    <script src="JS/translate.js" defer></script>
+    
 
     <title>TechFix - Agendamento</title>
   </head>
@@ -44,12 +43,12 @@
           >Menu <span class="hamburger"></span
         ></label>
         <ul class="menu">
-          <li><a href="home.html" class="nav">HOME</a></li>
-          <li><a href="Sobre.html" class="nav">ABOUT US</a></li>
-          <li><a href="serviço.html" class="nav">SERVICES</a></li>
-          <li><a href="contato.html" class="nav">CONTACT</a></li>
+          <li><a href="home.html" class="nav">INÍCIO</a></li>
+          <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
+          <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
+          <li><a href="contato.html" class="nav">CONTATO</a></li>
           <li id="btn_cadastro">
-            <a href="perfil.html" class="nav" id="cadastro">PROFILE</a>
+            <a href="perfil.html" class="nav" id="cadastro">PERFIL</a>
           </li>
         </ul>
       </menu>
@@ -58,7 +57,7 @@
     <main>
       <section class="container">
         <div class="card">
-          <h2>Month Calendar</h2>
+          <h2>Calendário Mensal</h2>
           <div class="controls">
             <button id="prevMonth"><i class="ri-arrow-left-s-line"></i></button>
             <span id="monthYear"></span>
@@ -68,12 +67,12 @@
           </div>
           <div class="calendar" id="calendar"></div>
           <div class="card" id="card_pagamento">
-          <h1>Payment method:</h1>
+          <h1>Método de pagamento:</h1>
 
           <div class="metodos">
             <button class="pag" data-form="pix" onclick="chavepix()"><i class="ri-pix-fill"></i> Pix</button>
             <button class="pag" data-form="cartao">
-            <i class="ri-bank-card-fill"></i> Credit/Debit
+            <i class="ri-bank-card-fill"></i> Crédito/Débito
             </button>
             <button class="pag" data-form="boleto">
             <i class="ri-barcode-box-fill"></i> Bank Slip

@@ -16,17 +16,16 @@
     <!-- CSS do editar -->
     <link rel="stylesheet" href="../CSS/editar.css" />
 
-    <!--==================== JS tradutor ====================-->
-    <script src="JS/translate.js" defer></script>
+    
 
-    <title>TechFix - Edit Profile</title>
+    <title>TechFix - Editar Perfil</title>
   </head>
   <body>
     <main>
       <section class="editar">
-        <h1>Edit Profile</h1>
+        <h1>Editar Perfil</h1>
         <form id="form-editar">
-          <label>Profile Photo:</label>
+          <label>Foto de Perfil:</label>
           <input type="file" id="avatar" accept="image/*" />
           <img
             id="preview"
@@ -34,7 +33,7 @@
             alt="Preview do avatar"
           />
 
-          <label>Name:</label>
+          <label>Nome:</label>
           <input
             type="text"
             id="nome"
@@ -42,33 +41,33 @@
             placeholder="Ex: Pedro Henrique Giovanelli"
           />
 
-          <label>Pronouns:</label>
-          <input type="text" id="pronome" placeholder="Ex: He/Him" />
+          <label>Pronomes:</label>
+          <input type="text" id="pronome" placeholder="Ex: Ele/Dele" />
 
-          <label>Profession:</label>
-          <input type="text" id="profissao" placeholder="Ex: Client ou Computer technician" />
+          <label>Profissão:</label>
+          <input type="text" id="profissao" placeholder="Ex: Cliente ou Técnico em informática" />
 
-          <label>Location:</label>
+          <label>Localização:</label>
           <input type="text" id="local" placeholder="Ex: São Paulo-SP" />
 
-          <label>Email:</label>
-          <input type="email" id="email" placeholder="Email profission:" />
+          <label>E-mail:</label>
+          <input type="email" id="email" placeholder="E-mail profissional:" />
 
-          <label>Number:</label>
+          <label>Número:</label>
           <input
             type="tel"
             id="telefone"
             placeholder="Ex: (11) 9999-9999"
           />
 
-          <label>Biography:</label>
+          <label>Biografia:</label>
           <textarea
             id="biografia"
             maxlength="500"
-            placeholder="Professional or personal summary (max. 500 characters)"
+            placeholder="Resumo profissional ou pessoal (máx. 500 caracteres)"
           ></textarea>
 
-          <label>Education:</label>
+          <label>Educação:</label>
           <textarea
             id="educacao"
             maxlength="500"
@@ -77,14 +76,14 @@
 
           <div class="botoes">
             <button type="submit" class="salvar">
-              <i class="ri-check-line"></i> Save
+              <i class="ri-check-line"></i> Salvar
             </button>
             <button
               type="button"
               class="cancelar"
               onclick="window.location.href='perfil.html'"
             >
-              <i class="ri-close-line"></i> Cancel
+              <i class="ri-close-line"></i> Cancelar
             </button>
           </div>
         </form>
