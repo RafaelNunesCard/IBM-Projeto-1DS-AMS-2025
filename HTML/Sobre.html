@@ -27,9 +27,10 @@
     <!--==================== JS header ====================-->
     <script src="../JS/header.JS" defer></script>
 
-    
-    
-    <title>TechFix - About us</title>
+    <!--==================== JS roda de navegação ====================-->
+    <script src="../JS/sobre-wheel.js" defer></script>
+
+    <title>TechFix - Sobre Nós</title>
   </head>
 
   <body>
@@ -55,6 +56,35 @@
         </ul>
       </menu>
     </header>
+
+    <!-- Roda de navegação circular -->
+    <nav class="about-wheel" id="aboutWheel" aria-label="Navegação rápida da página Sobre Nós">
+      <svg class="about-wheel__svg" viewBox="0 0 300 300" aria-hidden="true">
+        <path class="about-wheel__slice" data-target="about" data-index="0"
+          d="M 300.00,92.00 L 300.00,10.00 A 140,140 0 0,0 230.00,28.76 L 271.00,99.77 A 58,58 0 0,1 300.00,92.00 Z" />
+        <path class="about-wheel__slice" data-target="problem" data-index="1"
+          d="M 271.00,99.77 L 230.00,28.76 A 140,140 0 0,0 178.76,80.00 L 249.77,121.00 A 58,58 0 0,1 271.00,99.77 Z" />
+        <path class="about-wheel__slice" data-target="cause" data-index="2"
+          d="M 249.77,121.00 L 178.76,80.00 A 140,140 0 0,0 160.00,150.00 L 242.00,150.00 A 58,58 0 0,1 249.77,121.00 Z" />
+        <path class="about-wheel__slice" data-target="solution" data-index="3"
+          d="M 242.00,150.00 L 160.00,150.00 A 140,140 0 0,0 178.76,220.00 L 249.77,179.00 A 58,58 0 0,1 242.00,150.00 Z" />
+        <path class="about-wheel__slice" data-target="work" data-index="4"
+          d="M 249.77,179.00 L 178.76,220.00 A 140,140 0 0,0 230.00,271.24 L 271.00,200.23 A 58,58 0 0,1 249.77,179.00 Z" />
+        <path class="about-wheel__slice" data-target="team" data-index="5"
+          d="M 271.00,200.23 L 230.00,271.24 A 140,140 0 0,0 300.00,290.00 L 300.00,208.00 A 58,58 0 0,1 271.00,200.23 Z" />
+
+        <text class="about-wheel__label" x="272.31" y="42.65" text-anchor="middle" data-target="about"><tspan x="272.31" dy="0">Nossa</tspan><tspan x="272.31" dy="14">Empresa</tspan></text>
+        <text class="about-wheel__label" x="224.34" y="70.34" text-anchor="middle" data-target="problem"><tspan x="224.34" dy="0">Por que</tspan><tspan x="224.34" dy="14">TechFix</tspan></text>
+        <text class="about-wheel__label" x="196.65" y="118.31" text-anchor="middle" data-target="cause"><tspan x="196.65" dy="0">Nossos</tspan><tspan x="196.65" dy="14">Valores</tspan></text>
+        <text class="about-wheel__label" x="196.65" y="181.69" text-anchor="middle" data-target="solution"><tspan x="196.65" dy="0">Nossos</tspan><tspan x="196.65" dy="14">Serviços</tspan></text>
+        <text class="about-wheel__label" x="224.34" y="229.66" text-anchor="middle" data-target="work"><tspan x="224.34" dy="0">Como</tspan><tspan x="224.34" dy="14">Atuamos</tspan></text>
+        <text class="about-wheel__label" x="272.31" y="257.35" text-anchor="middle" data-target="team"><tspan x="272.31" dy="0">Nossa</tspan><tspan x="272.31" dy="14">Equipe</tspan></text>
+      </svg>
+
+      <button type="button" class="about-wheel__center" id="aboutWheelToggle" aria-label="Mostrar ou esconder o menu de navegação">
+        <i class="ri-eye-line" id="aboutWheelIcon"></i>
+      </button>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -222,7 +252,7 @@
         <h2>Como Trabalhamos</h2>
         <div class="work-content">
           <div class="work-text" style="font-size: 1.1rem">
-            <h3 style="margin: 20px 0 10px; color: var(--primary)">
+            <h3 style="margin: 20px 0 10px; color: var(--primaria)">
               1. Cadastro do Profissional:
             </h3>
             <p>
@@ -231,7 +261,7 @@
               experiências.
             </p>
 
-            <h3 style="margin: 20px 0 10px; color: var(--primary)">
+            <h3 style="margin: 20px 0 10px; color: var(--primaria)">
               2. Busca por Serviços:
             </h3>
             <p>
@@ -240,7 +270,7 @@
               atende às suas necessidades.
             </p>
 
-            <h3 style="margin: 20px 0 10px; color: var(--primary)">
+            <h3 style="margin: 20px 0 10px; color: var(--primaria)">
               3. Contratação Simples:
             </h3>
             <p>
@@ -249,7 +279,7 @@
               o serviço.
             </p>
 
-            <h3 style="margin: 20px 0 10px; color: var(--primary)">
+            <h3 style="margin: 20px 0 10px; color: var(--primaria)">
               4. Avaliações e Feedback:
             </h3>
             <p>
@@ -344,25 +374,23 @@
               </div>
             </div>
           </div>
+
           <div class="team-member autoShow">
-            <img src="../img/Perfis/joao.jpeg" alt="João" />
+            <img src="../img/Perfis/joao.jpeg" alt="João Betanzo" />
             <div class="team-info">
-              <h3>João</h3>
+              <h3>João Betanzo</h3>
               <p>Líder Jurídico</p>
               <div class="social-links">
-                <a href="#" target="_blank">
-                  <i class="ri-instagram-line"></i>
-                </a>
-                <a href="#" target="_blank">
-                  <i class="ri-github-fill"></i>
-                </a>
-                <a href="#" target="_blank">
-                  <i class="ri-linkedin-box-fill"></i>
-                </a>
+                <a href="#" target="_blank"
+                  ><i class="ri-instagram-line"></i
+                ></a>
+                <a href="#" target="_blank"><i class="ri-github-fill"></i></a>
+                <a href="#" target="_blank"
+                  ><i class="ri-linkedin-box-fill"></i
+                ></a>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
