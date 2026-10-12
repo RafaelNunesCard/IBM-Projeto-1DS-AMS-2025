@@ -19,14 +19,10 @@
     <!--==================== CSS header e footer ====================-->
     <link rel="stylesheet" href="../CSS/head-foot.css" />
 
-    <!--==================== JS header ====================-->
+    <!--==================== JS ====================-->
     <script src="../JS/header.JS" defer></script>
-
-    <!--==================== JS Calendario ====================-->
-    <script src="../JS/calendario.js" defer></script>
-    <script src="../JS/metodos pagmento.js"></script>
-    
-    
+    <script src="../JS/profissionais.js" defer></script>
+    <script src="../JS/agendamento.js" defer></script>
 
     <title>TechFix - Agendamento</title>
   </head>
@@ -55,90 +51,218 @@
     </header>
 
     <main>
-      <section class="container">
-        <div class="card">
-          <h2>Calendário Mensal</h2>
-          <div class="controls">
-            <button id="prevMonth"><i class="ri-arrow-left-s-line"></i></button>
-            <span id="monthYear"></span>
-            <button id="nextMonth">
-              <i class="ri-arrow-right-s-line"></i>
-            </button>
-          </div>
-          <div class="calendar" id="calendar"></div>
-          <div class="card" id="card_pagamento">
-          <h1>Método de pagamento:</h1>
-
-          <div class="metodos">
-            <button class="pag" data-form="pix" onclick="chavepix()"><i class="ri-pix-fill"></i> Pix</button>
-            <button class="pag" data-form="cartao">
-            <i class="ri-bank-card-fill"></i> Crédito/Débito
-            </button>
-            <button class="pag" data-form="boleto">
-            <i class="ri-barcode-box-fill"></i> Boleto
-            </button>
-            <button class="pag" data-form="dinheiro">
-            <i class="ri-money-dollar-box-fill"></i> Dinheiro
-            </button>
-          </div>
-
-          <!-- Formulário PIX -->
-          <form action="" class="form" id="pix">
-            <h2>Pix</h2>
-            <p>Escaneie o QR Code abaixo:</p>
-            <div id="QRcode">
-              <img src="../img/QR-code.png"
-                  alt="QR Code Pix">
-            </div>
-            <p><strong>Chave Pix: </strong><span id="chavepix"></span></p>
-          </form>
-
-          <!-- Formulário Cartão -->
-          <form action="" class="form" id="cartao">
-            <h2>Cartão de Crédito/Débito</h2>
-            <label for="numero_cartao">Número do cartão:</label>
-            <input type="number" id="numero_cartao" placeholder="Ex:0000 0000 0000 0000" required>
-
-            <label for="nome_cartao">Nome do titular:</label>
-            <input type="text" id="nome_cartao" placeholder="Nome completo" required>
-
-            <div class="linha">
-              <div>
-                <label for="validade">Data de validade:</label>
-                <input type="month" id="validade" required>
-              </div>
-              <div>
-                <label for="cvv">CVV:</label>
-                <input type="number" id="cvv" placeholder="Ex:123" required>
-              </div>
-            </div>
-          </form>
-
-          <!-- Formulário Boleto -->
-          <form action="" class="form" id="boleto">
-            <h2>Boleto Bancário</h2>
-            <p>Um boleto será gerado após a confirmação.</p>
-            <p>Vencimento: <strong>5 dias após a emissão</strong></p>
-          </form>
-
-          <!-- Formulário Dinheiro -->
-          <form action="" class="form" id="dinheiro">
-            <h2>Pagamento em Dinheiro</h2>
-            <p>Especifique se você precisa de troco:</p>
-            <label for="troco">Precisa de troco para:</label>
-            <input type="number" id="troco" placeholder="Informe o valor (ex.: 100)" min="0">
-          </form>
-
-          <button class="confirm" id="showConfirmed">Confirmar</button>
+      <section class="agend-hero">
+        <div class="agend-hero__interno">
+          <span class="agend-badge">
+            <i class="ri-calendar-check-line"></i> Agendamento
+          </span>
+          <h1>Escolha a data do seu serviço</h1>
+          <p>
+            Selecione as datas disponíveis, escolha a forma de pagamento e
+            confirme. Você acompanha o total em tempo real.
+          </p>
+          <a href="serviço.html" class="agend-voltar" id="voltar_perfil">
+            <i class="ri-arrow-left-line"></i> Voltar ao perfil do profissional
+          </a>
         </div>
       </section>
+
+      <div class="agend-container">
+        <div class="agend-grid">
+          <div class="agend-fluxo">
+            <div class="prof-card">
+              <img
+                class="prof-card__imagem"
+                id="prof_imagem"
+                src="../img/favicon.ico"
+                alt="Foto do profissional"
+              />
+              <div class="prof-card__dados">
+                <h2 id="prof_nome">Carregando...</h2>
+                <span id="prof_cargo"></span>
+                <div class="prof-card__meta">
+                  <span class="prof-card__estrelas" id="prof_estrelas"></span>
+                  <span class="prof-card__nota" id="prof_nota"></span>
+                  <span id="prof_total"></span>
+                </div>
+              </div>
+              <span class="prof-card__preco" id="prof_preco"></span>
+            </div>
+
+            <!-- ================= Passo 1 — Datas ================= -->
+            <section class="passo" aria-labelledby="passo1_titulo">
+              <div class="passo__cabeca">
+                <span class="passo__numero" aria-hidden="true">1</span>
+                <div>
+                  <h2 id="passo1_titulo">Escolha as datas</h2>
+                  <p>Toque nos dias disponíveis para selecionar ou remover.</p>
+                </div>
+              </div>
+
+              <div class="calendario-controles">
+                <button type="button" id="prev_mes" aria-label="Mês anterior">
+                  <i class="ri-arrow-left-s-line"></i>
+                </button>
+                <span id="mes_ano"></span>
+                <button type="button" id="next_mes" aria-label="Próximo mês">
+                  <i class="ri-arrow-right-s-line"></i>
+                </button>
+              </div>
+
+              <div class="calendario" id="calendario" role="group" aria-label="Calendário de datas disponíveis"></div>
+
+              <div class="dias-info">
+                <span id="dias_qtd" aria-live="polite">Nenhuma data selecionada</span>
+                <button type="button" id="limpar_datas" disabled>
+                  Limpar datas
+                </button>
+              </div>
+            </section>
+
+            <!-- ================= Passo 2 — Pagamento ================= -->
+            <section class="passo" aria-labelledby="passo2_titulo">
+              <div class="passo__cabeca">
+                <span class="passo__numero" aria-hidden="true">2</span>
+                <div>
+                  <h2 id="passo2_titulo">Forma de pagamento</h2>
+                  <p>Escolha como prefere pagar pelo serviço.</p>
+                </div>
+              </div>
+
+              <div class="metodos">
+                <button
+                  type="button"
+                  class="metodo"
+                  data-metodo="pix"
+                  aria-pressed="false"
+                >
+                  <i class="ri-pix-fill"></i>
+                  <span>Pix</span>
+                </button>
+                <button
+                  type="button"
+                  class="metodo"
+                  data-metodo="cartao"
+                  aria-pressed="false"
+                >
+                  <i class="ri-bank-card-fill"></i>
+                  <span>Crédito / Débito</span>
+                </button>
+              </div>
+
+              <div class="painel-metodo" id="painel_pix" data-painel="pix" hidden>
+                <h3 class="metodo-titulo">Pagar com Pix</h3>
+                <p class="metodo-texto">
+                  Escaneie o QR Code ou use a chave abaixo no aplicativo do seu
+                  banco.
+                </p>
+                <div class="pix-area">
+                  <img
+                    class="pix-qr"
+                    src="../img/QR-code.png"
+                    alt="QR Code para pagamento via Pix"
+                  />
+                  <div class="pix-chave">
+                    <span>Chave Pix (EVP)</span>
+                    <code id="pix_chave"></code>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="painel-metodo"
+                id="painel_cartao"
+                data-painel="cartao"
+                hidden
+              >
+                <h3 class="metodo-titulo">Dados do cartão</h3>
+
+                <div class="campo">
+                  <label for="numero_cartao">Número do cartão</label>
+                  <input
+                    type="text"
+                    id="numero_cartao"
+                    inputmode="numeric"
+                    autocomplete="cc-number"
+                    maxlength="19"
+                    placeholder="0000 0000 0000 0000"
+                  />
+                  <span class="campo-erro" id="erro_numero_cartao"></span>
+                </div>
+
+                <div class="campo">
+                  <label for="nome_cartao">Nome do titular</label>
+                  <input
+                    type="text"
+                    id="nome_cartao"
+                    autocomplete="cc-name"
+                    placeholder="Como está impresso no cartão"
+                  />
+                  <span class="campo-erro" id="erro_nome_cartao"></span>
+                </div>
+
+                <div class="linha-campos">
+                  <div class="campo">
+                    <label for="validade">Validade</label>
+                    <input type="month" id="validade" autocomplete="cc-exp" />
+                    <span class="campo-erro" id="erro_validade"></span>
+                  </div>
+                  <div class="campo">
+                    <label for="cvv">CVV</label>
+                    <input
+                      type="text"
+                      id="cvv"
+                      inputmode="numeric"
+                      autocomplete="cc-csc"
+                      maxlength="4"
+                      placeholder="Ex: 123"
+                    />
+                    <span class="campo-erro" id="erro_cvv"></span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- ================= Resumo ================= -->
+          <aside class="resumo" aria-label="Resumo do agendamento">
+            <h2>Resumo</h2>
+
+            <div class="resumo-chips" id="resumo_chips"></div>
+            <p class="resumo-vazio" id="resumo_vazio">
+              Nenhuma data selecionada ainda.
+            </p>
+
+            <div class="resumo-linhas">
+              <div class="resumo-linha">
+                <span>Subtotal</span>
+                <strong id="resumo_subtotal">R$ 0,00</strong>
+              </div>
+              <div class="resumo-linha">
+                <span>Taxa de serviço (5%)</span>
+                <strong id="resumo_taxa">R$ 0,00</strong>
+              </div>
+              <div class="resumo-linha resumo-linha--total">
+                <span>Total</span>
+                <strong id="resumo_total">R$ 0,00</strong>
+              </div>
+            </div>
+
+            <p class="resumo-aviso" id="resumo_aviso" aria-live="polite" hidden></p>
+
+            <button type="button" class="btn btn-primario" id="bnt_confirmar" disabled>
+              Confirmar agendamento
+            </button>
+          </aside>
+        </div>
+      </div>
     </main>
 
     <footer>
       <div class="footer-container">
         <div class="footer-column">
           <h3 id="footer-logo">TechFix</h3>
-          <p>
+          <p class="footer">
             Excelência nos serviços e qualidade nos produtos. Nosso compromisso
             é com você!
           </p>
@@ -147,19 +271,19 @@
         <div class="footer-column">
           <h3>Links</h3>
           <ul>
-            <li><a href="home.html">INÍCIO</a></li>
-            <li><a href="Sobre.html">SOBRE NÓS</a></li>
-            <li><a href="serviço.html">SERVIÇOS</a></li>
-            <li><a href="contato.html">CONTATO</a></li>
+            <li class="footer"><a href="home.html">INÍCIO</a></li>
+            <li class="footer"><a href="Sobre.html">SOBRE NÓS</a></li>
+            <li class="footer"><a href="serviço.html">SERVIÇOS</a></li>
+            <li class="footer"><a href="contato.html">CONTATO</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h3>Contato</h3>
           <ul>
-            <li><strong>E-mail: TechFix@gmail.com</strong></li>
+            <li class="footer"><strong>E-mail: TechFix@gmail.com</strong></li>
             <br />
-            <li><strong>Número: (11) 97018-4779</strong></li>
+            <li class="footer"><strong>Número: (11) 97018-4779</strong></li>
           </ul>
           <div class="social-icons">
             <a href="#"><i class="ri-facebook-box-fill"></i></a>
@@ -169,36 +293,36 @@
         </div>
       </div>
     </footer>
-    <script>
-      function chavepix() {
-      const campo = document.getElementById('chavepix');
-      
-      // Gera UUID v4 (chave EVP)
-      const bytes = crypto.getRandomValues(new Uint8Array(16));
-      bytes[6] = (bytes[6] & 0x0f) | 0x40; // versão 4
-      bytes[8] = (bytes[8] & 0x3f) | 0x80; // variante
-      
-      const hex = Array.from(bytes)
-        .map(b => b.toString(16).padStart(2, '0'))
-        .join('');
-      
-      const uuid = hex.replace(
-        /^(.{8})(.{4})(.{4})(.{4})(.{12})$/,
-        '$1-$2-$3-$4-$5'
-      );
-      campo.textContent = ''
-      campo.textContent += uuid; // mostra na tela
-    }
-    </script>
-    <script>
-        const buttons = document.querySelectorAll('.pag');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                buttons.forEach(btn => btn.classList.remove('checked'));
-                this.classList.add('checked');
-            });
-        });
-    </script>
+    <!-- ================= Modal de sucesso ================= -->
+    <div
+      class="modal"
+      id="modal_sucesso"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="sucesso_titulo"
+      hidden
+    >
+      <div class="modal__caixa">
+        <div class="modal__icone"><i class="ri-check-line"></i></div>
+        <h2 id="sucesso_titulo">Agendamento confirmado!</h2>
+        <p>
+          O profissional recebeu sua solicitação. Guarde o número do pedido
+          abaixo.
+        </p>
+
+        <div id="sucesso_resumo"></div>
+        <code class="sucesso-pedido" id="sucesso_pedido"></code>
+
+        <div class="modal__acoes">
+          <button type="button" class="btn btn-secundario" id="sucesso_fechar">
+            Fechar
+          </button>
+          <a class="btn btn-primario" id="sucesso_inicio" href="home.html">
+            Voltar ao início
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

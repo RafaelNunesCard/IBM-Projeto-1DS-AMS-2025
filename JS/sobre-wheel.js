@@ -6,6 +6,7 @@
    - Um IntersectionObserver mantém a fatia da seção visível em destaque.
    - O botão central (ícone de olho) esconde/mostra as fatias, deixando
      só o círculo central visível encostado na borda da tela.
+   - As fatias são acessíveis por teclado (Enter / Espaço).
    ===================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const slices = Array.from(wheel.querySelectorAll(".about-wheel__slice"));
   const toggleBtn = document.getElementById("aboutWheelToggle");
   const icon = document.getElementById("aboutWheelIcon");
+
+  const comportamentoRolagem = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches
+    ? "auto"
+    : "smooth";
 
   // Em telas pequenas, a roda já começa encolhida (o usuário toca pra abrir)
   if (window.innerWidth <= 900) {
@@ -28,13 +35,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Clique numa fatia -> rola até a seção correspondente
+  // Rola até a seção correspondente à fatia
+  function irParaSecao(slice) {
+    const targetId = slice.getAttribute("data-target");
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: comportamentoRolagem,
+        block: "start",
+      });
+    }
+  }
+
+  // Clique / teclado numa fatia -> rola até a seção correspondente
   slices.forEach((slice) => {
-    slice.addEventListener("click", () => {
-      const targetId = slice.getAttribute("data-target");
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    slice.addEventListener("click", () => irParaSecao(slice));
+
+    slice.addEventListener("keydown", (evento) => {
+      if (evento.key === "Enter" || evento.key === " ") {
+        evento.preventDefault();
+        irParaSecao(slice);
       }
     });
   });
@@ -57,7 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
       let mostVisible = null;
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          if (!mostVisible || entry.intersectionRatio > mostVisible.intersectionRatio) {
+          if (
+            !mostVisible ||
+            entry.intersectionRatio > mostVisible.intersectionRatio
+          ) {
             mostVisible = entry;
           }
         }

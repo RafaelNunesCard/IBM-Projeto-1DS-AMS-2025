@@ -339,15 +339,11 @@ th {
 .alinha {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .alinha h3 {
   font-size: 1.7rem;
-}
-
-.contato {
-  width: 300px;
 }
 
 .sobre {
@@ -649,10 +645,6 @@ th {
   }
 
   .sobre {
-    width: 100%;
-  }
-
-  .contato {
     width: 100%;
   }
 

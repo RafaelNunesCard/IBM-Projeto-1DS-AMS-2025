@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Remix Icons -->
+    <!--==================== RemixIcon ====================-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
@@ -13,83 +13,191 @@
     <!--==================== Favicon====================-->
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
-    <!-- CSS do editar -->
+    <!--==================== CSS ====================-->
     <link rel="stylesheet" href="../CSS/editar.css" />
 
-    
+    <!--==================== CSS header e footer ====================-->
+    <link rel="stylesheet" href="../CSS/head-foot.css" />
+
+    <!--==================== JS ====================-->
+    <script src="../JS/header.JS" defer></script>
+    <script src="../JS/editar.js" defer></script>
 
     <title>TechFix - Editar Perfil</title>
   </head>
   <body>
+    <header id="header">
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo TechFix" />
+        <h1>TechFix</h1>
+      </div>
+
+      <menu>
+        <input type="checkbox" id="checkbox" class="checkbox" />
+        <label for="checkbox" class="label_menu"
+          >Menu <span class="hamburger"></span
+        ></label>
+        <ul class="menu">
+          <li><a href="home.html" class="nav">INÍCIO</a></li>
+          <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
+          <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
+          <li><a href="contato.html" class="nav">CONTATO</a></li>
+          <li id="btn_cadastro">
+            <a href="perfil.html" class="nav" id="cadastro">PERFIL</a>
+          </li>
+        </ul>
+      </menu>
+    </header>
+
     <main>
-      <section class="editar">
-        <h1>Editar Perfil</h1>
-        <form id="form-editar">
-          <label>Foto de Perfil:</label>
-          <input type="file" id="avatar" accept="image/*" />
-          <img
-            id="preview"
-            src="../img/Perfis/Default perfil.jpg"
-            alt="Preview do avatar"
-          />
+      <section class="editar-hero">
+        <div class="editar-hero__interno">
+          <span class="editar-badge">
+            <i class="ri-user-settings-line"></i> Minha conta
+          </span>
+          <h1>Editar perfil</h1>
+          <p>
+            Mantenha seus dados atualizados para que clientes e profissionais
+            possam falar com você sem dificuldade.
+          </p>
+          <a href="perfil.html" class="editar-voltar">
+            <i class="ri-arrow-left-line"></i> Voltar ao perfil
+          </a>
+        </div>
+      </section>
 
-          <label>Nome:</label>
-          <input
-            type="text"
-            id="nome"
-            required
-            placeholder="Ex: Pedro Henrique Giovanelli"
-          />
+      <section class="editar-container">
+        <form class="editar-card" id="form-editar" novalidate>
+          <div class="editar-foto">
+            <label for="avatar">Foto de perfil</label>
+            <img
+              id="preview"
+              src="../img/Perfis/Default perfil.jpg"
+              alt="Prévia da foto de perfil"
+            />
+            <label for="avatar" class="btn btn-secundario editar-foto__botao">
+              <i class="ri-image-add-line"></i> Escolher imagem
+            </label>
+            <input type="file" id="avatar" accept="image/*" />
+            <p class="editar-dica">JPG ou PNG, de preferência quadrada.</p>
+          </div>
 
-          <label>Pronomes:</label>
-          <input type="text" id="pronome" placeholder="Ex: Ele/Dele" />
+          <div class="editar-campos">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input
+                type="text"
+                id="nome"
+                required
+                placeholder="Ex: Pedro Henrique Giovanelli"
+              />
+              <span class="campo-erro" id="erro_nome"></span>
+            </div>
 
-          <label>Profissão:</label>
-          <input type="text" id="profissao" placeholder="Ex: Cliente ou Técnico em informática" />
+            <div class="linha-campos">
+              <div class="campo">
+                <label for="pronome">Pronomes</label>
+                <input type="text" id="pronome" placeholder="Ex: Ele/Dele" />
+              </div>
+              <div class="campo">
+                <label for="profissao">Profissão</label>
+                <input
+                  type="text"
+                  id="profissao"
+                  placeholder="Ex: Cliente ou Técnico"
+                />
+              </div>
+            </div>
 
-          <label>Localização:</label>
-          <input type="text" id="local" placeholder="Ex: São Paulo-SP" />
+            <div class="campo">
+              <label for="local">Localização</label>
+              <input type="text" id="local" placeholder="Ex: São Paulo-SP" />
+            </div>
 
-          <label>E-mail:</label>
-          <input type="email" id="email" placeholder="E-mail profissional:" />
+            <div class="linha-campos">
+              <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="voce@email.com" />
+                <span class="campo-erro" id="erro_email"></span>
+              </div>
+              <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  placeholder="Ex: (11) 99999-9999"
+                />
+                <span class="campo-erro" id="erro_telefone"></span>
+              </div>
+            </div>
 
-          <label>Número:</label>
-          <input
-            type="tel"
-            id="telefone"
-            placeholder="Ex: (11) 9999-9999"
-          />
+            <div class="campo">
+              <label for="biografia">Biografia</label>
+              <textarea
+                id="biografia"
+                maxlength="500"
+                placeholder="Um resumo sobre você (máx. 500 caracteres)"
+              ></textarea>
+            </div>
 
-          <label>Biografia:</label>
-          <textarea
-            id="biografia"
-            maxlength="500"
-            placeholder="Resumo profissional ou pessoal (máx. 500 caracteres)"
-          ></textarea>
+            <div class="campo">
+              <label for="educacao">Educação</label>
+              <textarea
+                id="educacao"
+                maxlength="500"
+                placeholder="Ex: Universidade de São Paulo - Administração"
+              ></textarea>
+            </div>
 
-          <label>Educação:</label>
-          <textarea
-            id="educacao"
-            maxlength="500"
-            placeholder="Ex: Universidade de São Paulo - Administração (máx. 500 caracteres)"
-          ></textarea>
+            <p class="form-aviso" id="form_aviso" role="status" hidden></p>
 
-          <div class="botoes">
-            <button type="submit" class="salvar">
-              <i class="ri-check-line"></i> Salvar
-            </button>
-            <button
-              type="button"
-              class="cancelar"
-              onclick="window.location.href='perfil.html'"
-            >
-              <i class="ri-close-line"></i> Cancelar
-            </button>
+            <div class="botoes">
+              <button type="submit" class="btn btn-primario">
+                <i class="ri-check-line"></i> Salvar alterações
+              </button>
+              <a href="perfil.html" class="btn btn-secundario">
+                <i class="ri-close-line"></i> Cancelar
+              </a>
+            </div>
           </div>
         </form>
       </section>
     </main>
 
-    <script src="../JS/editar.js" defer></script>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3 id="footer-logo">TechFix</h3>
+          <p class="footer">
+            Excelência nos serviços e qualidade nos produtos. Nosso compromisso
+            é com você!
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Links</h3>
+          <ul>
+            <li class="footer"><a href="home.html">INÍCIO</a></li>
+            <li class="footer"><a href="Sobre.html">SOBRE NÓS</a></li>
+            <li class="footer"><a href="serviço.html">SERVIÇOS</a></li>
+            <li class="footer"><a href="contato.html">CONTATO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <ul>
+            <li class="footer"><strong>E-mail: TechFix@gmail.com</strong></li>
+            <br />
+            <li class="footer"><strong>Número: (11) 97018-4779</strong></li>
+          </ul>
+          <div class="social-icons">
+            <a href="#"><i class="ri-facebook-box-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

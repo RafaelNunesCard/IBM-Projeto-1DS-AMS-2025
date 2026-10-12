@@ -16,31 +16,19 @@
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="../CSS/perfil.css" />
 
-    <!--==================== CSS Status ====================-->
-    <link rel="stylesheet" href="../CSS/status.css" />
-
     <!--==================== CSS header e footer ====================-->
     <link rel="stylesheet" href="../CSS/head-foot.css" />
 
-    <!--==================== JS header ====================-->
+    <!--==================== JS ====================-->
     <script src="../JS/header.JS" defer></script>
-
-    <!--==================== JS Popup2 ====================-->
-    <script src="../JS/Popup2.js"></script>
-
-    <!--==================== JS Status ====================-->
-    <script src="../JS/status.js" defer></script>
-
-    <script src="../JS/editar.js" defer></script>
-
-    
+    <script src="../JS/perfil.js" defer></script>
 
     <title>TechFix - Perfil</title>
   </head>
   <body>
     <header id="header">
       <div class="logo">
-        <img src="../img/logo.png" alt="Logo" />
+        <img src="../img/logo.png" alt="Logo TechFix" />
         <h1>TechFix</h1>
       </div>
 
@@ -55,193 +43,117 @@
           <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
           <li><a href="contato.html" class="nav">CONTATO</a></li>
           <li id="btn_cadastro">
-            <a href="#" class="nav" id="cadastro">PERFIL</a>
+            <a
+              href="perfil.html"
+              class="nav"
+              id="cadastro"
+              aria-current="page"
+              >PERFIL</a
+            >
           </li>
         </ul>
       </menu>
     </header>
 
     <main>
-      <section>
-        <div class="perfil">
-          <div class="perfil_esquerda">
-            <div class="icon_img">
-              <div class="perfil_img">
-                <img
-                  src="../img/Perfis/Default perfil.jpg"
-                  alt="imagem do usuario"
-                />
-              </div>
-              <a href="#" onclick="openPopup()"
-                ><i class="ri-emotion-line"></i
-              ></a>
-              <div class="overlay" id="overlay" onclick="closePopup()"></div>
-              <div class="popup" id="popup">
-                <h2>Editar Status</h2>
-                <div class="select">
-                  <div id="category-select">
-                    <label for="options-view-button">Categoria</label>
-                    <input type="checkbox" id="options-view-button" />
-                    <div id="select-button">
-                      <div id="selected-value">Selecionar categoria</div>
-                      <div id="chevrons">
-                        <i class="ri-arrow-down-s-line"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <ul id="options">
-                    <li class="option">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="vacation"
-                        data-label="Estou de férias"
-                      />
-                      <i class="ri-tent-fill"></i>
-                      <span class="label">Estou de férias</span>
-                      <i class="ri-check-line"></i>
-                    </li>
-                    <li class="option">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="sick"
-                        data-label="Estou doente"
-                      />
-                      <i class="ri-nurse-fill"></i>
-                      <span class="label">Estou doente</span>
-                      <i class="ri-check-line"></i>
-                    </li>
-                    <li class="option">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="focusing"
-                        data-label="Estou focado"
-                      />
-                      <i class="ri-brain-fill"></i>
-                      <span class="label">Estou focado</span>
-                      <i class="ri-check-line"></i>
-                    </li>
-                    <li class="option">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="grief"
-                        data-label="Estou de luto"
-                      />
-                      <i class="ri-emotion-sad-fill"></i>
-                      <span class="label">Estou de luto</span>
-                      <i class="ri-check-line"></i>
-                    </li>
-                  </ul>
-                </div>
-                <p>Escolha por quanto tempo o status vai durar:</p>
-                <div class="select2">
-                  <div id="category-select2">
-                    <label for="options-view-button2">Duração:</label>
-                    <input type="checkbox" id="options-view-button2" />
-                    <div id="select-button2">
-                      <div id="selected-value2">Selecionar categoria</div>
-                      <div id="chevrons2">
-                        <i class="ri-arrow-down-s-line"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <ul id="options2">
-                    <li class="option2">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="hour"
-                        data-label="Uma hora"
-                      />
-                      <span class="label2">Uma hora</span>
-                      <i class="ri-check-line"></i>
-                    </li>
-                    <li class="option2">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="day"
-                        data-label="1 dia"
-                      />
-                      <span class="label2">Um dia</span>
-                      <i class="ri-check-line"></i>
-                    </li>
-                    <li class="option2">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="week"
-                        data-label="Uma semana"
-                      />
-                      <span class="label2">Uma semana</span>
-                      <i class="ri-check-line"></i>
-                    </li>
-                    <li class="option2">
-                      <input
-                        type="radio"
-                        name="category"
-                        value="month"
-                        data-label="Um mês"
-                      />
-                      <span class="label2">Um mês</span>
-                      <i class="ri-check-line"></i>
-                    </li>
-                  </ul>
-                </div>
-                <button onclick="sendStatus()">Aplicar status</button>
-                <button onclick="closePopup()">Cancelar</button>
-              </div>
+      <!--==================== Identidade ====================-->
+      <section class="perfil-hero">
+        <div class="perfil-hero__interno">
+          <div class="perfil-avatar">
+            <div class="perfil-avatar__moldura">
+              <img
+                class="perfil-avatar__img"
+                id="perfil_avatar"
+                src="../img/Perfis/Default perfil.jpg"
+                alt="Foto do usuário"
+              />
             </div>
-            <div class="endereços">
-              <h3><i class="ri-map-pin-line"></i> <a href="#">São Paulo</a></h3>
-              <h3>
-                <i class="ri-mail-line"></i>
-                <a href="mailto" target="_blank">Nenhum e-mail informado</a>
-              </h3>
-              <h3>
-                <i class="ri-phone-line"></i> <a href="tel"> (xx) xxxxx-xxxx</a>
-              </h3>
-            </div>
-
-            <div class="seguidores">
-              <a href="">
-                <h3 id="seguidores"><i class="ri-group-line"></i> 0</h3>
-                <h3>Agendas</h3>
-              </a>
-
-              <a href="">
-                <h3 id="seguindo"><i class="ri-user-received-2-fill"></i> 0</h3>
-                <h3>Avaliações</h3>
-              </a>
-
-              <a href="chat.html">
-                <h3><i class="ri-chat-3-line"></i> 2</h3>
-                <h3>Chats</h3>
-              </a>
-            </div>
+            <span class="perfil-avatar__badge" id="status_badge" hidden>
+              <i class="ri-emotion-line"></i>
+              <span id="status_badge_texto"></span>
+            </span>
+            <button
+              type="button"
+              class="perfil-avatar__botao"
+              id="bnt_status"
+              aria-haspopup="dialog"
+              aria-label="Editar status do perfil"
+            >
+              <i class="ri-emotion-line"></i>
+            </button>
           </div>
-          <div class="Informacoes">
-            <div class="nome">
-              <h1>Rafael Nunes Cardoso</h1>
-              <a href="editar.html" id="editar"><i class="ri-edit-fill"></i></a>
-              <h3>Cliente</h3>
-              <h2>Ele/Dele</h2>
-            </div>
 
-            <div class="biografia">
-              <h3><i class="ri-user-fill"></i>Biografia:</h3>
-              <p class="bio">Nada por aqui</p>
-            </div>
+          <h1 id="perfil_nome">Usuário</h1>
 
-            <div class="biografia">
-              <h3><i class="ri-book-marked-fill"></i>Educação:</h3>
-              <p class="edu">Nada por aqui</p>
+          <p class="perfil-hero__meta">
+            <span class="perfil-tag" id="perfil_profissao">Cliente</span>
+            <span class="perfil-tag perfil-tag--suave" id="perfil_pronome"></span>
+          </p>
+
+          <div class="perfil-aviso" id="perfil_aviso" hidden>
+            <i class="ri-information-line"></i>
+            <p>
+              Você ainda não tem um perfil salvo.
+              <a href="editar.html">Complete seus dados</a> ou
+              <a href="cadastro.html">entre na sua conta</a>.
+            </p>
+          </div>
+
+          <ul class="perfil-contato">
+            <li>
+              <i class="ri-map-pin-line"></i>
+              <span id="perfil_local">Local não informado</span>
+            </li>
+            <li>
+              <i class="ri-mail-line"></i>
+              <a id="perfil_email">E-mail não informado</a>
+            </li>
+            <li>
+              <i class="ri-phone-line"></i>
+              <a id="perfil_telefone">Telefone não informado</a>
+            </li>
+          </ul>
+
+          <div class="perfil-acoes">
+            <a href="editar.html" class="btn btn-primario" id="bnt_editar">
+              <i class="ri-edit-fill"></i> Editar perfil
+            </a>
+          </div>
+
+          <div class="perfil-stats">
+            <div class="perfil-stat">
+              <strong id="stat_agendamentos">0</strong>
+              <span>Agendamentos</span>
+            </div>
+            <div class="perfil-stat">
+              <strong id="stat_avaliacoes">0</strong>
+              <span>Avaliações</span>
             </div>
           </div>
         </div>
+      </section>
+
+      <!--==================== Sobre ====================-->
+      <section class="perfil-conteudo">
+        <article class="perfil-card">
+          <h2>
+            <span class="perfil-card__icone"><i class="ri-user-fill"></i></span>
+            Biografia
+          </h2>
+          <p id="perfil_biografia">Você ainda não adicionou uma biografia.</p>
+        </article>
+
+        <article class="perfil-card">
+          <h2>
+            <span class="perfil-card__icone"
+              ><i class="ri-book-marked-fill"></i
+            ></span>
+            Educação
+          </h2>
+          <p id="perfil_educacao">
+            Você ainda não adicionou informações de educação.
+          </p>
+        </article>
       </section>
     </main>
 
@@ -249,8 +161,8 @@
       <div class="footer-container">
         <div class="footer-column">
           <h3 id="footer-logo">TechFix</h3>
-          <p>
-            Excelência no atendimento e na qualidade dos serviços. Nosso compromisso
+          <p class="footer">
+            Excelência nos serviços e qualidade nos produtos. Nosso compromisso
             é com você!
           </p>
         </div>
@@ -258,19 +170,19 @@
         <div class="footer-column">
           <h3>Links</h3>
           <ul>
-            <li><a href="home.html">INÍCIO</a></li>
-            <li><a href="sobre.html">SOBRE NÓS</a></li>
-            <li><a href="serviço.html">SERVIÇOS</a></li>
-            <li><a href="contato.html">CONTATO</a></li>
+            <li class="footer"><a href="home.html">INÍCIO</a></li>
+            <li class="footer"><a href="Sobre.html">SOBRE NÓS</a></li>
+            <li class="footer"><a href="serviço.html">SERVIÇOS</a></li>
+            <li class="footer"><a href="contato.html">CONTATO</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h3>Contato</h3>
           <ul>
-            <li><strong>E-mail: TechFix@gmail.com</strong></li>
+            <li class="footer"><strong>E-mail: TechFix@gmail.com</strong></li>
             <br />
-            <li><strong>Número: (11) 97018-4779</strong></li>
+            <li class="footer"><strong>Número: (11) 97018-4779</strong></li>
           </ul>
           <div class="social-icons">
             <a href="#"><i class="ri-facebook-box-fill"></i></a>
@@ -280,31 +192,55 @@
         </div>
       </div>
     </footer>
-    <script>
-      if (document.body.contains(document.querySelector(".perfil"))) {
-        // --- AJUSTE AUTOMÁTICO DO AVATAR ---
-        const avatarImg = document.querySelector(".perfil_img img");
 
-        avatarImg.addEventListener("load", () => {
-          const largura = avatarImg.naturalWidth;
-          const altura = avatarImg.naturalHeight;
+    <!--==================== Popup de status ====================-->
+    <div class="status-overlay" id="status_overlay" hidden></div>
 
-          // Remove classes antigas
-          avatarImg.classList.remove(
-            "img-horizontal",
-            "img-vertical",
-            "img-quadrada"
-          );
+    <div
+      class="status-popup"
+      id="status_popup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="status_titulo"
+      hidden
+    >
+      <h2 id="status_titulo">Editar status</h2>
+      <p>
+        Mostre aos outros usuários como você está agora e por quanto tempo esse
+        status deve aparecer.
+      </p>
 
-          if (largura > altura) {
-            avatarImg.classList.add("img-horizontal"); 
-          } else if (altura > largura) {
-            avatarImg.classList.add("img-vertical"); 
-          } else {
-            avatarImg.classList.add("img-quadrada"); 
-          }
-        });
-      }
-    </script>
+      <div class="campo">
+        <label for="status_categoria">Como você está?</label>
+        <select id="status_categoria">
+          <option value="vacation">Estou de férias</option>
+          <option value="sick">Estou doente</option>
+          <option value="focusing">Estou focado</option>
+          <option value="grief">Estou de luto</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="status_duracao">Por quanto tempo?</label>
+        <select id="status_duracao">
+          <option value="hour">Uma hora</option>
+          <option value="day">Um dia</option>
+          <option value="week">Uma semana</option>
+          <option value="month">Um mês</option>
+        </select>
+      </div>
+
+      <div class="status-popup__acoes">
+        <button type="button" class="btn btn-primario" id="status_aplicar">
+          Aplicar status
+        </button>
+        <button type="button" class="btn btn-secundario" id="status_cancelar">
+          Cancelar
+        </button>
+      </div>
+      <button type="button" class="status-popup__remover" id="status_remover" hidden>
+        Remover status
+      </button>
+    </div>
   </body>
 </html>
