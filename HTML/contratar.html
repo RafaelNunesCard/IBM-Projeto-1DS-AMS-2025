@@ -23,13 +23,15 @@
     <!--==================== JS ====================-->
     <script src="../JS/header.JS" defer></script>
 
+    <script src="../JS/profissionais.js" defer></script>
+
     <script src="../JS/avaliacoes.js" defer></script>
 
     <script src="../JS/Popup.js" defer></script>
 
     <script src="../JS/popup_aval.js" defer></script>
 
-    
+    <script src="../JS/contratar.js" defer></script>
 
     <title>TechFix - Contratar</title>
   </head>
@@ -61,16 +63,14 @@
       <section class="clt">
         <div class="banner_clt">
           <div class="img_clt">
-            <img
-              src="https://pfst.cf2.poecdn.net/base/image/27cdbd2a42b23937e9ce950bcf18f0fe81dd1f1e17da8e6199da3893d427d5b9?w=1024&h=768&pmaid=466461082"
-              alt="Profissional"
-            />
+            <img id="clt_imagem" src="../img/logo.png" alt="Profissional" />
           </div>
 
           <div class="nome_clt">
-            <h1>Jorge Fonseca dos Santos</h1>
+            <h1 id="clt_nome">Carregando...</h1>
             <h2 class="prof">
-              <span class="especial">Profissão:</span> Técnico em informática
+              <span class="especial">Profissão:</span>
+              <span id="clt_cargo">...</span>
             </h2>
             <div
               class="aval_clt1"
@@ -78,59 +78,25 @@
               onmouseout="esconderGrafico(this)"
             >
               <div class="aval_clt">
-                <h3>4.5</h3>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
+                <h3 id="clt_nota">0.0</h3>
+                <span class="estrelas" id="clt_estrelas"></span>
                 <i class="ri-arrow-down-s-line" id="roda"></i>
               </div>
-              <a href="#coment">103 Avaliações de Clientees</a>
+              <a href="#coment" id="clt_total_avaliacoes"
+                >0 Avaliações de Clientes</a
+              >
 
-              <div class="grafico">
-                <div>5 estrelas (62%)</div>
-                <div class="barra">
-                  <div class="preenchimento" style="width: 62%"></div>
-                </div>
-                <div>4 estrelas (28%)</div>
-                <div class="barra">
-                  <div class="preenchimento" style="width: 28%"></div>
-                </div>
-                <div>3 estrelas (8%)</div>
-                <div class="barra">
-                  <div class="preenchimento" style="width: 8%"></div>
-                </div>
-                <div>2 estrelas (2%)</div>
-                <div class="barra">
-                  <div class="preenchimento" style="width: 2%"></div>
-                </div>
-                <div>1 estrela (0%)</div>
-                <div class="barra">
-                  <div class="preenchimento" style="width: 0%"></div>
-                </div>
-              </div>
+              <div class="grafico" id="clt_grafico"></div>
             </div>
 
-            <h5>Mais de 600 projetos concluídos</h5>
+            <h5 id="clt_projetos">Mais de 0 projetos concluídos</h5>
 
-            <div class="direitos">
-              <div class="direito">
-                <div class="direito_i"><i class="ri-star-smile-fill"></i></div>
-                <h4>Avaliações extremamente altas<br />pontos positivos</h4>
-              </div>
-              <div class="direito">
-                <div class="direito_i"><i class="ri-lock-star-fill"></i></div>
-                <h4>Segurança no trabalho</h4>
-              </div>
-              <div class="direito">
-                <div class="direito_i"><i class="ri-fire-fill"></i></div>
-                <h4>Alguma ausência</h4>
-              </div>
-            </div>
+            <div class="direitos" id="clt_selos"></div>
             <div class="bnt_clt">
-              <h2>R$80,00 p/day</h2>
-              <a href="agendamento.html"><button class="bnt">CONTRATAR</button></a>
+              <h2 id="clt_preco">R$0,00 por dia</h2>
+              <a id="bnt_contratar" href="agendamento.html"
+                ><button class="bnt">CONTRATAR</button></a
+              >
             </div>
           </div>
         </div>
@@ -143,85 +109,24 @@
             <div class="blocos">
               <div class="bloco">
                 <i class="ri-user-fill"></i>
-                <h3>Biografy</h3>
-                <p>
-                  Sou técnico em informática com mais de 4 anos de experiência em
-                  manutenção de computadores, configuração de redes e suporte
-                  técnico. Nascido e criado em São Paulo, sempre tive
-                  paixão por tecnologia e acredito no impacto positivo que
-                  soluções digitais bem aplicadas podem ter em empresas e
-                  pessoas.
-                </p>
+                <h3>Biografia</h3>
+                <p id="clt_biografia"></p>
               </div>
               <div class="bloco">
                 <i class="ri-book-marked-fill"></i>
                 <h3>Educação</h3>
-                <p>
-                  Me formei como Técnico em Informática pelo SENAI, onde
-                  adquiri conhecimento em hardware, software, redes e
-                  segurança digital. Posteriormente fiz cursos complementares
-                  em manutenção de computadores e administração de redes, o que
-                  aprimorou ainda mais minhas habilidades em diagnosticar e
-                  resolver problemas tecnológicos.
-                </p>
+                <p id="clt_educacao"></p>
               </div>
               <div class="bloco">
                 <i class="ri-phone-fill"></i>
                 <h3>Contato</h3>
-                <p>
-                  Para mais informações ou para discutir possíveis serviços de
-                  suporte e manutenção, você pode me contatar em: <br />
-                  <br />
-                  E-mail: <br />
-                  jorge.fonseca@email.com <br /><br />
-                  Número: <br />
-                  (11) 99233-7620
-                </p>
+                <p id="clt_contato"></p>
               </div>
             </div>
           </div>
           <div class="trabalhos">
             <h1>Trabalhos concluídos:</h1>
-            <div class="trabalho_img">
-              <div class="card">
-                <img
-                  src="https://pfst.cf2.poecdn.net/base/image/e366094fbea6527d70122b76e7f6cbdff1a1fab258a5f1fffcf28f99c0e1e246?w=1024&h=768&pmaid=473650111"
-                  alt="Trabalho concluido"
-                />
-                <h1>Rede Corporativa Segura</h1>
-                <p>
-                  Uma infraestrutura de rede projetada para pequenas e médias
-                  empresas, com servidores dedicados, firewalls e sistemas de
-                  backup automatizados, garantindo segurança e estabilidade na
-                  comunicação interna.
-                </p>
-              </div>
-              <div class="card">
-                <img
-                  src="https://pfst.cf2.poecdn.net/base/image/e503f9ad50d37ac4a13515c364490eceb440c13a0521242c39a9417236595331?w=1024&h=768&pmaid=473649197"
-                  alt="Trabalho concluido"
-                />
-                <h1>Otimização de Computadores</h1>
-                <p>
-                  Um projeto de manutenção preventiva e corretiva para desktops
-                  e notebooks, incluindo upgrades de hardware, limpeza física
-                  e otimização de software, aumentando o desempenho e a
-                  vida útil das máquinas.
-                </p>
-              </div>
-              <div class="card">
-                <img
-                  src="https://pfst.cf2.poecdn.net/base/image/e3e32231b4db079110f775f01ba6cf3b5ec6ff5e61d9f27a72e4a3ad966ed154?w=1024&h=768&pmaid=473650697"
-                  alt="Trabalho concluido"
-                />
-                <h1>Sistema de Monitoramento Remoto</h1>
-                <p>
-                  Instalação e configuração de um sistema de câmeras de segurança e
-                  acesso remoto, integrado a dispositivos móveis, permitindo
-                  o monitoramento em tempo real de casas e empresas.
-                </p>
-              </div>
-            </div>
+            <div class="trabalho_img" id="clt_trabalhos"></div>
           </div>
         </div>
       </section>
@@ -244,122 +149,20 @@
                   </th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">Tela</td>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    15.6" Full HD (1920x1080)
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Processador
-                  </td>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Intel Core i7-1165G7
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Memória RAM
-                  </td>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    16GB DDR4
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Armazenament
-                  </td>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    512GB SSD
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Placa de Vídeo
-                  </td>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    NVIDIA GeForce MX450
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Entradas
-                  </td>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    2 x USB 3.0, 1 x USB-C, 1 x HDMI
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Conectividade
-                  </td>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Wi-Fi 6 (802.11ax), Bluetooth 5.1
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">Camera</td>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    HD 720p com microfone embutido
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">Batery</td>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    autonomia de até 12 horas
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">Peso</td>
-                  <td style="padding: 10px; border: 1px solid #ddd">1.7 kg</td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Sistema Operacional
-                  </td>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Windows 11 Home
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 10px; border: 1px solid #ddd">
-                    Garantia
-                  </td>
-                  <td style="padding: 10px; border: 1px solid #ddd">1 ano</td>
-                </tr>
-              </tbody>
+              <tbody id="clt_item_tabela"></tbody>
             </table>
           </div>
           <div class="cont">
-            <div class="imgs">
-              <div class="img">
-                <img
-                  src="https://pfst.cf2.poecdn.net/base/image/621c7f66909be65500d109f699d58616158fb09fa18ce495d603a8ab4a064fb7?w=1024&h=768&pmaid=465882384"
-                  alt="notebook1"
-                />
-              </div>
-              <div class="img">
-                <img
-                  src="https://pfst.cf2.poecdn.net/base/image/777b3cce9b30afbf6a53beb44418971c737e176ed5e0186a4ac8ba9d858b30b9?w=1024&h=768&pmaid=465882574"
-                  alt="notebook2"
-                />
-              </div>
-            </div>
+            <div class="imgs" id="clt_item_imgs"></div>
             <div class="sobre">
               <h3>Mais informações:</h3>
-              <p>
-                Experimente a combinação perfeita entre desempenho e estilo com
-                este notebook. Com um design minimalista e elegante, ele se
-                destaca em qualquer ambiente, seja em casa, no escritório ou em
-                um café. Ideal para estudantes, profissionais e qualquer pessoa
-                que valorize eficiência e estilo.
-              </p>
+              <p id="clt_item_sobre"></p>
             </div>
             <div class="alinha">
-              <h3>Notebook: <span>R$ 3.499,00</span></h3>
-              <a href="chat.html"><button class="bnt contato">ENTRE EM CONTATO</button></a>
+              <h3 id="clt_item_preco"></h3>
+              <a href="chat.html"
+                ><button class="bnt contato">ENTRE EM CONTATO</button></a
+              >
             </div>
           </div>
         </div>
@@ -368,37 +171,12 @@
       <section id="coment">
         <div class="coment">
           <div class="avaliacoes">
-            <h1>Avaliações de Clientees</h1>
+            <h1>Avaliações de Clientes</h1>
             <div class="aval_clt aval1">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-half-fill"></i>
-              <h3>4.5 of 5</h3>
+              <span class="estrelas" id="clt_aval_estrelas"></span>
+              <h3 id="clt_aval_nota">0.0 of 5</h3>
             </div>
-            <div class="grafico1">
-              <div>5 estrelas (62%)</div>
-              <div class="barra">
-                <div class="preenchimento" style="width: 62%"></div>
-              </div>
-              <div>4 estrelas (28%)</div>
-              <div class="barra">
-                <div class="preenchimento" style="width: 28%"></div>
-              </div>
-              <div>3 estrelas (8%)</div>
-              <div class="barra">
-                <div class="preenchimento" style="width: 8%"></div>
-              </div>
-              <div>2 estrelas (2%)</div>
-              <div class="barra">
-                <div class="preenchimento" style="width: 2%"></div>
-              </div>
-              <div>1 estrela (0%)</div>
-              <div class="barra">
-                <div class="preenchimento" style="width: 0%"></div>
-              </div>
-            </div>
+            <div class="grafico1" id="clt_aval_grafico"></div>
             <div class="deixe">
               <h1>Deixe seu feedback</h1>
               <p>Compartilhe sua opinião com outros clientes.</p>
@@ -446,119 +224,8 @@
           </div>
           <div class="comentarios">
             <h1>Principais avaliações</h1>
-            <div class="comentario">
-              <div class="perfil">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
-                  alt="Perfil Comentario"
-                />
-                <h3>Lucas Almeida</h3>
-              </div>
-              <div class="aval_clt aval1">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <h4>Um excelente trabalho.</h4>
-              </div>
-              <h4>Reviewed September 12, 2025</h4>
-              <h3>Manutenção verificada</h3>
-              <p>
-                Contratei o Jorge Fonseca dos Santos como técnico de TI e não
-                poderia estar mais satisfeito! O trabalho dele foi excepcional,
-                com atenção aos detalhes e muito profissionalismo. Recomendo
-                ele para todos!
-              </p>
-              <h4>2 pessoas acharam esta avaliação útil</h4>
-              <div class="bnt_coment">
-                <button class="bnt comen util like-button" id="likeButton">
-                  Útil
-                </button>
-                <p class="like-message" id="likeMensagem">
-                  👍 Você achou esta avaliação útil!
-                </p>
-                <button class="bnt comen denunciar" id="openPopup">
-                  Denunciar
-                </button>
-              </div>
-            </div>
-
-            <div class="comentario">
-              <div class="perfil">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
-                  alt="Perfil Comentario"
-                />
-                <h3>Mariele Soares</h3>
-              </div>
-              <div class="aval_clt aval1">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <h4>Ótimo trabalho.</h4>
-              </div>
-              <h4>Reviewed September 6, 2025</h4>
-              <h3>Manutenção verificada</h3>
-              <p>
-                Contratei o Jorge Fonseca dos Santos como técnico de TI e não
-                poderia estar mais satisfeito! O trabalho dele foi excepcional,
-                com atenção aos detalhes e muito profissionalismo.
-              </p>
-              <h4>3 pessoas acharam esta avaliação útil</h4>
-              <div class="bnt_coment">
-                <button class="bnt comen util like-button" id="likeButton">
-                  Útil
-                </button>
-                <p class="like-message" id="likeMensagem">
-                  👍 Você achou esta avaliação útil!
-                </p>
-                <button class="bnt comen denunciar" id="openPopup">
-                  Denunciar
-                </button>
-              </div>
-            </div>
-
-            <div class="comentario">
-              <div class="perfil">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
-                  alt="Perfil Comentario"
-                />
-                <h3>Jaime dos Santos</h3>
-              </div>
-              <div class="aval_clt aval1">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <h4>Um parceiro confiável.</h4>
-              </div>
-              <h4>Reviewed September 1, 2025</h4>
-              <h3>Manutenção verificada</h3>
-              <p>
-                Quero agradecer ao Jorge pela excelente explicação do
-                projeto. Ele fez questão de detalhar cada etapa, o que me deixou
-                muito à vontade com o processo. Ele também recomendou uma
-                equipe confiável que realmente entregou um trabalho de qualidade.
-              </p>
-              <h4>2 pessoas acharam esta avaliação útil</h4>
-              <div class="bnt_coment">
-                <button class="bnt comen util like-button" id="likeButton">
-                  Útil
-                </button>
-                <p class="like-message" id="likeMensagem">
-                  👍 Você achou esta avaliação útil
-                </p>
-                <button class="bnt comen denunciar" id="openPopup">
-                  Denunciar
-                </button>
-              </div>
-            </div>
-            <a href=""
+            <div id="clt_comentarios"></div>
+            <a href="#coment"
               >VER MAIS AVALIAÇÕES <i class="ri-arrow-right-s-line"></i
             ></a>
           </div>
@@ -571,19 +238,19 @@
           <h4>Opcional: Por que você está denunciando isso?</h4>
           <form>
             <label class="custom-checkbox">
-              <input type="checkbox" id="meu-checkbox" />
+              <input type="checkbox" class="check-opcao" />
               <span class="checkmark"></span> Não relacionado ao assunto</label
             ><br />
             <label class="custom-checkbox">
-              <input type="checkbox" id="meu-checkbox" />
+              <input type="checkbox" class="check-opcao" />
               <span class="checkmark"></span> Inapropriado</label
             ><br />
             <label class="custom-checkbox">
-              <input type="checkbox" id="meu-checkbox" />
+              <input type="checkbox" class="check-opcao" />
               <span class="checkmark"></span> Falsa</label
             ><br />
             <label class="custom-checkbox">
-              <input type="checkbox" id="meu-checkbox" />
+              <input type="checkbox" class="check-opcao" />
               <span class="checkmark"></span> Outros</label
             ><br />
             <p>
@@ -594,7 +261,9 @@
               <button type="button" class="cancel" onclick="closePopup()">
                 Cancelar
               </button>
-              <button type="button" class="enviar"onclick="sendFeedback()">Enviar</button>
+              <button type="button" class="enviar" onclick="sendFeedback()">
+                Enviar
+              </button>
             </div>
           </form>
         </div>
@@ -636,18 +305,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      document
-        .getElementById("likeButton")
-        .addEventListener("click", function () {
-          const message = document.getElementById("likeMensagem");
-          message.style.display = "block";
-
-          // Esconder a mensagem após 3 segundos
-          setTimeout(function () {
-            message.style.display = "none";
-          }, 3000);
-        });
-    </script>
   </body>
 </html>

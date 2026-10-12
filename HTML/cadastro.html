@@ -3,11 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../img/Icons/folha.ico"
-      type="image/x-icon"
-    />
 
     <!--==================== RemixIcon ====================-->
     <link
@@ -15,29 +10,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
 
-    <!--==================== Favicon====================-->
+    <!--==================== Favicon ====================-->
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="../CSS/cadastro.css" />
-
-    <!--==================== CSS header e footer ====================-->
     <link rel="stylesheet" href="../CSS/head-foot.css" />
 
-    <!--==================== JS header ====================-->
+    <!--==================== JS ====================-->
     <script src="../JS/header.JS" defer></script>
-
     <script src="../JS/cadastro-login.js" defer></script>
-    
-    
 
-    <title>TechFix - Cadastrar</title>
+    <title>TechFix - Entrar / Cadastrar</title>
   </head>
 
   <body>
     <header id="header">
       <div class="logo">
-        <img src="../img/logo.png" alt="" />
+        <img src="../img/logo.png" alt="Logo TechFix" />
         <h1>TechFix</h1>
       </div>
 
@@ -58,101 +48,181 @@
       </menu>
     </header>
 
-    <section>
+    <main class="auth">
       <div class="container">
-        <div class="form-box login">
-          <form action="">
-            <h1>Entrar</h1>
-            <div class="input-box">
-              <input type="text" placeholder="E-mail" required />
-              <i class="ri-mail-fill"></i>
-            </div>
-            <div class="input-box">
-              <input
-                type="password"
-                placeholder="Senha"
-                autocomplete="new-password"
-                required
-              />
-              <i class="ri-lock-fill"></i>
-            </div>
-            <div class="forgot-link">
-              <a href="esqueceu.html">ESQUECEU SUA SENHA?</a>
-            </div>
-            <div class="pinto">
-              <button
-                type="button"
-                class="bnt"
-                id="bnt-login"
-              >
-                ENTRAR
-              </button>
-            </div>
-            <p>Entre com outras plataformas:</p>
-            <div class="social-icon">
-              <a href="#"><i class="ri-google-fill"></i></a>
-              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-            </div>
-          </form>
-        </div>
+        <!-- ==================== ÁREA DOS FORMULÁRIOS ==================== -->
+        <div class="auth-forms">
+          <!-- -------- LOGIN -------- -->
+          <div class="form-box login">
+            <form action="">
+              <div class="form-head">
+                <span class="badge"
+                  ><i class="ri-tools-line"></i> Área do cliente</span
+                >
+                <h1>Bem-vindo de volta</h1>
+                <p>Acesse sua conta TechFix e cuide dos seus reparos.</p>
+              </div>
 
-        <div class="form-box Cadastrar">
-          <form action="">
-            <h1>Cadastrar</h1>
-            <div class="input-box">
-              <input type="text" placeholder="Nome" required />
-              <i class="ri-user-fill"></i>
-            </div>
-            <div class="input-box">
-              <input
-                type="email"
-                placeholder="E-mail"
-                autocomplete="email"
-                required
-              />
-              <i class="ri-mail-fill"></i>
-            </div>
-            <div class="input-box">
-              <input
-                type="password"
-                placeholder="Senha"
-                autocomplete="new-password"
-                required
-              />
-              <i class="ri-lock-fill"></i>
-            </div>
-            <div class="pinto">
+              <div class="input-box">
+                <i class="ri-mail-fill"></i>
+                <input
+                  type="text"
+                  placeholder="E-mail"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <div class="input-box">
+                <i class="ri-lock-fill"></i>
+                <input
+                  type="password"
+                  placeholder="Senha"
+                  autocomplete="current-password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="toggle-pass"
+                  aria-label="Mostrar senha"
+                >
+                  <i class="ri-eye-line"></i>
+                </button>
+              </div>
+
+              <div class="forgot-link">
+                <a href="esqueceu.html">Esqueceu sua senha?</a>
+              </div>
+
+              <button type="button" class="bnt" id="bnt-login">ENTRAR</button>
+
+              <div class="divider"><span>ou continue com</span></div>
+
+              <div class="social-icon">
+                <a href="#" aria-label="Entrar com Google"
+                  ><i class="ri-google-fill"></i
+                ></a>
+                <a href="#" aria-label="Entrar com Facebook"
+                  ><i class="ri-facebook-circle-fill"></i
+                ></a>
+                <a href="#" aria-label="Entrar com LinkedIn"
+                  ><i class="ri-linkedin-box-fill"></i
+                ></a>
+              </div>
+
+              <p class="switch-text">
+                Não tem uma conta?
+                <button type="button" class="register-bnt link">
+                  Cadastre-se
+                </button>
+              </p>
+            </form>
+          </div>
+
+          <!-- -------- CADASTRO -------- -->
+          <div class="form-box Cadastrar">
+            <form action="">
+              <div class="form-head">
+                <span class="badge"
+                  ><i class="ri-user-add-line"></i> Criar conta</span
+                >
+                <h1>Junte-se à TechFix</h1>
+                <p>
+                  Cadastre-se e encontre o profissional ideal para o seu reparo.
+                </p>
+              </div>
+
+              <div class="input-box">
+                <i class="ri-user-fill"></i>
+                <input
+                  type="text"
+                  placeholder="Nome completo"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="input-box">
+                <i class="ri-mail-fill"></i>
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <div class="input-box">
+                <i class="ri-lock-fill"></i>
+                <input
+                  type="password"
+                  placeholder="Senha"
+                  autocomplete="new-password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="toggle-pass"
+                  aria-label="Mostrar senha"
+                >
+                  <i class="ri-eye-line"></i>
+                </button>
+              </div>
+
               <button type="submit" class="bnt" id="bnt-cadastro">
-                CADASTRAR
+                CRIAR CONTA
               </button>
-            </div>
-            <p>Cadastre-se através de outras plataformas:</p>
-            <div class="social-icon">
-              <a href="#"><i class="ri-google-fill"></i></a>
-              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-            </div>
-          </form>
-        </div>
 
-        <div class="toggle-box">
-          <div class="toggle-panel toggle-left">
-            <h1>Olá, bem-vindo de volta!</h1>
-            <p>Não tem uma conta?</p>
-            <button class="register-bnt" id="sim">CADASTRAR</button>
+              <div class="divider"><span>ou cadastre-se com</span></div>
+
+              <div class="social-icon">
+                <a href="#" aria-label="Cadastrar com Google"
+                  ><i class="ri-google-fill"></i
+                ></a>
+                <a href="#" aria-label="Cadastrar com Facebook"
+                  ><i class="ri-facebook-circle-fill"></i
+                ></a>
+                <a href="#" aria-label="Cadastrar com LinkedIn"
+                  ><i class="ri-linkedin-box-fill"></i
+                ></a>
+              </div>
+
+              <p class="switch-text">
+                Já tem uma conta?
+                <button type="button" class="login-bnt link">Entrar</button>
+              </p>
+            </form>
           </div>
         </div>
 
-        <div class="toggle-box">
-          <div class="toggle-panel toggle-right">
-            <h1>Olá, bem-vindo!</h1>
-            <p>Já tem uma conta?</p>
-            <button class="login-bnt" id="sim">Entrar</button>
+        <!-- ==================== PAINEL DE MARCA ==================== -->
+        <aside class="auth-aside">
+          <span class="aside-glow"></span>
+          <i class="ri-tools-fill float-icon i1"></i>
+          <i class="ri-settings-5-fill float-icon i2"></i>
+          <i class="ri-flashlight-fill float-icon i3"></i>
+
+          <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+              <div class="brand-icon"><i class="ri-tools-fill"></i></div>
+              <h1>TechFix</h1>
+              <p>Manutenção e reparo com quem entende do assunto.</p>
+              <button type="button" class="register-bnt">CADASTRAR</button>
+            </div>
+
+            <div class="toggle-panel toggle-right">
+              <div class="brand-icon"><i class="ri-shield-user-fill"></i></div>
+              <h1>Bem-vindo!</h1>
+              <p>
+                Entre para acompanhar seus serviços e conversar com os
+                profissionais.
+              </p>
+              <button type="button" class="login-bnt">ENTRAR</button>
+            </div>
           </div>
-        </div>
+        </aside>
       </div>
-    </section>
+    </main>
 
     <footer>
       <div class="footer-container">
@@ -169,7 +239,7 @@
           <ul>
             <li><a href="home.html">INÍCIO</a></li>
             <li><a href="Sobre.html">SOBRE NÓS</a></li>
-            <li><a href="#">SERVIÇOS</a></li>
+            <li><a href="serviço.html">SERVIÇOS</a></li>
             <li><a href="contato.html">CONTATO</a></li>
           </ul>
         </div>
@@ -189,18 +259,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      function validateForm() {
-        const username = document.querySelector('input[type="text"]');
-        const password = document.querySelector('input[type="password"]');
-
-        if (username.value.trim() === "" || password.value.trim() === "") {
-          alert("Please fill in all fields.");
-        } else {
-          window.location.href = "home.html";
-        }
-      }
-    </script>
   </body>
 </html>

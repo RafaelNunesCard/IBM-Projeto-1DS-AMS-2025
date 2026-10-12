@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="CSS/head-foot.css" />
 
     <!--==================== JS header ====================-->
-    <script src="js/header.JS" defer></script>
+    <script src="JS/header.JS" defer></script>
+    <script src="JS/home.js" defer></script>
 
     <title>TechFix</title>
   </head>
@@ -50,18 +51,35 @@
 
     <main>
       <section id="banr_home">
-        <div id="img_banr"><img src="img/banner1.png" alt="Pessoa" /></div>
+        <span class="hero-glow g1"></span>
+        <span class="hero-glow g2"></span>
+
+        <div id="img_banr">
+          <img src="img/banner1.png" alt="Profissional de manutenção" />
+          <div class="hero-chip">
+            <i class="ri-shield-check-fill"></i> Profissionais verificados
+          </div>
+        </div>
+
         <div id="text_banr">
+          <span class="hero-badge"
+            ><i class="ri-tools-line"></i> Manutenção &amp; Reparo</span
+          >
           <h2>Olá, precisa de ajuda?</h2>
-          <h1>Manutenção e reparo</h1>
+          <h1>Manutenção e reparo <span class="grad">sob medida</span></h1>
           <p>
             Se você precisa de assistência com reparos ou manutenção, estamos
             aqui para ajudar! Entre em contato e descubra como podemos resolver
             seus problemas de forma rápida e eficiente.
           </p>
-          <a href="HTML/cadastro.html"
-            ><button class="bnt">CADASTRAR</button></a
-          >
+          <div class="hero-cta">
+            <a href="HTML/cadastro.html"
+              ><button class="bnt">CADASTRAR</button></a
+            >
+            <a href="HTML/serviço.html"
+              ><button class="bnt btn-ghost">VER SERVIÇOS</button></a
+            >
+          </div>
         </div>
       </section>
 
@@ -146,24 +164,24 @@
       <section id="sec_beneficios">
         <div class="container" id="cont_beneficios">
           <div class="anos autoShow">
-            <h1>3</h1>
+            <h1 data-count="3">3</h1>
             <h2>Anos de Experiência</h2>
           </div>
           <div class="beneficios">
             <div class="card_retangulo autoShow">
-              <h2>600+</h2>
+              <h2 data-count="600" data-suffix="+">600+</h2>
               <p>Clientes</p>
             </div>
             <div class="card_retangulo autoShow">
-              <h2>12+</h2>
+              <h2 data-count="12" data-suffix="+">12+</h2>
               <p>Projetos Completos</p>
             </div>
             <div class="card_retangulo autoShow">
-              <h2>10</h2>
+              <h2 data-count="10">10</h2>
               <p>Conquistas</p>
             </div>
             <div class="card_retangulo autoShow">
-              <h2>40+</h2>
+              <h2 data-count="40" data-suffix="+">40+</h2>
               <p>Inscritos</p>
             </div>
           </div>

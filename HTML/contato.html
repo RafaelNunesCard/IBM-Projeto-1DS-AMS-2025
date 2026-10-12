@@ -18,10 +18,9 @@
     <link rel="stylesheet" href="../CSS/head-foot.css" />
 
     <!--==================== JS ====================-->
-    <script src="../JS/header.js" defer></script>
+    <script src="../JS/header.JS" defer></script>
     <script src="../JS/FAQ.js" defer></script>
-
-    
+    <script src="../JS/contato.js" defer></script>
 
     <title>TechFix - Contato</title>
   </head>
@@ -52,48 +51,56 @@
 
     <!-- BANNER -->
     <section id="banner">
-      <div class="banner_text">
-        <h1>Quer <span>entrar em contato?</span></h1>
-        <p>Adoraríamos ouvir você. Veja como entrar em contato conosco.</p>
-      </div>
+      <span class="hero-glow g1"></span>
+      <span class="hero-glow g2"></span>
+      <span class="hero-badge"
+        ><i class="ri-customer-service-2-fill"></i> Suporte TechFix</span
+      >
+      <h1>Quer <span class="grad">entrar em contato?</span></h1>
+      <p>
+        Adoraríamos ouvir você. Tire dúvidas, envie sugestões ou peça ajuda —
+        respondemos em até 48 horas.
+      </p>
     </section>
 
     <!-- CONTATO -->
     <div class="alinha">
       <section class="card" role="main">
         <aside class="contact-side">
-          <div class="contact-card">
-            <div class="contact-item">
-              <div class="icon"><i class="ri-mail-line"></i></div>
-              <div>
-                <div class="small">E-mail</div>
-                <div style="font-weight: 600">TechFix@gmail.com</div>
-              </div>
+          <a
+            class="contact-card"
+            href="mailto:TechFix@gmail.com"
+            aria-label="Enviar e-mail para a TechFix"
+          >
+            <div class="icon"><i class="ri-mail-line"></i></div>
+            <div>
+              <div class="small">E-mail</div>
+              <div class="valor">TechFix@gmail.com</div>
             </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-item">
-              <div class="icon"><i class="ri-phone-line"></i></div>
-              <div>
-                <div class="small">Número</div>
-                <div style="font-weight: 600">+55 (11) 97018-4779</div>
-              </div>
+          </a>
+          <a
+            class="contact-card"
+            href="tel:+5511970184779"
+            aria-label="Ligar para a TechFix"
+          >
+            <div class="icon"><i class="ri-phone-line"></i></div>
+            <div>
+              <div class="small">Número</div>
+              <div class="valor">+55 (11) 97018-4779</div>
             </div>
-          </div>
+          </a>
           <div class="contact-card">
-            <div class="contact-item">
-              <div class="icon"><i class="ri-map-pin-line"></i></div>
-              <div>
-                <div class="small">Localização</div>
-                <div style="font-weight: 600">São Paulo, BR</div>
-              </div>
+            <div class="icon"><i class="ri-map-pin-line"></i></div>
+            <div>
+              <div class="small">Localização</div>
+              <div class="valor">São Paulo, BR</div>
             </div>
           </div>
         </aside>
         <form id="contactForm" novalidate>
           <div class="row">
-            <div class="field">
-              <label for="name">Nome</label>
+            <div class="field" id="campo_name">
+              <label for="name">Nome *</label>
               <input
                 id="name"
                 name="name"
@@ -101,16 +108,18 @@
                 placeholder="Seu nome"
                 required
               />
+              <span class="field-erro" id="erro_name"></span>
             </div>
-            <div class="field">
-              <label for="email">E-mail</label>
+            <div class="field" id="campo_email">
+              <label for="email">E-mail *</label>
               <input
                 id="email"
                 name="email"
                 type="email"
-                placeholder="you@exemple.com"
+                placeholder="voce@exemplo.com"
                 required
               />
+              <span class="field-erro" id="erro_email"></span>
             </div>
           </div>
           <div class="field">
@@ -122,25 +131,28 @@
               placeholder="Sobre o que é?"
             />
           </div>
-          <div class="field">
-            <label for="message">Mensagem</label>
+          <div class="field" id="campo_message">
+            <label for="message">Mensagem *</label>
             <textarea
               id="message"
               name="message"
               placeholder="Escreva sua mensagem..."
               required
             ></textarea>
+            <span class="field-erro" id="erro_message"></span>
           </div>
           <div class="submit-area">
             <div class="meta">
-              Suas informações são confidenciais • Resposta em até 48 horas
+              <i class="ri-lock-2-line"></i> Suas informações são confidenciais
+              • Resposta em até 48 horas
             </div>
-            <button class="btn1 btn-primary" type="submit">
-              Enviar mensagem
+            <button class="bnt" type="submit" id="bnt_enviar">
+              ENVIAR MENSAGEM
             </button>
           </div>
           <div id="success" class="success" role="status">
-            Mensagem enviada com sucesso — obrigado! ✨
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Mensagem enviada com sucesso — obrigado!</span>
           </div>
         </form>
       </section>
@@ -154,120 +166,209 @@
       </div>
 
       <div class="faq_card">
-        <!-- Exemplo de FAQ -->
-        <div class="faq">
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
           <div class="pergunta">
-            <h3>Que tipos de Serviços?</h3>
+            <h3>Como funciona a contratação de um profissional?</h3>
             <i class="ri-arrow-down-s-line"></i>
           </div>
           <div class="resposta">
-            <p>
-              Oferecemos uma variedade de serviços, que você pode encontrar na
-              página de serviços.
-            </p>
+            <div class="resposta_inner">
+              <p>
+                Acesse a página de serviços, filtre pela categoria desejada e
+                escolha o profissional pelo perfil. Ao clicar em "Contratar",
+                você selecionará a data e a forma de pagamento. O agendamento é
+                confirmado quando o profissional aceita sua solicitação, e você
+                recebe um e-mail de confirmação.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="faq">
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
           <div class="pergunta">
-            <h3>Preços</h3>
+            <h3>Quais tipos de serviços a TechFix oferece?</h3>
             <i class="ri-arrow-down-s-line"></i>
           </div>
           <div class="resposta">
-            <p>
-              Os preços são definidos pelo profissional. Se quiser negociar,
-              você precisará entrar em contato diretamente com ele.
-            </p>
+            <div class="resposta_inner">
+              <p>
+                Trabalhamos com cinco categorias: manutenção predial, serviços
+                de TI, reparo de eletrodomésticos, manutenção de veículos e
+                manutenção de equipamentos industriais. Todos os profissionais
+                disponíveis podem ser encontrados na página de serviços.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="faq">
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
           <div class="pergunta">
-            <h3>Agendamento</h3>
+            <h3>Como os preços são definidos?</h3>
             <i class="ri-arrow-down-s-line"></i>
           </div>
           <div class="resposta">
-            <p>
-              O agendamento será marcado após o profissional confirmar sua
-              solicitação. Um e-mail será enviado a você após a confirmação.
-            </p>
+            <div class="resposta_inner">
+              <p>
+                Cada profissional define seu próprio valor por dia de trabalho,
+                que aparece no perfil e na listagem de serviços. Se quiser
+                negociar condições específicas, você pode entrar em contato
+                diretamente com o profissional pelo chat.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="faq">
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
           <div class="pergunta">
-            <h3>Área de Atendimento</h3>
+            <h3>Como funciona o agendamento?</h3>
             <i class="ri-arrow-down-s-line"></i>
           </div>
           <div class="resposta">
-            <p>
-              Os profissionais serão recomendados automaticamente com base na localização do cliente.
-            </p>
+            <div class="resposta_inner">
+              <p>
+                Após escolher o profissional, você seleciona a data no
+                calendário e envia a solicitação. O agendamento fica pendente
+                até a confirmação do profissional — quando isso acontece, um
+                e-mail é enviado para você com todos os detalhes.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="faq">
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
           <div class="pergunta">
-            <h3>Política de Cancelaramento</h3>
+            <h3>Quais formas de pagamento são aceitas?</h3>
             <i class="ri-arrow-down-s-line"></i>
           </div>
           <div class="resposta">
-            <p>
-              Cancelaramentos podem ser feitos com pelo menos um dia de
-              antecedência. Cancelaramentos tardios podem resultar em cobrança
-              parcial. Em caso de cancelamento pela empresa, o serviço será
-              reagendado sem custo.
-            </p>
+            <div class="resposta_inner">
+              <p>
+                Aceitamos cartões de crédito e débito, Pix e transferências
+                bancárias, com opção de parcelamento em condições especiais. A
+                forma de pagamento é escolhida no momento da contratação, mas o
+                valor só é cobrado após a conclusão total do serviço.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="faq">
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
           <div class="pergunta">
-            <h3>Avaliações e Depoimentos</h3>
+            <h3>Posso cancelar ou remarcar um agendamento?</h3>
             <i class="ri-arrow-down-s-line"></i>
           </div>
           <div class="resposta">
-            <p>
-              As avaliações aparecem abaixo do perfil do profissional. Ao
-              acessar o perfil, você verá todos os avaliadores e
-              seus depoimentos.
-            </p>
+            <div class="resposta_inner">
+              <p>
+                Sim. Cancelamentos podem ser feitos com pelo menos um dia de
+                antecedência. Cancelamentos tardios podem resultar em cobrança
+                parcial. Caso o cancelamento parta da empresa ou do
+                profissional, o serviço é reagendado sem nenhum custo para
+                você.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="faq">
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
           <div class="pergunta">
-            <h3>Experiência da Equipe</h3>
+            <h3>Como os profissionais são selecionados e verificados?</h3>
             <i class="ri-arrow-down-s-line"></i>
           </div>
           <div class="resposta">
-            <p>
-              Para ter certeza antes de contratar, verifique as certificações do
-              profissional e as avaliações de outros clientes para garantir
-              a qualidade do profissional.
-            </p>
+            <div class="resposta_inner">
+              <p>
+                Antes de entrar na plataforma, cada profissional passa por
+                verificação de identidade, certificações e experiência. Além
+                disso, os perfis exibem avaliações reais de outros clientes,
+                para que você decida com segurança.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="faq">
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
           <div class="pergunta">
-            <h3>Suporte Pós-Serviço</h3>
+            <h3>Como funcionam as avaliações?</h3>
             <i class="ri-arrow-down-s-line"></i>
           </div>
           <div class="resposta">
-            <p>
-              Após a conclusão do serviço, você pode avaliar o profissional em
-              nosso site. Se encontrar algum problema, entre em contato com
-              nossa equipe para obter assistência.
-            </p>
+            <div class="resposta_inner">
+              <p>
+                Após a conclusão do serviço, você pode avaliar o profissional
+                com nota e comentário. As avaliações aparecem no perfil dele,
+                junto com as notas de outros clientes, ajudando toda a
+                comunidade a contratar com mais confiança.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="faq">
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
           <div class="pergunta">
-            <h3>Métodos de Pagamento</h3>
+            <h3>E se eu tiver um problema depois do serviço?</h3>
             <i class="ri-arrow-down-s-line"></i>
           </div>
           <div class="resposta">
-            <p>
-              As opções de pagamento podem ser selecionadas ao contratar o
-              profissional. Aceitamos cartões de crédito e débito, Pix e
-              transferências bancárias. Também oferecemos parcelamento com
-              condições especiais. O pagamento é feito após a conclusão
-              total do serviço contratado.
-            </p>
+            <div class="resposta_inner">
+              <p>
+                Se algo não saiu como esperado, entre em contato com o
+                profissional pelo chat ou com nossa equipe pelos canais desta
+                página. Vamos acompanhar o caso e ajudar na solução — o suporte
+                pós-serviço faz parte do nosso compromisso.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
+          <div class="pergunta">
+            <h3>Em quais regiões a TechFix atende?</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <div class="resposta_inner">
+              <p>
+                Atendemos em todo o Brasil por meio de profissionais parceiros.
+                Os perfis recomendados são selecionados automaticamente com
+                base na sua localização, para priorizar quem está mais perto de
+                você.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
+          <div class="pergunta">
+            <h3>Preciso criar uma conta para contratar?</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <div class="resposta_inner">
+              <p>
+                Você pode navegar pelos serviços sem conta, mas recomendamos
+                criar um cadastro gratuito: assim é possível agendar serviços,
+                acompanhar o status das contratações e avaliar os profissionais
+                depois da conclusão.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq" role="button" tabindex="0" aria-expanded="false">
+          <div class="pergunta">
+            <h3>Em quanto tempo vocês respondem minha mensagem?</h3>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="resposta">
+            <div class="resposta_inner">
+              <p>
+                Nossa equipe responde todas as mensagens em até 48 horas,
+                incluindo fins de semana e feriados. Para assuntos urgentes,
+                prefira ligar para o nosso número — o atendimento é mais
+                rápido.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -278,7 +379,7 @@
       <div class="footer-container">
         <div class="footer-column">
           <h3 id="footer-logo">TechFix</h3>
-          <p>
+          <p class="footer">
             Excelência nos serviços e qualidade nos produtos. Nosso compromisso
             é com você!
           </p>
@@ -287,18 +388,19 @@
         <div class="footer-column">
           <h3>Links</h3>
           <ul>
-            <li><a href="index.html">INÍCIO</a></li>
-            <li><a href="Sobre.html">SOBRE NÓS</a></li>
-            <li><a href="serviço.html">SERVIÇOS</a></li>
-            <li><a href="#">CONTATO</a></li>
+            <li class="footer"><a href="home.html">INÍCIO</a></li>
+            <li class="footer"><a href="Sobre.html">SOBRE NÓS</a></li>
+            <li class="footer"><a href="serviço.html">SERVIÇOS</a></li>
+            <li class="footer"><a href="contato.html">CONTATO</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h3>Contato</h3>
           <ul>
-            <li><strong>E-mail: TechFix@gmail.com</strong></li>
-            <li><strong>Número: (11) 97018-4779</strong></li>
+            <li class="footer"><strong>E-mail: TechFix@gmail.com</strong></li>
+            <br />
+            <li class="footer"><strong>Número: (11) 97018-4779</strong></li>
           </ul>
           <div class="social-icons">
             <a href="#"><i class="ri-facebook-box-fill"></i></a>
@@ -308,31 +410,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- SCRIPT DO FORMULÁRIO -->
-    <script>
-      const form = document.getElementById("contactForm");
-      const successEl = document.getElementById("success");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const name = form.name.value.trim();
-        const email = form.email.value.trim();
-        const message = form.message.value.trim();
-
-        if (!name || !email || !message) {
-          alert("Preencha os campos obrigatórios: nome, e-mail e mensagem.");
-          return;
-        }
-
-        successEl.style.display = "block";
-        form.reset();
-
-        setTimeout(() => {
-          successEl.style.display = "none";
-        }, 5000);
-      });
-    </script>
   </body>
 </html>

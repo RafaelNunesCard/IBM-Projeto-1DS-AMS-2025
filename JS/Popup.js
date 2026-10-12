@@ -1,19 +1,22 @@
-document.getElementById("openPopup").onclick = function () {
-  document.getElementById("popup").style.display = "block";
-};
+document.addEventListener("click", (evento) => {
+  const popup = document.getElementById("popup");
+  if (!popup) return;
 
-document.getElementsByClassName("close")[0].onclick = function () {
-  closePopup();
-};
+  // ABRIR: botão denunciar (conteúdo dinâmico) ou openPopup legado
+  if (evento.target.closest(".denunciar") || evento.target.closest("#openPopup")) {
+    popup.style.display = "block";
+    return;
+  }
 
-window.onclick = function (event) {
-  if (event.target == document.getElementById("popup")) {
+  // FECHAR: X ou clique fora do conteúdo
+  if (evento.target.closest(".close") || evento.target === popup) {
     closePopup();
   }
-};
+});
 
 function closePopup() {
-  document.getElementById("popup").style.display = "none";
+  const popup = document.getElementById("popup");
+  if (popup) popup.style.display = "none";
 }
 
 function sendFeedback() {

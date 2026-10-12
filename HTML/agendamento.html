@@ -75,36 +75,36 @@
             <i class="ri-bank-card-fill"></i> Crédito/Débito
             </button>
             <button class="pag" data-form="boleto">
-            <i class="ri-barcode-box-fill"></i> Bank Slip
+            <i class="ri-barcode-box-fill"></i> Boleto
             </button>
             <button class="pag" data-form="dinheiro">
-            <i class="ri-money-dollar-box-fill"></i> Money
+            <i class="ri-money-dollar-box-fill"></i> Dinheiro
             </button>
           </div>
 
           <!-- Formulário PIX -->
           <form action="" class="form" id="pix">
             <h2>Pix</h2>
-            <p>Scan the Qr Code below:</p>
+            <p>Escaneie o QR Code abaixo:</p>
             <div id="QRcode">
-              <img src="/img/QR-code.png"
+              <img src="../img/QR-code.png"
                   alt="QR Code Pix">
             </div>
-            <p><strong>Pix Key: </strong><span id="chavepix"></span></p>
+            <p><strong>Chave Pix: </strong><span id="chavepix"></span></p>
           </form>
 
           <!-- Formulário Cartão -->
           <form action="" class="form" id="cartao">
-            <h2>Credit/Debit Card</h2>
-            <label for="numero_cartao">Card Number:</label>
+            <h2>Cartão de Crédito/Débito</h2>
+            <label for="numero_cartao">Número do cartão:</label>
             <input type="number" id="numero_cartao" placeholder="Ex:0000 0000 0000 0000" required>
 
-            <label for="nome_cartao">Cardholder Name:</label>
-            <input type="text" id="nome_cartao" placeholder="Full name" required>
+            <label for="nome_cartao">Nome do titular:</label>
+            <input type="text" id="nome_cartao" placeholder="Nome completo" required>
 
             <div class="linha">
               <div>
-                <label for="validade">Expiration Date:</label>
+                <label for="validade">Data de validade:</label>
                 <input type="month" id="validade" required>
               </div>
               <div>
@@ -116,20 +116,20 @@
 
           <!-- Formulário Boleto -->
           <form action="" class="form" id="boleto">
-            <h2>Bank Slip</h2>
-            <p>A bank slip will be generated after confirmation.</p>
-            <p>Due date: <strong>5 days after issue</strong></p>
+            <h2>Boleto Bancário</h2>
+            <p>Um boleto será gerado após a confirmação.</p>
+            <p>Vencimento: <strong>5 dias após a emissão</strong></p>
           </form>
 
           <!-- Formulário Dinheiro -->
           <form action="" class="form" id="dinheiro">
-            <h2>Cash Payment</h2>
-            <p>Please specify if you need change:</p>
-            <label for="troco">Do you need change for:</label>
-            <input type="number" id="troco" placeholder="Enter the amount (e.g., 100)" min="0">
+            <h2>Pagamento em Dinheiro</h2>
+            <p>Especifique se você precisa de troco:</p>
+            <label for="troco">Precisa de troco para:</label>
+            <input type="number" id="troco" placeholder="Informe o valor (ex.: 100)" min="0">
           </form>
 
-          <button class="confirm" id="showConfirmed">Confirm</button>
+          <button class="confirm" id="showConfirmed">Confirmar</button>
         </div>
       </section>
     </main>
@@ -139,27 +139,27 @@
         <div class="footer-column">
           <h3 id="footer-logo">TechFix</h3>
           <p>
-            Excellence in services and quality products. Our commitment 
-            is to you!
+            Excelência nos serviços e qualidade nos produtos. Nosso compromisso
+            é com você!
           </p>
         </div>
 
         <div class="footer-column">
           <h3>Links</h3>
           <ul>
-            <li><a href="home.html">HOME</a></li>
-            <li><a href="Sobre.html">ABOUT US</a></li>
-            <li><a href="serviço.html">SERVICES</a></li>
-            <li><a href="contato.html">CONTACT</a></li>
+            <li><a href="home.html">INÍCIO</a></li>
+            <li><a href="Sobre.html">SOBRE NÓS</a></li>
+            <li><a href="serviço.html">SERVIÇOS</a></li>
+            <li><a href="contato.html">CONTATO</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h3>Contato</h3>
           <ul>
-            <li><strong>Email: TechFix@gmail.com</strong></li>
+            <li><strong>E-mail: TechFix@gmail.com</strong></li>
             <br />
-            <li><strong>Number: (11) 97018-4779</strong></li>
+            <li><strong>Número: (11) 97018-4779</strong></li>
           </ul>
           <div class="social-icons">
             <a href="#"><i class="ri-facebook-box-fill"></i></a>

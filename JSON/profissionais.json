@@ -1,0 +1,1030 @@
+[
+  {
+    "id": "mariele-dos-santos",
+    "nome": "Mariele dos Santos",
+    "cargo": "Eletricista Predial",
+    "categoria": "predial",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/16380164119eb8578a598b3d6f245cbb9cdb6cb2d12799128b34baaec46276d4?w=1024&h=768&pmaid=485705992",
+    "preco_dia": 120,
+    "avaliacao": 4.0,
+    "total_avaliacoes": 78,
+    "projetos_concluidos": 340,
+    "distribuicao": [55, 28, 11, 4, 2],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+    ],
+    "descricao_curta": "Eletricista predial com mais de 15 anos de experiência em serviços elétricos em edifícios e canteiros de obras, especializada em instalações elétricas, reformas e diagnóstico de problemas.",
+    "biografia": "Mariele dos Santos é eletricista predial com mais de 15 anos de experiência em serviços elétricos em edifícios e canteiros de obras. Sua missão é oferecer segurança e eficiência em cada projeto, seja construção nova ou manutenção em edifícios existentes. É especializada em instalações elétricas, reformas e diagnóstico de problemas, sempre atenta às necessidades do cliente e às normas de segurança.",
+    "educacao": "Formada em Eletrotécnica pelo SENAI, com cursos complementares em segurança do trabalho e certificação NR-10. Ao longo da carreira, participou de treinamentos de atualização em instalações elétricas de baixa e média tensão, o que garante serviço técnico preciso e dentro das normas.",
+    "contato": { "email": "mariele.santos@email.com", "telefone": "(11) 98421-7735" },
+    "trabalhos": [
+      {
+        "titulo": "Modernização Elétrica de Condomínio",
+        "descricao": "Revisão completa do sistema elétrico de um edifício residencial de 12 andares, com substituição de quadros de distribuição, cabeamento e dispositivos de proteção.",
+        "imagem": "../img/Projetos/manutenção.jpg"
+      },
+      {
+        "titulo": "Projeto de Instalação Residencial",
+        "descricao": "Execução do projeto elétrico de uma casa de alto padrão, incluindo automação de iluminação, tomadas inteligentes e quadro geral dimensionado para expansão futura.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/d44be8114b85a6e5dc4d8046dd9a99157d145f5b67b37caf56043a16a30965ed?w=1024&h=768&pmaid=461066434"
+      },
+      {
+        "titulo": "Diagnóstico e Correção de Curtos",
+        "descricao": "Investigação de falhas recorrentes de energia em galpão comercial, com mapeamento da rede, correção de emendas irregulares e laudo técnico final.",
+        "imagem": "../img/Projetos/Contrução.jpg"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Lucas Almeida",
+        "nota": 5,
+        "titulo": "Trabalho impecável.",
+        "data": "14 de setembro de 2025",
+        "texto": "A Mariele refez toda a parte elétrica do meu apartamento com muita organização e capricho. Explicou cada etapa e deixou tudo funcionando perfeitamente. Recomendo demais!",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Mariele Soares",
+        "nota": 4,
+        "titulo": "Boa experiência.",
+        "data": "2 de setembro de 2025",
+        "texto": "Serviço bem executado e dentro do prazo combinado. Só atrasou um pouco na chegada do primeiro dia, mas avisou antes e compensou no final.",
+        "uteis": 1,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Jaime dos Santos",
+        "nota": 5,
+        "titulo": "Profissional confiável.",
+        "data": "21 de agosto de 2025",
+        "texto": "Contratei para revisar o quadro de energia do prédio e foi excelente. Muito atenciosa, detalhista e com preço justo. Já indiquei para vizinhos.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "felipe-martins-arquiteto",
+    "nome": "Felipe Martins",
+    "cargo": "Arquiteto(a)",
+    "categoria": "predial",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/a8e059f5f46fb74278137ce2578e5f1bd5ec0fea65956e1f4a220a96f0915930?w=1024&h=768&pmaid=466461648",
+    "preco_dia": 300,
+    "avaliacao": 4.0,
+    "total_avaliacoes": 52,
+    "projetos_concluidos": 210,
+    "distribuicao": [55, 28, 11, 4, 2],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+    ],
+    "descricao_curta": "Arquiteto(a) com mais de 15 anos de experiência em projetos residenciais e comerciais, apaixonado(a) por criar espaços que combinam estética e funcionalidade.",
+    "biografia": "Felipe Martins é arquiteto com mais de 15 anos de experiência em projetos residenciais e comerciais. É apaixonado por criar espaços que combinam estética e funcionalidade, sempre buscando soluções que tornem cada ambiente único e acolhedor. Já assinou mais de 200 projetos e acompanha as obras do conceito à entrega.",
+    "educacao": "Graduado em Arquitetura e Urbanismo pela Universidade Presbiteriana Mackenzie, com especialização em design de interiores e sustentabilidade na construção civil. Mantém atualização constante em normas técnicas e modelagem 3D.",
+    "contato": { "email": "felipe.martins.arq@email.com", "telefone": "(11) 97654-2208" },
+    "trabalhos": [
+      {
+        "titulo": "Reforma de Apartamento Compacto",
+        "descricao": "Projeto de reforma de um apartamento de 55m² com integração de ambientes, marcenaria planejada e iluminação cênica para ampliar a sensação de espaço.",
+        "imagem": "../img/Projetos/Contrução.jpg"
+      },
+      {
+        "titulo": "Projeto Comercial para Cafeteria",
+        "descricao": "Concepção completa de uma cafeteria contemporânea, do layout e fluxo de atendimento ao mobiliário e identidade visual do espaço.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/85e6acbf74e7a2e7d5b7a38342af885daeba02dd122285582d673797524389b9?w=1024&h=768&pmaid=461065826"
+      },
+      {
+        "titulo": "Fachada e Interiores de Clínica",
+        "descricao": "Modernização da fachada e dos ambientes internos de uma clínica odontológica, priorizando conforto acústico e acessibilidade.",
+        "imagem": "../img/Projetos/manutenção.jpg"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Renata Prado",
+        "nota": 5,
+        "titulo": "Superou as expectativas.",
+        "data": "10 de setembro de 2025",
+        "texto": "O Felipe entendeu exatamente o que eu queria e ainda melhorou várias ideias. O projeto ficou leve, funcional e dentro do orçamento. Acompanhou a obra com atenção total.",
+        "uteis": 4,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Carlos Eduardo",
+        "nota": 4,
+        "titulo": "Bom projeto e boa comunicação.",
+        "data": "28 de agosto de 2025",
+        "texto": "Gostei muito do resultado final. A entrega dos desenhos atrasou alguns dias por conta de ajustes, mas valeu a pena pela qualidade.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Beatriz Nogueira",
+        "nota": 4,
+        "titulo": "Criatividade e técnica.",
+        "data": "15 de agosto de 2025",
+        "texto": "Contratei para a reforma da minha clínica e o plano ficou perfeito. Recebi todos os detalhamentos certinhos e a obra seguiu sem surpresas.",
+        "uteis": 1,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "lucas-pereira",
+    "nome": "Lucas Pereira",
+    "cargo": "Técnico de Manutenção Predial",
+    "categoria": "predial",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/ef65a310e7a9d000ee7c710233aeecfeb198e994eaa85d7f2deac74f2bb80e43?w=1024&h=768&pmaid=485710649",
+    "preco_dia": 80,
+    "avaliacao": 3.5,
+    "total_avaliacoes": 41,
+    "projetos_concluidos": 180,
+    "distribuicao": [40, 30, 18, 8, 4],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Boas avaliações dos clientes" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+    ],
+    "descricao_curta": "Técnico de manutenção predial com 10 anos de experiência em conservação e reparo de edifícios, especializado em sistemas elétricos, hidráulicos e estruturais.",
+    "biografia": "Lucas Pereira é técnico de manutenção predial com 10 anos de experiência em conservação e reparo de edifícios. É especializado em sistemas elétricos, hidráulicos e estruturais, garantindo que todos os aspectos do imóvel estejam em perfeito funcionamento. Comprometido com qualidade e segurança, busca sempre soluções práticas e eficientes.",
+    "educacao": "Formado em Técnico em Edificações pelo IFSP, com cursos de hidráulica predial, elétrica básica e manutenção preventiva. Possui certificação para trabalho em altura (NR-35).",
+    "contato": { "email": "lucas.pereira@email.com", "telefone": "(11) 96312-8841" },
+    "trabalhos": [
+      {
+        "titulo": "Manutenção Preventiva de Condomínio",
+        "descricao": "Rotina mensal de inspeção e reparos em um condomínio de 8 blocos, cobrindo elétrica, hidráulica, portões e áreas comuns.",
+        "imagem": "../img/Projetos/manutenção.jpg"
+      },
+      {
+        "titulo": "Reparo de Infiltração e Alvenaria",
+        "descricao": "Diagnóstico e correção de infiltração em parede estrutural, com troca de revestimento e tratamento de umidade.",
+        "imagem": "../img/Projetos/Contrução.jpg"
+      },
+      {
+        "titulo": "Troca de Rede Hidráulica",
+        "descricao": "Substituição completa da tubulação hidráulica de uma sobrado antigo, resolvendo perdas de pressão e vazamentos recorrentes.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/4a7e19e7bab2016e04dd39464d6eb2fbd7dd8b335be915171db2c8544ba210c7?w=1024&h=768&pmaid=461074408"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Sandra Regina",
+        "nota": 4,
+        "titulo": "Resolveu o problema.",
+        "data": "8 de setembro de 2025",
+        "texto": "O Lucas identificou a origem do vazamento que ninguém achava. Serviço bem feito e sem sujeira ao final.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Paulo Sérgio",
+        "nota": 3,
+        "titulo": "Serviço ok, mas demorou.",
+        "data": "27 de agosto de 2025",
+        "texto": "O trabalho ficou bom, porém precisou remarcar uma visita por imprevisto pessoal. No fim, tudo funcionando como esperado.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Helena Martins",
+        "nota": 4,
+        "titulo": "Atencioso e honesto.",
+        "data": "9 de agosto de 2025",
+        "texto": "Gostei da transparência no orçamento. Indicou o que era urgente e o que podia esperar, sem empurrar serviço.",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "carlos-mendes",
+    "nome": "Carlos Mendes",
+    "cargo": "Técnico em Reparo de Eletrodomésticos",
+    "categoria": "eletro",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/8af5812a4fc3204b932e8c345edc245beaf2511eb73fb40e1f47eabc12e48ee1?w=1024&h=768&pmaid=485734557",
+    "preco_dia": 250,
+    "avaliacao": 4.0,
+    "total_avaliacoes": 66,
+    "projetos_concluidos": 420,
+    "distribuicao": [55, 28, 11, 4, 2],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+    ],
+    "descricao_curta": "Técnico especializado em reparo de eletrodomésticos com 8 anos de experiência e formação em eletrônica, habilidoso no reparo de geladeiras, máquinas de lavar e micro-ondas.",
+    "biografia": "Carlos Mendes é técnico especializado em reparo de eletrodomésticos com 8 anos de experiência. Tem formação técnica em eletrônica e é habilidoso no reparo de diversos aparelhos, incluindo geladeiras, máquinas de lavar e micro-ondas. É conhecido por sua dedicação e pela qualidade do seu trabalho, sempre buscando a satisfação do cliente.",
+    "educacao": "Técnico em Eletrônica pela ETEC, com cursos de refrigeração doméstica e manutenção de placas eletrônicas. Atualiza-se constantemente em novas tecnologias de inversores e motores brushless.",
+    "contato": { "email": "carlos.mendes@email.com", "telefone": "(11) 95578-3390" },
+    "trabalhos": [
+      {
+        "titulo": "Reparo de Geladeira Frost Free",
+        "descricao": "Diagnóstico de falha no sistema de degelo, substituição de resistência e sensores, devolvendo o funcionamento completo da geladeira.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/85e6acbf74e7a2e7d5b7a38342af885daeba02dd122285582d673797524389b9?w=1024&h=768&pmaid=461065826"
+      },
+      {
+        "titulo": "Manutenção de Máquina de Lavar",
+        "descricao": "Troca de rolamentos e correia, limpeza geral do tambor e revisão da placa de comando de uma lavadora de 12kg.",
+        "imagem": "../img/Projetos/Suporte ao Cliente.jpg"
+      },
+      {
+        "titulo": "Conserto de Micro-ondas",
+        "descricao": "Substituição de magnetron e reparo do circuito de alta tensão, com testes de segurança e aterramento.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/621c7f66909be65500d109f699d58616158fb09fa18ce495d603a8ab4a064fb7?w=1024&h=768&pmaid=465882384"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Fernanda Dias",
+        "nota": 5,
+        "titulo": "Salvou minha geladeira!",
+        "data": "11 de setembro de 2025",
+        "texto": "Achei que teria que comprar outra geladeira, mas o Carlos resolveu no mesmo dia. Preço justo e explicou tudo direitinho.",
+        "uteis": 5,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Rodrigo Lima",
+        "nota": 4,
+        "titulo": "Muito competente.",
+        "data": "30 de agosto de 2025",
+        "texto": "Consertou a máquina de lavar que já tinha ido para dois técnicos sem solução. Único detalhe é que demorou para conseguir a peça.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Amanda Souza",
+        "nota": 4,
+        "titulo": "Recomendo.",
+        "data": "12 de agosto de 2025",
+        "texto": "Atendimento educado, chegou no horário e deixou o micro-ondas funcionando como novo. Voltarei a contratar com certeza.",
+        "uteis": 1,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "ana-paula",
+    "nome": "Ana Paula",
+    "cargo": "Técnica de Reparo de Eletrodomésticos",
+    "categoria": "eletro",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/16c0e3cd4322c39ea195ea79b40cfaf5eb6ed2abee9177310b2330e77e58c1e1?w=1024&h=768&pmaid=485736391",
+    "preco_dia": 280,
+    "avaliacao": 5.0,
+    "total_avaliacoes": 87,
+    "projetos_concluidos": 510,
+    "distribuicao": [85, 12, 2, 1, 0],
+    "selos": [
+      { "icone": "ri-trophy-fill", "texto": "Top profissional da região" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+    ],
+    "descricao_curta": "Técnica especializada em reparo de eletrodomésticos com 6 anos de experiência, conhecida pela eficiência no diagnóstico e pelo excelente atendimento ao cliente.",
+    "biografia": "Ana Paula é técnica especializada em reparo de eletrodomésticos com 6 anos de experiência. Formada em Eletrônica, é habilidosa no reparo de diversos eletrodomésticos, incluindo geladeiras, fogões e máquinas de lavar. É conhecida por sua eficiência no diagnóstico de problemas e por seu excelente atendimento ao cliente.",
+    "educacao": "Formada em Eletrônica pela FATEC, com especialização em refrigeração e eletrodomésticos de linha branca. Participa de treinamentos de fabricantes regularmente.",
+    "contato": { "email": "ana.paula@email.com", "telefone": "(11) 99124-6607" },
+    "trabalhos": [
+      {
+        "titulo": "Diagnóstico Rápido de Fogão",
+        "descricao": "Identificação de falha na válvula de gás e ignição, com substituição de componentes originais e teste completo de segurança.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/85e6acbf74e7a2e7d5b7a38342af885daeba02dd122285582d673797524389b9?w=1024&h=768&pmaid=461065826"
+      },
+      {
+        "titulo": "Revisão Completa de Lava e Seca",
+        "descricao": "Limpeza de filtros, troca de mangueiras e balanceamento do tambor de uma lava e seca, eliminando ruídos e vazamentos.",
+        "imagem": "../img/Projetos/Suporte ao Cliente.jpg"
+      },
+      {
+        "titulo": "Recuperação de Geladeira Duplex",
+        "descricao": "Reparo do circuito de refrigeração, recarga de gás e ajuste de termostatos, com acompanhamento de temperatura por 48h.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/621c7f66909be65500d109f699d58616158fb09fa18ce495d603a8ab4a064fb7?w=1024&h=768&pmaid=465882384"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Juliana Castro",
+        "nota": 5,
+        "titulo": "Excepcional!",
+        "data": "13 de setembro de 2025",
+        "texto": "A Ana Paula chegou, diagnosticou e consertou tudo em uma única visita. Muito educada e extremamente competente. Nota mil!",
+        "uteis": 6,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Marcos Vinícius",
+        "nota": 5,
+        "titulo": "Melhor técnica que já contratei.",
+        "data": "1 de setembro de 2025",
+        "texto": "Serviço impecável na lava e seca. Explicou o que causou o defeito e como evitar novamente. Super recomendo.",
+        "uteis": 4,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Patrícia Alencar",
+        "nota": 5,
+        "titulo": "Rápida e organizada.",
+        "data": "19 de agosto de 2025",
+        "texto": "Chamou atenção a limpeza e o cuidado com o ambiente. Deixou tudo funcionando e ainda orientou sobre manutenção preventiva.",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "fernanda-lima-de-souza",
+    "nome": "Fernanda Lima de Souza",
+    "cargo": "Eletricista de Eletrodomésticos",
+    "categoria": "eletro",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/041bbe93837a22c8b228ddaf119a32144fb6db79be9ab680ca98cde7dd1f8b09?w=1024&h=768&pmaid=485743067",
+    "preco_dia": 120,
+    "avaliacao": 4.0,
+    "total_avaliacoes": 59,
+    "projetos_concluidos": 300,
+    "distribuicao": [55, 28, 11, 4, 2],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+    ],
+    "descricao_curta": "Eletricista com mais de 15 anos de experiência em serviços elétricos, especializada na instalação, manutenção e reparo de eletrodomésticos.",
+    "biografia": "Fernanda Lima é eletricista com mais de 15 anos de experiência em serviços elétricos, especializada em eletrodomésticos. Atua na instalação, manutenção e reparo de aparelhos elétricos como geladeiras, máquinas de lavar e fogões. Sempre garantindo segurança e eficiência, busca atender às necessidades de seus clientes com soluções práticas e de alta qualidade.",
+    "educacao": "Curso técnico em Eletrotécnica pelo SENAI e formação complementar em eletrodomésticos e automação residencial. Certificada NR-10 para serviços em instalações elétricas.",
+    "contato": { "email": "fernanda.souza@email.com", "telefone": "(11) 97241-5533" },
+    "trabalhos": [
+      {
+        "titulo": "Instalação de Coifa e Forno",
+        "descricao": "Instalação elétrica dedicada para coifa e forno embutidos, com dimensionamento de disjuntores e passagem de cabos em alvenaria.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/85e6acbf74e7a2e7d5b7a38342af885daeba02dd122285582d673797524389b9?w=1024&h=768&pmaid=461065826"
+      },
+      {
+        "titulo": "Reparo de Lava-Louças",
+        "descricao": "Correção de curto na placa de potência e substituição de bomba de circulação de uma lava-louças de embutir.",
+        "imagem": "../img/Projetos/Suporte ao Cliente.jpg"
+      },
+      {
+        "titulo": "Automação de Eletrodomésticos",
+        "descricao": "Configuração de tomadas inteligentes e sensores para automatizar o funcionamento de cafeteira, torradeira e iluminação da cozinha.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/621c7f66909be65500d109f699d58616158fb09fa18ce495d603a8ab4a064fb7?w=1024&h=768&pmaid=465882384"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Gustavo Henrique",
+        "nota": 5,
+        "titulo": "Muito cuidadosa.",
+        "data": "9 de setembro de 2025",
+        "texto": "Instalação perfeita e acabamento limpo. A Fernanda se preocupou com cada detalhe do projeto da cozinha. Excelente!",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Débora Cristina",
+        "nota": 4,
+        "titulo": "Serviço confiável.",
+        "data": "24 de agosto de 2025",
+        "texto": "Resolveu o problema da lava-louças rápido. Precisou pedir uma peça, mas avisou o prazo e cumpriu.",
+        "uteis": 1,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Eduardo Ramos",
+        "nota": 4,
+        "titulo": "Recomendada.",
+        "data": "5 de agosto de 2025",
+        "texto": "Contratei para automatizar a cozinha e superou minhas expectativas. Explicou tudo sobre o funcionamento dos aparelhos.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "andre-costa-ribeiro",
+    "nome": "André Costa Ribeiro",
+    "cargo": "Mecânico automotivo",
+    "categoria": "veiculos",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/c9fe3e35c8d0a4228a550c8301f342a7db5abac73252019730faca2b9cb28c49?w=1024&h=768&pmaid=466459878",
+    "preco_dia": 90,
+    "avaliacao": 3.5,
+    "total_avaliacoes": 38,
+    "projetos_concluidos": 260,
+    "distribuicao": [40, 30, 18, 8, 4],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Boas avaliações dos clientes" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+    ],
+    "descricao_curta": "Mecânico automotivo com mais de 10 anos de experiência em manutenção preventiva e corretiva de veículos nacionais e importados.",
+    "biografia": "André Costa Ribeiro é mecânico automotivo com mais de 10 anos de experiência em manutenção de veículos. É apaixonado por desenvolver soluções eficientes e duráveis, sempre explicando ao cliente cada etapa do serviço. Atende carros nacionais e importados, com foco em manutenção preventiva.",
+    "educacao": "Formado em Mecânica Automotiva pelo SENAI, com cursos de injeção eletrônica e diagnóstico por scanner. Atualiza-se constantemente em veículos híbridos e elétricos.",
+    "contato": { "email": "andre.ribeiro@email.com", "telefone": "(11) 94566-1182" },
+    "trabalhos": [
+      {
+        "titulo": "Revisão Completa de Motor",
+        "descricao": "Troca de correia dentada, bomba d'água, velas e fluidos, com revisão de toda a linha de ignição e arrefecimento.",
+        "imagem": "../img/Projetos/Agendamento.jpg"
+      },
+      {
+        "titulo": "Diagnóstico Eletrônico",
+        "descricao": "Mapeamento com scanner de falhas intermitentes na injeção, elaboração de relatório e substituição de sensores defeituosos.",
+        "imagem": "../img/Projetos/Ligação com o cliente.jpg"
+      },
+      {
+        "titulo": "Revisão de Suspensão e Freios",
+        "descricao": "Substituição de amortecedores, pastilhas e discos, com alinhamento e balanceamento após o serviço.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/777b3cce9b30afbf6a53beb44418971c737e176ed5e0186a4ac8ba9d858b30b9?w=1024&h=768&pmaid=465882574"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Roberto Farias",
+        "nota": 4,
+        "titulo": "Bom profissional.",
+        "data": "7 de setembro de 2025",
+        "texto": "Revisão bem feita e preço honesto. O carro ficou macio e sem ruídos depois da troca da suspensão.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Camila Torres",
+        "nota": 3,
+        "titulo": "Serviço demorou um pouco.",
+        "data": "26 de agosto de 2025",
+        "texto": "O diagnóstico foi certeiro, mas a entrega atrasou dois dias por conta da peça. No final, o carro ficou ótimo.",
+        "uteis": 1,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "William Castro",
+        "nota": 4,
+        "titulo": "Explicou tudo.",
+        "data": "11 de agosto de 2025",
+        "texto": "Gostei da transparência: mostrou as peças trocadas e explicou o que causou cada problema. Recomendo.",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "ana-clara-gomes",
+    "nome": "Ana Clara Gomes",
+    "cargo": "Técnico em Manutenção de Veículos Elétricos",
+    "categoria": "veiculos",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/40ac1238b172cc6a173370aa7a8a8901313439870fe4afd9e3e98990c36d0844?w=1024&h=768&pmaid=485725094",
+    "preco_dia": 150,
+    "avaliacao": 5.0,
+    "total_avaliacoes": 64,
+    "projetos_concluidos": 190,
+    "distribuicao": [85, 12, 2, 1, 0],
+    "selos": [
+      { "icone": "ri-trophy-fill", "texto": "Top profissional da região" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+    ],
+    "descricao_curta": "Técnica especializada em manutenção de veículos elétricos com 5 anos de experiência em sistemas de bateria, motores elétricos e tecnologia de carregamento.",
+    "biografia": "Ana Clara Gomes é técnica especializada em manutenção de veículos elétricos, com 5 anos de experiência no setor. Tem conhecimento aprofundado em sistemas de bateria, motores elétricos e tecnologia de carregamento. Destaca-se pelo compromisso com a sustentabilidade e eficiência energética, oferecendo serviços que garantem o desempenho ideal dos veículos elétricos.",
+    "educacao": "Graduada em Engenharia Elétrica com especialização em mobilidade elétrica. Possui certificações em manutenção de baterias de lítio e sistemas de alta tensão automotivos.",
+    "contato": { "email": "ana.clara.gomes@email.com", "telefone": "(11) 99872-4450" },
+    "trabalhos": [
+      {
+        "titulo": "Diagnóstico de Bateria de Lítio",
+        "descricao": "Análise completa do estado de saúde (SOH) de um pack de baterias, com rebalanceamento de células e relatório de autonomia.",
+        "imagem": "../img/Projetos/Agendamento.jpg"
+      },
+      {
+        "titulo": "Instalação de Carregador Residencial",
+        "descricao": "Instalação de wallbox em garagem residencial, com dimensionamento do circuito, proteções e teste de carga completa.",
+        "imagem": "../img/Projetos/Ligação com o cliente.jpg"
+      },
+      {
+        "titulo": "Manutenção de Motor Elétrico",
+        "descricao": "Revisão do sistema de propulsão, troca de rolamentos e atualização de firmware do controlador de motor.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/777b3cce9b30afbf6a53beb44418971c737e176ed5e0186a4ac8ba9d858b30b9?w=1024&h=768&pmaid=465882574"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Tatiana Lopes",
+        "nota": 5,
+        "titulo": "Especialista de verdade.",
+        "data": "12 de setembro de 2025",
+        "texto": "A Ana Clara resolveu um problema no meu elétrico que a concessionária não conseguiu. Deixou o carro com autonomia como novo. Recomendo muito!",
+        "uteis": 5,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Bruno Santana",
+        "nota": 5,
+        "titulo": "Instalação perfeita.",
+        "data": "29 de agosto de 2025",
+        "texto": "Instalou o carregador na minha garagem com acabamento impecável e toda a documentação elétrica em ordem. Excelente.",
+        "uteis": 4,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Marina Ferreira",
+        "nota": 5,
+        "titulo": "Muito atenciosa.",
+        "data": "16 de agosto de 2025",
+        "texto": "Explicou com paciência como cuidar da bateria no dia a dia. Serviço de altíssima qualidade e preço justo.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "felipe-martins-veiculos",
+    "nome": "Felipe Martins",
+    "cargo": "Técnico em Manutenção de Veículos Elétricos",
+    "categoria": "veiculos",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/037480535050f5cc69c438d87409d4ec1d44923b2979de68f0248c75950f2d32?w=1024&h=768&pmaid=485726851",
+    "preco_dia": 350,
+    "avaliacao": 4.5,
+    "total_avaliacoes": 91,
+    "projetos_concluidos": 230,
+    "distribuicao": [70, 20, 7, 2, 1],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+    ],
+    "descricao_curta": "Engenheiro com 7 anos de experiência em manutenção de veículos elétricos, especializado em sistemas elétricos automotivos e eficiência energética.",
+    "biografia": "Felipe Martins é engenheiro com 7 anos de experiência em manutenção de veículos elétricos. Formado em Engenharia Mecânica e especializado em sistemas elétricos automotivos, é responsável por diagnosticar e resolver problemas complexos em sistemas de propulsão elétrica, além de implementar melhorias na eficiência energética dos veículos.",
+    "educacao": "Graduado em Engenharia Mecânica pela USP, com pós-graduação em sistemas de propulsão híbrida e elétrica. Certificado em segurança de alta tensão (HV) nível 3.",
+    "contato": { "email": "felipe.martins.eng@email.com", "telefone": "(11) 96901-7743" },
+    "trabalhos": [
+      {
+        "titulo": "Upgrade de Gestão Térmica",
+        "descricao": "Melhoria no sistema de arrefecimento do pack de baterias, aumentando a eficiência em recargas rápidas em até 18%.",
+        "imagem": "../img/Projetos/Agendamento.jpg"
+      },
+      {
+        "titulo": "Reparo de Inversor de Tração",
+        "descricao": "Diagnóstico em bancada e reparo de módulo inversor, com substituição de IGBTs e testes de carga dinâmica.",
+        "imagem": "../img/Projetos/Ligação com o cliente.jpg"
+      },
+      {
+        "titulo": "Auditoria de Eficiência Energética",
+        "descricao": "Análise de telemetria de frota elétrica com recomendações que reduziram o consumo médio de energia em 12%.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/777b3cce9b30afbf6a53beb44418971c737e176ed5e0186a4ac8ba9d858b30b9?w=1024&h=768&pmaid=465882574"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Ricardo Amorim",
+        "nota": 5,
+        "titulo": "Engenheiro excepcional.",
+        "data": "10 de setembro de 2025",
+        "texto": "O Felipe resolveu um problema complexo de inversor que ninguém queria encarar. Domínio técnico impressionante.",
+        "uteis": 4,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Sofia Andrade",
+        "nota": 4,
+        "titulo": "Muito técnico e claro.",
+        "data": "27 de agosto de 2025",
+        "texto": "Explicou o diagnóstico com dados e gráficos. Só achei o valor um pouco alto, mas o resultado compensou.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Otávio Lima",
+        "nota": 5,
+        "titulo": "Vale cada centavo.",
+        "data": "13 de agosto de 2025",
+        "texto": "A auditoria que ele fez na nossa frota pagou o próprio custo em dois meses. Profissional de outro nível.",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "jorge-fonseca-dos-santos",
+    "nome": "Jorge Fonseca dos Santos",
+    "cargo": "Técnico em informática",
+    "categoria": "informatica",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/27cdbd2a42b23937e9ce950bcf18f0fe81dd1f1e17da8e6199da3893d427d5b9?w=1024&h=768&pmaid=466461082",
+    "preco_dia": 80,
+    "avaliacao": 4.5,
+    "total_avaliacoes": 103,
+    "projetos_concluidos": 600,
+    "distribuicao": [62, 28, 8, 2, 0],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+    ],
+    "descricao_curta": "Sou técnico em informática com mais de 4 anos de experiência em manutenção de computadores e redes. Tenho paixão por tecnologia e sempre busco oferecer soluções rápidas e eficientes.",
+    "biografia": "Sou técnico em informática com mais de 4 anos de experiência em manutenção de computadores, configuração de redes e suporte técnico. Nascido e criado em São Paulo, sempre tive paixão por tecnologia e acredito no impacto positivo que soluções digitais bem aplicadas podem ter em empresas e pessoas.",
+    "educacao": "Me formei como Técnico em Informática pelo SENAI, onde adquiri conhecimento em hardware, software, redes e segurança digital. Posteriormente fiz cursos complementares em manutenção de computadores e administração de redes, o que aprimorou ainda mais minhas habilidades em diagnosticar e resolver problemas tecnológicos.",
+    "contato": { "email": "jorge.fonseca@email.com", "telefone": "(11) 99233-7620" },
+    "trabalhos": [
+      {
+        "titulo": "Rede Corporativa Segura",
+        "descricao": "Uma infraestrutura de rede projetada para pequenas e médias empresas, com servidores dedicados, firewalls e sistemas de backup automatizados, garantindo segurança e estabilidade na comunicação interna.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/e366094fbea6527d70122b76e7f6cbdff1a1fab258a5f1fffcf28f99c0e1e246?w=1024&h=768&pmaid=473650111"
+      },
+      {
+        "titulo": "Otimização de Computadores",
+        "descricao": "Um projeto de manutenção preventiva e corretiva para desktops e notebooks, incluindo upgrades de hardware, limpeza física e otimização de software, aumentando o desempenho e a vida útil das máquinas.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/e503f9ad50d37ac4a13515c364490eceb440c13a0521242c39a9417236595331?w=1024&h=768&pmaid=473649197"
+      },
+      {
+        "titulo": "Sistema de Monitoramento Remoto",
+        "descricao": "Instalação e configuração de um sistema de câmeras de segurança e acesso remoto, integrado a dispositivos móveis, permitindo o monitoramento em tempo real de casas e empresas.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/e3e32231b4db079110f775f01ba6cf3b5ec6ff5e61d9f27a72e4a3ad966ed154?w=1024&h=768&pmaid=473650697"
+      }
+    ],
+    "item": {
+      "titulo": "Notebook",
+      "sobre": "Experimente a combinação perfeita entre desempenho e estilo com este notebook. Com um design minimalista e elegante, ele se destaca em qualquer ambiente, seja em casa, no escritório ou em um café. Ideal para estudantes, profissionais e qualquer pessoa que valorize eficiência e estilo.",
+      "preco": "R$ 3.499,00",
+      "especificacoes": [
+        { "recurso": "Tela", "especificacao": "15.6\" Full HD (1920x1080)" },
+        { "recurso": "Processador", "especificacao": "Intel Core i7-1165G7" },
+        { "recurso": "Memória RAM", "especificacao": "16GB DDR4" },
+        { "recurso": "Armazenamento", "especificacao": "512GB SSD" },
+        { "recurso": "Placa de Vídeo", "especificacao": "NVIDIA GeForce MX450" },
+        { "recurso": "Entradas", "especificacao": "2 x USB 3.0, 1 x USB-C, 1 x HDMI" },
+        { "recurso": "Conectividade", "especificacao": "Wi-Fi 6 (802.11ax), Bluetooth 5.1" },
+        { "recurso": "Câmera", "especificacao": "HD 720p com microfone embutido" },
+        { "recurso": "Bateria", "especificacao": "autonomia de até 12 horas" },
+        { "recurso": "Peso", "especificacao": "1.7 kg" },
+        { "recurso": "Sistema Operacional", "especificacao": "Windows 11 Home" },
+        { "recurso": "Garantia", "especificacao": "1 ano" }
+      ],
+      "imagens": [
+        "https://pfst.cf2.poecdn.net/base/image/621c7f66909be65500d109f699d58616158fb09fa18ce495d603a8ab4a064fb7?w=1024&h=768&pmaid=465882384",
+        "https://pfst.cf2.poecdn.net/base/image/777b3cce9b30afbf6a53beb44418971c737e176ed5e0186a4ac8ba9d858b30b9?w=1024&h=768&pmaid=465882574"
+      ]
+    },
+    "avaliacoes_clientes": [
+      {
+        "nome": "Lucas Almeida",
+        "nota": 5,
+        "titulo": "Um excelente trabalho.",
+        "data": "12 de setembro de 2025",
+        "texto": "Contratei o Jorge Fonseca dos Santos como técnico de TI e não poderia estar mais satisfeito! O trabalho dele foi excepcional, com atenção aos detalhes e muito profissionalismo. Recomendo ele para todos!",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Mariele Soares",
+        "nota": 5,
+        "titulo": "Ótimo trabalho.",
+        "data": "6 de setembro de 2025",
+        "texto": "Contratei o Jorge Fonseca dos Santos como técnico de TI e não poderia estar mais satisfeito! O trabalho dele foi excepcional, com atenção aos detalhes e muito profissionalismo.",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Jaime dos Santos",
+        "nota": 5,
+        "titulo": "Um parceiro confiável.",
+        "data": "1 de setembro de 2025",
+        "texto": "Quero agradecer ao Jorge pela excelente explicação do projeto. Ele fez questão de detalhar cada etapa, o que me deixou muito à vontade com o processo. Ele também recomendou uma equipe confiável que realmente entregou um trabalho de qualidade.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "carla-nunes-rosa",
+    "nome": "Carla Nunes Rosa",
+    "cargo": "Analista de Suporte Técnico",
+    "categoria": "informatica",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/af15d5a131c1bd6bcc8c390d190be88dd13a7bfd55d7e80c4ade055db7dd8342?w=1024&h=768&pmaid=485729487",
+    "preco_dia": 180,
+    "avaliacao": 4.5,
+    "total_avaliacoes": 74,
+    "projetos_concluidos": 380,
+    "distribuicao": [70, 20, 7, 2, 1],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+    ],
+    "descricao_curta": "Analista de suporte técnico com quatro anos de experiência em suporte a usuários e manutenção de sistemas, especialista em problemas de software e redes corporativas.",
+    "biografia": "Carla Nunes Rosa é analista de suporte técnico com quatro anos de experiência em suporte a usuários e manutenção de sistemas. Formada em Análise e Desenvolvimento de Sistemas, é especialista em resolver problemas de software e gerenciar redes corporativas. Muito organizada, tem excelentes habilidades de comunicação, o que a torna uma excelente profissional para interagir com clientes.",
+    "educacao": "Formada em Análise e Desenvolvimento de Sistemas pela Fatec, com certificações em ITIL e administração de redes. Atualiza-se constantemente em segurança da informação.",
+    "contato": { "email": "carla.rosa@email.com", "telefone": "(11) 98145-2276" },
+    "trabalhos": [
+      {
+        "titulo": "Suporte Dedicado a Escritório",
+        "descricao": "Atendimento mensal de suporte para um escritório de advocacia, com manutenção de computadores, e-mails e backup em nuvem.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/e503f9ad50d37ac4a13515c364490eceb440c13a0521242c39a9417236595331?w=1024&h=768&pmaid=473649197"
+      },
+      {
+        "titulo": "Reestruturação de Rede Corporativa",
+        "descricao": "Organização de switches, VLANs e Wi-Fi corporativo com controle de acesso, melhorando estabilidade e segurança da rede.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/e366094fbea6527d70122b76e7f6cbdff1a1fab258a5f1fffcf28f99c0e1e246?w=1024&h=768&pmaid=473650111"
+      },
+      {
+        "titulo": "Migração de Sistema Interno",
+        "descricao": "Planejamento e execução da migração de um sistema de gestão para servidor novo, sem paradas na operação da empresa.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/4a7e19e7bab2016e04dd39464d6eb2fbd7dd8b335be915171db2c8544ba210c7?w=1024&h=768&pmaid=461074408"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Fernando Guedes",
+        "nota": 5,
+        "titulo": "Organização impecável.",
+        "data": "11 de setembro de 2025",
+        "texto": "A Carla assumiu o suporte do nosso escritório e nunca mais tivemos problema. Comunicação clara e resolução rápida.",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Larissa Campos",
+        "nota": 4,
+        "titulo": "Muito competente.",
+        "data": "25 de agosto de 2025",
+        "texto": "Migrou nosso sistema sem nenhum transtorno e treinou a equipe depois. Só faltou documentar alguns acessos, mas enviou depois.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Diego Martins",
+        "nota": 5,
+        "titulo": "Suporte nota 10.",
+        "data": "7 de agosto de 2025",
+        "texto": "Paciente, educada e muito técnica. Resolveu um problema de rede que estava travando nosso faturamento.",
+        "uteis": 4,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "magali-silva-garcia",
+    "nome": "Magali Silva Garcia",
+    "cargo": "Desenvolvedor(a) Web",
+    "categoria": "informatica",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/07094f1fc4d2564ad262b23a4c9f4afb11cdf95001241cf594d7d14b471476a3?w=1024&h=768&pmaid=485738620",
+    "preco_dia": 350,
+    "avaliacao": 4.5,
+    "total_avaliacoes": 96,
+    "projetos_concluidos": 450,
+    "distribuicao": [70, 20, 7, 2, 1],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+    ],
+    "descricao_curta": "Desenvolvedora web com 6 anos de experiência criando e mantendo sites e aplicações web, especializada em HTML, CSS, JavaScript, React e Angular.",
+    "biografia": "Magali Silva Garcia é desenvolvedora web com 6 anos de experiência criando e mantendo sites e aplicações web. Formada em Engenharia da Computação, é especializada em HTML, CSS, JavaScript e frameworks como React e Angular. É conhecida por sua atenção aos detalhes e sua capacidade de trabalhar em equipe, sempre buscando soluções inovadoras para os desafios de seus projetos.",
+    "educacao": "Graduada em Engenharia da Computação, com cursos de especialização em desenvolvimento front-end, UX e arquitetura de software. Contribui para projetos open source.",
+    "contato": { "email": "magali.garcia@email.com", "telefone": "(11) 97733-9018" },
+    "trabalhos": [
+      {
+        "titulo": "E-commerce Completo",
+        "descricao": "Desenvolvimento de loja virtual responsiva com carrinho, pagamentos integrados e painel administrativo para gestão de produtos.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/e503f9ad50d37ac4a13515c364490eceb440c13a0521242c39a9417236595331?w=1024&h=768&pmaid=473649197"
+      },
+      {
+        "titulo": "Portal Institucional",
+        "descricao": "Site institucional para empresa de engenharia, com blog integrado, formulários de contato e otimização de performance e SEO.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/e366094fbea6527d70122b76e7f6cbdff1a1fab258a5f1fffcf28f99c0e1e246?w=1024&h=768&pmaid=473650111"
+      },
+      {
+        "titulo": "Dashboard de Dados",
+        "descricao": "Painel web para visualização de indicadores em tempo real, com gráficos interativos e filtros por período e equipe.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/4a7e19e7bab2016e04dd39464d6eb2fbd7dd8b335be915171db2c8544ba210c7?w=1024&h=768&pmaid=461074408"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Eduardo Pires",
+        "nota": 5,
+        "titulo": "Resultado impecável.",
+        "data": "12 de setembro de 2025",
+        "texto": "A Magali entregou nossa loja virtual antes do prazo e com um acabamento que impressionou os clientes. Profissional excepcional.",
+        "uteis": 5,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Renan Oliveira",
+        "nota": 4,
+        "titulo": "Muito criativa.",
+        "data": "30 de agosto de 2025",
+        "texto": "Ótimo trabalho no nosso portal. Sugeriu melhorias que nem tínhamos pensado. Só alguns ajustes pedidos depois da entrega, mas atendeu rápido.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Cláudia Menezes",
+        "nota": 5,
+        "titulo": "Comunicação excelente.",
+        "data": "14 de agosto de 2025",
+        "texto": "Explicou tudo em linguagem simples e cumpriu cada prazo. O dashboard ficou rápido e bonito. Contratarei novamente.",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "paulo-rogerio",
+    "nome": "Paulo Rogério",
+    "cargo": "Engenheiro Civil",
+    "categoria": "industriais",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/f5c47f65f83fdb2cc911a824bb2f591cb48ff2b0e20a0ddb1e31c412a910ab55?w=1024&h=768&pmaid=466465057",
+    "preco_dia": 150,
+    "avaliacao": 5.0,
+    "total_avaliacoes": 58,
+    "projetos_concluidos": 310,
+    "distribuicao": [85, 12, 2, 1, 0],
+    "selos": [
+      { "icone": "ri-trophy-fill", "texto": "Top profissional da região" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+    ],
+    "descricao_curta": "Engenheiro civil com mais de 10 anos de experiência em projetos de infraestrutura e construção, apaixonado por soluções inovadoras e sustentáveis.",
+    "biografia": "Paulo Rogério é engenheiro civil com mais de 10 anos de experiência em projetos de infraestrutura e construção. É apaixonado por implementar soluções inovadoras e sustentáveis no setor, conduzindo obras com rigor técnico e atenção a prazos e orçamentos. Já liderou equipes em projetos residenciais, comerciais e industriais.",
+    "educacao": "Graduado em Engenharia Civil pela Escola Politécnica da USP, com MBA em gestão de obras e especialização em estruturas metálicas e concreto protendido.",
+    "contato": { "email": "paulo.rogerio@email.com", "telefone": "(11) 95218-4471" },
+    "trabalhos": [
+      {
+        "titulo": "Galpão Industrial",
+        "descricao": "Projeto estrutural e execução de galpão de 1.200m² com estrutura metálica, mezanino e docas de carga e descarga.",
+        "imagem": "../img/Projetos/Contrução.jpg"
+      },
+      {
+        "titulo": "Reforma Estrutural de Prédio",
+        "descricao": "Reforço estrutural de edifício comercial dos anos 70, com reforço de pilares, vigas e atualização das instalações prediais.",
+        "imagem": "../img/Projetos/manutenção.jpg"
+      },
+      {
+        "titulo": "Projeto de Drenagem Urbana",
+        "descricao": "Estudos e projeto de drenagem para condomínio industrial, resolvendo alagamentos recorrentes na temporada de chuvas.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/85e6acbf74e7a2e7d5b7a38342af885daeba02dd122285582d673797524389b9?w=1024&h=768&pmaid=461065826"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Alberto Nunes",
+        "nota": 5,
+        "titulo": "Obra entregue no prazo.",
+        "data": "13 de setembro de 2025",
+        "texto": "O Paulo conduziu nosso galpão do projeto à entrega com precisão impressionante. Comunicação clara em todas as etapas.",
+        "uteis": 4,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Simone Aparecida",
+        "nota": 5,
+        "titulo": "Técnico e transparente.",
+        "data": "31 de agosto de 2025",
+        "texto": "Apresentou alternativas de custo sem comprometer a qualidade. O condomínio aprovou sem ressalvas.",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Henrique Fonseca",
+        "nota": 5,
+        "titulo": "Solução para nosso problema.",
+        "data": "17 de agosto de 2025",
+        "texto": "Nosso alagamento acabou depois do projeto dele. Profissional sério e muito capacitado.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "fernanda-lima-soares",
+    "nome": "Fernanda Lima Soares",
+    "cargo": "Manutenção de Equipamentos Industriais",
+    "categoria": "industriais",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/19e9d0aff2a5b00f704818dd0bfc33f7ca494616d8fb4c4c38b5416bdd409221?w=1024&h=768&pmaid=485746531",
+    "preco_dia": 250,
+    "avaliacao": 4.0,
+    "total_avaliacoes": 47,
+    "projetos_concluidos": 280,
+    "distribuicao": [55, 28, 11, 4, 2],
+    "selos": [
+      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+    ],
+    "descricao_curta": "Profissional com 10 anos de experiência em manutenção de equipamentos industriais, especializada em diagnósticos e reparos eficientes.",
+    "biografia": "Fernanda Lima Soares é uma profissional com 10 anos de experiência em manutenção de equipamentos industriais, especializada em diagnósticos e reparos eficientes. Atua em linhas de produção com foco em reduzir paradas e aumentar a vida útil dos equipamentos, sempre seguindo rigorosos protocolos de segurança.",
+    "educacao": "Técnica em Mecatrônica pelo SENAI, com cursos de manutenção preditiva, hidráulica industrial e pneumática. Certificação em segurança de máquinas (NR-12).",
+    "contato": { "email": "fernanda.soares@email.com", "telefone": "(11) 98407-5592" },
+    "trabalhos": [
+      {
+        "titulo": "Manutenção de Linha de Produção",
+        "descricao": "Revisão completa de uma linha de envase, com substituição de rolamentos, sensores e correias, reduzindo paradas não planejadas.",
+        "imagem": "../img/Projetos/Contrução.jpg"
+      },
+      {
+        "titulo": "Diagnóstico de Compressor Industrial",
+        "descricao": "Análise de vibração e termografia em compressor de parafuso, identificando desgaste precoce e evitando falha catastrófica.",
+        "imagem": "../img/Projetos/manutenção.jpg"
+      },
+      {
+        "titulo": "Plano de Manutenção Preventiva",
+        "descricao": "Elaboração de cronograma preventivo para 40 equipamentos de uma fábrica de alimentos, com checklist e indicadores.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/85e6acbf74e7a2e7d5b7a38342af885daeba02dd122285582d673797524389b9?w=1024&h=768&pmaid=461065826"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Márcio Tavares",
+        "nota": 5,
+        "titulo": "Evitou uma parada geral.",
+        "data": "9 de setembro de 2025",
+        "texto": "A Fernanda identificou um problema que ninguém tinha visto no compressor e evitou uma parada de dias. Excelente!",
+        "uteis": 4,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Lúcia Helena",
+        "nota": 4,
+        "titulo": "Trabalho bem executado.",
+        "data": "23 de agosto de 2025",
+        "texto": "Organizada e técnica. O plano de manutenção que ela montou já reduziu nossas paradas. Recomendo.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Fábio Andrade",
+        "nota": 4,
+        "titulo": "Profissional preparada.",
+        "data": "6 de agosto de 2025",
+        "texto": "Seguiu todos os protocolos de segurança e entregou no prazo combinado. Bom custo-benefício.",
+        "uteis": 1,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  },
+  {
+    "id": "carla-mendes",
+    "nome": "Carla Mendes",
+    "cargo": "Técnica em Máquinas de Refrigeração e Ventilação",
+    "categoria": "industriais",
+    "imagem": "https://pfst.cf2.poecdn.net/base/image/049b879c21db709ccbf4a5f0a2f902c95c400db51e5aa18cdfd2d81ecb755687?w=1024&h=768&pmaid=485748697",
+    "preco_dia": 300,
+    "avaliacao": 5.0,
+    "total_avaliacoes": 69,
+    "projetos_concluidos": 240,
+    "distribuicao": [85, 12, 2, 1, 0],
+    "selos": [
+      { "icone": "ri-trophy-fill", "texto": "Top profissional da região" },
+      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
+      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+    ],
+    "descricao_curta": "Técnica qualificada com experiência na instalação e manutenção de sistemas de refrigeração e ventilação, comprometida em oferecer soluções eficientes e confiáveis.",
+    "biografia": "Carla Mendes é uma técnica qualificada com experiência na instalação e manutenção de sistemas de refrigeração e ventilação. É comprometida em oferecer soluções eficientes e confiáveis, atendendo indústrias, comércios e residências com o mesmo nível de cuidado. Já atuou em câmaras frigoríficas, climatização de ambientes e sistemas de exaustão.",
+    "educacao": "Formada em Refrigeração e Climatização pelo SENAI, com certificações em manipulação de fluidos refrigerantes e sistemas VRF. Cursos de eficiência energética em HVAC.",
+    "contato": { "email": "carla.mendes@email.com", "telefone": "(11) 96540-2273" },
+    "trabalhos": [
+      {
+        "titulo": "Câmara Frigorífica Industrial",
+        "descricao": "Montagem e comissionamento de câmara frigorífica para armazenamento de congelados, com controle de temperatura redundante.",
+        "imagem": "../img/Projetos/manutenção.jpg"
+      },
+      {
+        "titulo": "Climatização de Restaurante",
+        "descricao": "Projeto e instalação de sistema de ar-condicionado do salão e da cozinha, com renovação de ar e exaustão adequada.",
+        "imagem": "https://pfst.cf2.poecdn.net/base/image/85e6acbf74e7a2e7d5b7a38342af885daeba02dd122285582d673797524389b9?w=1024&h=768&pmaid=461065826"
+      },
+      {
+        "titulo": "Manutenção Preventiva de HVAC",
+        "descricao": "Rotina preventiva em 25 equipamentos de um centro comercial, com limpeza, medições e relatório técnico mensal.",
+        "imagem": "../img/Projetos/Contrução.jpg"
+      }
+    ],
+    "avaliacoes_clientes": [
+      {
+        "nome": "Thiago Rocha",
+        "nota": 5,
+        "titulo": "Ambiente geladinho!",
+        "data": "14 de setembro de 2025",
+        "texto": "A Carla instalou o ar do restaurante e resolveu de vez o problema de calor na cozinha. Trabalho muito bem feito.",
+        "uteis": 4,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Vanessa Prado",
+        "nota": 5,
+        "titulo": "Confiança total.",
+        "data": "29 de agosto de 2025",
+        "texto": "Nossa câmara frigorífica nunca mais deu problema depois do serviço dela. Profissional atenciosa e muito qualificada.",
+        "uteis": 3,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      },
+      {
+        "nome": "Alexandre Pinto",
+        "nota": 5,
+        "titulo": "Relatórios impecáveis.",
+        "data": "12 de agosto de 2025",
+        "texto": "O contrato de manutenção preventiva valeu cada centavo. Equipamentos medidos, limpos e documentados todo mês.",
+        "uteis": 2,
+        "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
+      }
+    ]
+  }
+]

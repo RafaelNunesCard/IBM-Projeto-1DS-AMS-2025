@@ -1,20 +1,46 @@
-const container = document.querySelector(".container");
-const registerBnt = document.querySelector(".register-bnt");
-const loginBnt = document.querySelector(".login-bnt");
-
-registerBnt.addEventListener("click", () => {
-  container.classList.add("active");
-});
-
-loginBnt.addEventListener("click", () => {
-  container.classList.remove("active");
-});
-
 document.addEventListener("DOMContentLoaded", () => {
-  const btnCadastro = document.getElementById("bnt-cadastro");
-  const btnLogin = document.getElementById("bnt-login");
+  const container = document.querySelector(".container");
+
+  // === ALTERNAR ENTRE LOGIN E CADASTRO ===
+  // Pode haver mais de um botão (link no formulário + botão no painel lateral)
+  const registerBtns = document.querySelectorAll(".register-bnt");
+  const loginBtns = document.querySelectorAll(".login-bnt");
+
+  if (container) {
+    registerBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        container.classList.add("active");
+      });
+    });
+
+    loginBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        container.classList.remove("active");
+      });
+    });
+  }
+
+  // === MOSTRAR / OCULTAR SENHA ===
+  document.querySelectorAll(".toggle-pass").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const input = btn.parentElement.querySelector("input");
+      if (!input) return;
+
+      const isPassword = input.type === "password";
+      input.type = isPassword ? "text" : "password";
+
+      const icon = btn.querySelector("i");
+      if (icon) {
+        icon.classList.toggle("ri-eye-line", !isPassword);
+        icon.classList.toggle("ri-eye-off-line", isPassword);
+      }
+    });
+  });
 
   // === CADASTRO ===
+  const btnCadastro = document.getElementById("bnt-cadastro");
   btnCadastro?.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -27,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ).value;
 
     if (!nome || !email || !senha) {
-      alert("Fill out all fields to register.");
+      alert("Preencha todos os campos para se cadastrar.");
       return;
     }
 
@@ -36,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const userExists = users.find((u) => u.email === email);
 
     if (userExists) {
-      alert("This email is already registered.");
+      alert("Este e-mail já está cadastrado.");
       return;
     }
 
@@ -44,12 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
     users.push({ nome, email, senha });
     localStorage.setItem("users", JSON.stringify(users));
 
-    alert("Registered successfully! You can now log in.");
+    alert("Cadastro realizado com sucesso! Agora você pode entrar.");
   });
 
   // === LOGIN ===
+  const btnLogin = document.getElementById("bnt-login");
   btnLogin?.addEventListener("click", () => {
-    const loginForm = document.querySelector(".login"); // <--- IMPORTANTE
+    const loginForm = document.querySelector(".login");
+    if (!loginForm) return;
 
     const email = loginForm.querySelector('input[type="text"]').value;
     const senha = loginForm.querySelector('input[type="password"]').value;
@@ -61,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("loggedUser", JSON.stringify(validUser));
       window.location.href = "home.html"; // Redireciona após o login
     } else {
-      alert("Incorrect email or password.");
+      alert("E-mail ou senha incorretos.");
     }
   });
 });
