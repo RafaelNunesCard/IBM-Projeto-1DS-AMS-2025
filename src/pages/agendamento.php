@@ -1,0 +1,247 @@
+<?php
+$titulo = 'TechFix - Agendamento';
+$css = ['../../assets/css/agendamento.css'];
+$js = ['../../assets/js/profissionais.js', '../../assets/js/agendamento.js'];
+$paginaAtual = '';
+require __DIR__ . '/../partials/header.php';
+?>
+    <main>
+      <section class="agend-hero">
+        <div class="agend-hero__interno">
+          <span class="agend-badge">
+            <i class="ri-calendar-check-line"></i> Agendamento
+          </span>
+          <h1>Escolha a data do seu serviço</h1>
+          <p>
+            Selecione as datas disponíveis, escolha a forma de pagamento e
+            confirme. Você acompanha o total em tempo real.
+          </p>
+          <a href="servico.php" class="agend-voltar" id="voltar_perfil">
+            <i class="ri-arrow-left-line"></i> Voltar ao perfil do profissional
+          </a>
+        </div>
+      </section>
+
+      <div class="agend-container">
+        <div class="agend-grid">
+          <div class="agend-fluxo">
+            <div class="prof-card">
+              <img
+                class="prof-card__imagem"
+                id="prof_imagem"
+                src="../../assets/img/favicon.ico"
+                alt="Foto do profissional"
+              />
+              <div class="prof-card__dados">
+                <h2 id="prof_nome">Carregando...</h2>
+                <span id="prof_cargo"></span>
+                <div class="prof-card__meta">
+                  <span class="prof-card__estrelas" id="prof_estrelas"></span>
+                  <span class="prof-card__nota" id="prof_nota"></span>
+                  <span id="prof_total"></span>
+                </div>
+              </div>
+              <span class="prof-card__preco" id="prof_preco"></span>
+            </div>
+
+            <!-- ================= Passo 1 — Datas ================= -->
+            <section class="passo" aria-labelledby="passo1_titulo">
+              <div class="passo__cabeca">
+                <span class="passo__numero" aria-hidden="true">1</span>
+                <div>
+                  <h2 id="passo1_titulo">Escolha as datas</h2>
+                  <p>Toque nos dias disponíveis para selecionar ou remover.</p>
+                </div>
+              </div>
+
+              <div class="calendario-controles">
+                <button type="button" id="prev_mes" aria-label="Mês anterior">
+                  <i class="ri-arrow-left-s-line"></i>
+                </button>
+                <span id="mes_ano"></span>
+                <button type="button" id="next_mes" aria-label="Próximo mês">
+                  <i class="ri-arrow-right-s-line"></i>
+                </button>
+              </div>
+
+              <div class="calendario" id="calendario" role="group" aria-label="Calendário de datas disponíveis"></div>
+
+              <div class="dias-info">
+                <span id="dias_qtd" aria-live="polite">Nenhuma data selecionada</span>
+                <button type="button" id="limpar_datas" disabled>
+                  Limpar datas
+                </button>
+              </div>
+            </section>
+
+            <!-- ================= Passo 2 — Pagamento ================= -->
+            <section class="passo" aria-labelledby="passo2_titulo">
+              <div class="passo__cabeca">
+                <span class="passo__numero" aria-hidden="true">2</span>
+                <div>
+                  <h2 id="passo2_titulo">Forma de pagamento</h2>
+                  <p>Escolha como prefere pagar pelo serviço.</p>
+                </div>
+              </div>
+
+              <div class="metodos">
+                <button
+                  type="button"
+                  class="metodo"
+                  data-metodo="pix"
+                  aria-pressed="false"
+                >
+                  <i class="ri-pix-fill"></i>
+                  <span>Pix</span>
+                </button>
+                <button
+                  type="button"
+                  class="metodo"
+                  data-metodo="cartao"
+                  aria-pressed="false"
+                >
+                  <i class="ri-bank-card-fill"></i>
+                  <span>Crédito / Débito</span>
+                </button>
+              </div>
+
+              <div class="painel-metodo" id="painel_pix" data-painel="pix" hidden>
+                <h3 class="metodo-titulo">Pagar com Pix</h3>
+                <p class="metodo-texto">
+                  Escaneie o QR Code ou use a chave abaixo no aplicativo do seu
+                  banco.
+                </p>
+                <div class="pix-area">
+                  <img
+                    class="pix-qr"
+                    src="../../assets/img/QR-code.png"
+                    alt="QR Code para pagamento via Pix"
+                  />
+                  <div class="pix-chave">
+                    <span>Chave Pix (EVP)</span>
+                    <code id="pix_chave"></code>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="painel-metodo"
+                id="painel_cartao"
+                data-painel="cartao"
+                hidden
+              >
+                <h3 class="metodo-titulo">Dados do cartão</h3>
+
+                <div class="campo">
+                  <label for="numero_cartao">Número do cartão</label>
+                  <input
+                    type="text"
+                    id="numero_cartao"
+                    inputmode="numeric"
+                    autocomplete="cc-number"
+                    maxlength="19"
+                    placeholder="0000 0000 0000 0000"
+                  />
+                  <span class="campo-erro" id="erro_numero_cartao"></span>
+                </div>
+
+                <div class="campo">
+                  <label for="nome_cartao">Nome do titular</label>
+                  <input
+                    type="text"
+                    id="nome_cartao"
+                    autocomplete="cc-name"
+                    placeholder="Como está impresso no cartão"
+                  />
+                  <span class="campo-erro" id="erro_nome_cartao"></span>
+                </div>
+
+                <div class="linha-campos">
+                  <div class="campo">
+                    <label for="validade">Validade</label>
+                    <input type="month" id="validade" autocomplete="cc-exp" />
+                    <span class="campo-erro" id="erro_validade"></span>
+                  </div>
+                  <div class="campo">
+                    <label for="cvv">CVV</label>
+                    <input
+                      type="text"
+                      id="cvv"
+                      inputmode="numeric"
+                      autocomplete="cc-csc"
+                      maxlength="4"
+                      placeholder="Ex: 123"
+                    />
+                    <span class="campo-erro" id="erro_cvv"></span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- ================= Resumo ================= -->
+          <aside class="resumo" aria-label="Resumo do agendamento">
+            <h2>Resumo</h2>
+
+            <div class="resumo-chips" id="resumo_chips"></div>
+            <p class="resumo-vazio" id="resumo_vazio">
+              Nenhuma data selecionada ainda.
+            </p>
+
+            <div class="resumo-linhas">
+              <div class="resumo-linha">
+                <span>Subtotal</span>
+                <strong id="resumo_subtotal">R$ 0,00</strong>
+              </div>
+              <div class="resumo-linha">
+                <span>Taxa de serviço (5%)</span>
+                <strong id="resumo_taxa">R$ 0,00</strong>
+              </div>
+              <div class="resumo-linha resumo-linha--total">
+                <span>Total</span>
+                <strong id="resumo_total">R$ 0,00</strong>
+              </div>
+            </div>
+
+            <p class="resumo-aviso" id="resumo_aviso" aria-live="polite" hidden></p>
+
+            <button type="button" class="btn btn-primario" id="bnt_confirmar" disabled>
+              Confirmar agendamento
+            </button>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- ================= Modal de sucesso ================= -->
+    <div
+      class="modal"
+      id="modal_sucesso"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="sucesso_titulo"
+      hidden
+    >
+      <div class="modal__caixa">
+        <div class="modal__icone"><i class="ri-check-line"></i></div>
+        <h2 id="sucesso_titulo">Agendamento confirmado!</h2>
+        <p>
+          O profissional recebeu sua solicitação. Guarde o número do pedido
+          abaixo.
+        </p>
+
+        <div id="sucesso_resumo"></div>
+        <code class="sucesso-pedido" id="sucesso_pedido"></code>
+
+        <div class="modal__acoes">
+          <button type="button" class="btn btn-secundario" id="sucesso_fechar">
+            Fechar
+          </button>
+          <a class="btn btn-primario" id="sucesso_inicio" href="home.php">
+            Voltar ao início
+          </a>
+        </div>
+      </div>
+    </div>
+
+<?php require __DIR__ . '/../partials/footer.php'; ?>

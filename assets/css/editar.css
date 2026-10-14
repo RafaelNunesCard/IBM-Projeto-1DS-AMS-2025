@@ -1,0 +1,297 @@
+/* =====================================================================
+   TechFix — Editar perfil (v2)
+   ===================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ================= Hero ================= */
+
+.editar-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 11rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.editar-hero::before,
+.editar-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.editar-hero::before {
+  width: 320px;
+  height: 320px;
+  background: var(--primaria);
+  top: -130px;
+  left: -90px;
+}
+
+.editar-hero::after {
+  width: 300px;
+  height: 300px;
+  background: var(--secundaria);
+  top: -70px;
+  right: -80px;
+}
+
+.editar-hero__interno {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.editar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(252, 142, 83, 0.45);
+  border-radius: 999px;
+  background: rgba(252, 142, 83, 0.12);
+  color: var(--primaria);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.editar-hero h1 {
+  margin: 1rem 0 0.6rem;
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+}
+
+.editar-hero p {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.editar-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.1rem;
+  color: var(--primaria);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, translate 0.2s ease;
+}
+
+.editar-voltar:hover {
+  color: var(--holver);
+  translate: -4px 0;
+}
+
+/* ================= Card ================= */
+
+.editar-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.25rem 6rem;
+}
+
+.editar-card {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  background: linear-gradient(150deg, var(--superficie-2), var(--superficie));
+}
+
+/* ================= Foto ================= */
+
+.editar-foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.editar-foto > label:first-child {
+  font-size: 0.83rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+#preview {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 4px;
+  background: linear-gradient(140deg, var(--primaria), var(--secundaria));
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.4);
+}
+
+.editar-foto__botao {
+  cursor: pointer;
+}
+
+#avatar {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.editar-dica {
+  margin: 0;
+  font-size: 0.76rem;
+  color: var(--texto-suave);
+}
+
+/* ================= Campos ================= */
+
+.editar-campos {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: #dcdce6;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 1.5px solid var(--borda);
+  border-radius: 10px;
+  background: var(--preto);
+  color: var(--branco);
+  font-family: inherit;
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: #6f6f7a;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: var(--primaria);
+  box-shadow: 0 0 0 3px rgba(252, 142, 83, 0.18);
+}
+
+.campo input.campo-invalido,
+.campo textarea.campo-invalido {
+  border-color: var(--holver);
+  box-shadow: 0 0 0 3px rgba(247, 81, 91, 0.15);
+}
+
+.campo-erro {
+  display: block;
+  min-height: 1rem;
+  margin-top: 0.3rem;
+  color: #ff8f96;
+  font-size: 0.78rem;
+}
+
+.linha-campos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* ================= Aviso e botões ================= */
+
+.form-aviso {
+  margin: 0 0 1rem;
+  padding: 0.7rem 0.9rem;
+  border-left: 3px solid #4caf50;
+  border-radius: 8px;
+  background: rgba(76, 175, 80, 0.14);
+  color: #b6e6b8;
+  font-size: 0.85rem;
+}
+
+.form-aviso[hidden] {
+  display: none;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* ================= Botões (base fica em base.css) ================= */
+
+/* ================= Responsividade ================= */
+
+@media screen and (max-width: 768px) {
+  .editar-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .editar-foto {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--borda);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .editar-hero {
+    padding: 8rem 1rem 2.5rem;
+  }
+
+  .editar-container {
+    padding: 0 0.85rem 4rem;
+  }
+
+  .editar-card {
+    padding: 1.25rem;
+  }
+
+  .linha-campos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .botoes .btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .editar-voltar {
+    transition: none;
+  }
+
+  .btn-primario:hover {
+    transform: none;
+  }
+}

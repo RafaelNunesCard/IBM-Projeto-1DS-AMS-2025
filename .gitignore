@@ -1,0 +1,23 @@
+# Sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Logs e temporários
+*.log
+*.tmp
+npm-debug.log*
+
+# Dependências (não utilizadas, mas comuns)
+node_modules/
+
+# Ambiente
+.env
+.env.local
