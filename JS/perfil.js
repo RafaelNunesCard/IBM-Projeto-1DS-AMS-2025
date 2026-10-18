@@ -127,9 +127,17 @@ function preencherPerfil(perfil, loggedUser) {
   );
   $("perfil_aviso").hidden = temDados;
 
-  const agendamentos = lerArmazenamento("agendamentos") || [];
   const avaliacoes = lerArmazenamento("avaliacoes") || [];
-  $("stat_agendamentos").textContent = agendamentos.length || 0;
+  let agendamentosDoUsuario = [];
+
+  if (window.Agendamentos && loggedUser.id) {
+    agendamentosDoUsuario =
+      loggedUser.tipo === "profissional"
+        ? window.Agendamentos.doProfissional(loggedUser.id)
+        : window.Agendamentos.doCliente(loggedUser.id);
+  }
+
+  $("stat_agendamentos").textContent = agendamentosDoUsuario.length || 0;
   $("stat_avaliacoes").textContent = avaliacoes.length || 0;
 }
 
@@ -250,6 +258,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const botaoServicos = $("bnt_meus_servicos");
   if (botaoServicos) botaoServicos.hidden = loggedUser.tipo !== "profissional";
+
+  const botaoAgendamentos = $("bnt_agendamentos");
+  const textoAgendamentos = $("bnt_agendamentos_texto");
+  if (botaoAgendamentos && loggedUser.tipo === "profissional") {
+    botaoAgendamentos.href = "solicitacoes.html";
+    if (textoAgendamentos) textoAgendamentos.textContent = "Solicitações";
+  }
 
   statusAtual = perfil.status || null;
   renderizarBadge();

@@ -9,16 +9,34 @@
     "avaliacao": 4.0,
     "total_avaliacoes": 78,
     "projetos_concluidos": 340,
-    "distribuicao": [55, 28, 11, 4, 2],
+    "distribuicao": [
+      55,
+      28,
+      11,
+      4,
+      2
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Avaliações extremamente altas"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-fire-fill",
+        "texto": "Alguma ausência"
+      }
     ],
     "descricao_curta": "Eletricista predial com mais de 15 anos de experiência em serviços elétricos em edifícios e canteiros de obras, especializada em instalações elétricas, reformas e diagnóstico de problemas.",
     "biografia": "Mariele dos Santos é eletricista predial com mais de 15 anos de experiência em serviços elétricos em edifícios e canteiros de obras. Sua missão é oferecer segurança e eficiência em cada projeto, seja construção nova ou manutenção em edifícios existentes. É especializada em instalações elétricas, reformas e diagnóstico de problemas, sempre atenta às necessidades do cliente e às normas de segurança.",
     "educacao": "Formada em Eletrotécnica pelo SENAI, com cursos complementares em segurança do trabalho e certificação NR-10. Ao longo da carreira, participou de treinamentos de atualização em instalações elétricas de baixa e média tensão, o que garante serviço técnico preciso e dentro das normas.",
-    "contato": { "email": "mariele.santos@email.com", "telefone": "(11) 98421-7735" },
+    "contato": {
+      "email": "mariele.santos@email.com",
+      "telefone": "(11) 98421-7735"
+    },
     "trabalhos": [
       {
         "titulo": "Modernização Elétrica de Condomínio",
@@ -64,6 +82,10 @@
         "uteis": 2,
         "imagem": "https://cdn-icons-png.flaticon.com/512/12225/12225881.png"
       }
+    ],
+    "categorias": [
+      "predial",
+      "eletrica"
     ]
   },
   {
@@ -76,16 +98,34 @@
     "avaliacao": 4.0,
     "total_avaliacoes": 52,
     "projetos_concluidos": 210,
-    "distribuicao": [55, 28, 11, 4, 2],
+    "distribuicao": [
+      55,
+      28,
+      11,
+      4,
+      2
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Avaliações extremamente altas"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-fire-fill",
+        "texto": "Alguma ausência"
+      }
     ],
     "descricao_curta": "Arquiteto(a) com mais de 15 anos de experiência em projetos residenciais e comerciais, apaixonado(a) por criar espaços que combinam estética e funcionalidade.",
     "biografia": "Felipe Martins é arquiteto com mais de 15 anos de experiência em projetos residenciais e comerciais. É apaixonado por criar espaços que combinam estética e funcionalidade, sempre buscando soluções que tornem cada ambiente único e acolhedor. Já assinou mais de 200 projetos e acompanha as obras do conceito à entrega.",
     "educacao": "Graduado em Arquitetura e Urbanismo pela Universidade Presbiteriana Mackenzie, com especialização em design de interiores e sustentabilidade na construção civil. Mantém atualização constante em normas técnicas e modelagem 3D.",
-    "contato": { "email": "felipe.martins.arq@email.com", "telefone": "(11) 97654-2208" },
+    "contato": {
+      "email": "felipe.martins.arq@email.com",
+      "telefone": "(11) 97654-2208"
+    },
     "trabalhos": [
       {
         "titulo": "Reforma de Apartamento Compacto",
@@ -143,16 +183,34 @@
     "avaliacao": 3.5,
     "total_avaliacoes": 41,
     "projetos_concluidos": 180,
-    "distribuicao": [40, 30, 18, 8, 4],
+    "distribuicao": [
+      40,
+      30,
+      18,
+      8,
+      4
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Boas avaliações dos clientes" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Boas avaliações dos clientes"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-fire-fill",
+        "texto": "Alguma ausência"
+      }
     ],
     "descricao_curta": "Técnico de manutenção predial com 10 anos de experiência em conservação e reparo de edifícios, especializado em sistemas elétricos, hidráulicos e estruturais.",
     "biografia": "Lucas Pereira é técnico de manutenção predial com 10 anos de experiência em conservação e reparo de edifícios. É especializado em sistemas elétricos, hidráulicos e estruturais, garantindo que todos os aspectos do imóvel estejam em perfeito funcionamento. Comprometido com qualidade e segurança, busca sempre soluções práticas e eficientes.",
     "educacao": "Formado em Técnico em Edificações pelo IFSP, com cursos de hidráulica predial, elétrica básica e manutenção preventiva. Possui certificação para trabalho em altura (NR-35).",
-    "contato": { "email": "lucas.pereira@email.com", "telefone": "(11) 96312-8841" },
+    "contato": {
+      "email": "lucas.pereira@email.com",
+      "telefone": "(11) 96312-8841"
+    },
     "trabalhos": [
       {
         "titulo": "Manutenção Preventiva de Condomínio",
@@ -210,16 +268,34 @@
     "avaliacao": 4.0,
     "total_avaliacoes": 66,
     "projetos_concluidos": 420,
-    "distribuicao": [55, 28, 11, 4, 2],
+    "distribuicao": [
+      55,
+      28,
+      11,
+      4,
+      2
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Avaliações extremamente altas"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-fire-fill",
+        "texto": "Alguma ausência"
+      }
     ],
     "descricao_curta": "Técnico especializado em reparo de eletrodomésticos com 8 anos de experiência e formação em eletrônica, habilidoso no reparo de geladeiras, máquinas de lavar e micro-ondas.",
     "biografia": "Carlos Mendes é técnico especializado em reparo de eletrodomésticos com 8 anos de experiência. Tem formação técnica em eletrônica e é habilidoso no reparo de diversos aparelhos, incluindo geladeiras, máquinas de lavar e micro-ondas. É conhecido por sua dedicação e pela qualidade do seu trabalho, sempre buscando a satisfação do cliente.",
     "educacao": "Técnico em Eletrônica pela ETEC, com cursos de refrigeração doméstica e manutenção de placas eletrônicas. Atualiza-se constantemente em novas tecnologias de inversores e motores brushless.",
-    "contato": { "email": "carlos.mendes@email.com", "telefone": "(11) 95578-3390" },
+    "contato": {
+      "email": "carlos.mendes@email.com",
+      "telefone": "(11) 95578-3390"
+    },
     "trabalhos": [
       {
         "titulo": "Reparo de Geladeira Frost Free",
@@ -277,16 +353,34 @@
     "avaliacao": 5.0,
     "total_avaliacoes": 87,
     "projetos_concluidos": 510,
-    "distribuicao": [85, 12, 2, 1, 0],
+    "distribuicao": [
+      85,
+      12,
+      2,
+      1,
+      0
+    ],
     "selos": [
-      { "icone": "ri-trophy-fill", "texto": "Top profissional da região" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+      {
+        "icone": "ri-trophy-fill",
+        "texto": "Top profissional da região"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-flashlight-fill",
+        "texto": "Resposta rápida"
+      }
     ],
     "descricao_curta": "Técnica especializada em reparo de eletrodomésticos com 6 anos de experiência, conhecida pela eficiência no diagnóstico e pelo excelente atendimento ao cliente.",
     "biografia": "Ana Paula é técnica especializada em reparo de eletrodomésticos com 6 anos de experiência. Formada em Eletrônica, é habilidosa no reparo de diversos eletrodomésticos, incluindo geladeiras, fogões e máquinas de lavar. É conhecida por sua eficiência no diagnóstico de problemas e por seu excelente atendimento ao cliente.",
     "educacao": "Formada em Eletrônica pela FATEC, com especialização em refrigeração e eletrodomésticos de linha branca. Participa de treinamentos de fabricantes regularmente.",
-    "contato": { "email": "ana.paula@email.com", "telefone": "(11) 99124-6607" },
+    "contato": {
+      "email": "ana.paula@email.com",
+      "telefone": "(11) 99124-6607"
+    },
     "trabalhos": [
       {
         "titulo": "Diagnóstico Rápido de Fogão",
@@ -344,16 +438,34 @@
     "avaliacao": 4.0,
     "total_avaliacoes": 59,
     "projetos_concluidos": 300,
-    "distribuicao": [55, 28, 11, 4, 2],
+    "distribuicao": [
+      55,
+      28,
+      11,
+      4,
+      2
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Avaliações extremamente altas"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-fire-fill",
+        "texto": "Alguma ausência"
+      }
     ],
     "descricao_curta": "Eletricista com mais de 15 anos de experiência em serviços elétricos, especializada na instalação, manutenção e reparo de eletrodomésticos.",
     "biografia": "Fernanda Lima é eletricista com mais de 15 anos de experiência em serviços elétricos, especializada em eletrodomésticos. Atua na instalação, manutenção e reparo de aparelhos elétricos como geladeiras, máquinas de lavar e fogões. Sempre garantindo segurança e eficiência, busca atender às necessidades de seus clientes com soluções práticas e de alta qualidade.",
     "educacao": "Curso técnico em Eletrotécnica pelo SENAI e formação complementar em eletrodomésticos e automação residencial. Certificada NR-10 para serviços em instalações elétricas.",
-    "contato": { "email": "fernanda.souza@email.com", "telefone": "(11) 97241-5533" },
+    "contato": {
+      "email": "fernanda.souza@email.com",
+      "telefone": "(11) 97241-5533"
+    },
     "trabalhos": [
       {
         "titulo": "Instalação de Coifa e Forno",
@@ -411,16 +523,34 @@
     "avaliacao": 3.5,
     "total_avaliacoes": 38,
     "projetos_concluidos": 260,
-    "distribuicao": [40, 30, 18, 8, 4],
+    "distribuicao": [
+      40,
+      30,
+      18,
+      8,
+      4
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Boas avaliações dos clientes" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Boas avaliações dos clientes"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-fire-fill",
+        "texto": "Alguma ausência"
+      }
     ],
     "descricao_curta": "Mecânico automotivo com mais de 10 anos de experiência em manutenção preventiva e corretiva de veículos nacionais e importados.",
     "biografia": "André Costa Ribeiro é mecânico automotivo com mais de 10 anos de experiência em manutenção de veículos. É apaixonado por desenvolver soluções eficientes e duráveis, sempre explicando ao cliente cada etapa do serviço. Atende carros nacionais e importados, com foco em manutenção preventiva.",
     "educacao": "Formado em Mecânica Automotiva pelo SENAI, com cursos de injeção eletrônica e diagnóstico por scanner. Atualiza-se constantemente em veículos híbridos e elétricos.",
-    "contato": { "email": "andre.ribeiro@email.com", "telefone": "(11) 94566-1182" },
+    "contato": {
+      "email": "andre.ribeiro@email.com",
+      "telefone": "(11) 94566-1182"
+    },
     "trabalhos": [
       {
         "titulo": "Revisão Completa de Motor",
@@ -478,16 +608,34 @@
     "avaliacao": 5.0,
     "total_avaliacoes": 64,
     "projetos_concluidos": 190,
-    "distribuicao": [85, 12, 2, 1, 0],
+    "distribuicao": [
+      85,
+      12,
+      2,
+      1,
+      0
+    ],
     "selos": [
-      { "icone": "ri-trophy-fill", "texto": "Top profissional da região" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+      {
+        "icone": "ri-trophy-fill",
+        "texto": "Top profissional da região"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-flashlight-fill",
+        "texto": "Resposta rápida"
+      }
     ],
     "descricao_curta": "Técnica especializada em manutenção de veículos elétricos com 5 anos de experiência em sistemas de bateria, motores elétricos e tecnologia de carregamento.",
     "biografia": "Ana Clara Gomes é técnica especializada em manutenção de veículos elétricos, com 5 anos de experiência no setor. Tem conhecimento aprofundado em sistemas de bateria, motores elétricos e tecnologia de carregamento. Destaca-se pelo compromisso com a sustentabilidade e eficiência energética, oferecendo serviços que garantem o desempenho ideal dos veículos elétricos.",
     "educacao": "Graduada em Engenharia Elétrica com especialização em mobilidade elétrica. Possui certificações em manutenção de baterias de lítio e sistemas de alta tensão automotivos.",
-    "contato": { "email": "ana.clara.gomes@email.com", "telefone": "(11) 99872-4450" },
+    "contato": {
+      "email": "ana.clara.gomes@email.com",
+      "telefone": "(11) 99872-4450"
+    },
     "trabalhos": [
       {
         "titulo": "Diagnóstico de Bateria de Lítio",
@@ -545,16 +693,34 @@
     "avaliacao": 4.5,
     "total_avaliacoes": 91,
     "projetos_concluidos": 230,
-    "distribuicao": [70, 20, 7, 2, 1],
+    "distribuicao": [
+      70,
+      20,
+      7,
+      2,
+      1
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Avaliações extremamente altas"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-flashlight-fill",
+        "texto": "Resposta rápida"
+      }
     ],
     "descricao_curta": "Engenheiro com 7 anos de experiência em manutenção de veículos elétricos, especializado em sistemas elétricos automotivos e eficiência energética.",
     "biografia": "Felipe Martins é engenheiro com 7 anos de experiência em manutenção de veículos elétricos. Formado em Engenharia Mecânica e especializado em sistemas elétricos automotivos, é responsável por diagnosticar e resolver problemas complexos em sistemas de propulsão elétrica, além de implementar melhorias na eficiência energética dos veículos.",
     "educacao": "Graduado em Engenharia Mecânica pela USP, com pós-graduação em sistemas de propulsão híbrida e elétrica. Certificado em segurança de alta tensão (HV) nível 3.",
-    "contato": { "email": "felipe.martins.eng@email.com", "telefone": "(11) 96901-7743" },
+    "contato": {
+      "email": "felipe.martins.eng@email.com",
+      "telefone": "(11) 96901-7743"
+    },
     "trabalhos": [
       {
         "titulo": "Upgrade de Gestão Térmica",
@@ -612,16 +778,34 @@
     "avaliacao": 4.5,
     "total_avaliacoes": 103,
     "projetos_concluidos": 600,
-    "distribuicao": [62, 28, 8, 2, 0],
+    "distribuicao": [
+      62,
+      28,
+      8,
+      2,
+      0
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Avaliações extremamente altas"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-fire-fill",
+        "texto": "Alguma ausência"
+      }
     ],
     "descricao_curta": "Sou técnico em informática com mais de 4 anos de experiência em manutenção de computadores e redes. Tenho paixão por tecnologia e sempre busco oferecer soluções rápidas e eficientes.",
     "biografia": "Sou técnico em informática com mais de 4 anos de experiência em manutenção de computadores, configuração de redes e suporte técnico. Nascido e criado em São Paulo, sempre tive paixão por tecnologia e acredito no impacto positivo que soluções digitais bem aplicadas podem ter em empresas e pessoas.",
     "educacao": "Me formei como Técnico em Informática pelo SENAI, onde adquiri conhecimento em hardware, software, redes e segurança digital. Posteriormente fiz cursos complementares em manutenção de computadores e administração de redes, o que aprimorou ainda mais minhas habilidades em diagnosticar e resolver problemas tecnológicos.",
-    "contato": { "email": "jorge.fonseca@email.com", "telefone": "(11) 99233-7620" },
+    "contato": {
+      "email": "jorge.fonseca@email.com",
+      "telefone": "(11) 99233-7620"
+    },
     "trabalhos": [
       {
         "titulo": "Rede Corporativa Segura",
@@ -644,18 +828,54 @@
       "sobre": "Experimente a combinação perfeita entre desempenho e estilo com este notebook. Com um design minimalista e elegante, ele se destaca em qualquer ambiente, seja em casa, no escritório ou em um café. Ideal para estudantes, profissionais e qualquer pessoa que valorize eficiência e estilo.",
       "preco": "R$ 3.499,00",
       "especificacoes": [
-        { "recurso": "Tela", "especificacao": "15.6\" Full HD (1920x1080)" },
-        { "recurso": "Processador", "especificacao": "Intel Core i7-1165G7" },
-        { "recurso": "Memória RAM", "especificacao": "16GB DDR4" },
-        { "recurso": "Armazenamento", "especificacao": "512GB SSD" },
-        { "recurso": "Placa de Vídeo", "especificacao": "NVIDIA GeForce MX450" },
-        { "recurso": "Entradas", "especificacao": "2 x USB 3.0, 1 x USB-C, 1 x HDMI" },
-        { "recurso": "Conectividade", "especificacao": "Wi-Fi 6 (802.11ax), Bluetooth 5.1" },
-        { "recurso": "Câmera", "especificacao": "HD 720p com microfone embutido" },
-        { "recurso": "Bateria", "especificacao": "autonomia de até 12 horas" },
-        { "recurso": "Peso", "especificacao": "1.7 kg" },
-        { "recurso": "Sistema Operacional", "especificacao": "Windows 11 Home" },
-        { "recurso": "Garantia", "especificacao": "1 ano" }
+        {
+          "recurso": "Tela",
+          "especificacao": "15.6\" Full HD (1920x1080)"
+        },
+        {
+          "recurso": "Processador",
+          "especificacao": "Intel Core i7-1165G7"
+        },
+        {
+          "recurso": "Memória RAM",
+          "especificacao": "16GB DDR4"
+        },
+        {
+          "recurso": "Armazenamento",
+          "especificacao": "512GB SSD"
+        },
+        {
+          "recurso": "Placa de Vídeo",
+          "especificacao": "NVIDIA GeForce MX450"
+        },
+        {
+          "recurso": "Entradas",
+          "especificacao": "2 x USB 3.0, 1 x USB-C, 1 x HDMI"
+        },
+        {
+          "recurso": "Conectividade",
+          "especificacao": "Wi-Fi 6 (802.11ax), Bluetooth 5.1"
+        },
+        {
+          "recurso": "Câmera",
+          "especificacao": "HD 720p com microfone embutido"
+        },
+        {
+          "recurso": "Bateria",
+          "especificacao": "autonomia de até 12 horas"
+        },
+        {
+          "recurso": "Peso",
+          "especificacao": "1.7 kg"
+        },
+        {
+          "recurso": "Sistema Operacional",
+          "especificacao": "Windows 11 Home"
+        },
+        {
+          "recurso": "Garantia",
+          "especificacao": "1 ano"
+        }
       ],
       "imagens": [
         "https://pfst.cf2.poecdn.net/base/image/621c7f66909be65500d109f699d58616158fb09fa18ce495d603a8ab4a064fb7?w=1024&h=768&pmaid=465882384",
@@ -702,16 +922,34 @@
     "avaliacao": 4.5,
     "total_avaliacoes": 74,
     "projetos_concluidos": 380,
-    "distribuicao": [70, 20, 7, 2, 1],
+    "distribuicao": [
+      70,
+      20,
+      7,
+      2,
+      1
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Avaliações extremamente altas"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-fire-fill",
+        "texto": "Alguma ausência"
+      }
     ],
     "descricao_curta": "Analista de suporte técnico com quatro anos de experiência em suporte a usuários e manutenção de sistemas, especialista em problemas de software e redes corporativas.",
     "biografia": "Carla Nunes Rosa é analista de suporte técnico com quatro anos de experiência em suporte a usuários e manutenção de sistemas. Formada em Análise e Desenvolvimento de Sistemas, é especialista em resolver problemas de software e gerenciar redes corporativas. Muito organizada, tem excelentes habilidades de comunicação, o que a torna uma excelente profissional para interagir com clientes.",
     "educacao": "Formada em Análise e Desenvolvimento de Sistemas pela Fatec, com certificações em ITIL e administração de redes. Atualiza-se constantemente em segurança da informação.",
-    "contato": { "email": "carla.rosa@email.com", "telefone": "(11) 98145-2276" },
+    "contato": {
+      "email": "carla.rosa@email.com",
+      "telefone": "(11) 98145-2276"
+    },
     "trabalhos": [
       {
         "titulo": "Suporte Dedicado a Escritório",
@@ -769,16 +1007,34 @@
     "avaliacao": 4.5,
     "total_avaliacoes": 96,
     "projetos_concluidos": 450,
-    "distribuicao": [70, 20, 7, 2, 1],
+    "distribuicao": [
+      70,
+      20,
+      7,
+      2,
+      1
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Avaliações extremamente altas"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-flashlight-fill",
+        "texto": "Resposta rápida"
+      }
     ],
     "descricao_curta": "Desenvolvedora web com 6 anos de experiência criando e mantendo sites e aplicações web, especializada em HTML, CSS, JavaScript, React e Angular.",
     "biografia": "Magali Silva Garcia é desenvolvedora web com 6 anos de experiência criando e mantendo sites e aplicações web. Formada em Engenharia da Computação, é especializada em HTML, CSS, JavaScript e frameworks como React e Angular. É conhecida por sua atenção aos detalhes e sua capacidade de trabalhar em equipe, sempre buscando soluções inovadoras para os desafios de seus projetos.",
     "educacao": "Graduada em Engenharia da Computação, com cursos de especialização em desenvolvimento front-end, UX e arquitetura de software. Contribui para projetos open source.",
-    "contato": { "email": "magali.garcia@email.com", "telefone": "(11) 97733-9018" },
+    "contato": {
+      "email": "magali.garcia@email.com",
+      "telefone": "(11) 97733-9018"
+    },
     "trabalhos": [
       {
         "titulo": "E-commerce Completo",
@@ -836,16 +1092,34 @@
     "avaliacao": 5.0,
     "total_avaliacoes": 58,
     "projetos_concluidos": 310,
-    "distribuicao": [85, 12, 2, 1, 0],
+    "distribuicao": [
+      85,
+      12,
+      2,
+      1,
+      0
+    ],
     "selos": [
-      { "icone": "ri-trophy-fill", "texto": "Top profissional da região" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+      {
+        "icone": "ri-trophy-fill",
+        "texto": "Top profissional da região"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-flashlight-fill",
+        "texto": "Resposta rápida"
+      }
     ],
     "descricao_curta": "Engenheiro civil com mais de 10 anos de experiência em projetos de infraestrutura e construção, apaixonado por soluções inovadoras e sustentáveis.",
     "biografia": "Paulo Rogério é engenheiro civil com mais de 10 anos de experiência em projetos de infraestrutura e construção. É apaixonado por implementar soluções inovadoras e sustentáveis no setor, conduzindo obras com rigor técnico e atenção a prazos e orçamentos. Já liderou equipes em projetos residenciais, comerciais e industriais.",
     "educacao": "Graduado em Engenharia Civil pela Escola Politécnica da USP, com MBA em gestão de obras e especialização em estruturas metálicas e concreto protendido.",
-    "contato": { "email": "paulo.rogerio@email.com", "telefone": "(11) 95218-4471" },
+    "contato": {
+      "email": "paulo.rogerio@email.com",
+      "telefone": "(11) 95218-4471"
+    },
     "trabalhos": [
       {
         "titulo": "Galpão Industrial",
@@ -903,16 +1177,34 @@
     "avaliacao": 4.0,
     "total_avaliacoes": 47,
     "projetos_concluidos": 280,
-    "distribuicao": [55, 28, 11, 4, 2],
+    "distribuicao": [
+      55,
+      28,
+      11,
+      4,
+      2
+    ],
     "selos": [
-      { "icone": "ri-star-smile-fill", "texto": "Avaliações extremamente altas" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-fire-fill", "texto": "Alguma ausência" }
+      {
+        "icone": "ri-star-smile-fill",
+        "texto": "Avaliações extremamente altas"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-fire-fill",
+        "texto": "Alguma ausência"
+      }
     ],
     "descricao_curta": "Profissional com 10 anos de experiência em manutenção de equipamentos industriais, especializada em diagnósticos e reparos eficientes.",
     "biografia": "Fernanda Lima Soares é uma profissional com 10 anos de experiência em manutenção de equipamentos industriais, especializada em diagnósticos e reparos eficientes. Atua em linhas de produção com foco em reduzir paradas e aumentar a vida útil dos equipamentos, sempre seguindo rigorosos protocolos de segurança.",
     "educacao": "Técnica em Mecatrônica pelo SENAI, com cursos de manutenção preditiva, hidráulica industrial e pneumática. Certificação em segurança de máquinas (NR-12).",
-    "contato": { "email": "fernanda.soares@email.com", "telefone": "(11) 98407-5592" },
+    "contato": {
+      "email": "fernanda.soares@email.com",
+      "telefone": "(11) 98407-5592"
+    },
     "trabalhos": [
       {
         "titulo": "Manutenção de Linha de Produção",
@@ -964,22 +1256,40 @@
     "id": "carla-mendes",
     "nome": "Carla Mendes",
     "cargo": "Técnica em Máquinas de Refrigeração e Ventilação",
-    "categoria": "industriais",
+    "categoria": "climatizacao",
     "imagem": "https://pfst.cf2.poecdn.net/base/image/049b879c21db709ccbf4a5f0a2f902c95c400db51e5aa18cdfd2d81ecb755687?w=1024&h=768&pmaid=485748697",
     "preco_dia": 300,
     "avaliacao": 5.0,
     "total_avaliacoes": 69,
     "projetos_concluidos": 240,
-    "distribuicao": [85, 12, 2, 1, 0],
+    "distribuicao": [
+      85,
+      12,
+      2,
+      1,
+      0
+    ],
     "selos": [
-      { "icone": "ri-trophy-fill", "texto": "Top profissional da região" },
-      { "icone": "ri-lock-star-fill", "texto": "Segurança no trabalho" },
-      { "icone": "ri-flashlight-fill", "texto": "Resposta rápida" }
+      {
+        "icone": "ri-trophy-fill",
+        "texto": "Top profissional da região"
+      },
+      {
+        "icone": "ri-lock-star-fill",
+        "texto": "Segurança no trabalho"
+      },
+      {
+        "icone": "ri-flashlight-fill",
+        "texto": "Resposta rápida"
+      }
     ],
     "descricao_curta": "Técnica qualificada com experiência na instalação e manutenção de sistemas de refrigeração e ventilação, comprometida em oferecer soluções eficientes e confiáveis.",
     "biografia": "Carla Mendes é uma técnica qualificada com experiência na instalação e manutenção de sistemas de refrigeração e ventilação. É comprometida em oferecer soluções eficientes e confiáveis, atendendo indústrias, comércios e residências com o mesmo nível de cuidado. Já atuou em câmaras frigoríficas, climatização de ambientes e sistemas de exaustão.",
     "educacao": "Formada em Refrigeração e Climatização pelo SENAI, com certificações em manipulação de fluidos refrigerantes e sistemas VRF. Cursos de eficiência energética em HVAC.",
-    "contato": { "email": "carla.mendes@email.com", "telefone": "(11) 96540-2273" },
+    "contato": {
+      "email": "carla.mendes@email.com",
+      "telefone": "(11) 96540-2273"
+    },
     "trabalhos": [
       {
         "titulo": "Câmara Frigorífica Industrial",

@@ -55,7 +55,53 @@ const estado = {
   metodo: null,
   mes: hoje.getMonth(),
   ano: hoje.getFullYear(),
+  // Quando true, o profissional é uma conta cadastrada de verdade
+  // (não um dos perfis fictícios da vitrine) — o pedido vira um
+  // agendamento real, com status e visível pro profissional aceitar.
+  modoReal: false,
+  servicoReal: null,
 };
+
+/* ------------------------------------------------------------------ */
+/* Fluxo real (profissional cadastrado, não a vitrine fictícia)       */
+/* ------------------------------------------------------------------ */
+
+function lerArmazenamentoJSON(chave) {
+  try {
+    return JSON.parse(localStorage.getItem(chave)) || [];
+  } catch {
+    return [];
+  }
+}
+
+function carregarServicoReal(servicoId) {
+  const servicos = lerArmazenamentoJSON("servicos");
+  const servico = servicos.find((s) => String(s.id) === String(servicoId));
+  if (!servico || servico.ativo === false) return null;
+
+  const profissionais = lerArmazenamentoJSON("profissionais");
+  const conta = profissionais.find(
+    (p) => String(p.id) === String(servico.profissional_id)
+  );
+  if (!conta) return null;
+
+  const categoria =
+    window.Categorias && window.Categorias.porSlug
+      ? window.Categorias.porSlug(servico.categoria_slug)
+      : null;
+
+  estado.servicoReal = servico;
+
+  return {
+    id: conta.id,
+    nome: conta.nome,
+    cargo: categoria ? categoria.nome : servico.titulo,
+    imagem: "../img/Perfis/Default perfil.jpg",
+    avaliacao: 0,
+    total_avaliacoes: 0,
+    preco_dia: servico.preco != null ? servico.preco : conta.preco_dia || 0,
+  };
+}
 
 function $(id) {
   return document.getElementById(id);
@@ -382,7 +428,22 @@ function renderChips() {
   });
 }
 
+function usuarioLogado() {
+  try {
+    return JSON.parse(localStorage.getItem("loggedUser"));
+  } catch {
+    return null;
+  }
+}
+
 function validarFluxo() {
+  const usuario = usuarioLogado();
+  if (!usuario || usuario.tipo !== "cliente") {
+    return {
+      valido: false,
+      aviso: "Entre com uma conta de cliente para solicitar este serviço.",
+    };
+  }
   if (estado.datas.size === 0) {
     return { valido: false, aviso: "Selecione ao menos uma data no calendário." };
   }
@@ -457,7 +518,37 @@ function abrirModal() {
       <strong>${dinheiro(total)}</strong>
     </div>`;
 
-  $("sucesso_pedido").textContent = gerarNumeroPedido();
+  let numeroPedido = gerarNumeroPedido();
+
+  if (estado.modoReal && window.Agendamentos) {
+    const usuario = usuarioLogado();
+    const registro = window.Agendamentos.criar({
+      numero_pedido: numeroPedido,
+      cliente_id: usuario.id,
+      cliente_nome: usuario.nome,
+      profissional_id: estado.profissional.id,
+      profissional_nome: estado.profissional.nome,
+      servico_id: estado.servicoReal ? estado.servicoReal.id : null,
+      servico_titulo: estado.servicoReal ? estado.servicoReal.titulo : estado.profissional.cargo,
+      datas,
+      metodo_pagamento: estado.metodo,
+      subtotal,
+      taxa_servico: taxa,
+      valor_total: total,
+    });
+    numeroPedido = registro.numero_pedido;
+
+    const titulo = $("sucesso_titulo");
+    if (titulo) titulo.textContent = "Pedido enviado!";
+
+    const inicio = $("sucesso_inicio");
+    if (inicio) {
+      inicio.href = "meus-agendamentos.html";
+      inicio.textContent = "Ver meus agendamentos";
+    }
+  }
+
+  $("sucesso_pedido").textContent = numeroPedido;
 
   elementoFocoAnterior = document.activeElement;
 
@@ -547,26 +638,45 @@ function ligarEventos() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const id = new URLSearchParams(window.location.search).get("id");
+  const parametros = new URLSearchParams(window.location.search);
+  const id = parametros.get("id");
+  const servicoId = parametros.get("servico");
 
-  if (!id) {
-    window.location.replace("404.html");
-    return;
-  }
+  let profissional = null;
 
-  let profissionais;
+  if (servicoId) {
+    estado.modoReal = true;
+    profissional = carregarServicoReal(servicoId);
 
-  try {
-    profissionais = await Profissionais.carregarProfissionais();
-  } catch (erro) {
-    console.error(erro);
-    mostrarErroCarregamento();
-    return;
-  }
+    if (!profissional) {
+      window.location.replace("404.html");
+      return;
+    }
 
-  const profissional = Profissionais.getPorId(profissionais, id);
+    const voltar = $("voltar_perfil");
+    if (voltar) {
+      voltar.href = "serviço.html";
+      voltar.innerHTML =
+        '<i class="ri-arrow-left-line"></i> Voltar aos serviços';
+    }
+  } else if (id) {
+    let profissionais;
 
-  if (!profissional) {
+    try {
+      profissionais = await Profissionais.carregarProfissionais();
+    } catch (erro) {
+      console.error(erro);
+      mostrarErroCarregamento();
+      return;
+    }
+
+    profissional = Profissionais.getPorId(profissionais, id);
+
+    if (!profissional) {
+      window.location.replace("404.html");
+      return;
+    }
+  } else {
     window.location.replace("404.html");
     return;
   }

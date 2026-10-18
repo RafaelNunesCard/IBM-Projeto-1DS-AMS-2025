@@ -4,10 +4,31 @@ const prefereMenosMovimento = window.matchMedia(
 
 let listaCarregada = false;
 
+function montarFiltros() {
+  const container = document.getElementById("tipos");
+  if (!container || !window.CATEGORIAS) return;
+
+  const botoesCategorias = window.CATEGORIAS.map(
+    (cat) => `
+      <div class="tipos" data-categoria="${cat.slug}">
+        <div class="i"><i class="${cat.icone}"></i></div>
+        <h2>${cat.nome}</h2>
+      </div>`
+  ).join("");
+
+  container.innerHTML = `
+    ${botoesCategorias}
+    <div class="tipos ativo" data-categoria="todos">
+      <div class="i"><i class="ri-grid-fill"></i></div>
+      <h2>Todos</h2>
+    </div>`;
+}
+
 function criarCard(profissional) {
   const card = document.createElement("div");
   card.className = "card_clt";
-  card.setAttribute("data-categoria", profissional.categoria);
+  const categorias = profissional.categorias || [profissional.categoria];
+  card.setAttribute("data-categoria", categorias.join(","));
 
   card.innerHTML = `
     <div class="clt">
@@ -90,8 +111,9 @@ function atualizarCards(animar = false) {
     const categoriaCard = card.getAttribute("data-categoria");
 
     const combinaBusca = titulo.includes(textoBusca);
+    const categoriasDoCard = (categoriaCard || "").split(",");
     const combinaCategoria =
-      categoriaAtiva === "todos" || categoriaAtiva === categoriaCard;
+      categoriaAtiva === "todos" || categoriasDoCard.includes(categoriaAtiva);
     const mostrar = combinaBusca && combinaCategoria;
 
     card.style.display = mostrar ? "flex" : "none";
@@ -123,6 +145,8 @@ function atualizarCards(animar = false) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  montarFiltros();
+
   const botoes = document.querySelectorAll("#tipos .tipos");
 
   botoes.forEach((botao) => {

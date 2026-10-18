@@ -15,14 +15,13 @@
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="../CSS/serviço.css" />
+    <link rel="stylesheet" href="../CSS/servicos-reais.css" />
 
     <link rel="stylesheet" href="../CSS/head-foot.css" />
 
     <!--==================== JS header ====================-->
     <script src="../JS/header.JS" defer></script>
 
-    
-    
     <title>TechFix - Serviços</title>
   </head>
   <body>
@@ -63,32 +62,8 @@
         </p>
       </section>
 
-      <section id="tipos">
-        <div class="tipos" data-categoria="predial">
-          <div class="i"><i class="ri-home-9-fill"></i></div>
-          <h2>Manutenção predial</h2>
-        </div>
-        <div class="tipos" data-categoria="informatica">
-          <div class="i"><i class="ri-bug-fill"></i></div>
-          <h2>Serviços de TI</h2>
-        </div>
-        <div class="tipos" data-categoria="eletro">
-          <div class="i"><i class="ri-computer-fill"></i></div>
-          <h2>Reparo de Eletrodomésticos</h2>
-        </div>
-        <div class="tipos" data-categoria="veiculos">
-          <div class="i"><i class="ri-roadster-fill"></i></div>
-          <h2>Manutenção de Veículos</h2>
-        </div>
-        <div class="tipos" data-categoria="industriais">
-          <div class="i"><i class="ri-server-fill"></i></div>
-          <h2>Manutenção de Equipamentos Industriais</h2>
-        </div>
-        <div class="tipos ativo" data-categoria="todos">
-          <div class="i"><i class="ri-grid-fill"></i></div>
-          <h2>Todos</h2>
-        </div>
-      </section>
+      <!-- Preenchido dinamicamente por serviço.js a partir de categorias.js -->
+      <section id="tipos"></section>
 
       <section id="clts">
         <div class="clts_topo">
@@ -113,6 +88,17 @@
           </p>
           <button class="bnt" id="limpar_filtros">LIMPAR FILTROS</button>
         </div>
+      </section>
+
+      <!-- ==================== Serviços cadastrados por profissionais TechFix ==================== -->
+      <section id="servicos_reais" hidden>
+        <div class="clts_topo">
+          <div>
+            <h1>Serviços cadastrados na TechFix</h1>
+            <p>Solicite diretamente com quem já criou conta de profissional.</p>
+          </div>
+        </div>
+        <div id="lista_servicos_reais"></div>
       </section>
     </main>
 
@@ -151,7 +137,9 @@
         </div>
       </div>
     </footer>
+    <script src="../JS/categorias.js"></script>
     <script src="../JS/profissionais.js"></script>
     <script src="../JS/serviço.js"></script>
+    <script src="../JS/servicos-reais.js"></script>
   </body>
 </html>

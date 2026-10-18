@@ -1,0 +1,87 @@
+#servicos_reais {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#lista_servicos_reais {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+  margin-top: 1.25rem;
+}
+
+.servico-real-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #212123;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.servico-real-card__icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(252, 142, 83, 0.14);
+  color: #fc8e53;
+  font-size: 19px;
+}
+
+.servico-real-card__categoria {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #a6a6b3;
+}
+
+.servico-real-card__corpo h3 {
+  margin: 2px 0 4px;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.servico-real-card__corpo p {
+  color: #a6a6b3;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+
+.servico-real-card__profissional {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #d8d8de;
+}
+
+.servico-real-card__acao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.servico-real-card__acao strong {
+  color: #fc8e53;
+}
+
+.servico-real-card__acao .btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(135deg, #fc8e53, #f7515b);
+  color: #fff;
+}
