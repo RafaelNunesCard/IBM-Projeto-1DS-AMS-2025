@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--==================== RemixIcon ====================-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+
+    <!--==================== Favicon ====================-->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="../CSS/meus-servicos.css" />
+    <link rel="stylesheet" href="../CSS/head-foot.css" />
+
+    <!--==================== JS ====================-->
+    <script src="../JS/header.JS" defer></script>
+    <script src="../JS/categorias.js" defer></script>
+    <script src="../JS/meus-servicos.js" defer></script>
+
+    <title>TechFix - Meus Serviços</title>
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo TechFix" />
+        <h1>TechFix</h1>
+      </div>
+
+      <menu>
+        <input type="checkbox" id="checkbox" class="checkbox" />
+        <label for="checkbox" class="label_menu"
+          >Menu <span class="hamburger"></span
+        ></label>
+        <ul class="menu">
+          <li><a href="home.html" class="nav">INÍCIO</a></li>
+          <li><a href="Sobre.html" class="nav">SOBRE NÓS</a></li>
+          <li><a href="serviço.html" class="nav">SERVIÇOS</a></li>
+          <li><a href="contato.html" class="nav">CONTATO</a></li>
+          <li id="btn_cadastro">
+            <a href="perfil.html" class="nav" id="cadastro">PERFIL</a>
+          </li>
+        </ul>
+      </menu>
+    </header>
+
+    <main>
+      <section class="ms-cabecalho">
+        <div class="ms-cabecalho__texto">
+          <span class="ms-badge"><i class="ri-tools-fill"></i> Área do profissional</span>
+          <h1>Meus Serviços</h1>
+          <p>
+            Cadastre os serviços que você oferece. Cada um aparece pros
+            clientes na categoria escolhida, com o preço que você definir.
+          </p>
+        </div>
+        <button type="button" class="btn btn-primario" id="bnt_novo_servico">
+          <i class="ri-add-line"></i> Novo serviço
+        </button>
+      </section>
+
+      <!-- ==================== Aviso de acesso ==================== -->
+      <section class="ms-aviso" id="ms_aviso" hidden>
+        <i class="ri-information-line"></i>
+        <p>
+          Esta área é só para contas de profissional.
+          <a href="cadastro.html">Entre com uma conta de profissional</a> para
+          cadastrar seus serviços.
+        </p>
+      </section>
+
+      <!-- ==================== Lista de serviços ==================== -->
+      <section class="ms-lista" id="ms_lista"></section>
+
+      <section class="ms-vazio" id="ms_vazio" hidden>
+        <i class="ri-briefcase-4-line"></i>
+        <h2>Você ainda não cadastrou nenhum serviço</h2>
+        <p>Clique em "Novo serviço" para começar a aparecer nas buscas.</p>
+      </section>
+    </main>
+
+    <!-- ==================== Formulário (modal) ==================== -->
+    <div class="ms-overlay" id="ms_overlay" hidden></div>
+
+    <div
+      class="ms-popup"
+      id="ms_popup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="ms_popup_titulo"
+      hidden
+    >
+      <h2 id="ms_popup_titulo">Novo serviço</h2>
+
+      <form id="ms_form">
+        <input type="hidden" id="ms_id" />
+
+        <div class="campo">
+          <label for="ms_titulo">Título do serviço</label>
+          <input
+            type="text"
+            id="ms_titulo"
+            placeholder="Ex: Instalação de tomadas e disjuntores"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="ms_categoria">Categoria</label>
+          <select id="ms_categoria" required></select>
+          <p class="campo-dica" id="ms_categoria_exemplo"></p>
+        </div>
+
+        <div class="campo">
+          <label for="ms_descricao">Descrição</label>
+          <textarea
+            id="ms_descricao"
+            rows="3"
+            placeholder="Conte brevemente o que está incluído no serviço"
+          ></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="ms_preco">Preço (R$)</label>
+          <input
+            type="number"
+            id="ms_preco"
+            min="0"
+            step="0.01"
+            inputmode="decimal"
+            placeholder="Deixe em branco para usar seu preço/dia padrão"
+          />
+        </div>
+
+        <div class="ms-popup__acoes">
+          <button type="button" class="btn btn-secundario" id="ms_cancelar">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-primario" id="ms_salvar">
+            Salvar serviço
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3 id="footer-logo">TechFix</h3>
+          <p>
+            Excelência nos serviços e qualidade nos produtos. Nosso compromisso
+            é com você!
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="home.html">INÍCIO</a></li>
+            <li><a href="Sobre.html">SOBRE NÓS</a></li>
+            <li><a href="serviço.html">SERVIÇOS</a></li>
+            <li><a href="contato.html">CONTATO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <ul>
+            <li><strong>E-mail: TechFix@gmail.com</strong></li>
+            <br />
+            <li><strong>Número: (11) 97018-4779</strong></li>
+          </ul>
+          <div class="social-icons">
+            <a href="#"><i class="ri-facebook-box-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

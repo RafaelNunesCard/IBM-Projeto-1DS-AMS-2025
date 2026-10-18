@@ -118,6 +118,72 @@
   border: 1px solid rgba(252, 142, 83, 0.3);
 }
 
+/* ---------------- Seletor de tipo de conta ---------------- */
+.role-select {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.role-select input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.role-chip {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #111114;
+  color: #9a9aa2;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s, background 0.25s;
+}
+
+.role-chip i {
+  font-size: 16px;
+}
+
+.role-chip:hover {
+  color: #ddd;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.Cadastrar:has(#tipo-cliente:checked) label[for="tipo-cliente"],
+.Cadastrar:has(#tipo-profissional:checked) label[for="tipo-profissional"] {
+  color: #fff;
+  background: rgba(252, 142, 83, 0.14);
+  border-color: var(--primaria);
+}
+
+/* Campos exclusivos do profissional: escondidos por padrão,
+   mostrados via :has() porque o radio não é irmão direto do
+   bloco .campos-profissional (ambos ficam dentro do mesmo form,
+   mas não lado a lado), então ~ não funciona aqui. */
+.campos-profissional {
+  display: none;
+}
+
+.Cadastrar:has(#tipo-profissional:checked) .campos-profissional {
+  display: block;
+}
+
+.hint-profissional {
+  font-size: 0.78rem;
+  color: #7a7a85;
+  margin: -6px 0 4px;
+  line-height: 1.4;
+}
+
 /* ---------------- Inputs ---------------- */
 .input-box {
   position: relative;

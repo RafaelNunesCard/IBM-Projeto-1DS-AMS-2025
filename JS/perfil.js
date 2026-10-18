@@ -248,6 +248,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   preencherPerfil(perfil, loggedUser);
 
+  const botaoServicos = $("bnt_meus_servicos");
+  if (botaoServicos) botaoServicos.hidden = loggedUser.tipo !== "profissional";
+
   statusAtual = perfil.status || null;
   renderizarBadge();
 

@@ -39,57 +39,100 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // === TIPO DE CONTA (cliente / profissional) ===
+  // Cliente e profissional são contas completamente separadas: cada
+  // tipo vai para sua própria lista no localStorage (clientes /
+  // profissionais), espelhando as duas tabelas do banco.
+  const radiosTipo = document.querySelectorAll('input[name="tipo-conta"]');
+  const campoProfissao = document.getElementById("cad-profissao");
+
+  function tipoContaSelecionado() {
+    const marcado = document.querySelector('input[name="tipo-conta"]:checked');
+    return marcado ? marcado.value : "cliente";
+  }
+
+  function sincronizarCamposProfissional() {
+    if (!campoProfissao) return;
+    campoProfissao.required = tipoContaSelecionado() === "profissional";
+  }
+
+  radiosTipo.forEach((radio) =>
+    radio.addEventListener("change", sincronizarCamposProfissional)
+  );
+  sincronizarCamposProfissional();
+
   // === CADASTRO ===
   const btnCadastro = document.getElementById("bnt-cadastro");
   btnCadastro?.addEventListener("click", (e) => {
     e.preventDefault();
 
-    const nome = document.querySelector('.Cadastrar input[type="text"]').value;
-    const email = document.querySelector(
-      '.Cadastrar input[type="email"]'
-    ).value;
-    const senha = document.querySelector(
-      '.Cadastrar input[type="password"]'
-    ).value;
+    const tipo = tipoContaSelecionado();
+    const nome = document.getElementById("cad-nome").value.trim();
+    const email = document.getElementById("cad-email").value.trim().toLowerCase();
+    const senha = document.getElementById("cad-senha").value;
+    const profissao = document.getElementById("cad-profissao").value.trim();
+    const precoDiaCampo = document.getElementById("cad-preco-dia");
+    const precoDia = precoDiaCampo && precoDiaCampo.value ? Number(precoDiaCampo.value) : null;
 
     if (!nome || !email || !senha) {
       alert("Preencha todos os campos para se cadastrar.");
       return;
     }
 
-    // Verificar se já existe usuário com esse email
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const userExists = users.find((u) => u.email === email);
-
-    if (userExists) {
-      alert("Este e-mail já está cadastrado.");
+    if (tipo === "profissional" && !profissao) {
+      alert("Conte qual é a sua profissão ou especialidade.");
       return;
     }
 
-    // Salvar no localStorage
-    users.push({ nome, email, senha });
-    localStorage.setItem("users", JSON.stringify(users));
+    const chave = tipo === "profissional" ? "profissionais" : "clientes";
+    const contas = JSON.parse(localStorage.getItem(chave)) || [];
+
+    if (contas.find((c) => c.email === email)) {
+      alert(
+        tipo === "profissional"
+          ? "Já existe uma conta de profissional com esse e-mail."
+          : "Este e-mail já está cadastrado."
+      );
+      return;
+    }
+
+    const novaConta = { id: Date.now(), nome, email, senha, tipo };
+
+    if (tipo === "profissional") {
+      novaConta.profissao = profissao;
+      novaConta.preco_dia = precoDia;
+    }
+
+    contas.push(novaConta);
+    localStorage.setItem(chave, JSON.stringify(contas));
 
     alert("Cadastro realizado com sucesso! Agora você pode entrar.");
+    container?.classList.remove("active");
   });
 
   // === LOGIN ===
   const btnLogin = document.getElementById("bnt-login");
   btnLogin?.addEventListener("click", () => {
-    const loginForm = document.querySelector(".login");
-    if (!loginForm) return;
+    const campoEmail = document.getElementById("log-email");
+    const campoSenha = document.getElementById("log-senha");
+    if (!campoEmail || !campoSenha) return;
 
-    const email = loginForm.querySelector('input[type="text"]').value;
-    const senha = loginForm.querySelector('input[type="password"]').value;
+    const email = campoEmail.value.trim().toLowerCase();
+    const senha = campoSenha.value;
 
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const validUser = users.find((u) => u.email === email && u.senha === senha);
+    const clientes = JSON.parse(localStorage.getItem("clientes")) || [];
+    const profissionais = JSON.parse(localStorage.getItem("profissionais")) || [];
 
-    if (validUser) {
-      localStorage.setItem("loggedUser", JSON.stringify(validUser));
-      window.location.href = "home.html"; // Redireciona após o login
-    } else {
+    const contaValida =
+      clientes.find((c) => c.email === email && c.senha === senha) ||
+      profissionais.find((p) => p.email === email && p.senha === senha);
+
+    if (!contaValida) {
       alert("E-mail ou senha incorretos.");
+      return;
     }
+
+    localStorage.setItem("loggedUser", JSON.stringify(contaValida));
+    window.location.href = "home.html"; // Redireciona após o login
   });
 });

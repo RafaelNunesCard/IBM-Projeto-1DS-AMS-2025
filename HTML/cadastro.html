@@ -67,6 +67,7 @@
                 <i class="ri-mail-fill"></i>
                 <input
                   type="text"
+                  id="log-email"
                   placeholder="E-mail"
                   autocomplete="email"
                   required
@@ -77,6 +78,7 @@
                 <i class="ri-lock-fill"></i>
                 <input
                   type="password"
+                  id="log-senha"
                   placeholder="Senha"
                   autocomplete="current-password"
                   required
@@ -132,10 +134,34 @@
                 </p>
               </div>
 
+              <div class="role-select" role="radiogroup" aria-label="Tipo de conta">
+                <input
+                  type="radio"
+                  name="tipo-conta"
+                  id="tipo-cliente"
+                  value="cliente"
+                  checked
+                />
+                <label for="tipo-cliente" class="role-chip">
+                  <i class="ri-user-smile-line"></i> Sou cliente
+                </label>
+
+                <input
+                  type="radio"
+                  name="tipo-conta"
+                  id="tipo-profissional"
+                  value="profissional"
+                />
+                <label for="tipo-profissional" class="role-chip">
+                  <i class="ri-tools-fill"></i> Sou profissional
+                </label>
+              </div>
+
               <div class="input-box">
                 <i class="ri-user-fill"></i>
                 <input
                   type="text"
+                  id="cad-nome"
                   placeholder="Nome completo"
                   autocomplete="name"
                   required
@@ -146,6 +172,7 @@
                 <i class="ri-mail-fill"></i>
                 <input
                   type="email"
+                  id="cad-email"
                   placeholder="E-mail"
                   autocomplete="email"
                   required
@@ -156,6 +183,7 @@
                 <i class="ri-lock-fill"></i>
                 <input
                   type="password"
+                  id="cad-senha"
                   placeholder="Senha"
                   autocomplete="new-password"
                   required
@@ -167,6 +195,35 @@
                 >
                   <i class="ri-eye-line"></i>
                 </button>
+              </div>
+
+              <div class="campos-profissional">
+                <div class="input-box">
+                  <i class="ri-briefcase-4-fill"></i>
+                  <input
+                    type="text"
+                    id="cad-profissao"
+                    placeholder="Profissão / especialidade (ex: Eletricista)"
+                    autocomplete="organization-title"
+                  />
+                </div>
+
+                <div class="input-box">
+                  <i class="ri-price-tag-3-fill"></i>
+                  <input
+                    type="number"
+                    id="cad-preco-dia"
+                    placeholder="Preço base por dia (R$)"
+                    min="0"
+                    step="0.01"
+                    inputmode="decimal"
+                  />
+                </div>
+
+                <p class="hint-profissional">
+                  Depois de criar a conta, você cadastra seus serviços e
+                  categorias na área do profissional.
+                </p>
               </div>
 
               <button type="submit" class="bnt" id="bnt-cadastro">

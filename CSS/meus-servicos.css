@@ -1,0 +1,358 @@
+:root {
+  --primaria: #fc8e53;
+  --secundaria: #5445ae;
+  --terciaria: #6a67d2;
+  --holver: #f7515b;
+  --branco: #ffffff;
+  --preto: #1a1a1a;
+  --superficie: #212123;
+  --superficie-2: #26262a;
+  --borda: rgba(255, 255, 255, 0.1);
+  --texto-suave: #a6a6b3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 130px 20px 80px;
+}
+
+/* ---------------- Cabeçalho ---------------- */
+.ms-cabecalho {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+
+.ms-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--primaria);
+  background: rgba(252, 142, 83, 0.12);
+  border: 1px solid rgba(252, 142, 83, 0.3);
+  margin-bottom: 10px;
+}
+
+.ms-cabecalho h1 {
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+
+.ms-cabecalho p {
+  color: var(--texto-suave);
+  max-width: 520px;
+  line-height: 1.5;
+}
+
+/* ---------------- Botões ---------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease,
+    border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primario {
+  background: linear-gradient(135deg, var(--primaria), var(--holver));
+  color: var(--branco);
+}
+
+.btn-primario:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.btn-secundario {
+  border: 1px solid var(--borda);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--branco);
+}
+
+.btn-secundario:hover {
+  border-color: var(--primaria);
+  color: var(--primaria);
+}
+
+.btn-perigo {
+  border: 1px solid rgba(247, 81, 91, 0.4);
+  background: rgba(247, 81, 91, 0.1);
+  color: #ff8d93;
+}
+
+.btn-perigo:hover {
+  background: rgba(247, 81, 91, 0.2);
+  border-color: #f7515b;
+}
+
+/* ---------------- Aviso de acesso ---------------- */
+.ms-aviso {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: rgba(252, 142, 83, 0.08);
+  border: 1px solid rgba(252, 142, 83, 0.25);
+  color: var(--texto-suave);
+  margin-bottom: 30px;
+}
+
+.ms-aviso i {
+  color: var(--primaria);
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.ms-aviso a {
+  color: var(--primaria);
+  font-weight: 700;
+}
+
+/* ---------------- Lista de serviços ---------------- */
+.ms-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.ms-card {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ms-card__topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ms-card__icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(252, 142, 83, 0.14);
+  color: var(--primaria);
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.ms-card__categoria {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+}
+
+.ms-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.ms-card p {
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.ms-card__preco {
+  font-weight: 800;
+  color: var(--primaria);
+  font-size: 1.05rem;
+}
+
+.ms-card__preco small {
+  color: var(--texto-suave);
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.ms-card__acoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.ms-card__acoes .btn {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.82rem;
+}
+
+.ms-card--inativo {
+  opacity: 0.55;
+}
+
+.ms-card__status {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------------- Estado vazio ---------------- */
+.ms-vazio {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--texto-suave);
+}
+
+.ms-vazio i {
+  font-size: 42px;
+  color: var(--primaria);
+  margin-bottom: 10px;
+}
+
+.ms-vazio h2 {
+  color: var(--branco);
+  font-size: 1.2rem;
+  margin: 8px 0 4px;
+}
+
+/* ---------------- Modal (formulário) ---------------- */
+.ms-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 40;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.ms-overlay.visivel {
+  opacity: 1;
+}
+
+.ms-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+  width: min(460px, calc(100% - 32px));
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  padding: 28px 26px;
+  z-index: 41;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.ms-popup.visivel {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.ms-popup h2 {
+  margin: 0 0 18px;
+  font-size: 1.3rem;
+}
+
+.campo {
+  margin-bottom: 16px;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--texto-suave);
+  margin-bottom: 6px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--superficie-2);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  color: var(--branco);
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.25s;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: var(--primaria);
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.campo-dica {
+  margin: 6px 0 0;
+  font-size: 0.76rem;
+  color: var(--texto-suave);
+}
+
+.ms-popup__acoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.ms-popup__acoes .btn {
+  flex: 1;
+}
+
+@media screen and (max-width: 560px) {
+  main {
+    padding-top: 110px;
+  }
+
+  .ms-cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ms-cabecalho #bnt_novo_servico {
+    width: 100%;
+  }
+}
