@@ -126,11 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizarLista();
   });
 
-  $("sol_lista").addEventListener("click", (evento) => {
+  $("sol_lista").addEventListener("click", async (evento) => {
     const botao = evento.target.closest("button[data-id]");
     if (!botao) return;
 
-    window.Agendamentos.atualizarStatus(botao.dataset.id, botao.dataset.para);
+    await window.Agendamentos.atualizarStatus(botao.dataset.id, botao.dataset.para);
     renderizarLista();
   });
 });

@@ -486,7 +486,7 @@ function gerarNumeroPedido() {
   return `TF-${Date.now().toString(36).toUpperCase().slice(-5)}${aleatorio}`;
 }
 
-function abrirModal() {
+async function abrirModal() {
   const { subtotal, taxa, total } = calcularTotais();
   const datas = ordenarDatas();
 
@@ -522,7 +522,7 @@ function abrirModal() {
 
   if (estado.modoReal && window.Agendamentos) {
     const usuario = usuarioLogado();
-    const registro = window.Agendamentos.criar({
+    const registro = await window.Agendamentos.criar({
       numero_pedido: numeroPedido,
       cliente_id: usuario.id,
       cliente_nome: usuario.nome,
@@ -610,7 +610,7 @@ function ligarEventos() {
     });
   });
 
-  $("bnt_confirmar").addEventListener("click", () => {
+  $("bnt_confirmar").addEventListener("click", async () => {
     const validacao = validarFluxo();
     if (!validacao.valido) {
       atualizarResumo();
@@ -624,7 +624,7 @@ function ligarEventos() {
         return;
       }
     }
-    abrirModal();
+    await abrirModal();
   });
 
   $("sucesso_fechar").addEventListener("click", fecharModal);

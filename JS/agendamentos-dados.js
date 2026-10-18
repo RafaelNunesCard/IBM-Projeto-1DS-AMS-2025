@@ -37,17 +37,23 @@ window.Agendamentos = (() => {
     }
   }
 
-  function criar(dados) {
-    const lista = listar();
-    const registro = {
-      id: Date.now(),
-      status: "solicitado",
-      criado_em: new Date().toISOString(),
-      atualizado_em: new Date().toISOString(),
-      ...dados,
-    };
-    lista.push(registro);
-    salvarTodos(lista);
+  async function criar(dados) {
+    const resposta = await fetch("/api/agendamentos", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dados),
+    });
+
+    const data = await resposta.json().catch(() => ({}));
+
+    if (!resposta.ok || data.status !== "ok") {
+      throw new Error(data.mensagem || "Não foi possível criar o agendamento.");
+    }
+
+    const registro = data.dados?.agendamento;
+    if (registro) {
+      salvarTodos([...listar(), registro]);
+    }
     return registro;
   }
 
@@ -63,15 +69,24 @@ window.Agendamentos = (() => {
       .sort((a, b) => (b.criado_em || "").localeCompare(a.criado_em || ""));
   }
 
-  function atualizarStatus(id, novoStatus) {
-    const lista = listar();
-    const agendamento = lista.find((a) => String(a.id) === String(id));
-    if (agendamento) {
-      agendamento.status = novoStatus;
-      agendamento.atualizado_em = new Date().toISOString();
-      salvarTodos(lista);
+  async function atualizarStatus(id, novoStatus) {
+    const resposta = await fetch(`/api/agendamentos/${id}/acao`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ status: novoStatus }),
+    });
+
+    const data = await resposta.json().catch(() => ({}));
+
+    if (!resposta.ok || data.status !== "ok") {
+      throw new Error(data.mensagem || "Não foi possível atualizar o status.");
     }
-    return agendamento || null;
+
+    const atualizado = data.dados?.agendamento;
+    if (atualizado) {
+      salvarTodos(listar().map((a) => (String(a.id) === String(id) ? { ...a, ...atualizado } : a)));
+    }
+    return atualizado;
   }
 
   return {

@@ -27,7 +27,7 @@
     <header id="header">
       <div class="logo">
         <img src="../img/logo.png" alt="Logo TechFix" />
-        <h1>TechFix</h1>
+        
       </div>
 
       <menu>
@@ -178,7 +178,7 @@
     </footer>
 
     <script>
-      function validateForm() {
+      async function validateForm() {
         const formArea = document.querySelector(".form-box.login");
         const email = formArea.querySelector('input[type="text"]');
         const senhas = formArea.querySelectorAll('input[type="password"]');
@@ -197,8 +197,53 @@
           return;
         }
 
-        alert("Senha alterada com sucesso!");
-        window.location.href = "cadastro.html";
+        if (senhas[0].value.length < 6) {
+          alert("A nova senha deve ter no mínimo 6 caracteres.");
+          return;
+        }
+
+        const btn = document.getElementById("bnt-alterar");
+        btn.disabled = true;
+
+        try {
+          const resposta = await fetch("/api/auth/forgot-password", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email: email.value.trim() }),
+          });
+          const data = await resposta.json().catch(() => ({}));
+
+          if (!resposta.ok || data.status !== "ok") {
+            alert(data.mensagem || "Não foi possível processar a solicitação.");
+            return;
+          }
+
+          const token = data.reset_token;
+
+          if (!token) {
+            alert("Se o e-mail informar possuir uma conta, um link de recuperação será enviado.");
+            return;
+          }
+
+          const respostaReset = await fetch("/api/auth/reset-password", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token, senha: senhas[0].value }),
+          });
+          const dataReset = await respostaReset.json().catch(() => ({}));
+
+          if (!respostaReset.ok || dataReset.status !== "ok") {
+            alert(dataReset.mensagem || "Não foi possível redefinir a senha.");
+            return;
+          }
+
+          alert("Senha alterada com sucesso!");
+          window.location.href = "cadastro.html";
+        } catch (err) {
+          alert("Erro ao conectar com o servidor. Tente novamente.");
+        } finally {
+          btn.disabled = false;
+        }
       }
 
       // Mostrar / ocultar senha

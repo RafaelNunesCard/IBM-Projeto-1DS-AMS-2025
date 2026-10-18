@@ -11,15 +11,39 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* ---------- Saudação do usuário ---------- */
   const headerNome = document.getElementById("headerNome");
-  if (headerNome) {
+
+  async function carregarSaudacao() {
+    let loggedUser = null;
+
     try {
-      const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
-      if (loggedUser && loggedUser.nome) {
-        headerNome.textContent = `Olá ${loggedUser.nome}, você precisa de ajuda?`;
+      const resposta = await fetch("/api/auth/me");
+      const data = await resposta.json().catch(() => ({}));
+
+      if (resposta.ok && data.status === "ok" && data.dados?.usuario) {
+        loggedUser = data.dados.usuario;
+        localStorage.setItem("loggedUser", JSON.stringify(loggedUser));
+      } else if (!resposta.ok) {
+        localStorage.removeItem("loggedUser");
       }
     } catch (e) {
       console.warn("Não foi possível carregar o usuário logado.");
     }
+
+    if (!loggedUser) {
+      try {
+        loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
+      } catch {
+        loggedUser = null;
+      }
+    }
+
+    if (loggedUser && loggedUser.nome) {
+      headerNome.textContent = `Olá ${loggedUser.nome}, você precisa de ajuda?`;
+    }
+  }
+
+  if (headerNome) {
+    carregarSaudacao();
   }
 
   /* ---------- Contadores animados ---------- */

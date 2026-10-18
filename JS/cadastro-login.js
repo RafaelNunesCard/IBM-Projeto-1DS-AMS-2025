@@ -40,9 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // === TIPO DE CONTA (cliente / profissional) ===
-  // Cliente e profissional são contas completamente separadas: cada
-  // tipo vai para sua própria lista no localStorage (clientes /
-  // profissionais), espelhando as duas tabelas do banco.
+  // Cliente e profissional são contas completamente separadas, espelhando
+  // as listas do backend (banco de dados). Aqui usamos o backend via API.
   const radiosTipo = document.querySelectorAll('input[name="tipo-conta"]');
   const campoProfissao = document.getElementById("cad-profissao");
 
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // === CADASTRO ===
   const btnCadastro = document.getElementById("bnt-cadastro");
-  btnCadastro?.addEventListener("click", (e) => {
+  btnCadastro?.addEventListener("click", async (e) => {
     e.preventDefault();
 
     const tipo = tipoContaSelecionado();
@@ -84,35 +83,34 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const chave = tipo === "profissional" ? "profissionais" : "clientes";
-    const contas = JSON.parse(localStorage.getItem(chave)) || [];
+    btnCadastro.disabled = true;
 
-    if (contas.find((c) => c.email === email)) {
-      alert(
-        tipo === "profissional"
-          ? "Já existe uma conta de profissional com esse e-mail."
-          : "Este e-mail já está cadastrado."
-      );
-      return;
+    try {
+      const resposta = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome, email, senha, tipo, profissao, preco_dia: precoDia }),
+      });
+      const data = await resposta.json().catch(() => ({}));
+
+      if (!resposta.ok || data.status !== "ok") {
+        alert(data.mensagem || "Não foi possível realizar o cadastro.");
+        return;
+      }
+
+      alert("Cadastro realizado com sucesso! Agora você pode entrar.");
+      container?.classList.remove("active");
+    } catch (err) {
+      alert("Erro ao conectar com o servidor. Tente novamente.");
+    } finally {
+      btnCadastro.disabled = false;
     }
-
-    const novaConta = { id: Date.now(), nome, email, senha, tipo };
-
-    if (tipo === "profissional") {
-      novaConta.profissao = profissao;
-      novaConta.preco_dia = precoDia;
-    }
-
-    contas.push(novaConta);
-    localStorage.setItem(chave, JSON.stringify(contas));
-
-    alert("Cadastro realizado com sucesso! Agora você pode entrar.");
-    container?.classList.remove("active");
   });
 
   // === LOGIN ===
   const btnLogin = document.getElementById("bnt-login");
-  btnLogin?.addEventListener("click", () => {
+  btnLogin?.addEventListener("click", async (e) => {
+    e.preventDefault();
     const campoEmail = document.getElementById("log-email");
     const campoSenha = document.getElementById("log-senha");
     if (!campoEmail || !campoSenha) return;
@@ -120,19 +118,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = campoEmail.value.trim().toLowerCase();
     const senha = campoSenha.value;
 
-    const clientes = JSON.parse(localStorage.getItem("clientes")) || [];
-    const profissionais = JSON.parse(localStorage.getItem("profissionais")) || [];
+    btnLogin.disabled = true;
 
-    const contaValida =
-      clientes.find((c) => c.email === email && c.senha === senha) ||
-      profissionais.find((p) => p.email === email && p.senha === senha);
+    try {
+      const resposta = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha }),
+      });
+      const data = await resposta.json().catch(() => ({}));
 
-    if (!contaValida) {
-      alert("E-mail ou senha incorretos.");
-      return;
+      if (!resposta.ok || data.status !== "ok") {
+        alert(data.mensagem || "E-mail ou senha incorretos.");
+        return;
+      }
+
+      const usuario = data.dados?.usuario;
+      if (usuario) {
+        localStorage.setItem("loggedUser", JSON.stringify(usuario));
+      }
+
+      window.location.href = "home.html"; // Redireciona após o login
+    } catch (err) {
+      alert("Erro ao conectar com o servidor. Tente novamente.");
+    } finally {
+      btnLogin.disabled = false;
     }
-
-    localStorage.setItem("loggedUser", JSON.stringify(contaValida));
-    window.location.href = "home.html"; // Redireciona após o login
   });
 });

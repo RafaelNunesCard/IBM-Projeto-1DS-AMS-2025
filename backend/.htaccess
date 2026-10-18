@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# API -> backend front controller
+RewriteRule ^api/(.*)$ backend/index.php [QSA,L]
